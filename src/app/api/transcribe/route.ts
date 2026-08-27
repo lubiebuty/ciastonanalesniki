@@ -41,7 +41,7 @@ export async function POST(request: NextRequest) {
     // Reject an upload aimed at somebody else's session before spending a
     // paid STT call on it.
     const ownerDb = getDatabase();
-    const owner = requireSessionOwner(ownerDb, sessionId, authResult.userId);
+    const owner = await requireSessionOwner(ownerDb, sessionId, authResult.userId);
     if (!owner.ok) return owner.response;
 
     // Save to temp file
@@ -66,7 +66,7 @@ export async function POST(request: NextRequest) {
 
     // Save verbatim transcript (no cleaning/normalization)
     const db = getDatabase();
-    saveTranscriptChunk(db, sessionId, transcription, chunkIndex);
+    await saveTranscriptChunk(db, sessionId, transcription, chunkIndex);
 
     return NextResponse.json({
       text: transcription,

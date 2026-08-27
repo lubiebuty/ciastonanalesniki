@@ -36,126 +36,182 @@ export interface CreateSessionResult {
 
 /**
  * Creates a new exam session after deducting 1 token.
- *
- * Ticket 02: the token deduction and the session INSERT are wrapped in a single
- * database transaction so they succeed or fail together. A FK violation on
- * `topic_id` (or any other error mid-insert) rolls back the deduction, leaving
- * the user's balance unchanged.
+ * Manually rolls back token deduction if session creation fails.
  */
-export function createSession(
+export async function createSession(
   db: Database,
   userId: string,
   topicId: string
-): CreateSessionResult {
-  // Check tokens before entering the transaction — avoids a wasted round-trip
-  // inside the transaction body when there is nothing to roll back.
-  const beforeCheck = db
-    .prepare('SELECT tokens FROM users WHERE id = ?')
-    .get(userId) as { tokens: number } | undefined;
+): Promise<CreateSessionResult> {
+  const { data: user, error: findError } = await db
+    .from('users')
+    .select('tokens')
+    .eq('id', userId)
+    .single();
 
-  if (!beforeCheck) {
+  if (findError || !user) {
     return {
       success: false,
       error: 'Nie znaleziono użytkownika.',
     };
   }
 
-  // Automatic token replenishment for testing/development (skipped in test environment)
-  if (beforeCheck.tokens <= 0 && process.env.NODE_ENV !== 'test') {
-    db.prepare('UPDATE users SET tokens = 100 WHERE id = ?').run(userId);
-    beforeCheck.tokens = 100;
+  let tokens = user.tokens;
+  if (tokens <= 0 && process.env.NODE_ENV !== 'test') {
+    const { data: updatedUser } = await db
+      .from('users')
+      .update({ tokens: 100 })
+      .eq('id', userId)
+      .select('tokens')
+      .single();
+    if (updatedUser) {
+      tokens = updatedUser.tokens;
+    }
   }
 
-  if (beforeCheck.tokens <= 0) {
+  if (tokens <= 0) {
     return {
       success: false,
       error: 'Brak tokenów. Nie można rozpocząć sesji bez dostępnego tokenu.',
     };
   }
 
-  const id = uuidv4();
+  // 1. Deduct token
+  const { error: deductError } = await db
+    .from('users')
+    .update({ tokens: tokens - 1 })
+    .eq('id', userId);
 
-  try {
-    db.transaction(() => {
-      // 1. Deduct token
-      db.prepare('UPDATE users SET tokens = tokens - 1 WHERE id = ?').run(userId);
-
-      // 2. Insert session — if this throws (e.g. FK violation), the whole
-      //    transaction rolls back, restoring the token.
-      db.prepare(
-        `INSERT INTO sessions (id, topic_id, user_id, status, created_at) VALUES (?, ?, ?, 'active', datetime('now'))`
-      ).run(id, topicId, userId);
-    })();
-  } catch (err) {
+  if (deductError) {
     return {
       success: false,
-      error: err instanceof Error ? err.message : 'Failed to create session',
+      error: 'Błąd podczas pobierania tokenu.',
     };
   }
 
-  const session = db.prepare('SELECT * FROM sessions WHERE id = ?').get(id) as Session;
+  const id = uuidv4();
 
-  return { success: true, session };
+  // 2. Insert session
+  const { error: insertError } = await db
+    .from('sessions')
+    .insert({
+      id,
+      topic_id: topicId,
+      user_id: userId,
+      status: 'active',
+    });
+
+  if (insertError) {
+    // Rollback: return the token to the user
+    await db
+      .from('users')
+      .update({ tokens: tokens })
+      .eq('id', userId);
+
+    return {
+      success: false,
+      error: `Nie udało się utworzyć sesji: ${insertError.message}`,
+    };
+  }
+
+  const { data: session, error: fetchError } = await db
+    .from('sessions')
+    .select('*')
+    .eq('id', id)
+    .single();
+
+  if (fetchError || !session) {
+    return {
+      success: false,
+      error: 'Nie udało się pobrać utworzonej sesji.',
+    };
+  }
+
+  return { success: true, session: session as Session };
 }
-
 
 /**
  * Gets a session by ID.
  */
-export function getSession(db: Database, sessionId: string): Session | undefined {
-  return db.prepare('SELECT * FROM sessions WHERE id = ?').get(sessionId) as Session | undefined;
+export async function getSession(db: Database, sessionId: string): Promise<Session | undefined> {
+  const { data, error } = await db
+    .from('sessions')
+    .select('*')
+    .eq('id', sessionId)
+    .single();
+
+  if (error || !data) {
+    return undefined;
+  }
+
+  return data as Session;
 }
 
 /**
  * Updates session status.
- *
- * Ticket 05: extended to include error states so a failed LLM call can be
- * recorded rather than leaving the session stuck on 'evaluating'/'generating'.
  */
-export function updateSessionStatus(
+export async function updateSessionStatus(
   db: Database,
   sessionId: string,
   status: 'active' | 'monologue' | 'qa' | 'evaluating' | 'completed' | 'generation_failed' | 'evaluation_failed'
-): void {
-  db.prepare('UPDATE sessions SET status = ? WHERE id = ?').run(status, sessionId);
+): Promise<void> {
+  const { error } = await db
+    .from('sessions')
+    .update({ status })
+    .eq('id', sessionId);
+
+  if (error) {
+    throw new Error(`Failed to update session status: ${error.message}`);
+  }
 }
 
 /**
- * Saves a raw transcript chunk (verbatim ASR output, no cleaning).
+ * Saves a raw transcript chunk.
  */
-export function saveTranscriptChunk(
+export async function saveTranscriptChunk(
   db: Database,
   sessionId: string,
   text: string,
   chunkIndex: number
-): void {
-  db.prepare(
-    `INSERT INTO session_transcripts (id, session_id, text, chunk_index)
-     VALUES (?, ?, ?, ?)`
-  ).run(uuidv4(), sessionId, text, chunkIndex);
+): Promise<void> {
+  const { error } = await db
+    .from('session_transcripts')
+    .insert({
+      id: uuidv4(),
+      session_id: sessionId,
+      text,
+      chunk_index: chunkIndex,
+    });
+
+  if (error) {
+    throw new Error(`Failed to save transcript chunk: ${error.message}`);
+  }
 }
 
 /**
  * Gets all transcript chunks for a session, ordered by chunk_index.
  */
-export function getTranscriptChunks(
+export async function getTranscriptChunks(
   db: Database,
   sessionId: string
-): TranscriptChunk[] {
-  return db
-    .prepare('SELECT * FROM session_transcripts WHERE session_id = ? ORDER BY chunk_index')
-    .all(sessionId) as TranscriptChunk[];
+): Promise<TranscriptChunk[]> {
+  const { data, error } = await db
+    .from('session_transcripts')
+    .select('*')
+    .eq('session_id', sessionId)
+    .order('chunk_index', { ascending: true });
+
+  if (error) {
+    throw new Error(`Failed to get transcript chunks: ${error.message}`);
+  }
+
+  return data as TranscriptChunk[];
 }
 
 /**
- * Saves generated commission questions (1–3).
+ * Saves evaluation scores.
  */
-
-
-/**
- * Saves evaluation scores (computed server-side after cascade logic).
- */
-export function saveScores(
+export async function saveScores(
   db: Database,
   scores: {
     session_id: string;
@@ -163,42 +219,62 @@ export function saveScores(
     score: number;
     feedback?: string;
   }
-): void {
-  db.prepare(
-    `INSERT OR REPLACE INTO session_scores (session_id, is_correct, score, feedback)
-     VALUES (?, ?, ?, ?)`
-  ).run(
-    scores.session_id,
-    scores.is_correct ? 1 : 0,
-    scores.score,
-    scores.feedback || null
-  );
+): Promise<void> {
+  const { error } = await db
+    .from('session_scores')
+    .upsert({
+      session_id: scores.session_id,
+      is_correct: scores.is_correct ? 1 : 0,
+      score: scores.score,
+      feedback: scores.feedback || null,
+    });
+
+  if (error) {
+    throw new Error(`Failed to save scores: ${error.message}`);
+  }
 }
 
 /**
  * Gets scores for a session.
  */
-export function getScores(db: Database, sessionId: string): SessionScores | undefined {
-  return db
-    .prepare('SELECT * FROM session_scores WHERE session_id = ?')
-    .get(sessionId) as SessionScores | undefined;
+export async function getScores(db: Database, sessionId: string): Promise<SessionScores | undefined> {
+  const { data, error } = await db
+    .from('session_scores')
+    .select('*')
+    .eq('session_id', sessionId)
+    .single();
+
+  if (error) {
+    if (error.code === 'PGRST116') {
+      return undefined;
+    }
+    throw new Error(`Failed to get scores: ${error.message}`);
+  }
+
+  return data as SessionScores;
 }
 
 /**
  * Deletes all data for a user (RODO Art. 17 — Right to Erasure).
  */
-export function deleteAllUserData(db: Database, userId: string): void {
-  db.transaction(() => {
-    // Get all session IDs for the user
-    const sessions = db
-      .prepare('SELECT id FROM sessions WHERE user_id = ?')
-      .all(userId) as { id: string }[];
+export async function deleteAllUserData(db: Database, userId: string): Promise<void> {
+  // Cascading deletes on the database (transcripts, scores) will trigger automatically
+  // when deleting from the sessions table
+  const { error: sessionDeleteError } = await db
+    .from('sessions')
+    .delete()
+    .eq('user_id', userId);
 
-    for (const session of sessions) {
-      db.prepare('DELETE FROM session_scores WHERE session_id = ?').run(session.id);
-      db.prepare('DELETE FROM session_transcripts WHERE session_id = ?').run(session.id);
-    }
+  if (sessionDeleteError) {
+    throw new Error(`Failed to delete sessions: ${sessionDeleteError.message}`);
+  }
 
-    db.prepare('DELETE FROM sessions WHERE user_id = ?').run(userId);
-  })();
+  const { error: userDeleteError } = await db
+    .from('users')
+    .delete()
+    .eq('id', userId);
+
+  if (userDeleteError) {
+    throw new Error(`Failed to delete user profile: ${userDeleteError.message}`);
+  }
 }

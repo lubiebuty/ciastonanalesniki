@@ -16,7 +16,7 @@ export async function DELETE() {
     if (!authResult.ok) return authResult.response;
 
     const db = getDatabase();
-    deleteAllUserData(db, authResult.userId);
+    await deleteAllUserData(db, authResult.userId);
 
     return NextResponse.json({
       message: 'Wszystkie Twoje dane zostały usunięte.',

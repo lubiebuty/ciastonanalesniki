@@ -1,8 +1,8 @@
 /**
  * Health check logic for verifying AI model availability and DB connectivity.
  *
- * Ticket 08: checkHealth now also verifies the SQLite database is reachable
- * by running `SELECT 1`. The result distinguishes between three failure causes:
+ * Ticket 08: checkHealth now also verifies the database is reachable
+ * by running a lightweight select query. The result distinguishes between three failure causes:
  * baza (DB), stt (speech-to-text model), llm (language model).
  */
 import { getConfig } from './config';
@@ -57,17 +57,23 @@ async function checkModel(
 }
 
 /**
- * Ticket 08: Checks database connectivity by executing a lightweight query.
+ * Checks database connectivity by executing a lightweight query on Supabase.
  */
-function checkDatabase(db?: Database): DatabaseStatus {
+async function checkDatabase(db?: Database): Promise<DatabaseStatus> {
   if (!db) {
-    // No DB provided — skip the check (backward-compatible for tests that
-    // don't care about the DB status)
+    // No DB provided — skip the check (backward-compatible for tests)
     return { ok: true };
   }
 
   try {
-    db.prepare('SELECT 1').get();
+    const { error } = await db
+      .from('topics')
+      .select('id')
+      .limit(1);
+
+    if (error) {
+      throw error;
+    }
     return { ok: true };
   } catch (error) {
     return {
@@ -79,11 +85,6 @@ function checkDatabase(db?: Database): DatabaseStatus {
 
 /**
  * Turns an HTTP status into the actual cause.
- *
- * Ticket 01 exists because Groq and Gemini retire model generations every few
- * months — that is the 404. Reporting every failure as a retirement would send
- * whoever is on call hunting through the model list for what is really a bad
- * key or a rate limit.
  */
 function diagnose(modelId: string, status: number, statusText: string): string {
   if (status === 404) {
@@ -99,21 +100,16 @@ function diagnose(modelId: string, status: number, statusText: string): string {
 }
 
 /**
- * Checks health of both STT and LLM models and (optionally) the database.
- *
- * Ticket 08: accepts an optional `db` parameter so the database connectivity
- * check can be performed. The result distinguishes between three failure
- * causes: baza (db), stt (speech model), llm (language model).
+ * Checks health of both STT and LLM models and the database.
  */
 export async function checkHealth(db?: Database): Promise<HealthResult> {
   const config = getConfig();
 
-  const [stt, llm] = await Promise.all([
+  const [stt, llm, dbStatus] = await Promise.all([
     checkModel(config.groqApiKey, config.groqSttModel),
     checkModel(config.groqApiKey, config.groqLlmModel),
+    checkDatabase(db),
   ]);
-
-  const dbStatus = checkDatabase(db);
 
   return {
     status: stt.ok && llm.ok && dbStatus.ok ? 'healthy' : 'unhealthy',

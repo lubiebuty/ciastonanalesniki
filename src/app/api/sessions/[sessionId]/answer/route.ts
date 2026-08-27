@@ -22,14 +22,21 @@ export async function POST(
     }
 
     const db = getDatabase();
-    const owner = requireSessionOwner(db, sessionId, authResult.userId);
+    const owner = await requireSessionOwner(db, sessionId, authResult.userId);
     if (!owner.ok) return owner.response;
 
-    // Clear prior chunks and save the final answer text as a single transcript chunk
-    db.transaction(() => {
-      db.prepare('DELETE FROM session_transcripts WHERE session_id = ?').run(sessionId);
-      saveTranscriptChunk(db, sessionId, answerText, 0);
-    })();
+    // 1. Delete prior chunks
+    const { error: deleteError } = await db
+      .from('session_transcripts')
+      .delete()
+      .eq('session_id', sessionId);
+
+    if (deleteError) {
+      throw new Error(`Failed to clear prior transcripts: ${deleteError.message}`);
+    }
+
+    // 2. Save the final answer text as a single transcript chunk
+    await saveTranscriptChunk(db, sessionId, answerText, 0);
 
     return NextResponse.json({ saved: true });
   } catch (error) {

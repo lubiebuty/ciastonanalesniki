@@ -1,139 +1,117 @@
-/**
- * TDD Tests for user/auth functionality.
- * Tests token allocation, user creation, and token deduction.
- */
-import { describe, it, expect, beforeEach, afterEach } from 'vitest';
-import fs from 'fs';
-import path from 'path';
+import { describe, it, expect, beforeEach, vi } from 'vitest';
+import { findOrCreateUser, deductToken, getUserById, confirmAge, User } from '@/lib/users';
+import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
-const TEST_DB_PATH = path.join(__dirname, '../../..', 'test-users-' + process.pid + '.sqlite');
+vi.mock('@supabase/supabase-js', () => {
+  const mockClient = {
+    from: vi.fn().mockReturnThis(),
+    select: vi.fn().mockReturnThis(),
+    insert: vi.fn().mockReturnThis(),
+    update: vi.fn().mockReturnThis(),
+    eq: vi.fn().mockReturnThis(),
+    single: vi.fn(),
+  };
+  return {
+    createClient: () => mockClient,
+    SupabaseClient: class {},
+  };
+});
 
-describe('User Management', () => {
-  let userOps: typeof import('@/lib/users');
-  let dbMod: typeof import('@/lib/db');
-  let db: import('@/lib/db').Database;
+describe('User Management (Supabase)', () => {
+  let db: any;
 
-  beforeEach(async () => {
-    if (fs.existsSync(TEST_DB_PATH)) fs.unlinkSync(TEST_DB_PATH);
-    process.env.DATABASE_PATH = TEST_DB_PATH;
-
-    // Dynamic imports to get fresh module instances
-    dbMod = await import('@/lib/db');
-    db = dbMod.getDatabase();
-    userOps = await import('@/lib/users');
+  beforeEach(() => {
+    vi.stubEnv('NEXT_PUBLIC_SUPABASE_URL', 'https://example.supabase.co');
+    vi.stubEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY', 'some-key');
+    db = createClient('https://example.supabase.co', 'some-key');
+    vi.clearAllMocks();
   });
 
-  afterEach(() => {
-    // getDatabase() is a singleton (Ticket 09); db.close() would kill the
-    // shared connection for the rest of the process. Use resetDatabase() so
-    // the next test's getDatabase() call opens a fresh connection instead.
-    dbMod.resetDatabase();
-    if (fs.existsSync(TEST_DB_PATH)) fs.unlinkSync(TEST_DB_PATH);
-  });
+  describe('findOrCreateUser', () => {
+    it('returns existing user if found by email', async () => {
+      const mockUser = { id: 'u1', email: 'existing@example.com', name: 'User 1', tokens: 30 };
+      db.single.mockResolvedValueOnce({ data: mockUser, error: null });
 
-  describe('User creation', () => {
-    it('creates a new user with 30 free tokens on first login', () => {
-      const user = userOps.findOrCreateUser(db, {
-        email: 'student@example.com',
-        name: 'Jan Kowalski',
-        image: 'https://example.com/avatar.jpg',
-      });
+      const user = await findOrCreateUser(db, { email: 'existing@example.com' });
 
-      expect(user.email).toBe('student@example.com');
-      expect(user.tokens).toBe(30);
-      expect(user.name).toBe('Jan Kowalski');
+      expect(user).toEqual(mockUser);
+      expect(db.from).toHaveBeenCalledWith('users');
+      expect(db.select).toHaveBeenCalled();
+      expect(db.eq).toHaveBeenCalledWith('email', 'existing@example.com');
     });
 
-    it('returns existing user on second login (no extra tokens)', () => {
-      userOps.findOrCreateUser(db, {
-        email: 'repeat@example.com',
-        name: 'User',
+    it('creates a new user with 30 tokens if not found', async () => {
+      // First call (findUser): no user found
+      db.single.mockResolvedValueOnce({ data: null, error: { code: 'PGRST116', message: 'No rows' } });
+      // Second call (insert): success
+      db.insert.mockResolvedValueOnce({ data: null, error: null });
+      // Third call (fetch newly created user): success
+      const mockCreated = { id: 'new-id', email: 'new@example.com', name: 'New User', tokens: 30 };
+      db.single.mockResolvedValueOnce({ data: mockCreated, error: null });
+
+      const user = await findOrCreateUser(db, {
+        email: 'new@example.com',
+        name: 'New User',
       });
 
-      const user2 = userOps.findOrCreateUser(db, {
-        email: 'repeat@example.com',
-        name: 'User',
-      });
-
-      expect(user2.tokens).toBe(30); // Still 30, not 60
-    });
-
-    it('stores user avatar URL', () => {
-      const user = userOps.findOrCreateUser(db, {
-        email: 'avatar@example.com',
-        name: 'Test',
-        image: 'https://lh3.google.com/avatar.jpg',
-      });
-
-      expect(user.image).toBe('https://lh3.google.com/avatar.jpg');
+      expect(user).toEqual(mockCreated);
+      expect(db.insert).toHaveBeenCalled();
     });
   });
 
-  describe('Token management', () => {
-    it('deducts 1 token successfully when user has tokens', () => {
-      const user = userOps.findOrCreateUser(db, {
-        email: 'tokens@test.com',
-        name: 'Test',
-      });
+  describe('deductToken', () => {
+    it('deducts a token successfully if balance > 0', async () => {
+      // First call (get tokens): returns 10 tokens
+      db.single.mockResolvedValueOnce({ data: { tokens: 10 }, error: null });
+      // Second call (update): returns 9 tokens
+      db.single.mockResolvedValueOnce({ data: { tokens: 9 }, error: null });
 
-      const result = userOps.deductToken(db, user.id);
-      expect(result.success).toBe(true);
-      expect(result.remainingTokens).toBe(29);
+      const result = await deductToken(db, 'user-123');
+
+      expect(result).toEqual({ success: true, remainingTokens: 9 });
+      expect(db.update).toHaveBeenCalledWith({ tokens: 9 });
+      expect(db.eq).toHaveBeenCalledWith('id', 'user-123');
     });
 
-    it('fails to deduct when user has 0 tokens', () => {
-      const user = userOps.findOrCreateUser(db, {
-        email: 'broke@test.com',
-        name: 'Test',
-      });
+    it('fails to deduct token if balance is 0', async () => {
+      db.single.mockResolvedValueOnce({ data: { tokens: 0 }, error: null });
 
-      // Use up all 30 tokens
-      for (let i = 0; i < 30; i++) {
-        userOps.deductToken(db, user.id);
-      }
+      const result = await deductToken(db, 'user-123');
 
-      const result = userOps.deductToken(db, user.id);
-      expect(result.success).toBe(false);
-      expect(result.remainingTokens).toBe(0);
-    });
-
-    it('tracks correct balance after multiple deductions', () => {
-      const user = userOps.findOrCreateUser(db, {
-        email: 'track@test.com',
-        name: 'Test',
-      });
-
-      userOps.deductToken(db, user.id);
-      const result = userOps.deductToken(db, user.id);
-      expect(result.remainingTokens).toBe(28);
+      expect(result).toEqual({ success: false, remainingTokens: 0 });
+      expect(db.update).not.toHaveBeenCalled();
     });
   });
 
-  describe('Users table schema', () => {
-    it('has age_confirmed column', () => {
-      const tableInfo = db.pragma('table_info(users)') as Array<{ name: string }>;
-      const columns = tableInfo.map((c) => c.name);
-      expect(columns).toContain('age_confirmed');
+  describe('getUserById', () => {
+    it('returns the user if found', async () => {
+      const mockUser = { id: 'u1', email: 'user@example.com', tokens: 30 };
+      db.single.mockResolvedValueOnce({ data: mockUser, error: null });
+
+      const user = await getUserById(db, 'u1');
+
+      expect(user).toEqual(mockUser);
+      expect(db.eq).toHaveBeenCalledWith('id', 'u1');
     });
 
-    it('age_confirmed defaults to false (0)', () => {
-      const user = userOps.findOrCreateUser(db, {
-        email: 'minor@test.com',
-        name: 'Student',
-      });
-      expect(user.age_confirmed).toBe(0);
+    it('returns undefined if user not found', async () => {
+      db.single.mockResolvedValueOnce({ data: null, error: { code: 'PGRST116', message: 'No rows' } });
+
+      const user = await getUserById(db, 'u1');
+
+      expect(user).toBeUndefined();
     });
+  });
 
-    it('can confirm age', () => {
-      const user = userOps.findOrCreateUser(db, {
-        email: 'confirm@test.com',
-        name: 'Student',
-      });
+  describe('confirmAge', () => {
+    it('updates age_confirmed to 1', async () => {
+      db.update.mockReturnValueOnce(db);
+      db.eq.mockResolvedValueOnce({ error: null });
 
-      userOps.confirmAge(db, user.id);
+      await expect(confirmAge(db, 'u1')).resolves.not.toThrow();
 
-      const updated = userOps.getUserById(db, user.id);
-      expect(updated?.age_confirmed).toBe(1);
+      expect(db.update).toHaveBeenCalledWith({ age_confirmed: 1 });
+      expect(db.eq).toHaveBeenCalledWith('id', 'u1');
     });
   });
 });

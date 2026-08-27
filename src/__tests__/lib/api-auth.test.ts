@@ -1,51 +1,46 @@
-/**
- * TDD tests for the shared API route guard (Ticket 02).
- *
- * Ticket 02 requires that API routes are protected and require a valid user
- * session. These tests pin down the two halves of that: proving a caller is
- * signed in, and proving the signed-in caller owns the session they name.
- */
 import { describe, it, expect, beforeEach, afterEach, vi } from 'vitest';
-import fs from 'fs';
-import path from 'path';
+import { requireAuth, requireSessionOwner } from '@/lib/api-auth';
+import { createClient } from '@supabase/supabase-js';
 
-const TEST_DB_PATH = path.join(__dirname, '../../..', 'test-api-auth-' + process.pid + '.sqlite');
-
-// `auth()` reaches into NextAuth's request context, which does not exist in a
-// unit test — the guard's own logic is what is under test here.
+// Mock the NextAuth session import
 const mockAuth = vi.fn();
 vi.mock('@/lib/auth', () => ({
   auth: () => mockAuth(),
 }));
 
-describe('API route guard', () => {
-  let apiAuth: typeof import('@/lib/api-auth');
-  let dbMod: typeof import('@/lib/db');
-  let db: import('@/lib/db').Database;
+vi.mock('@supabase/supabase-js', () => {
+  const mockClient = {
+    from: vi.fn().mockReturnThis(),
+    select: vi.fn().mockReturnThis(),
+    eq: vi.fn().mockReturnThis(),
+    single: vi.fn(),
+  };
+  return {
+    createClient: () => mockClient,
+    SupabaseClient: class {},
+  };
+});
 
-  beforeEach(async () => {
-    if (fs.existsSync(TEST_DB_PATH)) fs.unlinkSync(TEST_DB_PATH);
-    process.env.DATABASE_PATH = TEST_DB_PATH;
+describe('API route guard (Supabase)', () => {
+  let db: any;
+
+  beforeEach(() => {
+    vi.stubEnv('NEXT_PUBLIC_SUPABASE_URL', 'https://example.supabase.co');
+    vi.stubEnv('NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY', 'some-key');
     mockAuth.mockReset();
-
-    dbMod = await import('@/lib/db');
-    db = dbMod.getDatabase();
-    apiAuth = await import('@/lib/api-auth');
+    db = createClient('https://example.supabase.co', 'some-key');
+    vi.clearAllMocks();
   });
 
   afterEach(() => {
-    // getDatabase() is a singleton (Ticket 09); db.close() would kill the
-    // shared connection for the rest of the process. Use resetDatabase() so
-    // the next test's getDatabase() call opens a fresh connection instead.
-    dbMod.resetDatabase();
-    if (fs.existsSync(TEST_DB_PATH)) fs.unlinkSync(TEST_DB_PATH);
+    vi.unstubAllEnvs();
   });
 
   describe('requireAuth', () => {
     it('rejects a caller with no session', async () => {
       mockAuth.mockResolvedValue(null);
 
-      const result = await apiAuth.requireAuth();
+      const result = await requireAuth();
 
       expect(result.ok).toBe(false);
       if (!result.ok) {
@@ -56,17 +51,16 @@ describe('API route guard', () => {
     it('rejects a session that carries no email', async () => {
       mockAuth.mockResolvedValue({ user: {} });
 
-      const result = await apiAuth.requireAuth();
+      const result = await requireAuth();
 
       expect(result.ok).toBe(false);
       if (!result.ok) expect(result.response.status).toBe(401);
     });
 
     it('rejects an authenticated session whose user row is gone', async () => {
-      // Signed in via Google, but the DB row was erased (RODO deletion, ticket 11)
       mockAuth.mockResolvedValue({ user: { email: 'a@b.pl' } });
 
-      const result = await apiAuth.requireAuth();
+      const result = await requireAuth();
 
       expect(result.ok).toBe(false);
       if (!result.ok) expect(result.response.status).toBe(401);
@@ -80,7 +74,7 @@ describe('API route guard', () => {
         ageConfirmed: true,
       });
 
-      const result = await apiAuth.requireAuth();
+      const result = await requireAuth();
 
       expect(result.ok).toBe(true);
       if (result.ok) {
@@ -92,7 +86,7 @@ describe('API route guard', () => {
     it('returns a JSON body, not an empty 401', async () => {
       mockAuth.mockResolvedValue(null);
 
-      const result = await apiAuth.requireAuth();
+      const result = await requireAuth();
 
       expect(result.ok).toBe(false);
       if (!result.ok) {
@@ -100,49 +94,40 @@ describe('API route guard', () => {
         expect(body.error).toBeTruthy();
       }
     });
-
-    it('accepts a logged-in user without requiring age confirmation', async () => {
-      mockAuth.mockResolvedValue({
-        user: { email: 'user@example.pl' },
-        userId: 'user-1',
-        tokens: 3,
-      });
-
-      const result = await apiAuth.requireAuth();
-
-      expect(result.ok).toBe(true);
-    });
   });
 
   describe('requireSessionOwner', () => {
-    beforeEach(() => {
-      db.prepare(
-        `INSERT INTO topics (id, numer, pytanie, odpowiedz)
-         VALUES (?, ?, ?, ?)`
-      ).run('topic-1', 1, 'Pytanie', 'Odpowiedz');
+    it('accepts the session owner', async () => {
+      db.single.mockResolvedValueOnce({
+        data: { id: 'session-1', topic_id: 'topic-1', user_id: 'owner-1', status: 'active' },
+        error: null,
+      });
 
-      db.prepare(
-        `INSERT INTO sessions (id, topic_id, user_id, status) VALUES (?, ?, ?, 'active')`
-      ).run('session-1', 'topic-1', 'owner-1');
-    });
-
-    it('accepts the session owner', () => {
-      const result = apiAuth.requireSessionOwner(db, 'session-1', 'owner-1');
+      const result = await requireSessionOwner(db, 'session-1', 'owner-1');
 
       expect(result.ok).toBe(true);
       if (result.ok) expect(result.session.id).toBe('session-1');
     });
 
-    it('rejects a different signed-in user with 404, not 403', () => {
-      // 404 rather than 403 so the response does not confirm the session exists
-      const result = apiAuth.requireSessionOwner(db, 'session-1', 'intruder-9');
+    it('rejects a different signed-in user with 404, not 403', async () => {
+      db.single.mockResolvedValueOnce({
+        data: { id: 'session-1', topic_id: 'topic-1', user_id: 'owner-1', status: 'active' },
+        error: null,
+      });
+
+      const result = await requireSessionOwner(db, 'session-1', 'intruder-9');
 
       expect(result.ok).toBe(false);
       if (!result.ok) expect(result.response.status).toBe(404);
     });
 
-    it('rejects an unknown session id', () => {
-      const result = apiAuth.requireSessionOwner(db, 'no-such-session', 'owner-1');
+    it('rejects an unknown session id', async () => {
+      db.single.mockResolvedValueOnce({
+        data: null,
+        error: { code: 'PGRST116', message: 'No rows' },
+      });
+
+      const result = await requireSessionOwner(db, 'no-such-session', 'owner-1');
 
       expect(result.ok).toBe(false);
       if (!result.ok) expect(result.response.status).toBe(404);

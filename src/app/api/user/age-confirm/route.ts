@@ -38,7 +38,7 @@ export async function POST(request: Request) {
     }
 
     const db = getDatabase();
-    confirmAge(db, authResult.userId);
+    await confirmAge(db, authResult.userId);
 
     return NextResponse.json({ ageConfirmed: true });
   } catch (error) {

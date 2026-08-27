@@ -13,7 +13,7 @@ export async function GET(
 
     const { sessionId } = await params;
     const db = getDatabase();
-    const owner = requireSessionOwner(db, sessionId, authResult.userId);
+    const owner = await requireSessionOwner(db, sessionId, authResult.userId);
     if (!owner.ok) return owner.response;
 
     if (owner.session.status !== 'completed') {
@@ -23,7 +23,7 @@ export async function GET(
       });
     }
 
-    const scores = getScores(db, sessionId);
+    const scores = await getScores(db, sessionId);
     return NextResponse.json({ scores, status: 'completed' });
   } catch (error) {
     return NextResponse.json(

@@ -15,17 +15,31 @@ export interface TopicSeedInput {
  * Upserts a topic by its number (`numer`).
  * Reuses the existing row's id when one is found instead of a new uuidv4() per run.
  */
-export function upsertTopic(db: Database, topic: TopicSeedInput): string {
-  const existing = db
-    .prepare('SELECT id FROM topics WHERE numer = ?')
-    .get(topic.numer) as { id: string } | undefined;
+export async function upsertTopic(db: Database, topic: TopicSeedInput): Promise<string> {
+  const { data: existing, error: findError } = await db
+    .from('topics')
+    .select('id')
+    .eq('numer', topic.numer)
+    .single();
+
+  if (findError && findError.code !== 'PGRST116') {
+    throw new Error(`Failed to check existing topic: ${findError.message}`);
+  }
 
   const id = existing?.id ?? uuidv4();
 
-  db.prepare(
-    `INSERT OR REPLACE INTO topics (id, numer, pytanie, odpowiedz)
-     VALUES (?, ?, ?, ?)`
-  ).run(id, topic.numer, topic.pytanie, topic.odpowiedz);
+  const { error: upsertError } = await db
+    .from('topics')
+    .upsert({
+      id,
+      numer: topic.numer,
+      pytanie: topic.pytanie,
+      odpowiedz: topic.odpowiedz,
+    });
+
+  if (upsertError) {
+    throw new Error(`Failed to upsert topic: ${upsertError.message}`);
+  }
 
   return id;
 }

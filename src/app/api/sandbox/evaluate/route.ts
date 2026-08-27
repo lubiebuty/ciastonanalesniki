@@ -18,16 +18,13 @@ export async function POST(request: NextRequest) {
     const db = getDatabase();
     
     // Get topic details
-    const topic = db
-      .prepare('SELECT * FROM topics WHERE id = ?')
-      .get(topicId) as {
-      id: string;
-      numer: number;
-      pytanie: string;
-      odpowiedz: string;
-    } | undefined;
+    const { data: topic, error: topicError } = await db
+      .from('topics')
+      .select('*')
+      .eq('id', topicId)
+      .single();
 
-    if (!topic) {
+    if (topicError || !topic) {
       return NextResponse.json({ error: 'Topic not found' }, { status: 404 });
     }
 

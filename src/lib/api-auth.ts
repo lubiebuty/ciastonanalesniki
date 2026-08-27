@@ -59,16 +59,18 @@ export async function requireAuthNoAgeGate(): Promise<AuthResult> {
  * A session belonging to someone else answers 404 rather than 403 — a 403 would
  * confirm the id exists, which is itself a leak.
  */
-export function requireSessionOwner(
+export async function requireSessionOwner(
   db: Database,
   sessionId: string,
   userId: string
-): OwnerResult {
-  const session = db
-    .prepare('SELECT * FROM sessions WHERE id = ?')
-    .get(sessionId) as Session | undefined;
+): Promise<OwnerResult> {
+  const { data: session, error } = await db
+    .from('sessions')
+    .select('*')
+    .eq('id', sessionId)
+    .single();
 
-  if (!session || session.user_id !== userId) {
+  if (error || !session || session.user_id !== userId) {
     return {
       ok: false,
       response: NextResponse.json(
@@ -78,5 +80,5 @@ export function requireSessionOwner(
     };
   }
 
-  return { ok: true, session };
+  return { ok: true, session: session as Session };
 }

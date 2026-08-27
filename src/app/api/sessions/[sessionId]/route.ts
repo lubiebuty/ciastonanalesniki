@@ -16,17 +16,38 @@ export async function GET(
     const { sessionId } = await params;
     const db = getDatabase();
 
-    const ownerResult = requireSessionOwner(db, sessionId, authResult.userId);
+    const ownerResult = await requireSessionOwner(db, sessionId, authResult.userId);
     if (!ownerResult.ok) return ownerResult.response;
 
-    const sessionWithTopic = db
-      .prepare(
-        `SELECT s.id, s.status, s.topic_id, t.numer, t.pytanie, t.odpowiedz 
-         FROM sessions s 
-         JOIN topics t ON s.topic_id = t.id 
-         WHERE s.id = ?`
-      )
-      .get(sessionId);
+    const { data: sessionData, error } = await db
+      .from('sessions')
+      .select(`
+        id,
+        status,
+        topic_id,
+        topics (
+          numer,
+          pytanie,
+          odpowiedz
+        )
+      `)
+      .eq('id', sessionId)
+      .single();
+
+    if (error || !sessionData) {
+      throw new Error(error?.message || 'Session not found');
+    }
+
+    const topic = Array.isArray(sessionData.topics) ? sessionData.topics[0] : sessionData.topics;
+
+    const sessionWithTopic = {
+      id: sessionData.id,
+      status: sessionData.status,
+      topic_id: sessionData.topic_id,
+      numer: topic?.numer,
+      pytanie: topic?.pytanie,
+      odpowiedz: topic?.odpowiedz,
+    };
 
     return NextResponse.json({ session: sessionWithTopic });
   } catch (error) {

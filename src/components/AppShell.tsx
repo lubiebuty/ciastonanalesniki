@@ -30,8 +30,8 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   if (status === 'loading') {
     return (
-      <main className="min-h-screen bg-background flex items-center justify-center">
-        <div className="w-10 h-10 border-4 border-primary/30 border-t-primary rounded-full animate-spin" />
+      <main className="min-h-screen bg-background flex items-center justify-center" suppressHydrationWarning>
+        <div className="w-10 h-10 border-4 border-primary/30 border-t-primary rounded-full animate-spin" suppressHydrationWarning />
       </main>
     );
   }

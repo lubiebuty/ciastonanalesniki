@@ -1,11 +1,3 @@
-/**
- * TDD tests for GET /api/health (Ticket 08).
- *
- * `checkHealth()` gained a DB check, but the route handler itself never
- * passed a database into it — `checkDatabase()` defaults to `{ ok: true }`
- * when no `db` argument is given, so the endpoint never actually detected an
- * unreachable database in production. These tests exercise the real route.
- */
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 
 vi.mock('@/lib/config', () => ({
@@ -29,7 +21,11 @@ describe('GET /api/health — DB connectivity (Ticket 08)', () => {
   it('reports db.ok === true and status healthy when the database responds', async () => {
     vi.doMock('@/lib/db', () => ({
       getDatabase: () => ({
-        prepare: () => ({ get: () => ({ '1': 1 }) }),
+        from: () => ({
+          select: () => ({
+            limit: () => Promise.resolve({ error: null }),
+          }),
+        }),
       }),
     }));
 
@@ -46,9 +42,11 @@ describe('GET /api/health — DB connectivity (Ticket 08)', () => {
   it('reports db.ok === false and an overall unhealthy status when the database is unreachable', async () => {
     vi.doMock('@/lib/db', () => ({
       getDatabase: () => ({
-        prepare: () => {
-          throw new Error('disk I/O error');
-        },
+        from: () => ({
+          select: () => ({
+            limit: () => Promise.resolve({ error: new Error('disk I/O error') }),
+          }),
+        }),
       }),
     }));
 
@@ -58,8 +56,6 @@ describe('GET /api/health — DB connectivity (Ticket 08)', () => {
 
     expect(body.db.ok).toBe(false);
     expect(body.status).toBe('unhealthy');
-    // The STT/LLM models are healthy in this test — the cause must be
-    // distinguishable as the database, not conflated with a model failure.
     expect(body.stt.ok).toBe(true);
     expect(body.llm.ok).toBe(true);
     expect(response.status).toBe(503);

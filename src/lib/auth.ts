@@ -21,12 +21,11 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
 
       try {
         const db = getDatabase();
-        findOrCreateUser(db, {
+        await findOrCreateUser(db, {
           email: user.email,
           name: user.name,
           image: user.image,
         });
-        // Ticket 10-12: db.close() removed — getDatabase() is a singleton.
         return true;
       } catch (error) {
         console.error('Error during sign-in:', error);
@@ -37,19 +36,21 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
       if (session.user?.email) {
         try {
           const db = getDatabase();
-          const dbUser = db
-            .prepare('SELECT id, tokens, age_confirmed FROM users WHERE email = ?')
-            .get(session.user.email) as
-            | { id: string; tokens: number; age_confirmed: number }
-            | undefined;
-          // Ticket 10-12: db.close() removed — getDatabase() is a singleton.
+          const { data: dbUser, error } = await db
+            .from('users')
+            .select('id, tokens, age_confirmed')
+            .eq('email', session.user.email)
+            .single();
+
+          if (error && error.code !== 'PGRST116') {
+            console.error('Failed to query user for session enrichment:', error.message);
+          }
 
           if (dbUser) {
             session.userId = dbUser.id;
             session.tokens = dbUser.tokens;
             session.ageConfirmed = dbUser.age_confirmed === 1;
           }
-          // Ticket 10-12: db.close() removed — getDatabase() is a singleton.
         } catch (error) {
           console.error('Error enriching session:', error);
         }

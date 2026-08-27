@@ -28,7 +28,7 @@ export async function POST(request: NextRequest) {
 
     const db = getDatabase();
 
-    const owner = requireSessionOwner(db, sessionId, authResult.userId);
+    const owner = await requireSessionOwner(db, sessionId, authResult.userId);
     if (!owner.ok) {
       return owner.response;
     }
@@ -36,19 +36,22 @@ export async function POST(request: NextRequest) {
     const sessionTopicId = session.topic_id;
 
     // Get topic details
-    const topic = db.prepare('SELECT * FROM topics WHERE id = ?').get(session.topic_id) as {
-      id: string;
-      numer: number;
-      pytanie: string;
-      odpowiedz: string;
-    };
+    const { data: topic, error: topicError } = await db
+      .from('topics')
+      .select('*')
+      .eq('id', session.topic_id)
+      .single();
+
+    if (topicError || !topic) {
+      throw new Error(`Failed to fetch topic: ${topicError?.message || 'Topic not found'}`);
+    }
 
     // Get all monologue transcript chunks (raw, unedited)
-    const chunks = getTranscriptChunks(db, sessionId);
+    const chunks = await getTranscriptChunks(db, sessionId);
     const userAnswer = chunks.map((c) => c.text).join(' ');
 
     // Update status to evaluating
-    updateSessionStatus(db, sessionId, 'evaluating');
+    await updateSessionStatus(db, sessionId, 'evaluating');
 
     // Call LLM for math score comparison
     const startedAt = Date.now();
@@ -60,7 +63,7 @@ export async function POST(request: NextRequest) {
         userAnswer,
       });
     } catch (llmError) {
-      updateSessionStatus(db, sessionId, 'evaluation_failed');
+      await updateSessionStatus(db, sessionId, 'evaluation_failed');
       throw llmError;
     }
 
@@ -83,7 +86,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Save scores
-    saveScores(db, {
+    await saveScores(db, {
       session_id: sessionId,
       is_correct: result.is_correct,
       score: result.score,
@@ -91,7 +94,7 @@ export async function POST(request: NextRequest) {
     });
 
     // Mark session as completed
-    updateSessionStatus(db, sessionId, 'completed');
+    await updateSessionStatus(db, sessionId, 'completed');
 
     await flushLangfuse();
 
