@@ -1,0 +1,96 @@
+{
+  "_README": [
+    "GOLDEN SET — ticket 09.",
+    "",
+    "Ten plik zawiera transkrypcje ocenione ręcznie przez polonistę wg oficjalnej",
+    "rubryki CKE. Harness (npm run validate) porównuje z nimi ocenę LLM.",
+    "",
+    "DOPÓKI `synthetic` = true, wyniki NIE są pokazywane uczniom — pipeline jest",
+    "zablokowany przez src/lib/validation-gate.ts. Aby go odblokować:",
+    "  1. zastąp poniższe fixture'y 15–20 prawdziwymi transkrypcjami z ocenami nauczyciela,",
+    "  2. ustaw `synthetic` na false,",
+    "  3. uruchom `npm run validate` — musi zakończyć się kodem 0.",
+    "",
+    "Fixture'y poniżej są WYMYŚLONE. Służą wyłącznie do sprawdzenia, że harness",
+    "działa end-to-end; nie dowodzą zgodności oceny AI z oceną człowieka."
+  ],
+  "synthetic": true,
+  "fixtures": [
+    {
+      "id": "fixture-1-mocna-wypowiedz",
+      "topicQuestion": "Prawa boskie a prawa ludzkie. Omów zagadnienie na podstawie Antygony Sofoklesa.",
+      "lektura": "Antygona - Sofokles",
+      "lektura_typ": "CALOSC",
+      "kluczowe_elementy": [
+        "konflikt Antygony z Kreonem",
+        "prawo boskie vs prawo ludzkie",
+        "tragiczny wybór"
+      ],
+      "konteksty": ["Pieśń o Rolandzie", "Zbrodnia i kara"],
+      "monologueTranscript": "Zagadnienie praw boskich i praw ludzkich jest centralnym motywem Antygony Sofoklesa. Tytułowa bohaterka staje przed dylematem czy pochować brata Polinika wbrew zakazowi Kreona. Kreon jako władca ustanowił prawo ludzkie zabraniające pochówku zdrajcy ale Antygona kieruje się prawem boskim które nakazuje oddać cześć zmarłym. Ten konflikt prowadzi do tragedii bo każdy wybór kończy się źle dla bohaterki. Antygona wybiera wierność prawu boskiemu i ponosi karę śmierci. W kontekście mogę przywołać Pieśń o Rolandzie gdzie prawa boskie i ludzkie się pokrywają Roland walczy za ojczyznę i za wiarę jednocześnie.",
+      "qaTranscript": "PYTANIE: Jakie konsekwencje poniósł Kreon za swoją decyzję?\nODPOWIEDŹ: Kreon poniósł straszne konsekwencje swojej decyzji. Jego syn Hajmon który był narzeczonym Antygony popełnił samobójstwo. Potem żona Kreona Eurydyka też się zabiła. Kreon został sam i zrozumiał że jego prawo ludzkie doprowadziło do tragedii. To pokazuje że nadmierna pycha władcy prowadzi do katastrofy.",
+      "humanScores": {
+        "merytoryka_zad1": 6,
+        "kompozycja": 3,
+        "merytoryka_rozmowy": 5,
+        "jezyk": 3,
+        "cardinal_zad1": false,
+        "cardinal_rozmowa": false
+      }
+    },
+    {
+      "id": "fixture-2-slaba-wypowiedz",
+      "topicQuestion": "Prawa boskie a prawa ludzkie. Omów zagadnienie na podstawie Antygony Sofoklesa.",
+      "lektura": "Antygona - Sofokles",
+      "lektura_typ": "CALOSC",
+      "kluczowe_elementy": ["konflikt Antygony z Kreonem", "prawo boskie vs prawo ludzkie"],
+      "konteksty": [],
+      "monologueTranscript": "No więc Antygona to jest taka sztuka gdzie jest dziewczyna i ona chce pochować brata ale nie może bo król zabronił. I potem ona i tak to robi i ją zamykają. I potem ona się zabija. To jest smutne.",
+      "qaTranscript": "PYTANIE: Dlaczego Antygona zdecydowała się złamać prawo Kreona?\nODPOWIEDŹ: Bo chciała pochować brata. Bo tak trzeba.",
+      "humanScores": {
+        "merytoryka_zad1": 2,
+        "kompozycja": 1,
+        "merytoryka_rozmowy": 1,
+        "jezyk": 2,
+        "cardinal_zad1": false,
+        "cardinal_rozmowa": false
+      }
+    },
+    {
+      "id": "fixture-3-blad-kardynalny-calosc",
+      "topicQuestion": "Prawa boskie a prawa ludzkie. Omów zagadnienie na podstawie Antygony Sofoklesa.",
+      "lektura": "Antygona - Sofokles",
+      "lektura_typ": "CALOSC",
+      "kluczowe_elementy": ["konflikt Antygony z Kreonem"],
+      "konteksty": [],
+      "monologueTranscript": "Makbet to jest dramat Szekspira o szkockim rycerzu który zabija króla żeby sam zostać królem. Lady Makbet namawia go do zbrodni. Potem oboje szaleją z poczucia winy. Wiedźmy przepowiedziały mu przyszłość.",
+      "qaTranscript": "PYTANIE: Jak zagadnienie praw boskich i ludzkich odnosi się do Antygony?\nODPOWIEDŹ: No Antygona to chyba jakaś Greczynka. Nie czytałem tej lektury.",
+      "humanScores": {
+        "merytoryka_zad1": 0,
+        "kompozycja": 0,
+        "merytoryka_rozmowy": 0,
+        "jezyk": 0,
+        "cardinal_zad1": true,
+        "cardinal_rozmowa": true
+      }
+    },
+    {
+      "id": "fixture-4-fragment-bez-kardynalnego",
+      "topicQuestion": "Motyw cierpienia. Omów zagadnienie na podstawie wybranego fragmentu Biblii.",
+      "lektura": "Biblia",
+      "lektura_typ": "FRAGMENT",
+      "kluczowe_elementy": ["Księga Hioba", "cierpienie niezawinione", "postawa wobec Boga"],
+      "konteksty": ["Lament świętokrzyski"],
+      "monologueTranscript": "Chciałem opowiedzieć o cierpieniu w Antygonie bo tam wszyscy cierpią. Antygona cierpi bo umiera jej brat a Kreon cierpi bo traci rodzinę. To jest podobne do Biblii chyba.",
+      "qaTranscript": "PYTANIE: Jak Hiob reaguje na utratę majątku i dzieci?\nODPOWIEDŹ: Nie pamiętam dokładnie tego fragmentu.",
+      "humanScores": {
+        "merytoryka_zad1": 1,
+        "kompozycja": 1,
+        "merytoryka_rozmowy": 0,
+        "jezyk": 2,
+        "cardinal_zad1": false,
+        "cardinal_rozmowa": true
+      }
+    }
+  ]
+}
