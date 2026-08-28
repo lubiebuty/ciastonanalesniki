@@ -20,7 +20,7 @@ export interface TokenResult {
 }
 
 /**
- * Finds an existing user by email, or creates a new one with 30 free tokens.
+ * Finds an existing user by email, or creates a new one with 10 free tokens.
  * Idempotent — calling multiple times with the same email won't create duplicates.
  */
 export async function findOrCreateUser(
@@ -47,7 +47,7 @@ export async function findOrCreateUser(
     email: profile.email,
     name: profile.name || null,
     image: profile.image || null,
-    tokens: 30,
+    tokens: 10,
     age_confirmed: 0,
   };
 

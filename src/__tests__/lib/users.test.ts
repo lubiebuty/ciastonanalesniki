@@ -29,7 +29,7 @@ describe('User Management (Supabase)', () => {
 
   describe('findOrCreateUser', () => {
     it('returns existing user if found by email', async () => {
-      const mockUser = { id: 'u1', email: 'existing@example.com', name: 'User 1', tokens: 30 };
+      const mockUser = { id: 'u1', email: 'existing@example.com', name: 'User 1', tokens: 10 };
       db.single.mockResolvedValueOnce({ data: mockUser, error: null });
 
       const user = await findOrCreateUser(db, { email: 'existing@example.com' });
@@ -40,13 +40,13 @@ describe('User Management (Supabase)', () => {
       expect(db.eq).toHaveBeenCalledWith('email', 'existing@example.com');
     });
 
-    it('creates a new user with 30 tokens if not found', async () => {
+    it('creates a new user with 10 tokens if not found', async () => {
       // First call (findUser): no user found
       db.single.mockResolvedValueOnce({ data: null, error: { code: 'PGRST116', message: 'No rows' } });
       // Second call (insert): success
       db.insert.mockResolvedValueOnce({ data: null, error: null });
       // Third call (fetch newly created user): success
-      const mockCreated = { id: 'new-id', email: 'new@example.com', name: 'New User', tokens: 30 };
+      const mockCreated = { id: 'new-id', email: 'new@example.com', name: 'New User', tokens: 10 };
       db.single.mockResolvedValueOnce({ data: mockCreated, error: null });
 
       const user = await findOrCreateUser(db, {
@@ -85,7 +85,7 @@ describe('User Management (Supabase)', () => {
 
   describe('getUserById', () => {
     it('returns the user if found', async () => {
-      const mockUser = { id: 'u1', email: 'user@example.com', tokens: 30 };
+      const mockUser = { id: 'u1', email: 'user@example.com', tokens: 10 };
       db.single.mockResolvedValueOnce({ data: mockUser, error: null });
 
       const user = await getUserById(db, 'u1');

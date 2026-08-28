@@ -64,7 +64,7 @@ function LoginContent() {
 
           <div className="rounded-xl bg-slate-50 border border-slate-200/80 p-3 text-center space-y-0.5">
             <p className="text-xs text-slate-800 font-semibold">
-              30 darmowych tokenów na start
+              10 darmowych tokenów na start
             </p>
             <p className="text-[11px] text-slate-500">
               1 token = 1 sesja rozwiązywania zadania z oceną AI
