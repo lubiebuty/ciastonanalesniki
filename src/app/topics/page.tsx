@@ -1,7 +1,7 @@
 'use client';
 
-import { useEffect, useState } from 'react';
-import { useRouter } from 'next/navigation';
+import { useEffect, useState, Suspense } from 'react';
+import { useRouter, useSearchParams } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 
@@ -10,32 +10,70 @@ interface Topic {
   numer: number;
   pytanie: string;
   odpowiedz: string;
+  przedmiot?: string;
 }
 
-/**
- * Topic selection page — user picks or draws a math challenge.
- */
-export default function TopicsPage() {
+function TopicsList() {
+  const searchParams = useSearchParams();
+  const router = useRouter();
+  const paramPrzedmiot = searchParams.get('przedmiot');
+
+  const [activeSubject, setActiveSubject] = useState<string>(() => {
+    if (paramPrzedmiot && (paramPrzedmiot === 'polski' || paramPrzedmiot === 'matematyka')) {
+      return paramPrzedmiot;
+    }
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('selected_przedmiot');
+      if (saved && (saved === 'polski' || saved === 'matematyka')) {
+        return saved;
+      }
+    }
+    return 'matematyka';
+  });
+
   const [topics, setTopics] = useState<Topic[]>([]);
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
   const [selectedTopicToConfirm, setSelectedTopicToConfirm] = useState<string | null>(null);
   const [currentPage, setCurrentPage] = useState(1);
-  const router = useRouter();
   const { update } = useSession();
 
+  // Sync activeSubject whenever URL search params change
   useEffect(() => {
-    fetch('/api/topics')
+    const p = searchParams.get('przedmiot');
+    if (p && (p === 'polski' || p === 'matematyka') && p !== activeSubject) {
+      setActiveSubject(p);
+    }
+  }, [searchParams, activeSubject]);
+
+  const handleSubjectChange = (subject: string) => {
+    setActiveSubject(subject);
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('selected_przedmiot', subject);
+    }
+    router.replace(`/topics?przedmiot=${subject}`, { scroll: false });
+  };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      localStorage.setItem('selected_przedmiot', activeSubject);
+    }
+    setLoading(true);
+    setCurrentPage(1);
+    fetch(`/api/topics?przedmiot=${activeSubject}`)
       .then((r) => r.json())
       .then((d) => setTopics(d.topics || []))
       .finally(() => setLoading(false));
-  }, []);
+  }, [activeSubject]);
 
   const selectTopic = async (topicId: string) => {
     if (creating) return;
     setCreating(true);
 
     try {
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('selected_przedmiot', activeSubject);
+      }
       const res = await fetch('/api/sessions', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -65,14 +103,6 @@ export default function TopicsPage() {
     setSelectedTopicToConfirm(random.id);
   };
 
-  if (loading) {
-    return (
-      <main className="min-h-screen bg-background p-8 flex items-center justify-center">
-        <p className="text-muted-foreground animate-pulse">Ładowanie zagadnień...</p>
-      </main>
-    );
-  }
-
   const itemsPerPage = 10;
   const totalPages = Math.ceil(topics.length / itemsPerPage);
   const indexOfLastItem = currentPage * itemsPerPage;
@@ -100,39 +130,84 @@ export default function TopicsPage() {
           </Link>
         </div>
 
+        {/* Subject Filter Tabs */}
+        <div className="flex items-center gap-2 p-1 rounded-xl bg-slate-100 border border-slate-200">
+          <button
+            type="button"
+            onClick={() => handleSubjectChange('matematyka')}
+            className={`flex-1 py-2.5 px-4 rounded-lg font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+              activeSubject === 'matematyka'
+                ? 'bg-white text-indigo-950 shadow-xs'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            📐 Matematyka
+          </button>
+          <button
+            type="button"
+            onClick={() => handleSubjectChange('polski')}
+            className={`flex-1 py-2.5 px-4 rounded-lg font-bold text-xs sm:text-sm transition-all cursor-pointer ${
+              activeSubject === 'polski'
+                ? 'bg-white text-amber-950 shadow-xs'
+                : 'text-slate-600 hover:text-slate-900'
+            }`}
+          >
+            📖 Język Polski
+          </button>
+        </div>
+
         {/* Random Draw Button */}
         <button
           onClick={drawRandom}
-          disabled={creating}
-          className="w-full rounded-xl bg-slate-900 hover:bg-slate-800 text-white p-4 font-semibold text-sm shadow-xs transition-colors active:scale-[0.99] disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
+          disabled={creating || topics.length === 0}
+          className={`w-full rounded-xl p-4 font-semibold text-sm shadow-xs transition-colors active:scale-[0.99] disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer text-white ${
+            activeSubject === 'matematyka' ? 'bg-indigo-950 hover:bg-indigo-900' : 'bg-amber-950 hover:bg-amber-900'
+          }`}
         >
-          <span>Wylosuj mi zadanie matematyczne</span>
+          <span>
+            Wylosuj zadanie ({activeSubject === 'matematyka' ? 'Matematyka' : 'Język Polski'})
+          </span>
           <span aria-hidden="true">→</span>
         </button>
 
         {/* Topics List */}
-        <div className="space-y-2.5">
-          {currentTopics.map((topic) => (
-            <button
-              key={topic.id}
-              onClick={() => setSelectedTopicToConfirm(topic.id)}
-              disabled={creating}
-              className="w-full text-left group rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50 p-4 space-y-1.5 shadow-xs transition-colors disabled:opacity-50 cursor-pointer"
-            >
-              <div className="flex items-center justify-between gap-2">
-                <span className="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-bold font-mono bg-slate-100 text-slate-800 border border-slate-200/80">
-                  Zadanie #{topic.numer}
-                </span>
-                <span className="text-xs font-medium text-slate-400 group-hover:text-slate-900 transition-colors">
-                  Rozwiąż →
-                </span>
-              </div>
-              <p className="font-semibold text-sm text-slate-900 leading-snug">
-                {topic.pytanie}
-              </p>
-            </button>
-          ))}
-        </div>
+        {loading ? (
+          <div className="flex items-center justify-center py-12">
+            <div className="w-8 h-8 border-3 border-slate-200 border-t-slate-800 rounded-full animate-spin" />
+          </div>
+        ) : topics.length === 0 ? (
+          <div className="text-center py-12 bg-white rounded-2xl border border-slate-200 p-6 space-y-2">
+            <p className="text-base font-bold text-slate-800">Brak zadań w wybranym przedmiocie</p>
+            <p className="text-xs text-slate-500">Wkrótce pojawią się tu nowe pytania.</p>
+          </div>
+        ) : (
+          <div className="space-y-3">
+            {currentTopics.map((topic) => (
+              <button
+                key={topic.id}
+                onClick={() => setSelectedTopicToConfirm(topic.id)}
+                disabled={creating}
+                className="w-full text-left group rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50 p-4 sm:p-5 space-y-2 shadow-xs transition-colors disabled:opacity-50 cursor-pointer"
+              >
+                <div className="flex items-center justify-between gap-2">
+                  <span className={`inline-flex items-center rounded-md px-2.5 py-1 text-xs sm:text-sm font-bold font-mono border ${
+                    activeSubject === 'polski'
+                      ? 'bg-amber-50 text-amber-800 border-amber-200'
+                      : 'bg-indigo-50 text-indigo-700 border-indigo-100'
+                  }`}>
+                    Zadanie #{topic.numer}
+                  </span>
+                  <span className="text-sm font-bold text-slate-500 group-hover:text-slate-900 transition-colors">
+                    Rozwiąż →
+                  </span>
+                </div>
+                <p className="font-bold text-base sm:text-lg text-slate-900 leading-snug">
+                  {topic.pytanie}
+                </p>
+              </button>
+            ))}
+          </div>
+        )}
 
         {/* Pagination Controls */}
         {totalPages > 1 && (
@@ -230,5 +305,17 @@ export default function TopicsPage() {
         );
       })()}
     </main>
+  );
+}
+
+export default function TopicsPage() {
+  return (
+    <Suspense fallback={
+      <main className="min-h-screen bg-background p-8 flex items-center justify-center">
+        <p className="text-muted-foreground animate-pulse">Ładowanie zagadnień...</p>
+      </main>
+    }>
+      <TopicsList />
+    </Suspense>
   );
 }

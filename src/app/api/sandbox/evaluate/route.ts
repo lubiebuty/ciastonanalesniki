@@ -34,6 +34,7 @@ export async function POST(request: NextRequest) {
       pytanie: topic.pytanie,
       expectedAnswer: topic.odpowiedz,
       userAnswer: userAnswer || '',
+      przedmiot: topic.przedmiot,
     });
 
     // Trace the sandbox evaluation

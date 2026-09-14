@@ -61,6 +61,7 @@ export async function POST(request: NextRequest) {
         pytanie: topic.pytanie,
         expectedAnswer: topic.odpowiedz,
         userAnswer,
+        przedmiot: topic.przedmiot,
       });
     } catch (llmError) {
       await updateSessionStatus(db, sessionId, 'evaluation_failed');

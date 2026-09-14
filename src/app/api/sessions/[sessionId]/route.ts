@@ -28,7 +28,8 @@ export async function GET(
         topics (
           numer,
           pytanie,
-          odpowiedz
+          odpowiedz,
+          przedmiot
         )
       `)
       .eq('id', sessionId)
@@ -38,7 +39,29 @@ export async function GET(
       throw new Error(error?.message || 'Session not found');
     }
 
-    const topic = Array.isArray(sessionData.topics) ? sessionData.topics[0] : sessionData.topics;
+    let topic = Array.isArray(sessionData.topics) ? sessionData.topics[0] : sessionData.topics;
+
+    // Fallback: If join didn't populate topic or przedmiot, query topics table directly
+    if ((!topic || !topic.przedmiot) && sessionData.topic_id) {
+      const { data: directTopic } = await db
+        .from('topics')
+        .select('numer, pytanie, odpowiedz, przedmiot')
+        .eq('id', sessionData.topic_id)
+        .single();
+      if (directTopic) {
+        topic = directTopic;
+      }
+    }
+
+    // Determine subject: explicit column or by question number (Polish tasks start at 51)
+    let przedmiot = topic?.przedmiot;
+    if (!przedmiot) {
+      if (topic?.numer && topic.numer >= 51) {
+        przedmiot = 'polski';
+      } else {
+        przedmiot = 'matematyka';
+      }
+    }
 
     const sessionWithTopic = {
       id: sessionData.id,
@@ -47,6 +70,7 @@ export async function GET(
       numer: topic?.numer,
       pytanie: topic?.pytanie,
       odpowiedz: topic?.odpowiedz,
+      przedmiot,
     };
 
     return NextResponse.json({ session: sessionWithTopic });

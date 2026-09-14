@@ -16,6 +16,7 @@ interface Topic {
   numer: number;
   pytanie: string;
   odpowiedz: string;
+  przedmiot: string;
 }
 
 export default function ExamPage() {
@@ -40,11 +41,16 @@ export default function ExamPage() {
       })
       .then((data) => {
         if (data.session) {
+          const subject = data.session.przedmiot || (data.session.numer >= 51 ? 'polski' : 'matematyka');
           setTopic({
             numer: data.session.numer,
             pytanie: data.session.pytanie,
             odpowiedz: data.session.odpowiedz,
+            przedmiot: subject,
           });
+          if (typeof window !== 'undefined' && subject) {
+            localStorage.setItem('selected_przedmiot', subject);
+          }
         }
       })
       .catch((err) => {
@@ -201,7 +207,10 @@ export default function ExamPage() {
 
             <div className="flex gap-3 pt-2">
               <button
-                onClick={() => router.push('/topics')}
+                onClick={() => {
+                  const subject = topic?.przedmiot || (typeof window !== 'undefined' ? localStorage.getItem('selected_przedmiot') : null) || 'matematyka';
+                  router.push(`/topics?przedmiot=${subject}`);
+                }}
                 className="flex-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-white p-3.5 font-semibold text-xs shadow-xs transition-colors active:scale-[0.99] cursor-pointer"
               >
                 Kolejne zadanie ✨

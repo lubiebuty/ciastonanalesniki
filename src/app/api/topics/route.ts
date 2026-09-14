@@ -4,13 +4,19 @@
 import { NextResponse } from 'next/server';
 import { getDatabase } from '@/lib/db';
 
-export async function GET() {
+export async function GET(request: Request) {
   try {
+    const { searchParams } = new URL(request.url);
+    const przedmiot = searchParams.get('przedmiot');
+
     const db = getDatabase();
-    const { data: topics, error } = await db
-      .from('topics')
-      .select('*')
-      .order('numer', { ascending: true });
+    let query = db.from('topics').select('*').order('numer', { ascending: true });
+
+    if (przedmiot) {
+      query = query.eq('przedmiot', przedmiot);
+    }
+
+    const { data: topics, error } = await query;
 
     if (error) {
       throw new Error(error.message);

@@ -118,7 +118,7 @@ export default function SandboxPage() {
             {/* Select Topic */}
             <div className="space-y-1.5">
               <label htmlFor="topic-select" className="text-xs font-semibold text-slate-700 block">
-                Wybierz zadanie matematyczne:
+                Wybierz zadanie:
               </label>
               {topics.length === 0 ? (
                 <p className="text-xs text-slate-400">Ładowanie tematów...</p>

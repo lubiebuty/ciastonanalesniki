@@ -15,8 +15,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Ewaluator Zadań Matematycznych — Matematyka",
-  description: "Sprawdź swoją wiedzę matematyczną i tok rozumowania z natychmiastową oceną i wskazówkami AI.",
+  title: "Ewaluator Zadań",
+  description: "Sprawdź swoją wiedzę i tok rozumowania z natychmiastową oceną i wskazówkami AI.",
 };
 
 export default function RootLayout({

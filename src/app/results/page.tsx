@@ -67,7 +67,7 @@ export default function ResultsPage() {
               Moje wyniki i postępy
             </h1>
             <p className="text-slate-500 text-xs sm:text-sm">
-              Historia rozwiązanych zadań matematycznych i analizy AI
+              Historia rozwiązanych zadań i analizy AI
             </p>
           </div>
           <Link

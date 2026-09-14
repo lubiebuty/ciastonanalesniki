@@ -20,13 +20,13 @@ function LoginContent() {
       <div className="w-full max-w-sm space-y-6 animate-in fade-in duration-150">
         <div className="space-y-2 text-center">
           <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-900 text-white font-mono font-bold text-lg shadow-xs">
-            M
+            EZ
           </div>
           <h1 className="text-xl font-bold tracking-tight text-slate-900">
-            Ewaluator Matematyczny
+            Ewaluator Zadań
           </h1>
           <p className="text-xs text-slate-500 leading-relaxed">
-            Sprawdź swoją wiedzę matematyczną z natychmiastową oceną AI
+            Sprawdź swoją wiedzę z natychmiastową oceną AI
           </p>
         </div>
 

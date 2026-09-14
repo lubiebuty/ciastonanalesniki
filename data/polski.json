@@ -1,0 +1,492 @@
+[
+  {
+    "id": "136175b0-c8b0-4177-8d6a-5746b919c055",
+    "numer": 51,
+    "pytanie": "Co wchodzi w skład elementów świata przedstawionego w utworze literackim?",
+    "odpowiedz": "Do elementów świata przedstawionego należą: czas akcji, miejsce akcji, bohaterowie, wydarzenia (akcja i fabuła) oraz narrator (w epice). Odpowiedź ucznia powinna zawierać przynajmniej czas, miejsce, bohaterów i wydarzenia.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "7fd49826-7f6f-4a97-b9bd-80d7b9cd640c",
+    "numer": 52,
+    "pytanie": "Czym są obrazy poetyckie w poezji? Podaj przykład, np. na podstawie wiersza 'Lokomotywa'.",
+    "odpowiedz": "Obraz poetycki to plastyczny opis w wierszu, który działa na zmysły czytelnika (wzrok, słuch, dotyk). W 'Lokomotywie' przykładem jest wizja potężnej, czarnej maszyny zalanej potem, stojącej na stacji i buchającej żarem.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "d032cd95-b936-4a99-9250-c822a456387b",
+    "numer": 53,
+    "pytanie": "Co to jest fikcja literacka?",
+    "odpowiedz": "Fikcja literacka to właściwość tekstów literackich polegająca na tym, że przedstawiony w nich świat jest zmyślony przez autora. Wydarzenia i postacie nie istnieją w rzeczywistości, nawet jeśli do niej bardzo mocno nawiązują.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "628e50f9-3c40-47a1-818a-3eaf14cd3c60",
+    "numer": 54,
+    "pytanie": "Jakie są różnice między elementami realistycznymi a fantastycznymi w lekturze?",
+    "odpowiedz": "Elementy realistyczne to takie, które są zgodne z prawami natury i mogłyby wydarzyć się w prawdziwym świecie. Elementy fantastyczne są zmyślone, niemożliwe w rzeczywistości, często magiczne lub baśniowe (łamane są prawa fizyki).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "e06f1b5b-6042-4c53-a480-0e127219bfde",
+    "numer": 55,
+    "pytanie": "Wymień najważniejsze cechy baśni.",
+    "odpowiedz": "Baśń to gatunek charakteryzujący się obecnością fantastyki (magiczne przedmioty, wróżki, gadające zwierzęta). Jej czas i miejsce akcji są nieokreślone ('dawno, dawno temu, za siedmioma górami'). Zawsze występuje w niej walka dobra ze złem, w której dobro zwycięża.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "c63dd451-1392-4cfe-ac7e-33e4880ff77d",
+    "numer": 56,
+    "pytanie": "Czym legenda różni się od innych gatunków epickich (np. od baśni)?",
+    "odpowiedz": "Legenda zawiera elementy fantastyczne, ale w odróżnieniu od baśni zawsze opiera się na ziarnie historycznej prawdy. Zawsze odnosi się do autentycznych miejsc (np. jezioro Gopło), postaci historycznych (król Popiel) lub rzeczywistych, dawnych wydarzeń.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "48750eb9-47a1-4d34-87be-09edae5be148",
+    "numer": 57,
+    "pytanie": "Jakie są cechy charakterystyczne bajki?",
+    "odpowiedz": "Bajka to krótki utwór pisany wierszem lub prozą, w którym bohaterami są najczęściej zwierzęta, będące uosobieniem ludzkich wad i zalet (np. chytry lis, naiwny kruk). Zawsze posiada pouczenie, czyli morał, znajdujący się na początku lub na końcu utworu.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "da4c57d4-f5e4-4173-8c65-a9485009880c",
+    "numer": 58,
+    "pytanie": "Co to jest hymn?",
+    "odpowiedz": "Hymn to uroczysta i podniosła pieśń pochwalna, która sławi bohatera, bóstwo, naród lub ojczyznę (np. 'Mazurek Dąbrowskiego'). Charakteryzuje się apostrofami, powagą i wzniosłym nastrojem.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "22e51e58-7bff-49fd-98fd-8b49d7becf1e",
+    "numer": 59,
+    "pytanie": "Co to jest przypowieść (parabola) i z jakich dwóch płaszczyzn znaczeniowych się składa?",
+    "odpowiedz": "Przypowieść to utwór, w którym opowiedziana historia (często z życia codziennego) jest tylko pretekstem do przekazania głębszej prawdy moralnej lub religijnej. Posiada sens dosłowny (np. siewca rzucający ziarno) oraz ukryty, symboliczny (np. głoszenie słowa Bożego).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "66c38af9-cde0-4a2a-8d36-758da3b5b56e",
+    "numer": 60,
+    "pytanie": "Czym był mit i dlaczego powstawał w starożytności?",
+    "odpowiedz": "Mit to opowieść o bogach i herosach, w której obecne są elementy fantastyczne. Ludzie w starożytności tworzyli mity, aby wyjaśnić sobie to, czego nie potrafili pojąć naukowo (np. zjawiska pogodowe, pory roku, powstanie świata, poch. człowieka).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "9d614bd5-fb8a-4615-b7c3-e64ad017a8b5",
+    "numer": 61,
+    "pytanie": "Czym charakteryzuje się opowiadanie?",
+    "odpowiedz": "Opowiadanie to krótki utwór epicki pisany prozą, posiadający zazwyczaj prostą fabułę, ale w przeciwieństwie do noweli ma luźniejszą budowę – mogą w nim występować postacie epizodyczne, rozbudowane dialogi i krótkie opisy.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "07adc40d-81ef-4730-aa7b-ad479c9922ac",
+    "numer": 62,
+    "pytanie": "Jakie są główne cechy noweli (tzw. teoria sokoła)?",
+    "odpowiedz": "Nowela to krótki utwór epicki o niezwykle ścisłej i rygorystycznej kompozycji. Posiada tylko jeden główny wątek (jednowątkowość), brak w niej postaci epizodycznych i obszernych opisów pobocznych. Akcja zmierza bezpośrednio do punktu kulminacyjnego i kończy się niespodziewaną puentą.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "d8393e56-9919-4caa-ace3-fb1405a1b052",
+    "numer": 63,
+    "pytanie": "Czym powieść różni się od opowiadania i noweli?",
+    "odpowiedz": "Powieść to długi, rozbudowany utwór epicki pisany prozą. W odróżnieniu od noweli i opowiadania jest wielowątkowa, występuje w niej bardzo wielu bohaterów (główni, drugoplanowi, epizodyczni) oraz zawiera obszerne opisy przyrody, miejsc czy przeżyć wewnętrznych.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "dd49433f-0491-446f-8d71-b5ebd39fb33f",
+    "numer": 64,
+    "pytanie": "Co to jest epitet? Podaj przykład, nawiązując do wiersza Tuwima 'Lokomotywa'.",
+    "odpowiedz": "Epitet to wyraz określający rzeczownik (najczęściej jest to przymiotnik), uwydatniający jego cechę i pobudzający wyobraźnię. Przykład u Tuwima: 'wielka' (maszyna), 'ciężka' (maszyna), 'tłusta' (wędlina).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "64a1f4a4-50da-467c-a3f1-669cd0ccb4b7",
+    "numer": 65,
+    "pytanie": "Na czym polega porównanie? Wskaż przykład u Tuwima.",
+    "odpowiedz": "Porównanie polega na zestawieniu i połączeniu dwóch zjawisk, osób lub przedmiotów ze spójnikiem (jak, niby, jakby, na kształt). W 'Lokomotywie' widać je w wersie: 'Jak żółw ociężale' (ruch pociągu przyrównany do ruchu żółwia).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "e728fa47-918c-4c54-b061-fe5fd19d7319",
+    "numer": 66,
+    "pytanie": "Co to jest przenośnia (metafora)? Zilustruj to zjawisko, np. odwołując się do wiersza 'Lokomotywa'.",
+    "odpowiedz": "Przenośnia to celowe i nietypowe połączenie słów, które w zestawieniu ze sobą zyskują zupełnie nowe, niedosłowne znaczenie. W 'Lokomotywie' np. zwrot 'para buch, koła w ruch' i opisy 'sapania', kreują poetycką przenośnię maszyny jako potężnego, niemal żywego i oddychającego potwora.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "118b317d-0f26-4de6-8487-f852815ae77f",
+    "numer": 67,
+    "pytanie": "Jaką funkcja pełnią wyrazy dźwiękonaśladowcze (onomatopeje)? Podaj przykłady z Tuwima.",
+    "odpowiedz": "Wyrazy dźwiękonaśladowcze służą urealnieniu utworu, nadaniu mu dynamiki i naśladowaniu naturalnych dźwięków otoczenia (np. zjawisk, maszyn, zwierząt). W 'Lokomotywie' są to m.in. słowa: 'Uch', 'Puf', 'Buch', 'tak to to, tak to to'.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "436095ed-38e3-4741-bf7f-3769229114af",
+    "numer": 68,
+    "pytanie": "Co to jest zdrobnienie i po co się je stosuje w tekstach?",
+    "odpowiedz": "Zdrobnienie to wyraz pomniejszający wielkość czy znaczenie wyrazu podstawowego. Wyraża on najczęściej sympatię, czułość, pieszczotliwy stosunek nadawcy do opisywanego zjawiska lub mały rozmiar przedmiotu (np. piesek zamiast pies, rączka zamiast ręka).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "f87a1169-761b-4a90-a3e4-dbf6b1f75e93",
+    "numer": 69,
+    "pytanie": "Co to jest zgrubienie? Znajdź przykład, jak mógł użyć tego Tuwim w 'Lokomotywie'.",
+    "odpowiedz": "Zgrubienie to wyraz, który wyolbrzymia, wzbudza poczucie grozy, potęgi, ciężaru lub niechęci. U Tuwima świetnym przykładem wyrażającym masę i potęgę pociągu są słowa 'wagoniska' (zamiast wagony) czy 'grubasy'.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "36abe0af-b1bc-4337-bb44-7670d6c4140a",
+    "numer": 70,
+    "pytanie": "Czym jest uosobienie (personifikacja)?",
+    "odpowiedz": "Uosobienie to zabieg nadający rzeczom nieożywionym, zwierzętom lub zjawiskom przyrody cech WYŁĄCZNIE LUDZKICH. Odpowiedź ucznia musi podkreślać, że chodzi o zdolności ludzkie – np. mówienie, myślenie, przeżywanie ludzkich emocji (np. 'chmura zapłakała', 'słońce się uśmiechnęło').",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "96546e54-2701-4811-82d0-33c6971fb2da",
+    "numer": 71,
+    "pytanie": "Czym ożywienie (animizacja) różni się od uosobienia? Wykorzystaj przykład z 'Lokomotywy'.",
+    "odpowiedz": "Ożywienie polega na nadaniu przedmiotom cech istot żywych (zwierząt), ale nie cech typowo ludzkich (jak w uosobieniu). 'Lokomotywa', która 'sapie' i 'dyszy', to przykład ożywienia, ponieważ zwierzę (np. pies) również może sapać i dyszeć (nie jest to cecha zastrzeżona dla ludzi).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "c3c62943-44c6-48d0-9dbf-edc2347ec188",
+    "numer": 72,
+    "pytanie": "Czym jest apostrofa?",
+    "odpowiedz": "Apostrofa to bezpośredni, uroczysty i podniosły zwrot do osoby, bóstwa, przedmiotu lub abstrakcyjnego zjawiska. Często występuje na początku utworów patriotycznych, religijnych lub poetyckich modlitw (np. 'Litwo, Ojczyzno moja!').",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "869da193-8900-444c-9dba-b5826ebb5101",
+    "numer": 73,
+    "pytanie": "Czym jest pytanie retoryczne? Podaj przykład, np. z 'Lokomotywy'.",
+    "odpowiedz": "Pytanie retoryczne to pytanie, które zadaje się w tekście nie po to, by uzyskać na nie odpowiedź (ponieważ odpowiedź jest oczywista lub wręcz nie do ustalenia), lecz by skłonić czytelnika do myślenia, wyrazić emocje, oburzenie lub zdziwienie. W wierszu Tuwima: 'A skądże to, jakże to, czemu tak gna?'.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "f51d45b1-9949-42a0-8732-e51c2e94df85",
+    "numer": 74,
+    "pytanie": "W jakim celu stosuje się powtórzenie w wierszu, zilustruj na podstawie 'Lokomotywy'?",
+    "odpowiedz": "Powtórzenie polega na celowym użyciu tych samych słów (lub całych fraz) blisko siebie. Służy ono wyeksponowaniu konkretnego wyrazu, zbudowaniu emocji oraz, co bardzo ważne, rytmizacji tekstu. W 'Lokomotywie' powtarzane frazy np. 'Tak to to, tak to to' znakomicie naśladują rytmiczny stukot obracających się kół.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "ba4789cf-2b4e-4e68-9564-a70af184d4cb",
+    "numer": 75,
+    "pytanie": "Jaką funkcję w utworze literackim pełnią tytuł, podtytuł i motto?",
+    "odpowiedz": "Tytuł służy do nazwania utworu, przyciągnięcia uwagi i zasugerowania tematu głównego. Podtytuł dodatkowo precyzuje informacje z tytułu lub wskazuje na gatunek. Motto to krótki cytat z dzieła innego twórcy, umieszczony przed tekstem właściwym, który stanowi wstępny komentarz, puentę lub klucz do interpretacji całego utworu.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "266cd2f6-b339-43d3-9201-7ccf785a668b",
+    "numer": 76,
+    "pytanie": "Co to jest puenta utworu?",
+    "odpowiedz": "Puenta to bardzo zaskakujące, trafne, krótkie sformułowanie kończące utwór literacki. Ma na celu podsumowanie całej opowiedzianej wcześniej treści i zmuszenie czytelnika do zadumy. Jest bardzo charakterystyczna np. dla noweli i fraszek.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "6468009b-4b1b-4416-97d3-f7e7aeee557a",
+    "numer": 77,
+    "pytanie": "Co nazywamy punktem kulminacyjnym?",
+    "odpowiedz": "Jest to kluczowy, najbardziej napięty moment w rozwoju akcji fabularnej utworu. Rozstrzygają się wtedy losy głównych bohaterów (np. dochodzi do konfrontacji). Zaraz po tym punkcie napięcie spada, a akcja zmierza do rozwiązania i zakończenia.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "ca3de397-0648-4248-aa96-3d8e8bd76c4d",
+    "numer": 78,
+    "pytanie": "Zdefiniuj pojęcia wers i rym, wskazując, jak budują one utwór (np. na przykładzie 'Lokomotywy').",
+    "odpowiedz": "Wers to każda pojedyncza linijka tekstu w poezji. Rym to powtarzanie się identycznych lub bardzo podobnych układów głosek na końcach wyrazów w wersach. Oba te elementy są kluczowe w 'Lokomotywie', gdyż to one (szczególnie gęste, krótkie wersy z częstymi rymami pod koniec) napędzają tempo i rytm całego utworu, imitując przyspieszający pociąg.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "b069552f-c444-4fcf-bddc-26bac45d24ef",
+    "numer": 79,
+    "pytanie": "Co to jest strofa (zwrotka) i czym jest refren?",
+    "odpowiedz": "Strofa to wydzielony graficznie (oddzielony wolną linią zwaną interlinią) zespół wersów, stanowiący pewną całość rytmiczną i treściową. Refren to powtarzający się w wierszu lub w pieśni, zawsze w tych samych miejscach, ten sam wers (lub cała strofa).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "81dca155-3f3c-4cfe-b7d6-35b337e78091",
+    "numer": 80,
+    "pytanie": "Jakie są główne cechy epiki (jako rodzaju literackiego)?",
+    "odpowiedz": "Epika (w opozycji do poezji) pisana jest zazwyczaj językiem ciągłym (prozą). Cechą kluczową jest to, że wypowiada się w niej NARRATOR (z zewnątrz lub jako świadek/bohater). Utwory epickie mają świat przedstawiony (akcja, fabuła, czas i miejsce), o którym się opowiada.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "bc91c1ba-10f2-4959-841f-8b6bfd403b39",
+    "numer": 81,
+    "pytanie": "Czym charakteryzuje się liryka (rodzaj literacki)?",
+    "odpowiedz": "Liryka jest zazwyczaj pisana wierszem. Brak tu klasycznego narratora – występuje PODMIOT LIRYCZNY (tzw. ja liryczne). Utwory z liryki skupiają się na wewnętrznym świecie – na przeżywaniu uczuć, refleksji, emocji, wrażeń.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "cd339772-f875-41ea-b92a-c46a94f15747",
+    "numer": 82,
+    "pytanie": "Co charakteryzuje dramat jako rodzaj literacki i z jakich elementów tekstowych się składa?",
+    "odpowiedz": "Dramat to rodzaj literacki przeznaczony do wystawiania w teatrze. Nie ma w nim głównego narratora – o wydarzeniach dowiadujemy się od bohaterów, którzy wypowiadają się w formie dialogów i monologów. Dramat składa się z tekstu głównego (wypowiedzi aktorów) oraz tekstu pobocznego, zwanego didaskaliami.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "2cce800f-8c8e-4ec2-a959-2a855d76597c",
+    "numer": 83,
+    "pytanie": "Jakie cechy posiada komedia?",
+    "odpowiedz": "Komedia to pogodny, lekki w odbiorze gatunek dramatu. Charakteryzuje się żywą akcją, często zabawnymi nieporozumieniami, obecnością komizmu (sytuacyjnego, słownego oraz postaci) i tym, że historia w komedii zawsze kończy się szczęśliwie dla protagonistów (bohaterów).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "18c19dd5-d023-4e37-ab53-457c973d0747",
+    "numer": 84,
+    "pytanie": "Czym jest fraszka (np. utwory Jana Kochanowskiego)?",
+    "odpowiedz": "Fraszka to krótki utwór poetycki (wierszowany). Zwykle ma żartobliwy lub satyryczny, anegdotyczny charakter (choć bywają fraszki filozoficzne i refleksyjne). Uczy czegoś o świecie lub ludziach i najczęściej wieńczy ją zaskakująca puenta.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "44d0e3da-4069-4b87-9e49-c4834e347d37",
+    "numer": 85,
+    "pytanie": "Co to jest pieśń jako gatunek literacki?",
+    "odpowiedz": "Pieśń to najstarszy i najbardziej uniwersalny gatunek liryczny, bardzo mocno połączony muzyką. Cechuje ją wyraźny, rytmiczny podział na strofy (zwrotki), powtarzalność rymów oraz często obecność refrenu.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "8acd6ac5-509b-4b0d-a6c6-4b97789e1ac7",
+    "numer": 86,
+    "pytanie": "Czym charakteryzuje się tren?",
+    "odpowiedz": "Tren to elegijna, podniosła pieśń żałobna napisana z powodu śmierci danej osoby. Wyraża potężny ból osoby piszącej oraz wychwala zmarłego, opiewając jego cnoty, zasługi oraz to, jak bardzo jego odejście było niesprawiedliwe i bolesne.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "eeac511f-5e5e-4673-a554-d431285c1d59",
+    "numer": 87,
+    "pytanie": "Dlaczego uważa się, że ballada jest tak zwanym gatunkiem synkretycznym (łączącym rodzajów)?",
+    "odpowiedz": "Ballada jest synkretyczna, bo łączy liryki, epiki i dramatu naraz. Z liryki posiada wierszowaną budowę (podział na wersy, zwrotki i rymy). Z epiki posiada narratora oraz snuje opowieść, czyli fabułę i akcję. Z dramatu posiada wypowiedzi postaci, czyli dialogi wplatane w tok opowieści. Najbardziej znanym twórcą jest tu Adam Mickiewicz.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "0cec6bec-8757-423d-93e6-d46fef79b167",
+    "numer": 88,
+    "pytanie": "Jakie są główne cechy epopei (eposu), której najsłynniejszym polskim przykładem jest 'Pan Tadeusz'?",
+    "odpowiedz": "Epopeja to ogromnych rozmiarów wierszowany utwór epicki, charakteryzujący się podniosłym stylem językowym. Opisuje on losy wybitnych postaci na tle przełomowych i ważących o losach narodu wydarzeń historycznych. Posiada niezwykle szczegółowe, 'rozlewne' opisy oraz rozpoczyna się od inwokacji.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "7039c3be-76be-41ac-b89c-677946f07ff2",
+    "numer": 89,
+    "pytanie": "Czym charakteryzowała się klasyczna tragedia i jak odróżnia się od komedii?",
+    "odpowiedz": "Tragedia to niezwykle poważny w wymowie gatunek dramatu (przeciwieństwo komedii), w którym występuje silny, nierozwiązywalny tzw. konflikt tragiczny. Oznacza to, że bohater stoi przed niemożliwym wyborem dwóch dobrych lub dwóch fatalnych racji, a każdy jego krok doprowadzi go na koniec utworu do klęski lub śmierci.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "c7a92e44-f1ea-4b36-be4c-730b58723b78",
+    "numer": 90,
+    "pytanie": "Jakie są główne elementy podziału konstrukcyjnego spektaklu lub tekstu dramatu?",
+    "odpowiedz": "Dramat dzieli się na największe części zwane AKTAMI (związane najczęściej ze zmianą czasu lub miejsca, czemu towarzyszy opuszczenie kurtyny), a te z kolei składają się z mniejszych SCEN. Nowa scena najczęściej zaczyna się lub kończy w momencie wejścia albo wyjścia którejś z postaci ze sceny.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "4ece92c9-2a1a-4f6c-9f55-e3e68df29f10",
+    "numer": 91,
+    "pytanie": "Czym w dramacie jest tekst główny i kto go wygłasza?",
+    "odpowiedz": "Tekst główny to nic innego jak same słowa postaci – są to wszystkie kwestie mówione przez aktorów w trakcie przedstawienia (czy dialogi, czy monologi).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "c245a2f3-90e6-441d-81c5-b871d30ef5c1",
+    "numer": 92,
+    "pytanie": "Na czym polega monolog, a na czym dialog w utworze literackim?",
+    "odpowiedz": "Dialog to po prostu naprzemienna wymiana zdań między co najmniej dwiema rozmawiającymi osobami (postaciami). Monolog z kolei to pojedyncza, nieprzerwana i często dość długa wypowiedź jednej osoby, w której formułuje ona np. swoje przemyślenia (często mówiąc do samej siebie lub do widza).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "725d6e36-185a-4e93-935a-50d0f7986568",
+    "numer": 93,
+    "pytanie": "Czym są didaskalia w dramacie, skoro wiemy już, czym jest tekst główny?",
+    "odpowiedz": "Didaskalia (znane też jako tekst poboczny) to wszystkie te polecenia i wskazówki autora dramatu, które zapisuje się zazwyczaj kursywą. Nie są one wypowiadane przez aktorów na scenie, a służą wyłącznie jako podpowiedź dla reżysera i scenografa – wyjaśniają jak wygląda scena (scenografia), rekwizyty, a także ubiór, ton głosu czy nawet ułożenie rąk postaci.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "377fc049-477f-403b-9e4f-8a7acf8fe30f",
+    "numer": 94,
+    "pytanie": "Co to jest neologizm w literaturze?",
+    "odpowiedz": "Neologizm to nowy wyraz stworzony przez autora specjalnie na potrzeby wiersza lub innego dzieła (wyraz, którego wcześniej w słownikach nie było). Często dodaje on wierszowi unikalności (szczególnie stosowany w poezji eksperymentalnej XX wieku).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "807a4eb0-9a28-45ba-bc95-551bcc399d8a",
+    "numer": 95,
+    "pytanie": "Co to jest inwokacja i gdzie się z nią spotykamy?",
+    "odpowiedz": "Inwokacja to silnie rozbudowana i podniosła forma apostrofy umieszczona obowiązkowo na samym początku epopei (np. Pana Tadeusza). Twórca dzieła, przed rozpoczęciem opowieści, zwraca się w inwokacji do ojczyzny, Boga czy muzy o pomoc, siłę i natchnienie do napisania całego utworu.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "d7bf0100-9ce1-40a3-b137-9579df443030",
+    "numer": 96,
+    "pytanie": "Czym jest symbol?",
+    "odpowiedz": "Symbol to znak, przedmiot, zdarzenie lub postać, która w sztuce lub literaturze posiada dwa znaczenia: jedno podstawowe, dosłowne i drugie – głębsze, niedosłowne. Ważne jest to, że symbol, w przeciwieństwie do alegorii, jest zawsze wieloznaczny (można interpretować go na bardzo wiele różnych sposobów).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "e5a9af10-35a5-4c49-8f1f-8d8ee457e2e4",
+    "numer": 97,
+    "pytanie": "Co to jest alegoria w literaturze i czym różni się od symbolu?",
+    "odpowiedz": "Alegoria (podobna z wierzchu do symbolu) to pojęcie, które posiada oprócz znaczenia dosłownego, także jedno, ogólnie przyjęte znaczenie domyślne. W odróżnieniu od symbolu, alegoria nie pozostawia pola do własnej interpretacji – znaczy tylko to i nic więcej (np. sowa w bajce ZAWSZE będzie reprezentowała mądrość, lis przebiegłość).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "9072b91f-932e-47c0-89c0-a5319d9bd42a",
+    "numer": 98,
+    "pytanie": "Jakie wyróżniamy trzy podstawowe rodzaje komizmu wywołujące u odbiorcy śmiech?",
+    "odpowiedz": "Są to: komizm postaci (odnoszący się do faktu, że bohater wygląda zabawnie lub posiada karykaturalny, śmieszny zbiór wad), komizm sytuacji (kiedy śmieszą nas perypetie i zaskakujące wypadki w jakich bohater się znalazł) oraz komizm słowny (wynikający z dowcipów, gier słownych, żartów w dialogach).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "cb82bcab-4e28-4fed-97d9-319e8c3b6066",
+    "numer": 99,
+    "pytanie": "Na czym polega ironia w języku potocznym oraz w tekście literackim?",
+    "odpowiedz": "Ironia to zamierzony celowy zabieg polegający na tym, że wypowiadamy pewne słowa, których dosłowne sens jest w oczywisty sposób ZUPEŁNIE PRZECIWNY temu, co rzeczywiście myślimy (np. mówienie 'Ale z ciebie geniusz!' do osoby, która właśnie zepsuła prostą rzecz). Odpowiedź powinna podkreślić ową odwrotność zamierzeń względem samych słów.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "41ee25ad-48f0-4fde-9d63-46190af2682a",
+    "numer": 100,
+    "pytanie": "Jakie wyróżniamy typy wypowiedzeń pod kątem celu wypowiedzi? Odpowiedz wskazując przykłady.",
+    "odpowiedz": "1. Oznajmujące (oznajmują o faktach), kończące się kropką, np. 'Kupiłem nowy rower.' 2. Pytające (zadające pytanie), kończące się znakiem zapytania, np. 'Kiedy skończysz lekcje?' 3. Rozkazujące (zawierające nakaz, żądanie, ale też prośbę), często zakończone wykrzyknikiem, np. 'Posprzątaj wreszcie swój pokój!'.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "39142448-c333-41f6-9f4d-7912186ec2fc",
+    "numer": 101,
+    "pytanie": "Czym, z punktu widzenia budowy i gramatyki, różni się zdanie pojedyncze od złożonego?",
+    "odpowiedz": "Zdanie pojedyncze posiada tylko i wyłącznie JEDNO orzeczenie (czyli zawiera w sobie jeden czasownik w formie osobowej, pokazujący czynność – np. 'Pies (podmiot) biegnie (orzeczenie).'). Zdanie złożone składa się z dwóch lub większej liczby zdań i musi posiadać min. DWA orzeczenia (np. 'Pies biegnie i szczeka na wiatr.').",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "50a34ee7-6ddc-47b8-b765-e3a8431a227f",
+    "numer": 102,
+    "pytanie": "W jaki sposób rozpoznać zdanie złożone współrzędnie a podrzędnie?",
+    "odpowiedz": "W zdaniu współrzędnie złożonym oba jego człony mogą stać samodzielnie, nie podlegają sobie i mają tyle samo ważności (połączenia typu 'i', 'oraz', 'ale'). Np. 'Dziewczyna pisze, a chłopak gra.' W zdaniu podrzędnym jedno ze zdań nie ma sensu samo z siebie bez drugiego – zdanie poboczne odpowiada zawsze na pytanie zadane do niego ze zdania głównego (połączenia: 'który', 'ponieważ', 'kiedy'). Np. '(Co zrobiono?) Zrobiłem tort, (Kiedy?) zanim goście przyśli.'",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "7cababdf-175c-4ea7-8bc9-a9d354b29423",
+    "numer": 103,
+    "pytanie": "Czym jest zdanie (wypowiedzenie) wielokrotnie złożone?",
+    "odpowiedz": "Wypowiedzenie wielokrotnie złożone to nic innego jak długie, rozbudowane zdanie, które składa się z minimum trzech lub więcej zdań składowych. A to z kolei znaczy po prostu, że zawiera w sobie przynajmniej trzy czasowniki w formie osobowej (trzy orzeczenia).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "2c04becb-5bd4-46cf-8619-97131a3c6802",
+    "numer": 104,
+    "pytanie": "Jak zdefiniujesz dla młodszego kolegi głoskę, literę, sylabę i akcent?",
+    "odpowiedz": "Litera to po prostu znak do pisania, jaki wpisujesz długopisem. Głoska to dźwięk wydawany przez nasze gardło, gdy to czytamy. Sylaba to jedna porcja (fragment wyrazu), wymawiana podczas jednego otwarcia ust, koniecznie zawierająca samogłoskę (np. w wyrazie ry-ba mamy 2 sylaby). Akcent z kolei polega na mocniejszym wydobyciu (silniejszym wypowiedzeniu) konkretnej sylaby w całym wyrazie (w polskim zazwyczaj jest to ta przedostatnia).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "db7bed2e-c984-44dc-9f75-200dcf954d9e",
+    "numer": 105,
+    "pytanie": "Czym dla ucznia różnią się poszczególne typy: literatura piękna, literatura naukowa, i popularnonaukowa?",
+    "odpowiedz": "Literatura piękna obejmuje artystyczne opowieści (wiersze, nowele), gdzie najważniejsze jest piękno języka i emocje. Literatura naukowa jest sucha, kierowana często na uniwersytety – wypełniona przypisami po brzegi. Najciekawsza dla ucznia z tego zestawienia jest popularnonaukowa – tłumaczy ona potężne, trudne, specjalistyczne zagadnienia naukowe potocznym, jasnym i zrozumiałym dla laika językiem.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "7bd5a145-de51-48b4-bee8-fcaac772a060",
+    "numer": 106,
+    "pytanie": "Czym jest tak zwana publicystyka?",
+    "odpowiedz": "Publicystyka to ogół tekstów informacyjnych (pojawiających się np. w prasie, tygodnikach internetowych, radiu), w których dziennikarze omawiają i oceniają bieżące wydarzenia (np. polityczne), prezentując publicznie swoje wyraziste i często bezkompromisowe opinie o tych sprawach, dążąc przez to do wpłynięcia na poglądy zwykłych czytelników.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "34d5eb52-256e-412f-b5ee-865ae4d44c46",
+    "numer": 107,
+    "pytanie": "Czym wyróżnia się reportaż od artykułu?",
+    "odpowiedz": "Reportaż (z pogranicza dziennikarstwa i literatury faktu) jest bardzo osobisty – jest on relacją autentycznych zdarzeń lub warunków życiowych jakichś ludzi przygotowaną bezpośrednio z samej linii frontu. Autor reportażu widział coś swoimi oczami na własnej wyprawie. Nie wolno w nim zmyślać faktów.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "ff69b1b5-6133-4245-947b-b6d9dfbc8b11",
+    "numer": 108,
+    "pytanie": "Na czym polega dziennikarski wywiad?",
+    "odpowiedz": "Wywiad ma na celu zdobycie i przekazanie widzom czy słuchaczom poglądów osoby znanej. Realizowany jest on z zasady metodą dialogową: wywiad ma na piśmie formę ułożoną od góry do dołu na zmianę: pytania zadawane przez dziennikarza oraz autoryzowane odpowiedzi osoby zapytanej.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "470bdd2b-8212-44f4-86a6-ae59e4dab359",
+    "numer": 109,
+    "pytanie": "Czym jest po prostu klasyczny artykuł w gazecie?",
+    "odpowiedz": "Artykuł to najbardziej powszechny, informacyjny materiał dziennikarski, poruszający jeden dany temat. Przedstawia zazwyczaj dość sprawnie zredagowane obiektywne suche fakty w towarzystwie krótkiej interpretacji problemu i stanowiska własnego autora.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "a0b3e979-d6cc-4b51-bad8-610d5c675231",
+    "numer": 110,
+    "pytanie": "Czym jest komiks i gdzie szukać jego cech głównych?",
+    "odpowiedz": "Komiks uważa się za tekst kultury z racji sposobu w jakim łączy sztukę rysowniczą z fabularną, książkową historią. Komiks składa się po prostu z kadrów ułożonych w rzędach, w których głównym i zasadniczym nośnikiem historii są szkice, a wszystkie narracyjne dialogi oraz teksty zostały dla oszczędności zepchnięte do graficznych 'dymków' wychodzących z ust postaci.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "9ffd458c-af63-4ba4-a652-ed5de0a9a836",
+    "numer": 111,
+    "pytanie": "Wyobraźmy sobie, że masz zapisać na egzaminie dialog z lektury. Jak zapisuje się poprawny dialog w tekście?",
+    "odpowiedz": "Podstawą techniczną zapisu dialogu jest, aby bezwzględnie wypowiedź każdej kolejnej zabierającej głos osoby ZACZYNAĆ od NOWEJ LINII, używając do tego myślnika. Ponadto, trzeba starannie wyczuć wtrącenia tak zwanego narratora, używając do ich złączenia poprawnych znaków interpunkcyjnych (np. – Ja tam nie wiem – powiedział chłopak – może to i prawda).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "8a54d01e-0e53-4ccb-9122-0758e50095ab",
+    "numer": 112,
+    "pytanie": "Czego nauczyciel będzie od ciebie wymagać przy tworzeniu długiego 'opowiadania' (twórczego lub odtwórczego z lektury)?",
+    "odpowiedz": "Dobrze zredagowane opowiadanie powinno bazować na logicznej akcji mającej swoje przyczyny. Musi posiadać układ i dzielić się po pierwsze na wstęp, rozwinięcie z punktem kulminacyjnym oraz zakończenie, oddzielone graficznie akapitami od głównej krawędzi tekstu. Niezwykle cenne jest ożywienie narracji wieloma poprawnymi elementami dialogowymi i elementami mniejszych, wewnętrznych opisów postaci i przyrody.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "7baef23b-66e7-4c35-8b17-f0fb99318fb2",
+    "numer": 113,
+    "pytanie": "Co jest podstawą idealnego 'opisu' jako formy wypowiedzi?",
+    "odpowiedz": "Opis przedmiotu, dzieła bądź osoby to wypowiedź niezwykle statyczna. Piszemy spójnie, zawsze kierując wzrok od zewnątrz do wewnątrz (np. figura, twarz, oczy) by wytworzyć u czytelnika obraz plastyczny – w tym celu autor wręcz zasypuje go mnóstwem wyselekcjonowanych przymiotników i precyzyjnych epitetów ze słownika (np. smukły, błękitny, mosiężny).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "c2bc0c38-e268-4aa5-b10e-5abf73d14399",
+    "numer": 114,
+    "pytanie": "Z jakich kilku najważniejszych, odwiecznych szkieletowych elementów musisz skonstruować typowy list?",
+    "odpowiedz": "Konstrukcja to podstawa: Prawy górny róg – Miejsce i dzisiejsza data. Lewa strona, osobna linia pod datą – Zwrot z szacunkiem do Adresata np. 'Kochany Janie,'. Środek wyjustowany – Pełna treść rozpisana w czytelne akapity (przyczyna dlaczego w ogóle piszemy, sama historia, podsumowanie). Na samym dole obowiązkowo podpis wraz z pożegnaniem ('Pozdrawiam, Twoja Babcia').",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "7484905e-39c4-46ef-b1cd-b9fce13c33ea",
+    "numer": 115,
+    "pytanie": "Czym, pod kątem formalnym, wyróżnia się sprawozdanie, chociażby z wycieczki ze szkoły?",
+    "odpowiedz": "Sprawozdanie ma uchodzić za rzeczowy dowód dla oceniającego. Relacjonujesz tu co wydarzyło się krok po kroku z maksymalnym obiektywizmem chronologicznie do zegara, by odbiorca czuł jakby sam na tę podróż pojechał. Absolutnie musi on opowiedzieć nam na klasyczne dziennikarskie pytania: kto pojechał?, dokąd, skąd i w jakich godzinach?, oraz na koniec zawierać twój ocenny, mały akapit na temat wartości tej wycieczki (czy było warto).",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "53760045-d4d0-41cb-98a4-775ae76217a2",
+    "numer": 116,
+    "pytanie": "O jakich elementach trzeba koniecznie pamiętać rzeźbiąc Dedykację w prezencie?",
+    "odpowiedz": "Dedykacja (umieszczana, dajmy na to na okładce nowej encyklopedii dla kolegi) składa się w pierwszej mierze z adresata podarunku i nadawcy – musi mówić kto wręcza (Ja) a kto pamiątkę otrzymuje. Do tego bezbłędnie musi odpowiedzieć na cel – z jakiej to okazji ma to miejsce? Musi być napisana starannym wykwintnym, bardzo kurtuazyjnym tonem uwieńczonym datą, tak by stanowiła ona uśmiech pamiątkowy w sercu adresata przez długie lata.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "2f56d599-374d-4357-8ff4-b61597ea3dd1",
+    "numer": 117,
+    "pytanie": "Z jakich elementów powinno składać się formalne podziękowanie?",
+    "odpowiedz": "To tekst krótszy niż dedykacja. Podziękowanie kierowane jest zawsze od kogoś do kogoś bardzo konkretnego i z reguły zawiera oficjalną informację 'ZA CO'. Przykładowo: 'Zarząd firmy serdecznie dziękuje pracownikom ZA wytrwały wysiłek zeszłego tygodnia'. Zwroty grzecznościowe (np. Ci, Wam, Ciebie) w oficjalnym tonie zaczynać trzeba dużą literą! Na dole leży ręczny autograf podmiotu dziękującego.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "afa3b166-7955-411e-ac84-7494cf61f6a5",
+    "numer": 118,
+    "pytanie": "Co powinno cechować poprawną strukturę życzeń na kartce świątecznej?",
+    "odpowiedz": "Poprawna budowa życzeń startuje od zwrotu na samej górze (określenia odbiorcy). Pod nim musi znaleźć się sformułowanie wyraźnie informujące, jaka zacna okoliczność zmusiła cię do chwycenia za kałamarz (Wesołych Świąt! Zdania egzaminu!). Na końcu formułujesz wzniosłe i pełne miłości obfitości pragnienia z podpisem. Całość nierzadko w formach życzeń obiera sobie za formę proste utwory rymowane.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "a4f3b61d-7d02-4d25-a0c6-e8ab625fa922",
+    "numer": 119,
+    "pytanie": "O czym najczęściej zapominają uczniowie próbujący napisać swój własny 'opis przeżyć wewnętrznych' względem emocji bohatera, i dlaczego to ważne?",
+    "odpowiedz": "Zapominają, że opis przeżyć wewnętrznych w psychologii książkowej to znacznie, znacznie więcej niż powiedzenie 'byłem wściekły i nieszczęśliwy, koniec kropka'. Prawidłowy opis wewnętrzny powinien, poza nazwaniem samych emocji serca jako takich, połączyć je z zewnętrznymi fizycznymi i niekontrolowanymi ludzkimi objawami cielesnymi. Przykładowo, zamiast mówić tylko o rozpaczy, piszemy raczej o nerwowym paraliżu nóg, słonym żalu płynącym potokiem z obrzękłych oczu czy sercu chcącym wydostać się uderzeniami z obolałej klatki piersiowej. Wtedy czytelnik dopiero nam wierzy w ten przeżywany stan i o to proszą egzaminatorzy.",
+    "przedmiot": "polski"
+  },
+  {
+    "id": "7f3f76a0-39d0-470c-9e7d-d3964ca08a32",
+    "numer": 120,
+    "pytanie": "Podsumowując naszą dyskusję... Jak zbudować ocenianą potem na dużą ilość punktów formę wypowiedzi zwaną charakterystyką wybranej postaci literackiej?",
+    "odpowiedz": "By obronić wypracowanie opierające się o chłodną i kompletną charakterystykę, musi posiadać ono trójdzielną rygorystyczną budowę. W Akapicie pierwszym umiejscawiasz wstęp – w nim określasz kim postać jest w świecie gry (nazwisko, status społeczny, klasa z lektury). W akapicie o numerze dwa następuje szeroko pojęte rozwinięcie. Najpierw omawiasz krótko aspekty wizualne bohatera (ubiór, wzrost, charyzmę), by szybko zeskoczyć do jego wnętrza (czyli wad i zalet, usposobienia umysłowego, stosunków względem swych przyjaciół). Warto pamiętać, że KAŻDA mocno stawiana zaleta charakterologiczna (np. że Skawiński był walecznym mężem), musi być wręcz na bieżąco uzasadniania podanym przez ciebie małym i krótkim dowodem obronnym wziętym prosto z kartek tamtej opowieści, bo bez nich charakterystyka leży z pustym brzuchem w sferze pustosłowia. Z kolei w samej końcówce autor oceny musi zamknąć cały akapit trzeci swoim autorskim podsumowaniem – wydaje on własny surowy, lecz osobisty, krótki sąd o tamtym człowieku i decyduje, co ta postać z lektury tak właściwie mu na koniec powiedziała.",
+    "przedmiot": "polski"
+  }
+]

@@ -9,6 +9,7 @@ export interface TopicSeedInput {
   numer: number;
   pytanie: string;
   odpowiedz: string;
+  przedmiot?: string;
 }
 
 /**
@@ -35,6 +36,7 @@ export async function upsertTopic(db: Database, topic: TopicSeedInput): Promise<
       numer: topic.numer,
       pytanie: topic.pytanie,
       odpowiedz: topic.odpowiedz,
+      przedmiot: topic.przedmiot ?? 'matematyka',
     });
 
   if (upsertError) {
