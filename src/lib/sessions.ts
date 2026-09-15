@@ -56,19 +56,7 @@ export async function createSession(
     };
   }
 
-  let tokens = user.tokens;
-  if (tokens <= 0 && process.env.NODE_ENV !== 'test') {
-    const { data: updatedUser } = await db
-      .from('users')
-      .update({ tokens: 100 })
-      .eq('id', userId)
-      .select('tokens')
-      .single();
-    if (updatedUser) {
-      tokens = updatedUser.tokens;
-    }
-  }
-
+  const tokens = user.tokens;
   if (tokens <= 0) {
     return {
       success: false,

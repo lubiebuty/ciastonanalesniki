@@ -53,7 +53,8 @@ export async function GET(request: NextRequest) {
         topics (
           numer,
           pytanie,
-          odpowiedz
+          odpowiedz,
+          przedmiot
         ),
         session_scores (
           is_correct,
@@ -73,6 +74,17 @@ export async function GET(request: NextRequest) {
       const topic = Array.isArray(s.topics) ? s.topics[0] : s.topics;
       const scoreObj = Array.isArray(s.session_scores) ? s.session_scores[0] : s.session_scores;
 
+      let przedmiot = topic?.przedmiot;
+      if (!przedmiot) {
+        if (topic?.numer && topic.numer >= 201) {
+          przedmiot = 'geografia';
+        } else if (topic?.numer && topic.numer >= 51) {
+          przedmiot = 'polski';
+        } else if (topic?.numer) {
+          przedmiot = 'matematyka';
+        }
+      }
+
       return {
         id: s.id,
         status: s.status,
@@ -81,6 +93,7 @@ export async function GET(request: NextRequest) {
         numer: topic?.numer,
         pytanie: topic?.pytanie,
         odpowiedz: topic?.odpowiedz,
+        przedmiot,
         is_correct: scoreObj?.is_correct,
         score: scoreObj?.score,
         feedback: scoreObj?.feedback,

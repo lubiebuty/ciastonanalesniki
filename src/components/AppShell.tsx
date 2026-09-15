@@ -4,6 +4,7 @@ import { useSession, signOut } from 'next-auth/react';
 import { usePathname, useRouter } from 'next/navigation';
 import { useEffect } from 'react';
 import UserBar from './UserBar';
+import NoTokensBanner from './NoTokensBanner';
 
 /** Routes reachable without a session — everything else redirects to sign-in. */
 const PUBLIC_ROUTES = ['/login'];
@@ -42,6 +43,8 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
     return <main className="min-h-screen bg-background" />;
   }
 
+  const tokens = session.tokens ?? 0;
+
   return (
     <div className="min-h-screen bg-background">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-4 sm:pt-6">
@@ -51,9 +54,10 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
             name: session.user.name,
             image: session.user.image,
           }}
-          tokens={session.tokens ?? 0}
+          tokens={tokens}
           onSignOut={() => signOut({ callbackUrl: '/login' })}
         />
+        {tokens <= 0 && <NoTokensBanner />}
       </div>
       {children}
     </div>

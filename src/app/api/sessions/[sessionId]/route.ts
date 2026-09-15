@@ -29,7 +29,13 @@ export async function GET(
           numer,
           pytanie,
           odpowiedz,
-          przedmiot
+          przedmiot,
+          dzial_numer,
+          dzial_nazwa,
+          wariant,
+          numer_pytania,
+          notatka,
+          id_slug
         )
       `)
       .eq('id', sessionId)
@@ -39,13 +45,13 @@ export async function GET(
       throw new Error(error?.message || 'Session not found');
     }
 
-    let topic = Array.isArray(sessionData.topics) ? sessionData.topics[0] : sessionData.topics;
+    let topic: any = Array.isArray(sessionData.topics) ? sessionData.topics[0] : sessionData.topics;
 
-    // Fallback: If join didn't populate topic or przedmiot, query topics table directly
+    // If join didn't populate topic or przedmiot, query topics table directly
     if ((!topic || !topic.przedmiot) && sessionData.topic_id) {
       const { data: directTopic } = await db
         .from('topics')
-        .select('numer, pytanie, odpowiedz, przedmiot')
+        .select('*')
         .eq('id', sessionData.topic_id)
         .single();
       if (directTopic) {
@@ -53,10 +59,12 @@ export async function GET(
       }
     }
 
-    // Determine subject: explicit column or by question number (Polish tasks start at 51)
+    // Determine subject: explicit column or by question number
     let przedmiot = topic?.przedmiot;
     if (!przedmiot) {
-      if (topic?.numer && topic.numer >= 51) {
+      if (topic?.numer && topic.numer >= 201) {
+        przedmiot = 'geografia';
+      } else if (topic?.numer && topic.numer >= 51) {
         przedmiot = 'polski';
       } else {
         przedmiot = 'matematyka';
@@ -71,6 +79,12 @@ export async function GET(
       pytanie: topic?.pytanie,
       odpowiedz: topic?.odpowiedz,
       przedmiot,
+      dzial_numer: topic?.dzial_numer,
+      dzial_nazwa: topic?.dzial_nazwa,
+      wariant: topic?.wariant,
+      numer_pytania: topic?.numer_pytania,
+      notatka: topic?.notatka,
+      id_slug: topic?.id_slug,
     };
 
     return NextResponse.json({ session: sessionWithTopic });

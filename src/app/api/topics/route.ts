@@ -3,7 +3,6 @@
  */
 import { NextResponse } from 'next/server';
 import { getDatabase } from '@/lib/db';
-
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
@@ -16,11 +15,13 @@ export async function GET(request: Request) {
       query = query.eq('przedmiot', przedmiot);
     }
 
-    const { data: topics, error } = await query;
+    const { data: dbTopics, error } = await query;
 
     if (error) {
       throw new Error(error.message);
     }
+
+    const topics = dbTopics || [];
 
     return NextResponse.json({ topics });
   } catch (error) {

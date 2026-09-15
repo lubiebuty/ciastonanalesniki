@@ -24,7 +24,7 @@ export default function ChalkboardFrame({ children, className = '', title }: Cha
       </svg>
 
       {/* Inner frame */}
-      <div className="relative border-2 border-slate-900 bg-white/90 p-4 sm:p-6 z-10">
+      <div className="relative border-2 border-slate-900 bg-white/90 p-2.5 sm:p-6 z-10">
         {title && (
           <div className="text-center font-bold text-lg sm:text-xl tracking-wide uppercase border-b-2 border-dashed border-slate-300 pb-2 mb-3">
             {title}

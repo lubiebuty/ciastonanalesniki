@@ -5,6 +5,7 @@ import Link from 'next/link';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import { marked } from 'marked';
+import NoTokensModal from '@/components/NoTokensModal';
 
 interface SessionItem {
   id: string;
@@ -14,6 +15,7 @@ interface SessionItem {
   numer?: number;
   pytanie?: string;
   odpowiedz?: string;
+  przedmiot?: string;
   is_correct?: boolean | number;
   score?: number;
   feedback?: string | null;
@@ -36,6 +38,7 @@ interface QuestionGroup {
   numer?: number;
   pytanie: string;
   odpowiedz?: string;
+  przedmiot?: string;
   attempts: AttemptItem[];
   latestAttempt: AttemptItem;
   firstAttempt?: AttemptItem;
@@ -113,6 +116,13 @@ function groupSessionsByQuestion(sessions: SessionItem[]): QuestionGroup[] {
     }
 
     const representative = sorted[sorted.length - 1];
+    const subject =
+      representative.przedmiot ||
+      (representative.numer && representative.numer >= 201
+        ? 'geografia'
+        : representative.numer && representative.numer >= 51
+        ? 'polski'
+        : 'matematyka');
 
     groups.push({
       key,
@@ -120,6 +130,7 @@ function groupSessionsByQuestion(sessions: SessionItem[]): QuestionGroup[] {
       numer: representative.numer,
       pytanie: representative.pytanie || `Zadanie #${representative.numer || '?'}`,
       odpowiedz: representative.odpowiedz,
+      przedmiot: subject,
       attempts,
       latestAttempt,
       firstAttempt: firstCompleted,
@@ -138,13 +149,17 @@ function groupSessionsByQuestion(sessions: SessionItem[]): QuestionGroup[] {
   return groups;
 }
 
+type SubjectFilter = 'all' | 'matematyka' | 'polski' | 'geografia';
+
 export default function ResultsPage() {
   const router = useRouter();
-  const { update } = useSession();
+  const { data: session, update } = useSession();
   const [sessions, setSessions] = useState<SessionItem[]>([]);
   const [loading, setLoading] = useState(true);
+  const [selectedSubject, setSelectedSubject] = useState<SubjectFilter>('all');
   const [expandedQuestionKey, setExpandedQuestionKey] = useState<string | null>(null);
   const [repeatingTopicId, setRepeatingTopicId] = useState<string | null>(null);
+  const [showNoTokensModal, setShowNoTokensModal] = useState<boolean>(false);
 
   useEffect(() => {
     fetch('/api/sessions')
@@ -156,8 +171,20 @@ export default function ResultsPage() {
 
   const questionGroups = groupSessionsByQuestion(sessions);
 
-  const completedGroups = questionGroups.filter((g) => g.latestScore !== undefined);
-  const totalQuestionsCount = questionGroups.length;
+  const counts = {
+    all: questionGroups.length,
+    matematyka: questionGroups.filter((g) => g.przedmiot === 'matematyka').length,
+    polski: questionGroups.filter((g) => g.przedmiot === 'polski').length,
+    geografia: questionGroups.filter((g) => g.przedmiot === 'geografia').length,
+  };
+
+  const filteredGroups =
+    selectedSubject === 'all'
+      ? questionGroups
+      : questionGroups.filter((g) => g.przedmiot === selectedSubject);
+
+  const completedGroups = filteredGroups.filter((g) => g.latestScore !== undefined);
+  const totalQuestionsCount = filteredGroups.length;
   const completedQuestionsCount = completedGroups.length;
   const passedQuestionsCount = completedGroups.filter((g) => g.latestIsCorrect).length;
   const passRate =
@@ -171,8 +198,16 @@ export default function ResultsPage() {
         ).toFixed(1)
       : '0.0';
 
+  const totalFilteredAttempts = filteredGroups.reduce((acc, g) => acc + g.totalAttempts, 0);
+
   const handleRepeat = async (group: QuestionGroup) => {
     if (!group.topic_id || repeatingTopicId) return;
+
+    if ((session?.tokens ?? 0) <= 0) {
+      setShowNoTokensModal(true);
+      return;
+    }
+
     setRepeatingTopicId(group.topic_id);
 
     try {
@@ -183,6 +218,12 @@ export default function ResultsPage() {
       });
 
       const data = await res.json();
+
+      if (res.status === 402 || data.error?.toLowerCase().includes('token')) {
+        setShowNoTokensModal(true);
+        return;
+      }
+
       if (res.ok && data.session) {
         await update();
         const prev = group.latestScore ?? 0;
@@ -227,6 +268,43 @@ export default function ResultsPage() {
           </Link>
         </div>
 
+        {/* ═════════════════════════════════════════════════════════════════
+            SUBJECT FILTER TABS (Notebook Tabs)
+            ═════════════════════════════════════════════════════════════════ */}
+        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+          {[
+            { id: 'all', label: 'Wszystkie', count: counts.all },
+            { id: 'matematyka', label: 'Matematyka', count: counts.matematyka },
+            { id: 'polski', label: 'Język Polski', count: counts.polski },
+            { id: 'geografia', label: 'Geografia', count: counts.geografia },
+          ].map((tab) => (
+            <button
+              key={tab.id}
+              type="button"
+              onClick={() => {
+                setSelectedSubject(tab.id as SubjectFilter);
+                setExpandedQuestionKey(null);
+              }}
+              className={`py-2.5 px-3 font-extrabold text-sm sm:text-base tracking-wide rounded-xl border-[2.5px] border-slate-900 transition-all cursor-pointer flex items-center justify-center gap-2 ${
+                selectedSubject === tab.id
+                  ? 'bg-amber-100 text-slate-900 shadow-[4px_4px_0px_#0f172a] scale-[1.01]'
+                  : 'bg-white text-slate-700 hover:bg-slate-50 shadow-[2px_2px_0px_#0f172a]'
+              }`}
+            >
+              <span>{tab.label}</span>
+              <span
+                className={`text-xs px-2 py-0.5 rounded-md border font-extrabold ${
+                  selectedSubject === tab.id
+                    ? 'border-slate-900 bg-amber-200 text-slate-900'
+                    : 'border-slate-300 bg-slate-100 text-slate-600'
+                }`}
+              >
+                {tab.count}
+              </span>
+            </button>
+          ))}
+        </div>
+
         {/* Analytics Section */}
         {completedQuestionsCount > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-6">
@@ -236,33 +314,40 @@ export default function ResultsPage() {
                 Średnia ocena zadań
               </span>
               <div className="relative w-28 h-28 flex items-center justify-center">
-                <svg className="w-full h-full transform -rotate-90">
-                  <circle
-                    cx="56"
-                    cy="56"
-                    r="46"
-                    stroke="#e2e8f0"
-                    strokeWidth="8"
-                    fill="transparent"
-                  />
-                  <circle
-                    cx="56"
-                    cy="56"
-                    r="46"
-                    stroke="#0f172a"
-                    strokeWidth="8"
-                    strokeLinecap="round"
-                    className="transition-all duration-500"
-                    fill="transparent"
-                    strokeDasharray={2 * Math.PI * 46}
-                    strokeDashoffset={2 * Math.PI * 46 * (1 - Math.min(10, parseFloat(avgScore)) / 10)}
-                  />
+                <svg
+                  viewBox="0 0 100 100"
+                  className="w-full h-full drop-shadow-xs overflow-visible"
+                >
+                  <g transform="rotate(-90 50 50)">
+                    {/* Background track circle */}
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="40"
+                      stroke="#e2e8f0"
+                      strokeWidth="7"
+                      fill="transparent"
+                    />
+                    {/* Progress indicator circle */}
+                    <circle
+                      cx="50"
+                      cy="50"
+                      r="40"
+                      stroke="#0f172a"
+                      strokeWidth="7"
+                      strokeLinecap="round"
+                      fill="transparent"
+                      strokeDasharray={251.33}
+                      strokeDashoffset={251.33 * (1 - Math.min(10, Math.max(0, parseFloat(avgScore) || 0)) / 10)}
+                      className="transition-[stroke-dashoffset] duration-500 ease-out"
+                    />
+                  </g>
                 </svg>
-                <div className="absolute inset-0 flex flex-col items-center justify-center">
-                  <span className="text-3xl font-extrabold text-slate-900">
+                <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none">
+                  <span className="text-3xl font-extrabold text-slate-900 leading-none">
                     {avgScore}
                   </span>
-                  <span className="text-[11px] font-bold text-slate-500 uppercase">
+                  <span className="text-[11px] font-bold text-slate-500 uppercase mt-1">
                     / 10 pkt
                   </span>
                 </div>
@@ -294,7 +379,7 @@ export default function ResultsPage() {
                   {passedQuestionsCount}
                 </span>
                 <span className="text-xs font-bold text-slate-500 uppercase mt-1">
-                  Z {totalQuestionsCount} podjętych zadań ({sessions.length} prób łącznie)
+                  Z {totalQuestionsCount} podjętych zadań ({totalFilteredAttempts} prób łącznie)
                 </span>
               </div>
             </div>
@@ -305,7 +390,7 @@ export default function ResultsPage() {
         <div className="space-y-4">
           <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
             <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-slate-900 uppercase">
-              Lista rozwiązanych zadań ({questionGroups.length})
+              Lista rozwiązanych zadań ({filteredGroups.length})
             </h2>
           </div>
 
@@ -321,9 +406,29 @@ export default function ResultsPage() {
                 Rozpocznij pierwsze zadanie →
               </Link>
             </div>
+          ) : filteredGroups.length === 0 ? (
+            <div className="sketch-box p-8 sm:p-12 text-center space-y-3 bg-white">
+              <p className="text-lg font-bold text-slate-700">
+                Brak rozwiązanych zadań w przedmiocie:{' '}
+                <strong className="text-slate-900">
+                  {selectedSubject === 'matematyka'
+                    ? 'Matematyka'
+                    : selectedSubject === 'polski'
+                    ? 'Język Polski'
+                    : 'Geografia'}
+                </strong>
+                .
+              </p>
+              <Link
+                href={`/topics?przedmiot=${selectedSubject}`}
+                className="sketch-btn-black px-6 py-2.5 text-sm font-extrabold inline-block"
+              >
+                Przejdź do zadań z tego przedmiotu →
+              </Link>
+            </div>
           ) : (
             <div className="space-y-3">
-              {questionGroups.map((group) => {
+              {filteredGroups.map((group) => {
                 const isExpanded = expandedQuestionKey === group.key;
                 const hasCompleted = group.latestScore !== undefined;
                 const formattedDate = new Date(group.lastAttemptDate).toLocaleDateString('pl-PL', {
@@ -348,6 +453,16 @@ export default function ResultsPage() {
                           {group.numer && (
                             <span className="inline-flex items-center rounded-md px-2.5 py-0.5 text-xs font-extrabold border-2 border-slate-900 bg-amber-100 text-slate-900">
                               Zadanie #{group.numer}
+                            </span>
+                          )}
+
+                          {group.przedmiot && (
+                            <span className="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-extrabold border border-slate-900 bg-amber-200 text-slate-900">
+                              {group.przedmiot === 'geografia'
+                                ? 'Geografia'
+                                : group.przedmiot === 'polski'
+                                ? 'Język Polski'
+                                : 'Matematyka'}
                             </span>
                           )}
 
@@ -645,6 +760,12 @@ export default function ResultsPage() {
           )}
         </div>
       </div>
+
+      {/* No Tokens Modal Window */}
+      <NoTokensModal
+        isOpen={showNoTokensModal}
+        onClose={() => setShowNoTokensModal(false)}
+      />
     </main>
   );
 }

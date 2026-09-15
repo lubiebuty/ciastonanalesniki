@@ -9,17 +9,20 @@ vi.mock('next/navigation', () => ({
   }),
 }));
 
+const mockUseSession = vi.fn().mockReturnValue({
+  data: { user: { email: 'test@example.com' }, tokens: 5 },
+  status: 'authenticated',
+  update: vi.fn(),
+});
+
 vi.mock('next-auth/react', () => ({
-  useSession: () => ({
-    data: { user: { email: 'test@example.com' }, tokens: 5 },
-    status: 'authenticated',
-    update: vi.fn(),
-  }),
+  useSession: () => mockUseSession(),
 }));
 
 describe('Home Page - Subject Selection', () => {
   beforeEach(() => {
     vi.restoreAllMocks();
+    localStorage.clear();
     vi.stubGlobal('fetch', vi.fn().mockImplementation((url: string) => {
       if (url.includes('przedmiot=polski')) {
         return Promise.resolve({
@@ -60,6 +63,46 @@ describe('Home Page - Subject Selection', () => {
     await user.click(polskiButton);
 
     expect(screen.getByText('Trening zadań z Polskiego')).toBeInTheDocument();
-    expect(screen.getByText('Baza zadań z Języka Polskiego jest pusta')).toBeInTheDocument();
+    expect(screen.getByText('Brak zadań z polskiego w bazie danych.')).toBeInTheDocument();
+  });
+
+  it('switches to Geografia when clicked and renders chapter progression', async () => {
+    render(<Home />);
+
+    const user = userEvent.setup();
+    const geografiaButton = screen.getByRole('button', { name: /Geografia/i });
+    await user.click(geografiaButton);
+
+    expect(screen.getByText('Trening Geograficzny — 13 Działów')).toBeInTheDocument();
+    expect(screen.getByText('Działy z Geografii (13 działów)')).toBeInTheDocument();
+    expect(screen.getByText(/Dział I: Mapa Polski/i)).toBeInTheDocument();
+  });
+
+  it('shows NoTokensModal instead of starting task when user has 0 tokens', async () => {
+    mockUseSession.mockReturnValue({
+      data: { user: { email: 'zero@example.com' }, tokens: 0 } as any,
+      status: 'authenticated',
+      update: vi.fn(),
+    });
+
+    render(<Home />);
+
+    await waitFor(() => {
+      expect(screen.getByText('Wybrane zadania z matematyki (1)')).toBeInTheDocument();
+    });
+
+    const user = userEvent.setup();
+    const topicButton = screen.getByRole('button', { name: /#1/i });
+    await user.click(topicButton);
+
+    expect(screen.getByText('Brak dostępnych tokenów')).toBeInTheDocument();
+    expect(screen.getByText('ciastonanalesniki@gmail.com')).toBeInTheDocument();
+
+    // Restore
+    mockUseSession.mockReturnValue({
+      data: { user: { email: 'test@example.com' }, tokens: 5 },
+      status: 'authenticated',
+      update: vi.fn(),
+    });
   });
 });

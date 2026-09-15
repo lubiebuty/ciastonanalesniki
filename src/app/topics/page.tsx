@@ -4,6 +4,9 @@ import { useEffect, useState, Suspense } from 'react';
 import { useRouter, useSearchParams } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import GeografiaChaptersView from '@/components/GeografiaChaptersView';
+import NoTokensModal from '@/components/NoTokensModal';
+import { getNextTopic } from '@/lib/geografia';
 
 interface Topic {
   id: string;
@@ -11,6 +14,12 @@ interface Topic {
   pytanie: string;
   odpowiedz: string;
   przedmiot?: string;
+  dzial_numer?: number;
+  dzial_nazwa?: string;
+  wariant?: string;
+  numer_pytania?: number;
+  notatka?: string | null;
+  id_slug?: string;
 }
 
 function TopicsList() {
@@ -19,12 +28,12 @@ function TopicsList() {
   const paramPrzedmiot = searchParams.get('przedmiot');
 
   const [activeSubject, setActiveSubject] = useState<string>(() => {
-    if (paramPrzedmiot && (paramPrzedmiot === 'polski' || paramPrzedmiot === 'matematyka')) {
+    if (paramPrzedmiot && (paramPrzedmiot === 'polski' || paramPrzedmiot === 'matematyka' || paramPrzedmiot === 'geografia')) {
       return paramPrzedmiot;
     }
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('selected_przedmiot');
-      if (saved && (saved === 'polski' || saved === 'matematyka')) {
+      if (saved && (saved === 'polski' || saved === 'matematyka' || saved === 'geografia')) {
         return saved;
       }
     }
@@ -32,16 +41,34 @@ function TopicsList() {
   });
 
   const [topics, setTopics] = useState<Topic[]>([]);
+  const [sessions, setSessions] = useState<any[]>([]);
   const [loading, setLoading] = useState(true);
   const [creating, setCreating] = useState(false);
   const [selectedTopicToConfirm, setSelectedTopicToConfirm] = useState<string | null>(null);
+  const [showNoTokensModal, setShowNoTokensModal] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const { update } = useSession();
+  const { data: session, update } = useSession();
+
+  const handleTopicClick = (topicId: string) => {
+    if ((session?.tokens ?? 0) <= 0) {
+      setShowNoTokensModal(true);
+      return;
+    }
+    setSelectedTopicToConfirm(topicId);
+  };
+
+  // Load user sessions for progress tracking
+  useEffect(() => {
+    fetch('/api/sessions')
+      .then((res) => res.json())
+      .then((data) => setSessions(data.sessions || []))
+      .catch(() => setSessions([]));
+  }, []);
 
   // Sync activeSubject whenever URL search params change
   useEffect(() => {
     const p = searchParams.get('przedmiot');
-    if (p && (p === 'polski' || p === 'matematyka') && p !== activeSubject) {
+    if (p && (p === 'polski' || p === 'matematyka' || p === 'geografia') && p !== activeSubject) {
       setActiveSubject(p);
     }
   }, [searchParams, activeSubject]);
@@ -67,6 +94,12 @@ function TopicsList() {
   }, [activeSubject]);
 
   const selectTopic = async (topicId: string) => {
+    if ((session?.tokens ?? 0) <= 0) {
+      setSelectedTopicToConfirm(null);
+      setShowNoTokensModal(true);
+      return;
+    }
+
     if (creating) return;
     setCreating(true);
 
@@ -81,6 +114,12 @@ function TopicsList() {
       });
 
       const data = await res.json();
+
+      if (res.status === 402 || data.error?.toLowerCase().includes('token')) {
+        setSelectedTopicToConfirm(null);
+        setShowNoTokensModal(true);
+        return;
+      }
 
       if (res.ok && data.session) {
         await update();
@@ -97,6 +136,10 @@ function TopicsList() {
   };
 
   const drawRandom = () => {
+    if ((session?.tokens ?? 0) <= 0) {
+      setShowNoTokensModal(true);
+      return;
+    }
     if (topics.length === 0) return;
     const random = topics[Math.floor(Math.random() * topics.length)];
     setSelectedTopicToConfirm(random.id);
@@ -107,6 +150,13 @@ function TopicsList() {
   const indexOfLastItem = currentPage * itemsPerPage;
   const indexOfFirstItem = indexOfLastItem - itemsPerPage;
   const currentTopics = topics.slice(indexOfFirstItem, indexOfLastItem);
+
+  const subjectLabel =
+    activeSubject === 'matematyka'
+      ? 'Matematyka'
+      : activeSubject === 'polski'
+      ? 'Język Polski'
+      : 'Geografia';
 
   return (
     <main className="min-h-screen p-3 sm:p-6 md:p-10 font-sketch">
@@ -121,7 +171,7 @@ function TopicsList() {
               Działy — Lista Kafli
             </h1>
             <p className="text-sm sm:text-base font-bold text-slate-600">
-              Wybierz zadanie z zeszytu lub wylosuj wyzwanie
+              Wybierz zadanie z zeszytu lub przejdź do kolejnego zadania
             </p>
           </div>
 
@@ -140,7 +190,7 @@ function TopicsList() {
           <button
             type="button"
             onClick={() => handleSubjectChange('matematyka')}
-            className={`flex-1 py-3 px-4 font-extrabold text-base sm:text-lg tracking-wide rounded-xl border-[2.5px] border-slate-900 transition-all cursor-pointer ${
+            className={`flex-1 py-3 px-3 font-extrabold text-sm sm:text-base tracking-wide rounded-xl border-[2.5px] border-slate-900 transition-all cursor-pointer ${
               activeSubject === 'matematyka'
                 ? 'bg-amber-100 text-slate-900 shadow-[4px_4px_0px_#0f172a] scale-[1.01]'
                 : 'bg-white text-slate-700 hover:bg-slate-50 shadow-[2px_2px_0px_#0f172a]'
@@ -151,7 +201,7 @@ function TopicsList() {
           <button
             type="button"
             onClick={() => handleSubjectChange('polski')}
-            className={`flex-1 py-3 px-4 font-extrabold text-base sm:text-lg tracking-wide rounded-xl border-[2.5px] border-slate-900 transition-all cursor-pointer ${
+            className={`flex-1 py-3 px-3 font-extrabold text-sm sm:text-base tracking-wide rounded-xl border-[2.5px] border-slate-900 transition-all cursor-pointer ${
               activeSubject === 'polski'
                 ? 'bg-amber-100 text-slate-900 shadow-[4px_4px_0px_#0f172a] scale-[1.01]'
                 : 'bg-white text-slate-700 hover:bg-slate-50 shadow-[2px_2px_0px_#0f172a]'
@@ -159,22 +209,35 @@ function TopicsList() {
           >
             Język Polski
           </button>
+          <button
+            type="button"
+            onClick={() => handleSubjectChange('geografia')}
+            className={`flex-1 py-3 px-3 font-extrabold text-sm sm:text-base tracking-wide rounded-xl border-[2.5px] border-slate-900 transition-all cursor-pointer ${
+              activeSubject === 'geografia'
+                ? 'bg-amber-100 text-slate-900 shadow-[4px_4px_0px_#0f172a] scale-[1.01]'
+                : 'bg-white text-slate-700 hover:bg-slate-50 shadow-[2px_2px_0px_#0f172a]'
+            }`}
+          >
+            Geografia
+          </button>
         </div>
 
         {/* ═════════════════════════════════════════════════════════════════
-            RANDOM DRAW PROMPT BUTTON (Hand-drawn CTA)
+            CTA BUTTON (Hand-drawn CTA) — Only for Math & Polish
             ═════════════════════════════════════════════════════════════════ */}
-        <button
-          onClick={drawRandom}
-          disabled={creating || topics.length === 0}
-          className="w-full sketch-btn-black p-4 font-extrabold text-base sm:text-lg tracking-wide flex items-center justify-center gap-2.5 disabled:opacity-50 cursor-pointer"
-        >
-          <span>Wylosuj zadanie ({activeSubject === 'matematyka' ? 'Matematyka' : 'Język Polski'})</span>
-          <span aria-hidden="true">→</span>
-        </button>
+        {activeSubject !== 'geografia' && (
+          <button
+            onClick={drawRandom}
+            disabled={creating || topics.length === 0}
+            className="w-full sketch-btn-black p-4 font-extrabold text-base sm:text-lg tracking-wide flex items-center justify-center gap-2.5 disabled:opacity-50 cursor-pointer"
+          >
+            <span>Wylosuj zadanie ({subjectLabel})</span>
+            <span aria-hidden="true">→</span>
+          </button>
+        )}
 
         {/* ═════════════════════════════════════════════════════════════════
-            TOPICS TILES (Pages 7 & 8 Hand-drawn Lined Boxes with Hatches)
+            TOPICS TILES / GEOGRAFIA CHAPTERS VIEW
             ═════════════════════════════════════════════════════════════════ */}
         {loading ? (
           <div className="flex items-center justify-center py-12">
@@ -189,12 +252,20 @@ function TopicsList() {
               Wkrótce pojawią się tu nowe zagadnienia.
             </p>
           </div>
+        ) : activeSubject === 'geografia' ? (
+          <GeografiaChaptersView
+            topics={topics}
+            userSessions={sessions}
+            onSelectTopic={(topicId) => handleTopicClick(topicId)}
+            creating={creating}
+            compact={false}
+          />
         ) : (
           <div className="space-y-3.5">
             {currentTopics.map((topic) => (
               <button
                 key={topic.id}
-                onClick={() => setSelectedTopicToConfirm(topic.id)}
+                onClick={() => handleTopicClick(topic.id)}
                 disabled={creating}
                 className="w-full text-left group rounded-xl border-[2.5px] border-slate-900 bg-white hover:bg-amber-50/50 p-4 sm:p-5 space-y-2 shadow-[4px_4px_0px_#0f172a] hover:shadow-[5px_5px_0px_#0f172a] transition-all disabled:opacity-50 cursor-pointer relative overflow-hidden"
               >
@@ -219,9 +290,9 @@ function TopicsList() {
         )}
 
         {/* ═════════════════════════════════════════════════════════════════
-            PAGINATION CONTROLS (Hand-drawn Buttons)
+            PAGINATION CONTROLS (Hand-drawn Buttons) - Only for Math & Polish
             ═════════════════════════════════════════════════════════════════ */}
-        {totalPages > 1 && (
+        {activeSubject !== 'geografia' && totalPages > 1 && (
           <div className="flex items-center justify-between border-t-2 border-dashed border-slate-300 pt-4">
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}
@@ -305,6 +376,12 @@ function TopicsList() {
         })()}
 
       </div>
+
+      {/* No Tokens Modal Window */}
+      <NoTokensModal
+        isOpen={showNoTokensModal}
+        onClose={() => setShowNoTokensModal(false)}
+      />
     </main>
   );
 }

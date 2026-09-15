@@ -127,7 +127,7 @@ export default function UserBar({ user, tokens, onSignOut }: UserBarProps) {
             </svg>
             <span className="font-bold text-sm">{tokens}</span>
             <span className="text-slate-700">
-              {tokens === 1 ? 'token' : 'tokeny'}
+              {tokens === 1 ? 'token' : tokens >= 2 && tokens <= 4 ? 'tokeny' : 'tokenów'}
             </span>
           </div>
 

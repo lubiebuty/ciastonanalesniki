@@ -4,33 +4,56 @@ import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
+import GeografiaChaptersView from '@/components/GeografiaChaptersView';
+import NoTokensModal from '@/components/NoTokensModal';
 
 interface TopicData {
   id: string;
   numer: number;
   pytanie: string;
   odpowiedz: string;
-  przedmiot?: string;
+  przedmiot: string;
+  dzial_numer?: number;
+  dzial_nazwa?: string;
+  wariant?: string;
+  numer_pytania?: number;
+  notatka?: string | null;
+  id_slug?: string;
 }
 
-type Subject = 'matematyka' | 'polski';
+type Subject = 'matematyka' | 'polski' | 'geografia';
 
 export default function Home() {
   const [activeSubject, setActiveSubject] = useState<Subject>('matematyka');
   const [topics, setTopics] = useState<TopicData[]>([]);
+  const [sessions, setSessions] = useState<any[]>([]);
   const [topicsLoading, setTopicsLoading] = useState(true);
   const [creating, setCreating] = useState(false);
   const [selectedTopicToConfirm, setSelectedTopicToConfirm] = useState<string | null>(null);
+  const [showNoTokensModal, setShowNoTokensModal] = useState<boolean>(false);
   const router = useRouter();
-  const { update } = useSession();
+  const { data: session, update } = useSession();
+
+  const handleTopicClick = (topicId: string) => {
+    if ((session?.tokens ?? 0) <= 0) {
+      setShowNoTokensModal(true);
+      return;
+    }
+    setSelectedTopicToConfirm(topicId);
+  };
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('selected_przedmiot');
-      if (saved === 'polski' || saved === 'matematyka') {
-        setActiveSubject(saved);
+      if (saved === 'polski' || saved === 'matematyka' || saved === 'geografia') {
+        setActiveSubject(saved as Subject);
       }
     }
+    // Load sessions to track progress
+    fetch('/api/sessions')
+      .then((res) => res.json())
+      .then((data) => setSessions(data.sessions || []))
+      .catch(() => setSessions([]));
   }, []);
 
   useEffect(() => {
@@ -46,6 +69,12 @@ export default function Home() {
   }, [activeSubject]);
 
   const selectTopic = async (topicId: string) => {
+    if ((session?.tokens ?? 0) <= 0) {
+      setSelectedTopicToConfirm(null);
+      setShowNoTokensModal(true);
+      return;
+    }
+
     if (creating) return;
     setCreating(true);
 
@@ -57,6 +86,12 @@ export default function Home() {
       });
 
       const data = await res.json();
+
+      if (res.status === 402 || data.error?.toLowerCase().includes('token')) {
+        setSelectedTopicToConfirm(null);
+        setShowNoTokensModal(true);
+        return;
+      }
 
       if (res.ok && data.session) {
         await update();
@@ -86,7 +121,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
             {/* Matematyka Card */}
             <button
               type="button"
@@ -108,7 +143,7 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Matematyka</h3>
-                  <p className="text-sm font-bold text-slate-600">Cyferki, równania i geometria</p>
+                  <p className="text-sm font-bold text-slate-600">Cyferki i równania</p>
                 </div>
               </div>
             </button>
@@ -133,7 +168,31 @@ export default function Home() {
                 </div>
                 <div>
                   <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Język Polski</h3>
-                  <p className="text-sm font-bold text-slate-600">Lektury, pojęcia i wypracowania</p>
+                  <p className="text-sm font-bold text-slate-600">Lektury i pojęcia</p>
+                </div>
+              </div>
+            </button>
+
+            {/* Geografia Card */}
+            <button
+              type="button"
+              onClick={() => setActiveSubject('geografia')}
+              className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${
+                activeSubject === 'geografia'
+                  ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]'
+                  : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'
+              }`}
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a]">
+                  <svg className="w-6 h-6 stroke-slate-900 fill-none" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <circle cx="12" cy="12" r="10"/>
+                    <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Geografia</h3>
+                  <p className="text-sm font-bold text-slate-600">13 działów i 4 warianty</p>
                 </div>
               </div>
             </button>
@@ -175,7 +234,7 @@ export default function Home() {
               </Link>
             </div>
           </div>
-        ) : (
+        ) : activeSubject === 'polski' ? (
           <div className="sketch-box p-6 sm:p-8 bg-white space-y-4">
             <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
               Trening Polonistyczny
@@ -192,6 +251,36 @@ export default function Home() {
             <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
               <Link
                 href="/topics?przedmiot=polski"
+                className="sketch-btn-black px-6 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Wybierz zadanie</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+              <Link
+                href="/results"
+                className="sketch-btn px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Moje wyniki</span>
+              </Link>
+            </div>
+          </div>
+        ) : (
+          <div className="sketch-box p-6 sm:p-8 bg-white space-y-4">
+            <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
+              Tutor Geograficzny
+            </div>
+
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-wide leading-tight text-slate-900">
+              Trening Geograficzny — 13 Działów
+            </h2>
+
+            <p className="text-base sm:text-lg font-bold text-slate-600 leading-relaxed max-w-2xl">
+              System 4 wariantów w każdym dziale: od pytań ogólnych (A), przez szczegółowe podpunkty z pułapkami (B), pytania integrujące (C), po wyłapywanie błędów (D).
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
+              <Link
+                href="/topics?przedmiot=geografia"
                 className="sketch-btn-black px-6 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
               >
                 <span>Wybierz zadanie</span>
@@ -242,7 +331,7 @@ export default function Home() {
                   <button
                     key={topic.id}
                     type="button"
-                    onClick={() => setSelectedTopicToConfirm(topic.id)}
+                    onClick={() => handleTopicClick(topic.id)}
                     disabled={creating}
                     className="w-full text-left group flex items-start gap-3.5 rounded-xl border-2 border-slate-900 bg-white hover:bg-amber-50/70 p-4 transition-all shadow-[3px_3px_0px_#0f172a] hover:shadow-[4px_4px_0px_#0f172a] cursor-pointer disabled:opacity-50"
                   >
@@ -265,7 +354,7 @@ export default function Home() {
               </div>
             )}
           </div>
-        ) : topics.length > 0 ? (
+        ) : activeSubject === 'polski' ? (
           <div className="sketch-box p-5 sm:p-7 space-y-4">
             <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
               <div>
@@ -289,13 +378,15 @@ export default function Home() {
               <div className="flex items-center justify-center py-8">
                 <div className="w-8 h-8 border-3 border-slate-900 border-t-amber-500 rounded-full animate-spin" />
               </div>
+            ) : topics.length === 0 ? (
+              <p className="text-slate-600 text-base py-4 font-bold">Brak zadań z polskiego w bazie danych.</p>
             ) : (
               <div className="grid gap-3">
                 {topics.slice(0, 5).map((topic) => (
                   <button
                     key={topic.id}
                     type="button"
-                    onClick={() => setSelectedTopicToConfirm(topic.id)}
+                    onClick={() => handleTopicClick(topic.id)}
                     disabled={creating}
                     className="w-full text-left group flex items-start gap-3.5 rounded-xl border-2 border-slate-900 bg-white hover:bg-amber-50/70 p-4 transition-all shadow-[3px_3px_0px_#0f172a] hover:shadow-[4px_4px_0px_#0f172a] cursor-pointer disabled:opacity-50"
                   >
@@ -319,32 +410,40 @@ export default function Home() {
             )}
           </div>
         ) : (
-          <div className="sketch-box p-8 sm:p-12 text-center space-y-4">
-            <div className="flex justify-center">
-              <svg className="w-14 h-14 stroke-slate-900 fill-none" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
-                <path d="M6 6h10"/>
-                <path d="M6 10h10"/>
-                <path d="M6 14h6"/>
-              </svg>
-            </div>
-            <div className="max-w-md mx-auto space-y-2">
-              <h2 className="text-2xl font-extrabold text-slate-900">
-                Baza zadań z Języka Polskiego jest pusta
-              </h2>
-              <p className="text-sm font-bold text-slate-600 leading-relaxed">
-                Na razie sekcja Języka Polskiego nie zawiera jeszcze pytań w tym środowisku.
-              </p>
-            </div>
-            <div className="pt-2">
-              <button
-                type="button"
-                onClick={() => setActiveSubject('matematyka')}
-                className="sketch-btn-black px-6 py-2.5 text-sm font-extrabold"
+          <div className="sketch-box p-5 sm:p-7 space-y-4">
+            <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-slate-900">
+                  Działy z Geografii (13 działów)
+                </h2>
+                <p className="text-sm font-bold text-slate-500">
+                  Wybierz dział i przechodź warianty: A → B → C → D
+                </p>
+              </div>
+
+              <Link
+                href="/topics?przedmiot=geografia"
+                className="sketch-btn px-3.5 py-1 text-sm font-extrabold hover:bg-amber-50"
               >
-                <span>Przejdź do zadań z Matematyki →</span>
-              </button>
+                Wszystkie zadania →
+              </Link>
             </div>
+
+            {topicsLoading ? (
+              <div className="flex items-center justify-center py-8">
+                <div className="w-8 h-8 border-3 border-slate-900 border-t-amber-500 rounded-full animate-spin" />
+              </div>
+            ) : topics.length === 0 ? (
+              <p className="text-slate-600 text-base py-4 font-bold">Brak pytań z geografii w bazie danych.</p>
+            ) : (
+              <GeografiaChaptersView
+                topics={topics as any}
+                userSessions={sessions}
+                onSelectTopic={(topicId) => handleTopicClick(topicId)}
+                creating={creating}
+                compact={true}
+              />
+            )}
           </div>
         )}
       </div>
@@ -420,6 +519,12 @@ export default function Home() {
           </div>
         );
       })()}
+
+      {/* No Tokens Modal Window */}
+      <NoTokensModal
+        isOpen={showNoTokensModal}
+        onClose={() => setShowNoTokensModal(false)}
+      />
     </main>
   );
 }

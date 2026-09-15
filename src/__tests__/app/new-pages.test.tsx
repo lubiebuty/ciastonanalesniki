@@ -57,13 +57,13 @@ describe('CzyJestesCwaniakPage (/cwaniak)', () => {
     expect(screen.getByRole('button', { name: 'NIE' })).toBeInTheDocument();
   });
 
-  it('shows "Odpowiedź nie, jest nie miłe. Spróbuj jeszcze raz" when clicking NIE', async () => {
+  it('shows witty warning when clicking NIE', async () => {
     render(<CzyJestesCwaniakPage />);
     const user = userEvent.setup();
     const nieBtn = screen.getByRole('button', { name: 'NIE' });
     await user.click(nieBtn);
 
-    expect(screen.getAllByText(/Odpowiedź nie, jest nie miłe\. Spróbuj jeszcze raz/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Prawdziwy cwaniak nigdy nie pęka przed wyzwaniem/i).length).toBeGreaterThan(0);
     expect(pushMock).not.toHaveBeenCalled();
   });
 
@@ -73,7 +73,7 @@ describe('CzyJestesCwaniakPage (/cwaniak)', () => {
     const mozeBtn = screen.getByRole('button', { name: 'MOŻE' });
     await user.click(mozeBtn);
 
-    expect(screen.getAllByText(/Więcej wiary w siebie!/i).length).toBeGreaterThan(0);
+    expect(screen.getAllByText(/Więcej wiary w siebie/i).length).toBeGreaterThan(0);
     expect(pushMock).not.toHaveBeenCalled();
   });
 

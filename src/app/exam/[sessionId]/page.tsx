@@ -9,6 +9,8 @@ import ScoreBreakdown from '@/components/ScoreBreakdown';
 import ChalkboardFrame from '@/components/sketch/ChalkboardFrame';
 import WimpyCharacters from '@/components/sketch/WimpyCharacters';
 import WimpyRobot from '@/components/sketch/WimpyRobot';
+import NoTokensModal from '@/components/NoTokensModal';
+import { getNextTopic } from '@/lib/geografia';
 
 type ExamPhase = 'monologue' | 'evaluating' | 'report';
 
@@ -23,6 +25,12 @@ interface Topic {
   pytanie: string;
   odpowiedz: string;
   przedmiot: string;
+  dzial_numer?: number;
+  dzial_nazwa?: string;
+  wariant?: string;
+  numer_pytania?: number;
+  notatka?: string | null;
+  id_slug?: string;
 }
 
 function ExamContent() {
@@ -30,7 +38,7 @@ function ExamContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const sessionId = params.sessionId as string;
-  const { update } = useSession();
+  const { data: session, update } = useSession();
 
   const prevScoreParam = searchParams.get('prevScore');
   const prevScore = prevScoreParam !== null && !isNaN(Number(prevScoreParam)) ? Number(prevScoreParam) : null;
@@ -44,6 +52,7 @@ function ExamContent() {
   const [answerText, setAnswerText] = useState<string>('');
   const [showKeyboard, setShowKeyboard] = useState<boolean>(false);
   const [repeating, setRepeating] = useState<boolean>(false);
+  const [showNoTokensModal, setShowNoTokensModal] = useState<boolean>(false);
 
   // Load session & topic details on mount
   useEffect(() => {
@@ -54,13 +63,21 @@ function ExamContent() {
       })
       .then((data) => {
         if (data.session) {
-          const subject = data.session.przedmiot || (data.session.numer >= 51 ? 'polski' : 'matematyka');
+          const subject =
+            data.session.przedmiot ||
+            (data.session.numer >= 201 ? 'geografia' : data.session.numer >= 51 ? 'polski' : 'matematyka');
           setTopic({
             topicId: data.session.topic_id,
             numer: data.session.numer,
             pytanie: data.session.pytanie,
             odpowiedz: data.session.odpowiedz,
             przedmiot: subject,
+            dzial_numer: data.session.dzial_numer,
+            dzial_nazwa: data.session.dzial_nazwa,
+            wariant: data.session.wariant,
+            numer_pytania: data.session.numer_pytania,
+            notatka: data.session.notatka,
+            id_slug: data.session.id_slug,
           });
           if (typeof window !== 'undefined' && subject) {
             localStorage.setItem('selected_przedmiot', subject);
@@ -105,6 +122,12 @@ function ExamContent() {
 
       const data = await res.json();
 
+      if (res.status === 402 || data.error?.toLowerCase().includes('token')) {
+        setShowNoTokensModal(true);
+        setPhase('monologue');
+        return;
+      }
+
       if (res.ok && data.scores) {
         setScores(data.scores);
         setFeedback(data.feedback || '');
@@ -122,6 +145,12 @@ function ExamContent() {
   // Repeat answer → creates a new session entry (non-overwriting)
   const repeatExam = async () => {
     if (!topic?.topicId || repeating) return;
+
+    if ((session?.tokens ?? 0) <= 0) {
+      setShowNoTokensModal(true);
+      return;
+    }
+
     setRepeating(true);
 
     try {
@@ -132,6 +161,11 @@ function ExamContent() {
       });
 
       const data = await res.json();
+
+      if (res.status === 402 || data.error?.toLowerCase().includes('token')) {
+        setShowNoTokensModal(true);
+        return;
+      }
 
       if (res.ok && data.session) {
         await update();
@@ -144,6 +178,63 @@ function ExamContent() {
       alert('Błąd połączenia z serwerem');
     } finally {
       setRepeating(false);
+    }
+  };
+
+  const [loadingNext, setLoadingNext] = useState<boolean>(false);
+
+  // Next topic in learning sequence → creates a new session and starts exam immediately
+  const handleNextExamTopic = async () => {
+    if (loadingNext || !topic) return;
+
+    if ((session?.tokens ?? 0) <= 0) {
+      setShowNoTokensModal(true);
+      return;
+    }
+
+    setLoadingNext(true);
+
+    try {
+      const subject = topic.przedmiot || 'geografia';
+      const [topicsRes, sessionsRes] = await Promise.all([
+        fetch(`/api/topics?przedmiot=${subject}`),
+        fetch('/api/sessions'),
+      ]);
+
+      const topicsData = await topicsRes.json();
+      const sessionsData = await sessionsRes.json();
+
+      const allTopics = topicsData.topics || [];
+      const allSessions = sessionsData.sessions || [];
+
+      const nextTopic = getNextTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
+
+      if (nextTopic && nextTopic.id) {
+        const createRes = await fetch('/api/sessions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicId: nextTopic.id }),
+        });
+
+        const createData = await createRes.json();
+
+        if (createRes.status === 402 || createData.error?.toLowerCase().includes('token')) {
+          setShowNoTokensModal(true);
+          return;
+        }
+
+        if (createRes.ok && createData.session) {
+          await update();
+          router.push(`/exam/${createData.session.id}`);
+          return;
+        }
+      }
+
+      router.push(`/topics?przedmiot=${subject}`);
+    } catch {
+      router.push(`/topics?przedmiot=${topic.przedmiot || 'matematyka'}`);
+    } finally {
+      setLoadingNext(false);
     }
   };
 
@@ -169,9 +260,20 @@ function ExamContent() {
           </Link>
 
           {topic && (
-            <span className="text-sm font-extrabold uppercase px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-100 shadow-[2px_2px_0px_#0f172a]">
-              {topic.przedmiot === 'polski' ? 'Język Polski' : 'Matematyka'}
-            </span>
+            <div className="flex items-center gap-2">
+              {topic.wariant && (
+                <span className="text-xs font-extrabold uppercase px-2.5 py-1 rounded-md border-2 border-slate-900 bg-amber-200 shadow-[1.5px_1.5px_0px_#0f172a]">
+                  Wariant {topic.wariant}
+                </span>
+              )}
+              <span className="text-sm font-extrabold uppercase px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-100 shadow-[2px_2px_0px_#0f172a]">
+                {topic.przedmiot === 'polski'
+                  ? 'Język Polski'
+                  : topic.przedmiot === 'geografia'
+                  ? 'Geografia'
+                  : 'Matematyka'}
+              </span>
+            </div>
           )}
         </div>
 
@@ -194,14 +296,26 @@ function ExamContent() {
           <div className="space-y-6 sm:space-y-8">
             {/* Visual Scene: Chalkboard Frame with question + Characters */}
             <div className="relative">
-              <ChalkboardFrame title={`ZADANIE #${topic.numer}`}>
+              <ChalkboardFrame
+                title={
+                  topic.dzial_nazwa
+                    ? `${topic.dzial_nazwa} • Wariant ${topic.wariant || ''}`
+                    : `ZADANIE #${topic.numer}`
+                }
+              >
                 <div className="space-y-3">
+                  {topic.wariant === 'D' && (
+                    <div className="p-2.5 rounded-lg border-2 border-dashed border-sky-600 bg-sky-50 text-xs font-bold text-sky-950">
+                      Zadanie typu „Znajdź i wytłumacz błąd”: Oceń, czy w podanym zdaniu występuje błąd merytoryczny i go wytłumacz. Pamiętaj: zdanie może być w pełni poprawne — nie doszukuj się błędu na siłę!
+                    </div>
+                  )}
+
                   <p className="text-xl sm:text-2xl font-extrabold text-slate-900 leading-snug">
                     {topic.pytanie}
                   </p>
 
                   <div className="pt-2 border-t-2 border-dashed border-slate-300 flex items-center justify-between text-xs sm:text-sm font-extrabold text-slate-500 uppercase tracking-wider">
-                    <span>SPRAWDŹ CZY ROZUMIESZ</span>
+                    <span>{topic.id_slug ? `KOD: ${topic.id_slug}` : 'SPRAWDŹ CZY ROZUMIESZ'}</span>
                     <span>10 PKT</span>
                   </div>
                 </div>
@@ -360,13 +474,18 @@ function ExamContent() {
               </button>
               <button
                 type="button"
-                onClick={() => {
-                  const subject = topic?.przedmiot || (typeof window !== 'undefined' ? localStorage.getItem('selected_przedmiot') : null) || 'matematyka';
-                  router.push(`/topics?przedmiot=${subject}`);
-                }}
-                className="flex-1 sketch-btn-black p-4 font-extrabold text-base sm:text-lg flex items-center justify-center gap-2 cursor-pointer shadow-[4px_4px_0px_#0f172a]"
+                onClick={handleNextExamTopic}
+                disabled={loadingNext}
+                className="flex-1 sketch-btn-black p-4 font-extrabold text-base sm:text-lg flex items-center justify-center gap-2 cursor-pointer shadow-[4px_4px_0px_#0f172a] disabled:opacity-50"
               >
-                Kolejne zadanie
+                {loadingNext ? (
+                  <>
+                    <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                    <span>Ładowanie zadania...</span>
+                  </>
+                ) : (
+                  <span>Kolejne zadanie →</span>
+                )}
               </button>
               <button
                 type="button"
@@ -379,6 +498,12 @@ function ExamContent() {
           </div>
         )}
       </div>
+
+      {/* No Tokens Modal Window */}
+      <NoTokensModal
+        isOpen={showNoTokensModal}
+        onClose={() => setShowNoTokensModal(false)}
+      />
     </main>
   );
 }
