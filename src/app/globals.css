@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Comic+Neue:wght@400;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -88,12 +89,12 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply font-sans;
+    font-family: 'Patrick Hand', 'Comic Neue', system-ui, cursive, sans-serif;
     font-size: 18px;
   }
   @media (max-width: 640px) {
     html {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
   body {
@@ -110,7 +111,7 @@
    ═══════════════════════════════════════════════════════════════════ */
 
 .font-sketch {
-  font-family: var(--font-sans), system-ui, -apple-system, sans-serif;
+  font-family: 'Patrick Hand', 'Comic Neue', cursive, sans-serif;
 }
 
 /* Ruled notebook paper background */
