@@ -152,7 +152,7 @@ export default function CzyJestesCwaniakPage() {
 
           {/* Greg & Rowley watching below the frame */}
           <div className="flex justify-end -mt-3 sm:-mt-6 pr-4 relative z-20 pointer-events-none">
-            <WimpyCharacters pose="reading" />
+            <WimpyCharacters pose="looking_up" />
           </div>
         </div>
 
