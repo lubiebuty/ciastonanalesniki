@@ -1,8 +1,22 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Patrick_Hand, Comic_Neue } from "next/font/google";
 import { SessionProvider } from "next-auth/react";
 import AppShell from "@/components/AppShell";
 import "./globals.css";
+
+const patrickHand = Patrick_Hand({
+  weight: "400",
+  subsets: ["latin", "latin-ext"],
+  variable: "--font-sketch",
+  display: "swap",
+});
+
+const comicNeue = Comic_Neue({
+  weight: ["400", "700"],
+  subsets: ["latin"],
+  variable: "--font-comic",
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-sans",
@@ -28,7 +42,7 @@ export default function RootLayout({
     <html lang="pl" suppressHydrationWarning>
       <body
         suppressHydrationWarning
-        className={`${geistSans.variable} ${geistMono.variable} antialiased selection:bg-indigo-100 selection:text-indigo-900`}
+        className={`${patrickHand.variable} ${comicNeue.variable} ${geistSans.variable} ${geistMono.variable} antialiased selection:bg-indigo-100 selection:text-indigo-900`}
       >
         <SessionProvider>
           <AppShell>{children}</AppShell>
