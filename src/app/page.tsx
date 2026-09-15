@@ -1,15 +1,16 @@
 'use client';
 
-import Link from 'next/link';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
-import { useEffect, useState } from 'react';
+import Link from 'next/link';
 
 interface TopicData {
   id: string;
   numer: number;
   pytanie: string;
   odpowiedz: string;
+  przedmiot?: string;
 }
 
 type Subject = 'matematyka' | 'polski';
@@ -58,7 +59,6 @@ export default function Home() {
       const data = await res.json();
 
       if (res.ok && data.session) {
-        // Refresh client-side NextAuth session to sync token count
         await update();
         setSelectedTopicToConfirm(null);
         router.push(`/exam/${data.session.id}`);
@@ -73,37 +73,42 @@ export default function Home() {
   };
 
   return (
-    <main className="min-h-screen p-4 sm:p-6 md:p-10">
+    <main className="min-h-screen p-3 sm:p-6 md:p-10 font-sketch">
       <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
 
-        {/* Subject Selection Cards / Grid */}
+        {/* ═════════════════════════════════════════════════════════════════
+            1. WYBIERZ PRZEDMIOT (Subject Selection Tabs)
+            ═════════════════════════════════════════════════════════════════ */}
         <div className="space-y-3">
-          <div className="flex items-center justify-between">
-            <h2 className="text-sm font-bold uppercase tracking-wider text-slate-600">
+          <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-1.5">
+            <h2 className="text-lg sm:text-xl font-extrabold uppercase tracking-wider text-slate-900">
               Wybierz przedmiot
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-3.5">
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
             {/* Matematyka Card */}
             <button
               type="button"
               onClick={() => setActiveSubject('matematyka')}
-              className={`group relative text-left p-4 sm:p-5 rounded-2xl border transition-all duration-200 cursor-pointer ${activeSubject === 'matematyka'
-                  ? 'border-indigo-600 bg-indigo-50/60 shadow-md ring-2 ring-indigo-600/20'
-                  : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50 shadow-xs'
-                }`}
+              className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${
+                activeSubject === 'matematyka'
+                  ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]'
+                  : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'
+              }`}
             >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className={`p-3 rounded-xl text-xl ${activeSubject === 'matematyka' ? 'bg-indigo-600 text-white' : 'bg-slate-100 text-slate-700'
-                    }`}>
-                    📐
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-lg">Matematyka</h3>
-                    <p className="text-sm text-slate-500">Poziom Podstawowy i Rozszerzony</p>
-                  </div>
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a]">
+                  <svg className="w-6 h-6 stroke-slate-900 fill-none" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M21.3 15.3l-9-9a2 2 0 0 0-2.8 0l-5.2 5.2a2 2 0 0 0 0 2.8l9 9a2 2 0 0 0 2.8 0l5.2-5.2a2 2 0 0 0 0-2.8z"/>
+                    <path d="m14.5 12.5 2-2"/>
+                    <path d="m11.5 9.5 2-2"/>
+                    <path d="m8.5 6.5 2-2"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Matematyka</h3>
+                  <p className="text-sm font-bold text-slate-600">Cyferki, równania i geometria</p>
                 </div>
               </div>
             </button>
@@ -112,118 +117,114 @@ export default function Home() {
             <button
               type="button"
               onClick={() => setActiveSubject('polski')}
-              className={`group relative text-left p-4 sm:p-5 rounded-2xl border transition-all duration-200 cursor-pointer ${activeSubject === 'polski'
-                  ? 'border-amber-600 bg-amber-50/60 shadow-md ring-2 ring-amber-600/20'
-                  : 'border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/50 shadow-xs'
-                }`}
+              className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${
+                activeSubject === 'polski'
+                  ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]'
+                  : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'
+              }`}
             >
-              <div className="flex items-start justify-between gap-3">
-                <div className="flex items-center gap-3">
-                  <div className={`p-3 rounded-xl text-xl ${activeSubject === 'polski' ? 'bg-amber-600 text-white' : 'bg-slate-100 text-slate-700'
-                    }`}>
-                    📖
-                  </div>
-                  <div>
-                    <h3 className="font-bold text-slate-900 text-lg">Język Polski</h3>
-                    <p className="text-sm text-slate-500">Zadania</p>
-                  </div>
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a]">
+                  <svg className="w-6 h-6 stroke-slate-900 fill-none" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                    <path d="M6 6h10"/>
+                    <path d="M6 10h10"/>
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Język Polski</h3>
+                  <p className="text-sm font-bold text-slate-600">Lektury, pojęcia i wypracowania</p>
                 </div>
               </div>
             </button>
           </div>
         </div>
 
-        {/* Hero Section */}
+        {/* ═════════════════════════════════════════════════════════════════
+            4. HERO CALL TO ACTION (Notebook Styled Banner)
+            ═════════════════════════════════════════════════════════════════ */}
         {activeSubject === 'matematyka' ? (
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-indigo-600 via-indigo-700 to-purple-800 p-6 sm:p-8 md:p-12 text-white shadow-xl transition-all">
-            <div className="absolute -right-10 -bottom-10 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute left-1/3 -top-10 w-40 h-40 bg-pink-400/20 rounded-full blur-xl pointer-events-none" />
+          <div className="sketch-box p-6 sm:p-8 bg-white space-y-4">
+            <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
+              Tutor Matematyczny
+            </div>
 
-            <div className="relative z-10 space-y-5 sm:space-y-6 max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1 text-xs font-semibold tracking-wide text-indigo-100 border border-white/20">
-                Twój osobisty tutor matematyczny
-              </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-wide leading-tight text-slate-900">
+              Opanuj matematykę z natychmiastową oceną AI
+            </h2>
 
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                Opanuj matematykę z natychmiastową oceną AI ✨
-              </h1>
+            <p className="text-base sm:text-lg font-bold text-slate-600 leading-relaxed max-w-2xl">
+              Wybierz zadanie, odpowiedz głosem lub wpisz rozwiązanie, a sztuczna inteligencja sprawdzi Twój tok myślenia i podpowie jak zdobyć 10/10 punktów!
+            </p>
 
-              <p className="text-indigo-100 text-sm sm:text-base md:text-lg leading-relaxed">
-                Wybierz zadanie, odpowiedz głosem lub wpisz rozwiązanie, a sztuczna inteligencja sprawdzi Twój tok myślenia i podpowie jak zdobyć 10/10 punktów!
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link
-                  href="/topics?przedmiot=matematyka"
-                  id="btn-start-simulation"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-sm sm:text-base font-bold text-indigo-950 shadow-lg hover:bg-indigo-50 hover:scale-105 active:scale-95 transition-all duration-150 text-center"
-                >
-                  <span>Rozpocznij zadanie</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-                <Link
-                  href="/results"
-                  id="btn-view-results"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-indigo-900/50 backdrop-blur-md border border-white/20 px-5 py-3.5 text-sm sm:text-base font-bold text-white shadow-sm hover:bg-indigo-900/80 active:scale-95 transition-all duration-150 text-center"
-                >
-                  <span>Moje wyniki</span>
-                </Link>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
+              <Link
+                href="/topics?przedmiot=matematyka"
+                id="btn-start-simulation"
+                className="sketch-btn-black px-6 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Wybierz zadanie</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+              <Link
+                href="/results"
+                id="btn-view-results"
+                className="sketch-btn px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Moje wyniki</span>
+              </Link>
             </div>
           </div>
         ) : (
-          <div className="relative overflow-hidden rounded-3xl bg-gradient-to-br from-amber-600 via-rose-700 to-amber-900 p-6 sm:p-8 md:p-12 text-white shadow-xl transition-all">
-            <div className="absolute -right-10 -bottom-10 w-60 h-60 bg-white/10 rounded-full blur-2xl pointer-events-none" />
-            <div className="absolute left-1/3 -top-10 w-40 h-40 bg-orange-400/20 rounded-full blur-xl pointer-events-none" />
+          <div className="sketch-box p-6 sm:p-8 bg-white space-y-4">
+            <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
+              Trening Polonistyczny
+            </div>
 
-            <div className="relative z-10 space-y-5 sm:space-y-6 max-w-2xl">
-              <div className="inline-flex items-center gap-2 rounded-full bg-white/15 backdrop-blur-md px-3.5 py-1 text-xs font-semibold tracking-wide text-amber-100 border border-white/20">
-                Przedmiot: Język Polski 📖
-              </div>
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-wide leading-tight text-slate-900">
+              Trening zadań z Polskiego
+            </h2>
 
-              <h1 className="text-2xl sm:text-4xl md:text-5xl font-extrabold tracking-tight leading-tight">
-                Trening zadań z Polskiego ✨
-              </h1>
+            <p className="text-base sm:text-lg font-bold text-slate-600 leading-relaxed max-w-2xl">
+              Ćwicz zadania z języka polskiego, analizuj lektury i sprawdzaj swoją wiedzę z automatyczną oceną AI!
+            </p>
 
-              <p className="text-amber-100 text-sm sm:text-base md:text-lg leading-relaxed">
-                Ćwicz zadania z języka polskiego, analizuj lektury i sprawdzaj swoją wiedzę z automatyczną oceną AI!
-              </p>
-
-              <div className="flex flex-col sm:flex-row gap-3 pt-2">
-                <Link
-                  href="/topics?przedmiot=polski"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-white px-6 py-3.5 text-sm sm:text-base font-bold text-amber-950 shadow-lg hover:bg-amber-50 hover:scale-105 active:scale-95 transition-all duration-150 text-center cursor-pointer"
-                >
-                  <span>Rozpocznij zadanie</span>
-                  <span aria-hidden="true">→</span>
-                </Link>
-                <Link
-                  href="/results"
-                  className="inline-flex items-center justify-center gap-2 rounded-2xl bg-amber-950/40 backdrop-blur-md border border-white/20 px-5 py-3.5 text-sm sm:text-base font-bold text-white shadow-sm hover:bg-amber-950/60 active:scale-95 transition-all duration-150 text-center"
-                >
-                  <span>Moje wyniki</span>
-                </Link>
-              </div>
+            <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
+              <Link
+                href="/topics?przedmiot=polski"
+                className="sketch-btn-black px-6 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Wybierz zadanie</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+              <Link
+                href="/results"
+                className="sketch-btn px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Moje wyniki</span>
+              </Link>
             </div>
           </div>
         )}
 
-        {/* Dynamic Content List (Matematyka vs Polski) */}
+        {/* ═════════════════════════════════════════════════════════════════
+            5. TOPICS LIST PREVIEW (Pages 7 & 8 Hatch Patterned Tiles)
+            ═════════════════════════════════════════════════════════════════ */}
         {activeSubject === 'matematyka' ? (
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-7 shadow-xs space-y-5">
-            <div className="flex items-center justify-between">
-              <div className="space-y-0.5">
-                <h2 className="text-xl font-bold tracking-tight text-slate-900">
+          <div className="sketch-box p-5 sm:p-7 space-y-4">
+            <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-slate-900">
                   Wybrane zadania z matematyki ({topics.length})
                 </h2>
-                <p className="text-sm text-slate-600">
-                  Pytania z podstawy programowej z matematyki
+                <p className="text-sm font-bold text-slate-500">
+                  Wybierz kafelek z listy poniżej:
                 </p>
               </div>
 
               <Link
-                href="/topics"
-                className="text-sm font-bold text-slate-900 hover:text-slate-600 inline-flex items-center gap-1 transition-colors"
+                href="/topics?przedmiot=matematyka"
+                className="sketch-btn px-3.5 py-1 text-sm font-extrabold hover:bg-amber-50"
               >
                 Wszystkie zadania →
               </Link>
@@ -231,10 +232,10 @@ export default function Home() {
 
             {topicsLoading ? (
               <div className="flex items-center justify-center py-8">
-                <div className="w-6 h-6 border-2 border-slate-200 border-t-slate-800 rounded-full animate-spin" />
+                <div className="w-8 h-8 border-3 border-slate-900 border-t-amber-500 rounded-full animate-spin" />
               </div>
             ) : topics.length === 0 ? (
-              <p className="text-slate-600 text-base py-4">Brak zadań z matematyki w bazie danych.</p>
+              <p className="text-slate-600 text-base py-4 font-bold">Brak zadań z matematyki w bazie danych.</p>
             ) : (
               <div className="grid gap-3">
                 {topics.slice(0, 5).map((topic) => (
@@ -243,20 +244,20 @@ export default function Home() {
                     type="button"
                     onClick={() => setSelectedTopicToConfirm(topic.id)}
                     disabled={creating}
-                    className="w-full text-left group flex items-start gap-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:bg-slate-50/70 p-4 transition-colors cursor-pointer disabled:opacity-50"
+                    className="w-full text-left group flex items-start gap-3.5 rounded-xl border-2 border-slate-900 bg-white hover:bg-amber-50/70 p-4 transition-all shadow-[3px_3px_0px_#0f172a] hover:shadow-[4px_4px_0px_#0f172a] cursor-pointer disabled:opacity-50"
                   >
-                    <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-indigo-50 text-indigo-700 font-mono text-sm font-bold border border-indigo-100">
+                    <span className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg border-2 border-slate-900 bg-amber-100 text-slate-900 font-extrabold text-base shadow-[1px_1px_0px_#0f172a]">
                       #{topic.numer}
                     </span>
-                    <div className="space-y-1 min-w-0 flex-1">
+                    <div className="space-y-0.5 min-w-0 flex-1">
                       <p className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
                         {topic.pytanie}
                       </p>
-                      <p className="text-xs sm:text-sm text-slate-500">
-                        Kliknij, aby otworzyć wyzwanie
+                      <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">
+                        Kliknij, aby otworzyć zadanie
                       </p>
                     </div>
-                    <span className="text-sm font-bold text-indigo-600 group-hover:text-indigo-800 transition-colors self-center shrink-0">
+                    <span className="text-sm font-extrabold text-slate-900 group-hover:translate-x-1 transition-transform self-center shrink-0">
                       Rozwiąż →
                     </span>
                   </button>
@@ -265,20 +266,20 @@ export default function Home() {
             )}
           </div>
         ) : topics.length > 0 ? (
-          <div className="rounded-2xl border border-slate-200 bg-white p-5 sm:p-7 shadow-xs space-y-5">
-            <div className="flex items-center justify-between">
-              <div className="space-y-0.5">
-                <h2 className="text-xl font-bold tracking-tight text-slate-900">
+          <div className="sketch-box p-5 sm:p-7 space-y-4">
+            <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-slate-900">
                   Wybrane zadania z Języka Polskiego ({topics.length})
                 </h2>
-                <p className="text-sm text-slate-600">
-                  Pytania z lektur szkolnych oraz zadania
+                <p className="text-sm font-bold text-slate-500">
+                  Pytania z lektur oraz pojęcia literackie:
                 </p>
               </div>
 
               <Link
-                href="/topics"
-                className="text-sm font-bold text-slate-900 hover:text-slate-600 inline-flex items-center gap-1 transition-colors"
+                href="/topics?przedmiot=polski"
+                className="sketch-btn px-3.5 py-1 text-sm font-extrabold hover:bg-amber-50"
               >
                 Wszystkie zadania →
               </Link>
@@ -286,7 +287,7 @@ export default function Home() {
 
             {topicsLoading ? (
               <div className="flex items-center justify-center py-8">
-                <div className="w-6 h-6 border-2 border-slate-200 border-t-slate-800 rounded-full animate-spin" />
+                <div className="w-8 h-8 border-3 border-slate-900 border-t-amber-500 rounded-full animate-spin" />
               </div>
             ) : (
               <div className="grid gap-3">
@@ -296,20 +297,20 @@ export default function Home() {
                     type="button"
                     onClick={() => setSelectedTopicToConfirm(topic.id)}
                     disabled={creating}
-                    className="w-full text-left group flex items-start gap-3.5 rounded-xl border border-slate-200 bg-white hover:border-slate-300 hover:bg-amber-50/50 p-4 transition-colors cursor-pointer disabled:opacity-50"
+                    className="w-full text-left group flex items-start gap-3.5 rounded-xl border-2 border-slate-900 bg-white hover:bg-amber-50/70 p-4 transition-all shadow-[3px_3px_0px_#0f172a] hover:shadow-[4px_4px_0px_#0f172a] cursor-pointer disabled:opacity-50"
                   >
-                    <span className="shrink-0 inline-flex items-center justify-center w-8 h-8 rounded-lg bg-amber-50 text-amber-800 font-mono text-sm font-bold border border-amber-200">
+                    <span className="shrink-0 inline-flex items-center justify-center w-9 h-9 rounded-lg border-2 border-slate-900 bg-amber-100 text-slate-900 font-extrabold text-base shadow-[1px_1px_0px_#0f172a]">
                       #{topic.numer}
                     </span>
-                    <div className="space-y-1 min-w-0 flex-1">
+                    <div className="space-y-0.5 min-w-0 flex-1">
                       <p className="text-base sm:text-lg font-bold text-slate-900 leading-snug">
                         {topic.pytanie}
                       </p>
-                      <p className="text-xs sm:text-sm text-slate-500">
-                        Kliknij, aby otworzyć wyzwanie
+                      <p className="text-xs font-bold text-slate-500 uppercase tracking-wide">
+                        Kliknij, aby otworzyć zadanie
                       </p>
                     </div>
-                    <span className="text-sm font-bold text-amber-700 group-hover:text-amber-900 transition-colors self-center shrink-0">
+                    <span className="text-sm font-extrabold text-slate-900 group-hover:translate-x-1 transition-transform self-center shrink-0">
                       Rozwiąż →
                     </span>
                   </button>
@@ -318,95 +319,100 @@ export default function Home() {
             )}
           </div>
         ) : (
-          <div className="rounded-2xl border border-slate-200 bg-white p-8 sm:p-12 shadow-xs text-center space-y-4">
-            <div className="w-16 h-16 mx-auto rounded-2xl bg-amber-100 text-amber-800 flex items-center justify-center text-3xl shadow-inner">
-              📖
+          <div className="sketch-box p-8 sm:p-12 text-center space-y-4">
+            <div className="flex justify-center">
+              <svg className="w-14 h-14 stroke-slate-900 fill-none" viewBox="0 0 24 24" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M4 19.5v-15A2.5 2.5 0 0 1 6.5 2H20v20H6.5a2.5 2.5 0 0 1-2.5-2.5Z"/>
+                <path d="M6 6h10"/>
+                <path d="M6 10h10"/>
+                <path d="M6 14h6"/>
+              </svg>
             </div>
             <div className="max-w-md mx-auto space-y-2">
-              <h2 className="text-xl font-bold text-slate-900">
+              <h2 className="text-2xl font-extrabold text-slate-900">
                 Baza zadań z Języka Polskiego jest pusta
               </h2>
-              <p className="text-sm text-slate-500 leading-relaxed">
-                Na razie sekcja Języka Polskiego nie zawiera jeszcze pytań. Wykonaj skrypt SQL, aby dodać pytania do bazy danych!
+              <p className="text-sm font-bold text-slate-600 leading-relaxed">
+                Na razie sekcja Języka Polskiego nie zawiera jeszcze pytań w tym środowisku.
               </p>
             </div>
             <div className="pt-2">
               <button
                 type="button"
                 onClick={() => setActiveSubject('matematyka')}
-                className="inline-flex items-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white px-5 py-2.5 text-xs sm:text-sm font-semibold shadow-xs transition-colors cursor-pointer"
+                className="sketch-btn-black px-6 py-2.5 text-sm font-extrabold"
               >
-                <span>Przejdź do zadań z Matematyki</span>
-                <span aria-hidden="true">→</span>
+                <span>Przejdź do zadań z Matematyki →</span>
               </button>
             </div>
           </div>
         )}
       </div>
 
-      {/* Confirmation Modal */}
+      {/* ═════════════════════════════════════════════════════════════════
+          CONFIRMATION MODAL (Wimpy Kid Notebook Memo Style)
+          ═════════════════════════════════════════════════════════════════ */}
       {selectedTopicToConfirm && (() => {
         const topic = topics.find((t) => t.id === selectedTopicToConfirm);
         return (
-          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/40 backdrop-blur-xs animate-in fade-in duration-150">
-            <div className="w-full max-w-lg rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 shadow-xl space-y-5 animate-in zoom-in-95 duration-150">
-              <div className="space-y-1.5">
-                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-slate-100 text-slate-800 text-xs font-medium border border-slate-200">
+          <div className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-slate-950/50 backdrop-blur-xs animate-in fade-in duration-150">
+            <div className="w-full max-w-lg rounded-2xl border-[3px] border-slate-900 bg-white p-6 sm:p-7 shadow-[8px_8px_0px_#0f172a] space-y-5 animate-in zoom-in-95 duration-150">
+              <div className="space-y-1">
+                <div className="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-md bg-amber-100 text-slate-900 text-xs font-bold border border-slate-900">
                   Gotowy na wyzwanie?
                 </div>
-                <h2 className="text-xl font-bold tracking-tight text-slate-900">
+                <h2 className="text-2xl font-extrabold tracking-tight text-slate-900 uppercase">
                   Potwierdź start zadania
                 </h2>
-                <p className="text-xs text-slate-500 leading-relaxed">
+                <p className="text-xs font-bold text-slate-500 leading-relaxed">
                   Rozpoczęcie wyzwania pobierze z Twojego konta <strong className="text-slate-900">1 token</strong>.
                 </p>
               </div>
 
-              {/* Topic details */}
               {topic && (
-                <div className="rounded-xl border border-slate-200 bg-slate-50 p-4 space-y-1.5">
-                  <span className="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-bold font-mono bg-white text-slate-800 border border-slate-200">
+                <div className="rounded-xl border-2 border-slate-900 bg-amber-50/50 p-4 space-y-1.5 shadow-[2px_2px_0px_#0f172a]">
+                  <span className="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-bold bg-white text-slate-900 border border-slate-900">
                     Zadanie #{topic.numer}
                   </span>
-                  <p className="text-sm font-semibold text-slate-900 leading-relaxed">
+                  <p className="text-base font-bold text-slate-900 leading-relaxed">
                     {topic.pytanie}
                   </p>
                 </div>
               )}
 
-              {/* Rules Info */}
-              <div className="rounded-xl border border-slate-200 bg-white p-4 text-xs text-slate-600 space-y-1.5 leading-relaxed">
-                <p className="font-semibold text-slate-900">
-                  Jak to działa:
+              <div className="rounded-xl border-2 border-dashed border-slate-300 p-4 text-xs font-bold text-slate-600 space-y-1.5">
+                <p className="font-extrabold text-slate-900 uppercase">
+                  Zasady:
                 </p>
-                <ul className="list-disc list-inside space-y-1 text-slate-600">
+                <ul className="list-disc list-inside space-y-1 text-slate-700">
                   <li>Nagraj wypowiedź głosem lub wpisz rozwiązanie tekstem.</li>
-                  <li>Model przeanalizuje poprawność toku rozumowania.</li>
+                  <li>Model AI oceni merytorykę i tok rozumowania.</li>
                   <li>Otrzymasz punktację 0–10 oraz wskazówki krok po kroku.</li>
                 </ul>
               </div>
 
-              {/* Buttons */}
-              <div className="flex gap-2.5 pt-1">
+              <div className="flex gap-3 pt-1">
                 <button
+                  type="button"
                   onClick={() => setSelectedTopicToConfirm(null)}
                   disabled={creating}
-                  className="flex-1 rounded-xl border border-slate-200 bg-white hover:bg-slate-50 p-3 font-semibold text-xs text-slate-700 shadow-2xs transition-colors active:scale-[0.98] disabled:opacity-50 cursor-pointer"
+                  className="flex-1 sketch-btn p-3 font-extrabold text-sm"
                 >
                   Wróć
                 </button>
                 <button
+                  type="button"
                   onClick={() => selectTopic(selectedTopicToConfirm)}
                   disabled={creating}
-                  className="flex-1 rounded-xl bg-slate-900 hover:bg-slate-800 text-white p-3 font-semibold text-xs shadow-xs transition-colors active:scale-[0.98] disabled:opacity-50 flex items-center justify-center gap-2 cursor-pointer"
+                  className="flex-1 sketch-btn-black p-3 font-extrabold text-sm flex items-center justify-center gap-2"
                 >
                   {creating ? (
                     <>
-                      <div className="w-3.5 h-3.5 border-2 border-white/30 border-t-white rounded-full animate-spin" />
+                      <div className="w-4 h-4 border-2 border-white/30 border-t-white rounded-full animate-spin" />
                       <span>Ładowanie...</span>
                     </>
                   ) : (
-                    <span>Rozpocznij wyzwanie ✨</span>
+                    <span>Rozpocznij wyzwanie</span>
                   )}
                 </button>
               </div>

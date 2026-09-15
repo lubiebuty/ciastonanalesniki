@@ -148,6 +148,7 @@ describe('/api/sessions API Route (Supabase)', () => {
 
       const rawDbSession = {
         id: 'session-123',
+        topic_id: 'topic-abc',
         status: 'completed',
         created_at: '2026-08-27T10:00:00Z',
         topics: {
@@ -174,6 +175,7 @@ describe('/api/sessions API Route (Supabase)', () => {
       const data = await res.json();
       expect(data.sessions).toHaveLength(1);
       expect(data.sessions[0].id).toBe('session-123');
+      expect(data.sessions[0].topic_id).toBe('topic-abc');
       expect(data.sessions[0].score).toBe(8);
       expect(data.sessions[0].feedback).toBe('Swietna robota');
       expect(data.sessions[0].pytanie).toBe('Pytanie testowe');

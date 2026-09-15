@@ -3,45 +3,47 @@
 import { signIn } from 'next-auth/react';
 import { useSearchParams } from 'next/navigation';
 import { Suspense } from 'react';
+import WimpyRobot from '@/components/sketch/WimpyRobot';
 
 /**
- * Sign-in page (Ticket 02).
- *
- * `lib/auth.ts` points NextAuth's `pages.signIn` here, so this route has to
- * exist — without it every unauthenticated redirect lands on a 404.
+ * Sign-in page redesigned in Diary of a Wimpy Kid comic style (from Page 1 of concept sketches).
  */
 function LoginContent() {
   const searchParams = useSearchParams();
-  const callbackUrl = searchParams.get('callbackUrl') || '/';
+  const callbackParam = searchParams.get('callbackUrl');
+  const callbackUrl = (!callbackParam || callbackParam === '/') ? '/wybierz-droge' : callbackParam;
   const error = searchParams.get('error');
 
   return (
-    <main className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-10">
-      <div className="w-full max-w-sm space-y-6 animate-in fade-in duration-150">
-        <div className="space-y-2 text-center">
-          <div className="inline-flex items-center justify-center w-12 h-12 rounded-xl bg-slate-900 text-white font-mono font-bold text-lg shadow-xs">
-            EZ
-          </div>
-          <h1 className="text-xl font-bold tracking-tight text-slate-900">
+    <main className="min-h-screen flex items-center justify-center p-4 sm:p-6 md:p-10 font-sketch">
+      <div className="w-full max-w-md space-y-6 animate-in fade-in duration-150">
+        
+        {/* Robot Bob with speech bubble (Page 1 concept) */}
+        <div className="py-2">
+          <WimpyRobot message="HEJ, BOB, MIŁO CIĘ POZNAĆ, BOB." />
+        </div>
+
+        <div className="space-y-1 text-center">
+          <h1 className="text-3xl sm:text-4xl font-extrabold tracking-wider text-slate-900 uppercase">
             Ewaluator Zadań
           </h1>
-          <p className="text-xs text-slate-500 leading-relaxed">
+          <p className="text-base font-bold text-slate-600 leading-relaxed">
             Sprawdź swoją wiedzę z natychmiastową oceną AI
           </p>
         </div>
 
         {error && (
-          <div className="rounded-xl border border-red-200 bg-white p-3.5 text-xs font-medium text-red-700 shadow-xs">
+          <div className="rounded-xl border-[2.5px] border-slate-900 bg-rose-50 p-4 text-sm font-extrabold text-rose-900 shadow-[3px_3px_0px_#0f172a]">
             Logowanie nie powiodło się. Spróbuj ponownie.
           </div>
         )}
 
-        <div className="rounded-2xl border border-slate-200 bg-white p-6 sm:p-7 space-y-4 shadow-xs">
+        <div className="sketch-box p-6 sm:p-7 space-y-5 bg-white">
           <button
             onClick={() => signIn('google', { callbackUrl })}
-            className="w-full rounded-xl bg-white border border-slate-200 hover:bg-slate-50 text-slate-800 px-4 py-3 font-semibold text-xs shadow-2xs transition-colors flex items-center justify-center gap-2.5 active:scale-[0.98] cursor-pointer"
+            className="w-full sketch-btn p-3.5 font-extrabold text-base sm:text-lg flex items-center justify-center gap-3 cursor-pointer shadow-[4px_4px_0px_#0f172a]"
           >
-            <svg className="w-4 h-4" viewBox="0 0 24 24" aria-hidden="true">
+            <svg className="w-5 h-5" viewBox="0 0 24 24" aria-hidden="true">
               <path
                 fill="#4285F4"
                 d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92a5.06 5.06 0 0 1-2.2 3.32v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.1z"
@@ -59,20 +61,20 @@ function LoginContent() {
                 d="M12 4.75c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 1.46 14.97.5 12 .5A11 11 0 0 0 2.18 7.05l3.66 2.84C6.71 6.68 9.14 4.75 12 4.75z"
               />
             </svg>
-            Zaloguj się przez Google
+            <span>Zaloguj się przez Google</span>
           </button>
 
-          <div className="rounded-xl bg-slate-50 border border-slate-200/80 p-3 text-center space-y-0.5">
-            <p className="text-xs text-slate-800 font-semibold">
+          <div className="rounded-xl bg-amber-50 border-2 border-slate-900 p-3.5 text-center space-y-1 shadow-[2px_2px_0px_#0f172a]">
+            <p className="text-sm text-slate-900 font-extrabold uppercase">
               10 darmowych tokenów na start
             </p>
-            <p className="text-[11px] text-slate-500">
+            <p className="text-xs text-slate-600 font-bold">
               1 token = 1 sesja rozwiązywania zadania z oceną AI
             </p>
           </div>
         </div>
 
-        <p className="text-[11px] text-slate-400 text-center leading-relaxed">
+        <p className="text-xs text-slate-500 font-bold text-center leading-relaxed">
           Nagrania audio nie są zapisywane — po transkrypcji mowy są natychmiast usuwane.
         </p>
       </div>
@@ -82,7 +84,7 @@ function LoginContent() {
 
 export default function LoginPage() {
   return (
-    <Suspense fallback={<main className="min-h-screen" />}>
+    <Suspense fallback={<main className="min-h-screen font-sketch" />}>
       <LoginContent />
     </Suspense>
   );

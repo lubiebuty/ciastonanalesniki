@@ -216,7 +216,7 @@ export default function SandboxPage() {
                   <span>Trwa analiza LLM...</span>
                 </>
               ) : (
-                <span>Uruchom ewaluację testową ✨</span>
+                <span>Uruchom ewaluację testową</span>
               )}
             </button>
           </div>

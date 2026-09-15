@@ -47,7 +47,7 @@ describe('Home Page - Subject Selection', () => {
 
     // Default subject is Matematyka
     await waitFor(() => {
-      expect(screen.getByText('Opanuj matematykę z natychmiastową oceną AI ✨')).toBeInTheDocument();
+      expect(screen.getByText('Opanuj matematykę z natychmiastową oceną AI')).toBeInTheDocument();
       expect(screen.getByText('Wybrane zadania z matematyki (1)')).toBeInTheDocument();
     });
   });
@@ -59,7 +59,7 @@ describe('Home Page - Subject Selection', () => {
     const polskiButton = screen.getByRole('button', { name: /Język Polski/i });
     await user.click(polskiButton);
 
-    expect(screen.getByText('Trening zadań z Polskiego ✨')).toBeInTheDocument();
+    expect(screen.getByText('Trening zadań z Polskiego')).toBeInTheDocument();
     expect(screen.getByText('Baza zadań z Języka Polskiego jest pusta')).toBeInTheDocument();
   });
 });

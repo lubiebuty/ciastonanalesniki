@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Patrick+Hand&family=Comic+Neue:wght@400;700&display=swap');
 @import "tailwindcss";
 @import "tw-animate-css";
 @import "shadcn/tailwind.css";
@@ -88,15 +89,125 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply font-sans;
+    font-family: 'Patrick Hand', 'Comic Neue', system-ui, cursive, sans-serif;
     font-size: 18px;
   }
   @media (max-width: 640px) {
     html {
-      font-size: 20px;
+      font-size: 19px;
     }
   }
   body {
-    @apply bg-slate-50 text-slate-900 min-h-screen antialiased text-base leading-relaxed;
+    @apply text-slate-900 min-h-screen antialiased text-base leading-relaxed;
+    background-color: #fbfaf7;
+    background-image: repeating-linear-gradient(transparent, transparent 31px, #e3e8ee 31px, #e3e8ee 32px);
+    background-size: 100% 32px;
+    background-attachment: local;
   }
+}
+
+/* ═══════════════════════════════════════════════════════════════════
+   DIARY OF A WIMPY KID / SKETCHBOOK DESIGN UTILITIES
+   ═══════════════════════════════════════════════════════════════════ */
+
+.font-sketch {
+  font-family: 'Patrick Hand', 'Comic Neue', cursive, sans-serif;
+}
+
+/* Ruled notebook paper background */
+.notebook-paper {
+  background-color: #fbfaf7;
+  background-image: repeating-linear-gradient(transparent, transparent 31px, #e2e8f0 31px, #e2e8f0 32px);
+  background-size: 100% 32px;
+  background-attachment: local;
+}
+
+/* Hand-drawn sketchy border */
+.sketch-border {
+  border: 2.5px solid #18181b;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+}
+
+/* Sketch card with hard ink shadow */
+.sketch-box {
+  background-color: #ffffff;
+  border: 2.5px solid #18181b;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 4px 4px 0px #18181b;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+/* Interactive sketch button */
+.sketch-btn {
+  background-color: #ffffff;
+  color: #18181b;
+  border: 2.5px solid #18181b;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 4px 4px 0px #18181b;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+.sketch-btn:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #18181b;
+}
+.sketch-btn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #18181b;
+}
+
+/* Inverted black sketch button */
+.sketch-btn-black {
+  background-color: #18181b;
+  color: #ffffff;
+  border: 2.5px solid #18181b;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 4px 4px 0px #18181b;
+  transition: transform 0.1s ease, box-shadow 0.1s ease, background-color 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+}
+.sketch-btn-black:hover {
+  background-color: #27272a;
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #18181b;
+}
+.sketch-btn-black:active {
+  transform: translate(2px, 2px);
+  box-shadow: 1px 1px 0px #18181b;
+}
+
+/* Diagonal pencil hatching from pages 7 and 8 */
+.sketch-hatch {
+  background-image: repeating-linear-gradient(
+    -45deg,
+    transparent,
+    transparent 7px,
+    rgba(148, 163, 184, 0.35) 7px,
+    rgba(148, 163, 184, 0.35) 11px
+  );
+}
+
+/* Comic Speech Bubble with Jagged Tail */
+.speech-bubble {
+  position: relative;
+  background: #ffffff;
+  border: 2.5px solid #18181b;
+  border-radius: 255px 15px 225px 15px/15px 225px 15px 255px;
+  box-shadow: 3px 3px 0px #18181b;
+}
+
+/* 3D Perspective Chalkboard/Picture Frame from pages 3, 4, 5, 6 */
+.chalkboard-frame {
+  position: relative;
+  background-color: #ffffff;
+  border: 3px solid #18181b;
+  padding: 12px;
+  box-shadow: 4px 4px 0px #18181b;
+}
+.chalkboard-frame-inner {
+  border: 2px solid #18181b;
+  background: #ffffff;
+  position: relative;
 }

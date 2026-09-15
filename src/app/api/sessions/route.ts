@@ -48,6 +48,7 @@ export async function GET(request: NextRequest) {
       .select(`
         id, 
         status, 
+        topic_id,
         created_at, 
         topics (
           numer,
@@ -75,6 +76,7 @@ export async function GET(request: NextRequest) {
       return {
         id: s.id,
         status: s.status,
+        topic_id: s.topic_id,
         created_at: s.created_at,
         numer: topic?.numer,
         pytanie: topic?.pytanie,

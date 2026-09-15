@@ -224,30 +224,42 @@ export default function AudioRecorder({
   );
 
   return (
-    <div className="space-y-3.5">
-      <div className="flex items-center gap-3 flex-wrap">
+    <div className="space-y-4 font-sketch">
+      <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
         {!isRecording ? (
           <button
             onClick={startRecording}
-            className="flex items-center gap-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white px-4 py-2.5 font-semibold text-xs shadow-xs transition-colors active:scale-95 cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-3 rounded-2xl border-[3px] border-slate-900 bg-white hover:bg-amber-50 text-slate-900 px-6 py-4 font-extrabold text-base sm:text-lg shadow-[4px_4px_0px_#0f172a] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#0f172a] cursor-pointer"
           >
-            <span className="w-2 h-2 rounded-full bg-red-500 animate-pulse" />
-            <span>Rozpocznij nagrywanie</span>
+            {/* Hand-drawn mic icon */}
+            <svg
+              viewBox="0 0 24 28"
+              className="w-6 h-6 stroke-slate-900 fill-none"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <rect x="7" y="2" width="10" height="14" rx="5" fill="#ffffff" />
+              <path d="M 4 11 C 4 19 20 19 20 11" />
+              <line x1="12" y1="19" x2="12" y2="24" />
+              <line x1="7" y1="24" x2="17" y2="24" />
+            </svg>
+            <span className="uppercase tracking-wider">Rozpocznij nagrywanie</span>
           </button>
         ) : (
           <button
             onClick={stopRecording}
-            className="flex items-center gap-2 rounded-xl bg-red-600 hover:bg-red-700 text-white px-4 py-2.5 font-semibold text-xs shadow-xs transition-colors active:scale-95 cursor-pointer"
+            className="w-full sm:w-auto flex items-center justify-center gap-3 rounded-2xl border-[3px] border-slate-900 bg-rose-500 hover:bg-rose-600 text-white px-6 py-4 font-extrabold text-base sm:text-lg shadow-[4px_4px_0px_#0f172a] transition-all active:translate-x-0.5 active:translate-y-0.5 active:shadow-[1px_1px_0px_#0f172a] cursor-pointer animate-pulse"
           >
-            <span className="w-2 h-2 rounded-xs bg-white" />
-            <span>Zakończ nagrywanie</span>
+            <span className="w-3.5 h-3.5 bg-white rounded-xs" />
+            <span className="uppercase tracking-wider">Zakończ nagrywanie</span>
           </button>
         )}
 
         {/* Live capture indicator */}
         {isRecording && (
-          <div className="flex items-center gap-3 bg-white border border-slate-200 rounded-xl px-3 py-2 text-xs shadow-2xs">
-            <div className="flex items-end gap-0.5 h-4 w-20">
+          <div className="flex items-center gap-3 bg-white border-2 border-slate-900 rounded-xl px-4 py-2 text-sm shadow-[3px_3px_0px_#0f172a]">
+            <div className="flex items-end gap-1 h-5 w-24">
               {[...Array(12)].map((_, i) => {
                 const baseHeight = 25;
                 const scale = isSpeaking ? (meterWidth / 100) : 0.15;
@@ -263,7 +275,7 @@ export default function AudioRecorder({
                   <div
                     key={i}
                     style={{ height: `${heightPercentage}%` }}
-                    className={`w-1 rounded-full transition-all duration-75 ${
+                    className={`w-1.5 rounded-full transition-all duration-75 ${
                       isSpeaking ? 'bg-slate-900' : 'bg-slate-300'
                     }`}
                   />
@@ -271,13 +283,13 @@ export default function AudioRecorder({
               })}
             </div>
             
-            <div className="flex items-center min-w-[80px]">
+            <div className="flex items-center min-w-[70px]">
               {isSpeaking ? (
-                <span className="text-slate-900 font-bold text-xs">
+                <span className="text-slate-900 font-extrabold text-sm uppercase">
                   Mówisz...
                 </span>
               ) : (
-                <span className="text-slate-400 text-xs">
+                <span className="text-slate-400 font-bold text-sm uppercase">
                   Cisza
                 </span>
               )}
@@ -286,38 +298,21 @@ export default function AudioRecorder({
         )}
 
         {status === 'processing' && (
-          <div className="flex items-center gap-1.5 rounded-lg bg-slate-100 border border-slate-200 text-slate-800 px-2.5 py-1 text-xs font-medium">
-            <div className="w-2 h-2 border border-slate-400 border-t-slate-900 rounded-full animate-spin" />
+          <div className="flex items-center gap-2 rounded-xl bg-white border-2 border-slate-900 text-slate-900 px-3.5 py-2 text-sm font-extrabold shadow-[2px_2px_0px_#0f172a]">
+            <div className="w-3.5 h-3.5 border-2 border-slate-900 border-t-amber-500 rounded-full animate-spin" />
             Przetwarzanie głosu...
           </div>
         )}
       </div>
 
-      {isRecording && (
-        <div className="space-y-1">
-          <div className="h-1.5 rounded-full bg-slate-200 overflow-hidden">
-            <div
-              className={`h-full rounded-full transition-all duration-100 ${
-                isSpeaking ? 'bg-slate-900' : 'bg-slate-300'
-              }`}
-              style={{ width: `${meterWidth}%` }}
-            />
-          </div>
-          {discardedChunks > 0 && (
-            <p className="text-[11px] text-slate-400">
-              Pominięto {discardedChunks}{' '}
-              {discardedChunks === 1 ? 'fragment ciszy' : 'fragmentów ciszy'}.
-            </p>
-          )}
-        </div>
-      )}
-
       {chunks.length > 0 && (
-        <div className="rounded-xl border border-slate-200 bg-white p-3.5 space-y-1 shadow-xs">
-          <p className="text-[10px] uppercase font-bold text-slate-500 tracking-wider">
+        <div className="sketch-box p-4 space-y-1.5 bg-amber-50/40">
+          <p className="text-xs uppercase font-extrabold text-slate-600 tracking-wider">
             Transkrypcja mowy na żywo:
           </p>
-          <p className="text-xs font-medium text-slate-800 leading-relaxed">{chunks.join(' ')}</p>
+          <p className="text-base sm:text-lg font-bold text-slate-900 leading-relaxed font-sketch">
+            "{chunks.join(' ')}"
+          </p>
         </div>
       )}
     </div>
