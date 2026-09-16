@@ -90,4 +90,56 @@ describe('CzyJestesCwaniakPage (/cwaniak)', () => {
 
     expect(pushMock).toHaveBeenCalledWith('/');
   });
+
+  it("supports Step 3 trick: Ultra Cwaniak -> Gratulacje, odbierz 50 tokenów with press (+50) and unpress (-51)", async () => {
+    global.fetch = vi.fn().mockImplementation((url) => {
+      if (url === "/api/user/cwaniak-ekstra") {
+        return Promise.resolve({ ok: true, json: async () => ({ success: true, tokens: 60 }) });
+      }
+      if (url === "/api/user/cwaniak-odcisk") {
+        return Promise.resolve({ ok: true, json: async () => ({ success: true, tokens: 9 }) });
+      }
+      return Promise.resolve({ ok: true, json: async () => ({}) });
+    });
+
+    render(<CzyJestesCwaniakPage />);
+    const user = userEvent.setup();
+
+    // In step 2, header shows KROK 2 Z 2 (so user does not suspect step 3)
+    expect(screen.getByText("KROK 2 Z 2")).toBeInTheDocument();
+
+    // Click ULTRA CWANIAK
+    const ultraCwaniakBtn = screen.getByRole("button", { name: /Achtung, Achtung!/i });
+    await user.click(ultraCwaniakBtn);
+
+    // Now Step 3 is revealed: KROK 3 Z 3
+    expect(screen.getByText("KROK 3 Z 3")).toBeInTheDocument();
+    expect(screen.getByText(/Gratulacje, odbierz 50 tokenów. Gratis./i)).toBeInTheDocument();
+    expect(screen.getByText(/Dla cwaniaka/i)).toBeInTheDocument();
+
+    const odbierzBtn = screen.getByRole("button", { name: /ODBIERZ/i });
+    expect(odbierzBtn).toBeInTheDocument();
+
+    // 1. WCIŚNIĘCIE: grants 50 tokens
+    await user.click(odbierzBtn);
+    expect(global.fetch).toHaveBeenCalledWith("/api/user/cwaniak-ekstra", { method: "POST" });
+    expect(screen.getByText(/PRZYCISK WCIŚNIĘTY/i)).toBeInTheDocument();
+
+    // After pressing, leads to tasks
+    const przejdzBtn = screen.getByRole("button", { name: /Przejdź do zadań/i });
+    expect(przejdzBtn).toBeInTheDocument();
+
+    // 2. ODCIŚNIĘCIE: unpressing deducts 51 tokens!
+    await user.click(odbierzBtn);
+    expect(global.fetch).toHaveBeenCalledWith("/api/user/cwaniak-odcisk", { method: "POST" });
+    expect(screen.getByText(/Odcisnąłeś przycisk! Kara dla cwaniaczka: -51 tokenów!/i)).toBeInTheDocument();
+
+    // Press it again to get tokens back
+    await user.click(odbierzBtn);
+    expect(screen.getByText(/PRZYCISK WCIŚNIĘTY/i)).toBeInTheDocument();
+
+    // Click Przejdź do zadań -> navigates to /
+    await user.click(screen.getByRole("button", { name: /Przejdź do zadań/i }));
+    expect(pushMock).toHaveBeenCalledWith("/");
+  });
 });

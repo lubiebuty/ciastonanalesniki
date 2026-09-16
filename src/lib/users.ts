@@ -148,3 +148,63 @@ export async function confirmAge(db: Database, userId: string): Promise<void> {
     throw new Error(`Failed to confirm age: ${error.message}`);
   }
 }
+
+/**
+ * Adds tokens to the user's balance.
+ */
+export async function addTokens(db: Database, userId: string, count: number): Promise<TokenResult> {
+  const { data: user, error: findError } = await db
+    .from('users')
+    .select('tokens')
+    .eq('id', userId)
+    .single();
+
+  if (findError || !user) {
+    return { success: false, remainingTokens: 0 };
+  }
+
+  const newTotal = (user.tokens ?? 0) + count;
+
+  const { data: updated, error: updateError } = await db
+    .from('users')
+    .update({ tokens: newTotal })
+    .eq('id', userId)
+    .select('tokens')
+    .single();
+
+  if (updateError || !updated) {
+    throw new Error(`Failed to add tokens: ${updateError?.message}`);
+  }
+
+  return { success: true, remainingTokens: updated.tokens };
+}
+
+/**
+ * Deducts multiple tokens from user balance (e.g. -51 penalty for unpressing cwaniak button).
+ */
+export async function deductMultipleTokens(db: Database, userId: string, count: number): Promise<TokenResult> {
+  const { data: user, error: findError } = await db
+    .from("users")
+    .select("tokens")
+    .eq("id", userId)
+    .single();
+
+  if (findError || !user) {
+    return { success: false, remainingTokens: 0 };
+  }
+
+  const newTotal = Math.max(0, (user.tokens ?? 0) - count);
+
+  const { data: updated, error: updateError } = await db
+    .from("users")
+    .update({ tokens: newTotal })
+    .eq("id", userId)
+    .select("tokens")
+    .single();
+
+  if (updateError || !updated) {
+    throw new Error(`Failed to deduct tokens: ${updateError?.message}`);
+  }
+
+  return { success: true, remainingTokens: updated.tokens };
+}

@@ -1,5 +1,5 @@
 import { describe, it, expect, beforeEach, vi } from 'vitest';
-import { findOrCreateUser, deductToken, getUserById, confirmAge, User } from '@/lib/users';
+import { findOrCreateUser, deductToken, addTokens, getUserById, confirmAge, User } from '@/lib/users';
 import { createClient, SupabaseClient } from '@supabase/supabase-js';
 
 vi.mock('@supabase/supabase-js', () => {
@@ -114,4 +114,18 @@ describe('User Management (Supabase)', () => {
       expect(db.eq).toHaveBeenCalledWith('id', 'u1');
     });
   });
+
+  describe("addTokens", () => {
+    it("adds tokens successfully to user balance", async () => {
+      db.single.mockResolvedValueOnce({ data: { tokens: 10 }, error: null });
+      db.single.mockResolvedValueOnce({ data: { tokens: 60 }, error: null });
+
+      const result = await addTokens(db, "user-123", 50);
+
+      expect(result).toEqual({ success: true, remainingTokens: 60 });
+      expect(db.update).toHaveBeenCalledWith({ tokens: 60 });
+      expect(db.eq).toHaveBeenCalledWith("id", "user-123");
+    });
+  });
+
 });
