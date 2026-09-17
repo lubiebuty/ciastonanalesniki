@@ -38,8 +38,39 @@ export default function ZawodPage() {
   };
 
   return (
-    <main className="min-h-screen p-2.5 sm:p-6 md:p-10 font-sketch flex flex-col justify-between">
-      <div className="max-w-4xl mx-auto w-full space-y-6 sm:space-y-10 animate-in fade-in duration-300">
+    <main className="relative z-0 min-h-screen p-2.5 sm:p-6 md:p-10 font-sketch flex flex-col justify-between overflow-hidden">
+      {/* Tło graficzne bazowe */}
+      <div 
+        className="fixed inset-0 pointer-events-none z-[-2] bg-[#0a0a0a] bg-center bg-cover bg-no-repeat bg-fixed opacity-95"
+        style={{ backgroundImage: "url('/images/doradca_bg.jpg')" }}
+      />
+      {/* Pełny układ reklamowy z doradcy jako tło */}
+      <div className="fixed inset-0 pointer-events-none z-[-1] flex flex-col items-center justify-start opacity-100 overflow-hidden">
+        <div className="relative flex flex-col items-center justify-center py-16 sm:py-20 w-full max-w-4xl mx-auto">
+          <img src="/images/item2.png" alt="Ad" className="absolute w-[40%] sm:w-[35%] -rotate-12 top-[-10%] left-[-20%] sm:left-[-15%] z-0 drop-shadow-xl" />
+          <img src="/images/item1.png" alt="Ad" className="absolute w-[45%] sm:w-[40%] rotate-6 top-[-15%] right-[-15%] z-0 drop-shadow-xl" />
+          <img src="/images/item4.png" alt="Ad" className="absolute w-[55%] sm:w-[50%] top-[5%] left-[10%] z-0 drop-shadow-xl" />
+          <img src="/images/item3.png" alt="Ad" className="absolute w-[45%] sm:w-[40%] rotate-12 bottom-[0%] right-[-25%] sm:right-[-15%] z-0 drop-shadow-xl" />
+          
+          <img src="/images/item2.png" alt="Ad" className="absolute w-[35%] sm:w-[30%] rotate-[20deg] bottom-[-15%] left-[-15%] z-0 drop-shadow-xl" />
+          <img src="/images/item1.png" alt="Ad" className="absolute w-[40%] sm:w-[35%] -rotate-[15deg] top-[30%] left-[-25%] z-0 drop-shadow-xl" />
+          <img src="/images/item3.png" alt="Ad" className="absolute w-[35%] sm:w-[30%] -rotate-[30deg] top-[20%] right-[15%] z-0 drop-shadow-xl" />
+          <img src="/images/item4.png" alt="Ad" className="absolute w-[40%] sm:w-[35%] rotate-3 bottom-[25%] left-[30%] z-0 drop-shadow-xl" />
+
+          <img src="/images/item3.png" alt="Ad" className="absolute w-[30%] sm:w-[25%] rotate-[45deg] top-[-5%] left-[35%] z-0 drop-shadow-xl" />
+          <img src="/images/item2.png" alt="Ad" className="absolute w-[35%] sm:w-[30%] -rotate-[40deg] top-[50%] right-[0%] z-0 drop-shadow-xl" />
+          <img src="/images/item1.png" alt="Ad" className="absolute w-[45%] sm:w-[40%] rotate-[10deg] bottom-[-20%] left-[10%] z-0 drop-shadow-xl" />
+          <img src="/images/item4.png" alt="Ad" className="absolute w-[50%] sm:w-[45%] -rotate-6 bottom-[-10%] right-[10%] z-0 drop-shadow-xl" />
+          <img src="/images/item2.png" alt="Ad" className="absolute w-[40%] sm:w-[35%] rotate-[25deg] top-[15%] left-[60%] z-0 drop-shadow-xl" />
+          <img src="/images/item1.png" alt="Ad" className="absolute w-[30%] sm:w-[25%] -rotate-[20deg] bottom-[40%] left-[-5%] z-0 drop-shadow-xl" />
+          <img src="/images/item3.png" alt="Ad" className="absolute w-[40%] sm:w-[35%] rotate-[5deg] top-[75%] right-[-20%] z-0 drop-shadow-xl" />
+          <img src="/images/item4.png" alt="Ad" className="absolute w-[35%] sm:w-[30%] -rotate-[8deg] top-[60%] left-[-30%] z-0 drop-shadow-xl" />
+
+          <img src="/images/dice_header_transparent.png" alt="DICE DORADCA ZAWODOWY DICE" className="relative z-10 w-full max-w-xl sm:max-w-3xl mx-auto rotate-1" />
+        </div>
+      </div>
+
+      <div className="max-w-4xl mx-auto w-full space-y-6 sm:space-y-10 animate-in fade-in duration-300 relative z-10">
         
         {/* Navigation Bar */}
         <div className="flex items-center justify-between">
