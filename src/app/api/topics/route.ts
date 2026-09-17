@@ -21,7 +21,21 @@ export async function GET(request: Request) {
       throw new Error(error.message);
     }
 
-    const topics = dbTopics || [];
+    let topics = dbTopics || [];
+
+    // Fallback if chemia is not yet seeded in database
+    if (przedmiot === 'chemia' && topics.length === 0) {
+      try {
+        const fs = await import('fs');
+        const path = await import('path');
+        const chemiaFile = path.resolve(process.cwd(), 'data/chemia.json');
+        if (fs.existsSync(chemiaFile)) {
+          topics = JSON.parse(fs.readFileSync(chemiaFile, 'utf-8'));
+        }
+      } catch (err) {
+        console.error('Error loading chemia.json fallback:', err);
+      }
+    }
 
     return NextResponse.json({ topics });
   } catch (error) {

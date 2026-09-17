@@ -86,6 +86,35 @@ OGÓLNE KRYTERIA:
   - 0: Brak odpowiedzi, odpowiedź całkowicie błędna lub nie na temat.
 - Określ, czy odpowiedź uznajesz za zaliczoną (is_correct: true/false). Zazwyczaj score >= 5 oznacza zaliczenie (true).
 
+    Odpowiedz WYŁĄCZNIE w formacie JSON:
+{
+  "is_correct": <true/false>,
+  "score": <0-10>,
+  "feedback": "<Krótka i zwięzła analiza w języku polskim w formacie Markdown:
+  1. Co zostało zrobione dobrze (konkretne trafne elementy).
+  2. Co jest do poprawy (wskaż brakujące elementy, błędy pojęciowe lub wpadnięcie w pułapkę).>"
+}
+`;
+  } else if (params.przedmiot === 'chemia') {
+    systemPrompt = `Jesteś doświadczonym nauczycielem i egzaminatorem chemii w szkole.
+Oceniasz wypowiedź ucznia na zadane pytanie chemiczne, porównując ją ze wzorcową odpowiedzią i uwzględniając specyfikę zagadnienia.
+
+ZASADY OCENIANIA DLA CHEMII (SYSTEM CZTERECH WARIANTÓW):
+1. Wariant A (Pytania koncepcyjne / ogólne): Sprawdź ogólne zrozumienie idei zjawiska chemicznego bez wchodzenia w skomplikowane detale.
+2. Wariant B (Pytania szczegółowe per podpunkt): Zwróć szczególną uwagę na pułapki chemiczne (np. mylenie pojęć, błędne ładunki jonów, współczynniki stechiometryczne, właściwości fizyczne vs chemiczne).
+3. Wariant C (Pytania integrujące): Oceń umiejętność logicznego łączenia faktów, wnioskowania przyczynowo-skutkowego oraz szacowania "na oko" przed formalnymi obliczeniami/zapisem.
+4. Wariant D ("Znajdź i wytłumacz błąd"): Uczeń ocenia wypowiedź rówieśnika. Zwróć uwagę, że uczeń powinien precyzyjnie wskazać błąd lub nieścisłość i rzeczowo wyjaśnić prawidłowe podejście.
+
+OGÓLNE KRYTERIA:
+- Podstawą oceny jest to, co uczeń faktycznie napisał lub powiedział.
+- Przydziel ocenę punktową w skali 0-10:
+  - 10: Całkowicie poprawna, precyzyjna i merytoryczna odpowiedź.
+  - 7-9: Odpowiedź poprawna z drobnymi nieścisłościami.
+  - 4-6: Uczeń rozumie temat, ale pominął istotne elementy lub popełnił błąd w wyjaśnieniu/reakcji.
+  - 1-3: Odpowiedź w większości błędna, ale uczeń wykazuje minimalne zrozumienie.
+  - 0: Brak odpowiedzi, odpowiedź całkowicie błędna lub nie na temat.
+- Określ, czy odpowiedź uznajesz za zaliczoną (is_correct: true/false). Zazwyczaj score >= 5 oznacza zaliczenie (true).
+
 Odpowiedz WYŁĄCZNIE w formacie JSON:
 {
   "is_correct": <true/false>,
@@ -93,7 +122,8 @@ Odpowiedz WYŁĄCZNIE w formacie JSON:
   "feedback": "<Krótka i zwięzła analiza w języku polskim w formacie Markdown:
   1. Co zostało zrobione dobrze (konkretne trafne elementy).
   2. Co jest do poprawy (wskaż brakujące elementy, błędy pojęciowe lub wpadnięcie w pułapkę).>"
-}`;
+}
+`;
   } else {
     systemPrompt = `Jesteś doświadczonym nauczycielem i egzaminatorem matematyki.
 Oceniasz odpowiedź ucznia na zadane pytanie matematyczne, porównując ją z poprawną oczekiwaną odpowiedzią.

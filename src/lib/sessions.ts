@@ -79,7 +79,31 @@ export async function createSession(
 
   const id = uuidv4();
 
-  // 2. Insert session
+  // 2. Ensure topic exists in database before creating session (prevents FK violation)
+  const { data: existingTopic } = await db
+    .from('topics')
+    .select('id')
+    .eq('id', topicId)
+    .single();
+
+  if (!existingTopic) {
+    try {
+      const fs = await import('fs');
+      const path = await import('path');
+      const chemiaFile = path.resolve(process.cwd(), 'data/chemia.json');
+      if (fs.existsSync(chemiaFile)) {
+        const topics = JSON.parse(fs.readFileSync(chemiaFile, 'utf-8'));
+        const matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
+        if (matched) {
+          await db.from('topics').upsert(matched, { onConflict: 'numer' });
+        }
+      }
+    } catch (e) {
+      console.warn('Failed to auto-seed topic for session:', e);
+    }
+  }
+
+  // 3. Insert session
   const { error: insertError } = await db
     .from('sessions')
     .insert({

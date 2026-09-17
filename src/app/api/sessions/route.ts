@@ -25,7 +25,8 @@ export async function POST(request: NextRequest) {
     const result = await createSession(db, authResult.userId, topicId);
 
     if (!result.success) {
-      return NextResponse.json({ error: result.error }, { status: 402 });
+      const isTokenError = result.error?.toLowerCase().includes('token');
+      return NextResponse.json({ error: result.error }, { status: isTokenError ? 402 : 500 });
     }
 
     return NextResponse.json({ session: result.session }, { status: 201 });
@@ -76,7 +77,9 @@ export async function GET(request: NextRequest) {
 
       let przedmiot = topic?.przedmiot;
       if (!przedmiot) {
-        if (topic?.numer && topic.numer >= 201) {
+        if (topic?.numer && topic.numer >= 501) {
+          przedmiot = 'chemia';
+        } else if (topic?.numer && topic.numer >= 201) {
           przedmiot = 'geografia';
         } else if (topic?.numer && topic.numer >= 51) {
           przedmiot = 'polski';

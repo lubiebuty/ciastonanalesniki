@@ -12,6 +12,7 @@ export interface User {
   tokens: number;
   age_confirmed: number;
   created_at: string;
+  role: 'student' | 'teacher';
 }
 
 export interface TokenResult {
@@ -37,49 +38,74 @@ export async function findOrCreateUser(
     throw new Error(`Failed to find user: ${findError.message}`);
   }
 
-  if (existing) {
-    return existing as User;
-  }
+  let user = existing as User | undefined;
 
-  const id = uuidv4();
-  const newUser = {
-    id,
-    email: profile.email,
-    name: profile.name || null,
-    image: profile.image || null,
-    tokens: 10,
-    age_confirmed: 0,
-  };
+  if (!user) {
+    const id = uuidv4();
+    const newUser = {
+      id,
+      email: profile.email,
+      name: profile.name || null,
+      image: profile.image || null,
+      tokens: 10,
+      age_confirmed: 0,
+      role: 'student',
+    };
 
-  const { error: insertError } = await db
-    .from('users')
-    .insert(newUser);
+    const { error: insertError } = await db
+      .from('users')
+      .insert(newUser);
 
-  if (insertError) {
-    // If concurrent insert occurs, try fetching again
-    if (insertError.code === '23505') {
-      const { data: concurrentUser } = await db
+    if (insertError) {
+      // If concurrent insert occurs, try fetching again
+      if (insertError.code === '23505') {
+        const { data: concurrentUser } = await db
+          .from('users')
+          .select('*')
+          .eq('email', profile.email)
+          .single();
+        if (concurrentUser) user = concurrentUser as User;
+      } else {
+        throw new Error(`Failed to create user: ${insertError.message}`);
+      }
+    } else {
+      // Retrieve the newly created user
+      const { data: created, error: getError } = await db
         .from('users')
         .select('*')
-        .eq('email', profile.email)
+        .eq('id', id)
         .single();
-      if (concurrentUser) return concurrentUser as User;
+
+      if (getError || !created) {
+        throw new Error(`Failed to retrieve newly created user: ${getError?.message}`);
+      }
+      user = created as User;
     }
-    throw new Error(`Failed to create user: ${insertError.message}`);
   }
 
-  // Retrieve the newly created user
-  const { data: created, error: getError } = await db
-    .from('users')
-    .select('*')
-    .eq('id', id)
-    .single();
+  // Ticket 13: Sprawdzenie allowlisty i nadanie roli nauczyciela na stałe
+  if (user && user.role !== 'teacher') {
+    const allowlistRes = await db
+      .from('teacher_allowlist')
+      .select('email')
+      .eq('email', user.email)
+      .single();
 
-  if (getError || !created) {
-    throw new Error(`Failed to retrieve newly created user: ${getError?.message}`);
+    const allowlistEntry = allowlistRes?.data;
+
+    if (allowlistEntry) {
+      const { error: updateError } = await db
+        .from('users')
+        .update({ role: 'teacher' })
+        .eq('id', user.id);
+      
+      if (!updateError) {
+        user.role = 'teacher';
+      }
+    }
   }
 
-  return created as User;
+  return user!;
 }
 
 /**

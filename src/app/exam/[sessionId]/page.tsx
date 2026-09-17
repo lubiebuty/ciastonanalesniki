@@ -10,7 +10,8 @@ import ChalkboardFrame from '@/components/sketch/ChalkboardFrame';
 import WimpyCharacters from '@/components/sketch/WimpyCharacters';
 import WimpyRobot from '@/components/sketch/WimpyRobot';
 import NoTokensModal from '@/components/NoTokensModal';
-import { getNextTopic } from '@/lib/geografia';
+import { getNextTopic as getNextGeografiaTopic } from '@/lib/geografia';
+import { getNextTopic as getNextChemiaTopic } from '@/lib/chemia';
 
 type ExamPhase = 'monologue' | 'evaluating' | 'report';
 
@@ -38,7 +39,7 @@ function ExamContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const sessionId = params.sessionId as string;
-  const { data: session, update } = useSession();
+  const { data: session, status, update } = useSession();
 
   const prevScoreParam = searchParams.get('prevScore');
   const prevScore = prevScoreParam !== null && !isNaN(Number(prevScoreParam)) ? Number(prevScoreParam) : null;
@@ -65,7 +66,13 @@ function ExamContent() {
         if (data.session) {
           const subject =
             data.session.przedmiot ||
-            (data.session.numer >= 201 ? 'geografia' : data.session.numer >= 51 ? 'polski' : 'matematyka');
+            (data.session.numer >= 501
+              ? 'chemia'
+              : data.session.numer >= 201
+              ? 'geografia'
+              : data.session.numer >= 51
+              ? 'polski'
+              : 'matematyka');
           setTopic({
             topicId: data.session.topic_id,
             numer: data.session.numer,
@@ -146,7 +153,7 @@ function ExamContent() {
   const repeatExam = async () => {
     if (!topic?.topicId || repeating) return;
 
-    if ((session?.tokens ?? 0) <= 0) {
+    if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
       setShowNoTokensModal(true);
       return;
     }
@@ -187,7 +194,7 @@ function ExamContent() {
   const handleNextExamTopic = async () => {
     if (loadingNext || !topic) return;
 
-    if ((session?.tokens ?? 0) <= 0) {
+    if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
       setShowNoTokensModal(true);
       return;
     }
@@ -207,7 +214,10 @@ function ExamContent() {
       const allTopics = topicsData.topics || [];
       const allSessions = sessionsData.sessions || [];
 
-      const nextTopic = getNextTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
+      const nextTopic =
+        subject === 'chemia'
+          ? getNextChemiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject)
+          : getNextGeografiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
 
       if (nextTopic && nextTopic.id) {
         const createRes = await fetch('/api/sessions', {
@@ -271,6 +281,8 @@ function ExamContent() {
                   ? 'Język Polski'
                   : topic.przedmiot === 'geografia'
                   ? 'Geografia'
+                  : topic.przedmiot === 'chemia'
+                  ? 'Chemia'
                   : 'Matematyka'}
               </span>
             </div>

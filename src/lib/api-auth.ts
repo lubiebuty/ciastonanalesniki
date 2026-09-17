@@ -52,6 +52,36 @@ export async function requireAuthNoAgeGate(): Promise<AuthResult> {
   return requireAuth();
 }
 
+/**
+ * Teacher-only guard.
+ * Returns 404 if the user is not a teacher (Ticket 19 convention).
+ */
+export async function requireTeacher(): Promise<AuthResult> {
+  const session = await auth();
+
+  if (!session?.user?.email || !session.userId) {
+    return {
+      ok: false,
+      response: NextResponse.json(
+        { error: 'Wymagane zalogowanie.' },
+        { status: 401 }
+      ),
+    };
+  }
+
+  if (session.role !== 'teacher') {
+    return {
+      ok: false,
+      response: NextResponse.json(
+        { error: 'Nie znaleziono.' },
+        { status: 404 }
+      ),
+    };
+  }
+
+  return { ok: true, userId: session.userId, email: session.user.email };
+}
+
 
 /**
  * Confirms the signed-in user owns the named session.

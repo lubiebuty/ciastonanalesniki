@@ -45,9 +45,11 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
 
   const tokens = session.tokens ?? 0;
 
+  const isTeacherZone = pathname?.startsWith('/teacher') || pathname?.startsWith('/hide-and-seek');
+
   return (
-    <div className="min-h-screen bg-background">
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-4 sm:pt-6">
+    <div className={`min-h-screen ${isTeacherZone ? 'bg-[#050505]' : 'bg-background'}`}>
+      <div className={isTeacherZone ? 'w-full' : 'max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-4 sm:pt-6'}>
         <UserBar
           user={{
             email: session.user.email,
@@ -55,6 +57,7 @@ export default function AppShell({ children }: { children: React.ReactNode }) {
             image: session.user.image,
           }}
           tokens={tokens}
+          role={session.role}
           onSignOut={() => signOut({ callbackUrl: '/login' })}
         />
         {tokens <= 0 && <NoTokensBanner />}

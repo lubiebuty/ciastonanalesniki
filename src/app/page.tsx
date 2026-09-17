@@ -5,6 +5,7 @@ import { useRouter } from 'next/navigation';
 import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import GeografiaChaptersView from '@/components/GeografiaChaptersView';
+import ChemiaChaptersView from '@/components/ChemiaChaptersView';
 import NoTokensModal from '@/components/NoTokensModal';
 
 interface TopicData {
@@ -21,7 +22,7 @@ interface TopicData {
   id_slug?: string;
 }
 
-type Subject = 'matematyka' | 'polski' | 'geografia';
+type Subject = 'matematyka' | 'polski' | 'geografia' | 'chemia';
 
 export default function Home() {
   const [activeSubject, setActiveSubject] = useState<Subject>('matematyka');
@@ -31,11 +32,29 @@ export default function Home() {
   const [creating, setCreating] = useState(false);
   const [selectedTopicToConfirm, setSelectedTopicToConfirm] = useState<string | null>(null);
   const [showNoTokensModal, setShowNoTokensModal] = useState<boolean>(false);
+  const [debilClicks, setDebilClicks] = useState(0);
   const router = useRouter();
-  const { data: session, update } = useSession();
+  const { data: session, status, update } = useSession();
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      const saved = localStorage.getItem('hamas_debilario_clicks');
+      if (saved) setDebilClicks(parseInt(saved, 10) || 0);
+    }
+  }, []);
+
+  const handleHamasDebilarioClick = () => {
+    setDebilClicks((prev) => {
+      const next = prev + 1;
+      if (typeof window !== 'undefined') {
+        localStorage.setItem('hamas_debilario_clicks', String(next));
+      }
+      return next;
+    });
+  };
 
   const handleTopicClick = (topicId: string) => {
-    if ((session?.tokens ?? 0) <= 0) {
+    if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
       setShowNoTokensModal(true);
       return;
     }
@@ -45,7 +64,7 @@ export default function Home() {
   useEffect(() => {
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('selected_przedmiot');
-      if (saved === 'polski' || saved === 'matematyka' || saved === 'geografia') {
+      if (saved === 'polski' || saved === 'matematyka' || saved === 'geografia' || saved === 'chemia') {
         setActiveSubject(saved as Subject);
       }
     }
@@ -69,7 +88,7 @@ export default function Home() {
   }, [activeSubject]);
 
   const selectTopic = async (topicId: string) => {
-    if ((session?.tokens ?? 0) <= 0) {
+    if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
       setSelectedTopicToConfirm(null);
       setShowNoTokensModal(true);
       return;
@@ -121,7 +140,7 @@ export default function Home() {
             </h2>
           </div>
 
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {/* Matematyka Card */}
             <button
               type="button"
@@ -196,6 +215,31 @@ export default function Home() {
                 </div>
               </div>
             </button>
+
+            {/* Chemia Card */}
+            <button
+              type="button"
+              onClick={() => setActiveSubject('chemia')}
+              className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${
+                activeSubject === 'chemia'
+                  ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]'
+                  : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'
+              }`}
+            >
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a]">
+                  <svg className="w-6 h-6 stroke-slate-900 fill-none" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <path d="M10 2v7.527a2 2 0 0 1-.211.896L4.72 20.55a1 1 0 0 0 .9 1.45h12.76a1 1 0 0 0 .9-1.45l-5.069-10.127A2 2 0 0 1 14 9.527V2" />
+                    <path d="M8.5 2h7" />
+                    <path d="M7 16h10" />
+                  </svg>
+                </div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Chemia</h3>
+                  <p className="text-sm font-bold text-slate-600">10 działów i 4 warianty</p>
+                </div>
+              </div>
+            </button>
           </div>
         </div>
 
@@ -216,7 +260,7 @@ export default function Home() {
               Wybierz zadanie, odpowiedz głosem lub wpisz rozwiązanie, a sztuczna inteligencja sprawdzi Twój tok myślenia i podpowie jak zdobyć 10/10 punktów!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="/topics?przedmiot=matematyka"
                 id="btn-start-simulation"
@@ -232,6 +276,25 @@ export default function Home() {
               >
                 <span>Moje wyniki</span>
               </Link>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={handleHamasDebilarioClick}
+                  className="sketch-btn-black !bg-red-700 !border-red-900 px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2 hover:!bg-red-800 cursor-pointer shadow-[4px_4px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 select-none"
+                >
+                  <span>test how much debil do you have</span>
+                </button>
+                {debilClicks > 0 && (
+                  <div
+                    className="sketch-box px-4 py-2 bg-amber-200 border-[3px] border-slate-900 shadow-[3px_3px_0px_#0f172a] flex items-center justify-center min-w-[55px] animate-in fade-in zoom-in-95 duration-150"
+                    title="Ilość kliknięć"
+                  >
+                    <span className="text-2xl sm:text-3xl font-black text-slate-900 font-sketch leading-none">
+                      {debilClicks}
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         ) : activeSubject === 'polski' ? (
@@ -248,7 +311,7 @@ export default function Home() {
               Ćwicz zadania z języka polskiego, analizuj lektury i sprawdzaj swoją wiedzę z automatyczną oceną AI!
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="/topics?przedmiot=polski"
                 className="sketch-btn-black px-6 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
@@ -262,9 +325,28 @@ export default function Home() {
               >
                 <span>Moje wyniki</span>
               </Link>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={handleHamasDebilarioClick}
+                  className="sketch-btn-black !bg-red-700 !border-red-900 px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2 hover:!bg-red-800 cursor-pointer shadow-[4px_4px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 select-none"
+                >
+                  <span>test how much debil do you have</span>
+                </button>
+                {debilClicks > 0 && (
+                  <div
+                    className="sketch-box px-4 py-2 bg-amber-200 border-[3px] border-slate-900 shadow-[3px_3px_0px_#0f172a] flex items-center justify-center min-w-[55px] animate-in fade-in zoom-in-95 duration-150"
+                    title="Ilość kliknięć"
+                  >
+                    <span className="text-2xl sm:text-3xl font-black text-slate-900 font-sketch leading-none">
+                      {debilClicks}
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
-        ) : (
+        ) : activeSubject === 'geografia' ? (
           <div className="sketch-box p-6 sm:p-8 bg-white space-y-4">
             <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
               Tutor Geograficzny
@@ -278,7 +360,7 @@ export default function Home() {
               System 4 wariantów w każdym dziale: od pytań ogólnych (A), przez szczegółowe podpunkty z pułapkami (B), pytania integrujące (C), po wyłapywanie błędów (D).
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-3.5 pt-2">
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3.5 pt-2">
               <Link
                 href="/topics?przedmiot=geografia"
                 className="sketch-btn-black px-6 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
@@ -292,6 +374,76 @@ export default function Home() {
               >
                 <span>Moje wyniki</span>
               </Link>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={handleHamasDebilarioClick}
+                  className="sketch-btn-black !bg-red-700 !border-red-900 px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2 hover:!bg-red-800 cursor-pointer shadow-[4px_4px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 select-none"
+                >
+                  <span>test how much debil do you have</span>
+                </button>
+                {debilClicks > 0 && (
+                  <div
+                    id="hamas-debilario-counter"
+                    className="sketch-box px-4 py-2 bg-amber-200 border-[3px] border-slate-900 shadow-[3px_3px_0px_#0f172a] flex items-center justify-center min-w-[55px] animate-in fade-in zoom-in-95 duration-150"
+                    title="Ilość kliknięć"
+                  >
+                    <span className="text-2xl sm:text-3xl font-black text-slate-900 font-sketch leading-none">
+                      {debilClicks}
+                    </span>
+                  </div>
+                )}
+              </div>
+            </div>
+          </div>
+        ) : (
+          <div className="sketch-box p-6 sm:p-8 bg-white space-y-4">
+            <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
+              Tutor Chemiczny
+            </div>
+
+            <h2 className="text-2xl sm:text-4xl font-extrabold tracking-wide leading-tight text-slate-900">
+              Trening Chemiczny — 10 Działów
+            </h2>
+
+            <p className="text-base sm:text-lg font-bold text-slate-600 leading-relaxed max-w-2xl">
+              System 4 wariantów w każdym dziale: od pytań ogólnych (A), przez szczegółowe podpunkty z pułapkami (B), pytania integrujące (C), po wyłapywanie błędów (D).
+            </p>
+
+            <div className="flex flex-col sm:flex-row flex-wrap items-center gap-3.5 pt-2">
+              <Link
+                href="/topics?przedmiot=chemia"
+                className="sketch-btn-black px-6 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Wybierz zadanie</span>
+                <span aria-hidden="true">→</span>
+              </Link>
+              <Link
+                href="/results"
+                className="sketch-btn px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2"
+              >
+                <span>Moje wyniki</span>
+              </Link>
+              <div className="flex items-center gap-3">
+                <button
+                  type="button"
+                  onClick={handleHamasDebilarioClick}
+                  className="sketch-btn-black !bg-red-700 !border-red-900 px-5 py-3.5 text-base sm:text-lg font-extrabold text-center inline-flex items-center justify-center gap-2 hover:!bg-red-800 cursor-pointer shadow-[4px_4px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 select-none"
+                >
+                  <span>test how much debil do you have</span>
+                </button>
+                {debilClicks > 0 && (
+                  <div
+                    id="hamas-debilario-counter"
+                    className="sketch-box px-4 py-2 bg-amber-200 border-[3px] border-slate-900 shadow-[3px_3px_0px_#0f172a] flex items-center justify-center min-w-[55px] animate-in fade-in zoom-in-95 duration-150"
+                    title="Ilość kliknięć"
+                  >
+                    <span className="text-2xl sm:text-3xl font-black text-slate-900 font-sketch leading-none">
+                      {debilClicks}
+                    </span>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         )}
@@ -409,7 +561,7 @@ export default function Home() {
               </div>
             )}
           </div>
-        ) : (
+        ) : activeSubject === 'geografia' ? (
           <div className="sketch-box p-5 sm:p-7 space-y-4">
             <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
               <div>
@@ -437,6 +589,42 @@ export default function Home() {
               <p className="text-slate-600 text-base py-4 font-bold">Brak pytań z geografii w bazie danych.</p>
             ) : (
               <GeografiaChaptersView
+                topics={topics as any}
+                userSessions={sessions}
+                onSelectTopic={(topicId) => handleTopicClick(topicId)}
+                creating={creating}
+                compact={true}
+              />
+            )}
+          </div>
+        ) : (
+          <div className="sketch-box p-5 sm:p-7 space-y-4">
+            <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
+              <div>
+                <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-slate-900">
+                  Działy z Chemii (10 działów)
+                </h2>
+                <p className="text-sm font-bold text-slate-500">
+                  Wybierz dział i przechodź warianty: A → B → C → D
+                </p>
+              </div>
+
+              <Link
+                href="/topics?przedmiot=chemia"
+                className="sketch-btn px-3.5 py-1 text-sm font-extrabold hover:bg-amber-50"
+              >
+                Wszystkie zadania →
+              </Link>
+            </div>
+
+            {topicsLoading ? (
+              <div className="flex items-center justify-center py-8">
+                <div className="w-8 h-8 border-3 border-slate-900 border-t-amber-500 rounded-full animate-spin" />
+              </div>
+            ) : topics.length === 0 ? (
+              <p className="text-slate-600 text-base py-4 font-bold">Brak pytań z chemii w bazie danych.</p>
+            ) : (
+              <ChemiaChaptersView
                 topics={topics as any}
                 userSessions={sessions}
                 onSelectTopic={(topicId) => handleTopicClick(topicId)}

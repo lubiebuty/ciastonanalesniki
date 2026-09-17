@@ -38,7 +38,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
           const db = getDatabase();
           const { data: dbUser, error } = await db
             .from('users')
-            .select('id, tokens, age_confirmed')
+            .select('id, tokens, age_confirmed, role')
             .eq('email', session.user.email)
             .single();
 
@@ -50,6 +50,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             session.userId = dbUser.id;
             session.tokens = dbUser.tokens;
             session.ageConfirmed = dbUser.age_confirmed === 1;
+            session.role = dbUser.role;
           }
         } catch (error) {
           console.error('Error enriching session:', error);

@@ -10,5 +10,6 @@ declare module 'next-auth' {
     userId?: string;
     tokens?: number;
     ageConfirmed?: boolean;
+    role?: 'student' | 'teacher';
   }
 }

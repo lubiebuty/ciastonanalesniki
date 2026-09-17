@@ -118,7 +118,9 @@ function groupSessionsByQuestion(sessions: SessionItem[]): QuestionGroup[] {
     const representative = sorted[sorted.length - 1];
     const subject =
       representative.przedmiot ||
-      (representative.numer && representative.numer >= 201
+      (representative.numer && representative.numer >= 501
+        ? 'chemia'
+        : representative.numer && representative.numer >= 201
         ? 'geografia'
         : representative.numer && representative.numer >= 51
         ? 'polski'
@@ -149,11 +151,11 @@ function groupSessionsByQuestion(sessions: SessionItem[]): QuestionGroup[] {
   return groups;
 }
 
-type SubjectFilter = 'all' | 'matematyka' | 'polski' | 'geografia';
+type SubjectFilter = 'all' | 'matematyka' | 'polski' | 'geografia' | 'chemia';
 
 export default function ResultsPage() {
   const router = useRouter();
-  const { data: session, update } = useSession();
+  const { data: session, status, update } = useSession();
   const [sessions, setSessions] = useState<SessionItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [selectedSubject, setSelectedSubject] = useState<SubjectFilter>('all');
@@ -176,6 +178,7 @@ export default function ResultsPage() {
     matematyka: questionGroups.filter((g) => g.przedmiot === 'matematyka').length,
     polski: questionGroups.filter((g) => g.przedmiot === 'polski').length,
     geografia: questionGroups.filter((g) => g.przedmiot === 'geografia').length,
+    chemia: questionGroups.filter((g) => g.przedmiot === 'chemia').length,
   };
 
   const filteredGroups =
@@ -203,7 +206,7 @@ export default function ResultsPage() {
   const handleRepeat = async (group: QuestionGroup) => {
     if (!group.topic_id || repeatingTopicId) return;
 
-    if ((session?.tokens ?? 0) <= 0) {
+    if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
       setShowNoTokensModal(true);
       return;
     }
@@ -271,12 +274,13 @@ export default function ResultsPage() {
         {/* ═════════════════════════════════════════════════════════════════
             SUBJECT FILTER TABS (Notebook Tabs)
             ═════════════════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3">
           {[
             { id: 'all', label: 'Wszystkie', count: counts.all },
             { id: 'matematyka', label: 'Matematyka', count: counts.matematyka },
             { id: 'polski', label: 'Język Polski', count: counts.polski },
             { id: 'geografia', label: 'Geografia', count: counts.geografia },
+            { id: 'chemia', label: 'Chemia', count: counts.chemia },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -458,7 +462,9 @@ export default function ResultsPage() {
 
                           {group.przedmiot && (
                             <span className="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-extrabold border border-slate-900 bg-amber-200 text-slate-900">
-                              {group.przedmiot === 'geografia'
+                              {group.przedmiot === 'chemia'
+                                ? 'Chemia'
+                                : group.przedmiot === 'geografia'
                                 ? 'Geografia'
                                 : group.przedmiot === 'polski'
                                 ? 'Język Polski'
