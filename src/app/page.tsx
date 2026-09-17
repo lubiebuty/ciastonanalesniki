@@ -132,6 +132,22 @@ export default function Home() {
       <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
 
         {/* ═════════════════════════════════════════════════════════════════
+            0. DICE STYLE DORADCA ZAWODOWY BANNER
+            ═════════════════════════════════════════════════════════════════ */}
+        <div className="w-full">
+          <Link href="/doradca" className="block relative group">
+            <div className="relative flex flex-col items-center justify-center text-center px-4 py-16 sm:py-20 w-full max-w-4xl mx-auto">
+              
+              <img 
+                src="/images/dice_header_transparent.png" 
+                alt="DICE Doradca Zawodowy DICE" 
+                className="relative z-10 w-full max-h-[400px] sm:max-h-[500px] object-contain opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" 
+              />
+            </div>
+          </Link>
+        </div>
+
+        {/* ═════════════════════════════════════════════════════════════════
             1. WYBIERZ PRZEDMIOT (Subject Selection Tabs)
             ═════════════════════════════════════════════════════════════════ */}
         <div className="space-y-3">

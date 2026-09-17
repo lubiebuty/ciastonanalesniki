@@ -212,3 +212,16 @@
   background: #ffffff;
   position: relative;
 }
+
+/* Fire animation for text */
+@keyframes fire-text {
+  0% { text-shadow: 0px -2px 5px #ffaa00, 0px -5px 15px #ff3300, 0px -15px 25px #ff0000, 0px -25px 35px #aa0000; }
+  25% { text-shadow: -2px -4px 6px #ffcc00, -4px -10px 18px #ff4400, -6px -20px 30px #dd0000, -4px -30px 40px #990000; }
+  50% { text-shadow: 2px -3px 4px #ff9900, 4px -8px 14px #ff2200, 6px -18px 25px #ee0000, 4px -28px 35px #aa0000; }
+  75% { text-shadow: 0px -5px 7px #ffbb00, 0px -12px 20px #ff5500, 0px -22px 35px #cc0000, 0px -35px 45px #880000; }
+  100% { text-shadow: 0px -2px 5px #ffaa00, 0px -5px 15px #ff3300, 0px -15px 25px #ff0000, 0px -25px 35px #aa0000; }
+}
+
+.animate-fire {
+  animation: fire-text 0.5s infinite alternate ease-in-out;
+}
