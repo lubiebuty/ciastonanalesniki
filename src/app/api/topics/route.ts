@@ -8,11 +8,29 @@ export async function GET(request: Request) {
     const { searchParams } = new URL(request.url);
     const przedmiot = searchParams.get('przedmiot');
 
+    if (przedmiot === 'fizyka') {
+      try {
+        const fs = await import('fs');
+        const path = await import('path');
+        const fizykaFile = path.resolve(process.cwd(), 'data/fizyka.json');
+        if (fs.existsSync(fizykaFile)) {
+          const topics = JSON.parse(fs.readFileSync(fizykaFile, 'utf-8'));
+          return NextResponse.json({ topics });
+        }
+      } catch (err) {
+        console.error('Error loading fizyka.json:', err);
+      }
+    }
+
     const db = getDatabase();
     let query = db.from('topics').select('*').order('numer', { ascending: true });
 
     if (przedmiot) {
-      query = query.eq('przedmiot', przedmiot);
+      if (przedmiot === 'chemia') {
+        query = query.eq('przedmiot', 'chemia').lt('numer', 700);
+      } else {
+        query = query.eq('przedmiot', przedmiot);
+      }
     }
 
     const { data: dbTopics, error } = await query;

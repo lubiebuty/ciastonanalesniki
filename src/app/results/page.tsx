@@ -118,7 +118,9 @@ function groupSessionsByQuestion(sessions: SessionItem[]): QuestionGroup[] {
     const representative = sorted[sorted.length - 1];
     const subject =
       representative.przedmiot ||
-      (representative.numer && representative.numer >= 501
+      (representative.numer && representative.numer >= 701
+        ? 'fizyka'
+        : representative.numer && representative.numer >= 501
         ? 'chemia'
         : representative.numer && representative.numer >= 201
         ? 'geografia'
@@ -151,7 +153,7 @@ function groupSessionsByQuestion(sessions: SessionItem[]): QuestionGroup[] {
   return groups;
 }
 
-type SubjectFilter = 'all' | 'matematyka' | 'polski' | 'geografia' | 'chemia';
+type SubjectFilter = 'all' | 'matematyka' | 'polski' | 'geografia' | 'chemia' | 'fizyka';
 
 export default function ResultsPage() {
   const router = useRouter();
@@ -179,6 +181,7 @@ export default function ResultsPage() {
     polski: questionGroups.filter((g) => g.przedmiot === 'polski').length,
     geografia: questionGroups.filter((g) => g.przedmiot === 'geografia').length,
     chemia: questionGroups.filter((g) => g.przedmiot === 'chemia').length,
+    fizyka: questionGroups.filter((g) => g.przedmiot === 'fizyka').length,
   };
 
   const filteredGroups =
@@ -274,13 +277,14 @@ export default function ResultsPage() {
         {/* ═════════════════════════════════════════════════════════════════
             SUBJECT FILTER TABS (Notebook Tabs)
             ═════════════════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-2 sm:grid-cols-5 gap-2.5 sm:gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-2.5 sm:gap-3">
           {[
             { id: 'all', label: 'Wszystkie', count: counts.all },
             { id: 'matematyka', label: 'Matematyka', count: counts.matematyka },
             { id: 'polski', label: 'Język Polski', count: counts.polski },
             { id: 'geografia', label: 'Geografia', count: counts.geografia },
             { id: 'chemia', label: 'Chemia', count: counts.chemia },
+            { id: 'fizyka', label: 'Fizyka', count: counts.fizyka },
           ].map((tab) => (
             <button
               key={tab.id}
@@ -419,7 +423,11 @@ export default function ResultsPage() {
                     ? 'Matematyka'
                     : selectedSubject === 'polski'
                     ? 'Język Polski'
-                    : 'Geografia'}
+                    : selectedSubject === 'geografia'
+                    ? 'Geografia'
+                    : selectedSubject === 'chemia'
+                    ? 'Chemia'
+                    : 'Fizyka'}
                 </strong>
                 .
               </p>
@@ -462,7 +470,9 @@ export default function ResultsPage() {
 
                           {group.przedmiot && (
                             <span className="inline-flex items-center rounded-md px-2 py-0.5 text-xs font-extrabold border border-slate-900 bg-amber-200 text-slate-900">
-                              {group.przedmiot === 'chemia'
+                              {group.przedmiot === 'fizyka'
+                                ? 'Fizyka'
+                                : group.przedmiot === 'chemia'
                                 ? 'Chemia'
                                 : group.przedmiot === 'geografia'
                                 ? 'Geografia'

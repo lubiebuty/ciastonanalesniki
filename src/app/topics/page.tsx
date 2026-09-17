@@ -6,6 +6,7 @@ import { useSession } from 'next-auth/react';
 import Link from 'next/link';
 import GeografiaChaptersView from '@/components/GeografiaChaptersView';
 import ChemiaChaptersView from '@/components/ChemiaChaptersView';
+import FizykaChaptersView from '@/components/FizykaChaptersView';
 import NoTokensModal from '@/components/NoTokensModal';
 import { getNextTopic } from '@/lib/geografia';
 
@@ -29,12 +30,12 @@ function TopicsList() {
   const paramPrzedmiot = searchParams.get('przedmiot');
 
   const [activeSubject, setActiveSubject] = useState<string>(() => {
-    if (paramPrzedmiot && (paramPrzedmiot === 'polski' || paramPrzedmiot === 'matematyka' || paramPrzedmiot === 'geografia' || paramPrzedmiot === 'chemia')) {
+    if (paramPrzedmiot && (paramPrzedmiot === 'polski' || paramPrzedmiot === 'matematyka' || paramPrzedmiot === 'geografia' || paramPrzedmiot === 'chemia' || paramPrzedmiot === 'fizyka')) {
       return paramPrzedmiot;
     }
     if (typeof window !== 'undefined') {
       const saved = localStorage.getItem('selected_przedmiot');
-      if (saved && (saved === 'polski' || saved === 'matematyka' || saved === 'geografia' || saved === 'chemia')) {
+      if (saved && (saved === 'polski' || saved === 'matematyka' || saved === 'geografia' || saved === 'chemia' || saved === 'fizyka')) {
         return saved;
       }
     }
@@ -87,7 +88,7 @@ function TopicsList() {
   // Sync activeSubject whenever URL search params change
   useEffect(() => {
     const p = searchParams.get('przedmiot');
-    if (p && (p === 'polski' || p === 'matematyka' || p === 'geografia' || p === 'chemia') && p !== activeSubject) {
+    if (p && (p === 'polski' || p === 'matematyka' || p === 'geografia' || p === 'chemia' || p === 'fizyka') && p !== activeSubject) {
       setActiveSubject(p);
     }
   }, [searchParams, activeSubject]);
@@ -177,7 +178,9 @@ function TopicsList() {
       ? 'Język Polski'
       : activeSubject === 'geografia'
       ? 'Geografia'
-      : 'Chemia';
+      : activeSubject === 'chemia'
+      ? 'Chemia'
+      : 'Fizyka';
 
   return (
     <main className="min-h-screen p-3 sm:p-6 md:p-10 font-sketch">
@@ -207,7 +210,7 @@ function TopicsList() {
         {/* ═════════════════════════════════════════════════════════════════
             SUBJECT SWITCHER TABS (Notebook Tabs)
             ═════════════════════════════════════════════════════════════════ */}
-        <div className="grid grid-cols-2 sm:grid-cols-4 gap-2.5 sm:gap-3">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3">
           <button
             type="button"
             onClick={() => handleSubjectChange('matematyka')}
@@ -252,13 +255,24 @@ function TopicsList() {
           >
             Chemia
           </button>
+          <button
+            type="button"
+            onClick={() => handleSubjectChange('fizyka')}
+            className={`py-3 px-3 font-extrabold text-sm sm:text-base tracking-wide rounded-xl border-[2.5px] border-slate-900 transition-all cursor-pointer ${
+              activeSubject === 'fizyka'
+                ? 'bg-amber-100 text-slate-900 shadow-[4px_4px_0px_#0f172a] scale-[1.01]'
+                : 'bg-white text-slate-700 hover:bg-slate-50 shadow-[2px_2px_0px_#0f172a]'
+            }`}
+          >
+            Fizyka
+          </button>
         </div>
 
         {/* ═════════════════════════════════════════════════════════════════
             CTA BUTTON (Hand-drawn CTA)
             ═════════════════════════════════════════════════════════════════ */}
         <div className="space-y-3">
-          {activeSubject !== 'geografia' && activeSubject !== 'chemia' && (
+          {activeSubject !== 'geografia' && activeSubject !== 'chemia' && activeSubject !== 'fizyka' && (
             <button
               onClick={drawRandom}
               disabled={creating || topics.length === 0}
@@ -322,6 +336,14 @@ function TopicsList() {
             creating={creating}
             compact={false}
           />
+        ) : activeSubject === 'fizyka' ? (
+          <FizykaChaptersView
+            topics={topics}
+            userSessions={sessions}
+            onSelectTopic={(topicId) => handleTopicClick(topicId)}
+            creating={creating}
+            compact={false}
+          />
         ) : (
           <div className="space-y-3.5">
             {currentTopics.map((topic) => (
@@ -352,9 +374,9 @@ function TopicsList() {
         )}
 
         {/* ═════════════════════════════════════════════════════════════════
-            PAGINATION CONTROLS (Hand-drawn Buttons) - Only for Math & Polish
+            PAGINATION CONTROLS (Hand-drawn Buttons) - Math & Polish
             ═════════════════════════════════════════════════════════════════ */}
-        {activeSubject !== 'geografia' && activeSubject !== 'chemia' && totalPages > 1 && (
+        {activeSubject !== 'geografia' && activeSubject !== 'chemia' && activeSubject !== 'fizyka' && totalPages > 1 && (
           <div className="flex items-center justify-between border-t-2 border-dashed border-slate-300 pt-4">
             <button
               onClick={() => setCurrentPage((p) => Math.max(1, p - 1))}

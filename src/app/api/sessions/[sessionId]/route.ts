@@ -62,7 +62,9 @@ export async function GET(
     // Determine subject: explicit column or by question number
     let przedmiot = topic?.przedmiot;
     if (!przedmiot) {
-      if (topic?.numer && topic.numer >= 501) {
+      if (topic?.numer && topic.numer >= 701) {
+        przedmiot = 'fizyka';
+      } else if (topic?.numer && topic.numer >= 501) {
         przedmiot = 'chemia';
       } else if (topic?.numer && topic.numer >= 201) {
         przedmiot = 'geografia';

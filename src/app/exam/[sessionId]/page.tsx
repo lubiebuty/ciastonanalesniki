@@ -12,6 +12,7 @@ import WimpyRobot from '@/components/sketch/WimpyRobot';
 import NoTokensModal from '@/components/NoTokensModal';
 import { getNextTopic as getNextGeografiaTopic } from '@/lib/geografia';
 import { getNextTopic as getNextChemiaTopic } from '@/lib/chemia';
+import { getNextTopic as getNextFizykaTopic } from '@/lib/fizyka';
 
 type ExamPhase = 'monologue' | 'evaluating' | 'report';
 
@@ -66,7 +67,9 @@ function ExamContent() {
         if (data.session) {
           const subject =
             data.session.przedmiot ||
-            (data.session.numer >= 501
+            (data.session.numer >= 701
+              ? 'fizyka'
+              : data.session.numer >= 501
               ? 'chemia'
               : data.session.numer >= 201
               ? 'geografia'
@@ -214,10 +217,14 @@ function ExamContent() {
       const allTopics = topicsData.topics || [];
       const allSessions = sessionsData.sessions || [];
 
-      const nextTopic =
-        subject === 'chemia'
-          ? getNextChemiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject)
-          : getNextGeografiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
+      let nextTopic: any = null;
+      if (subject === 'fizyka') {
+        nextTopic = getNextFizykaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
+      } else if (subject === 'chemia') {
+        nextTopic = getNextChemiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
+      } else {
+        nextTopic = getNextGeografiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
+      }
 
       if (nextTopic && nextTopic.id) {
         const createRes = await fetch('/api/sessions', {
@@ -283,6 +290,8 @@ function ExamContent() {
                   ? 'Geografia'
                   : topic.przedmiot === 'chemia'
                   ? 'Chemia'
+                  : topic.przedmiot === 'fizyka'
+                  ? 'Fizyka'
                   : 'Matematyka'}
               </span>
             </div>

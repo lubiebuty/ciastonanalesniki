@@ -57,11 +57,22 @@ export async function POST(request: NextRequest) {
     const startedAt = Date.now();
     let result: Awaited<ReturnType<typeof evaluateSession>>;
     try {
+      const evaluatedPrzedmiot =
+        topic.numer >= 701
+          ? 'fizyka'
+          : topic.numer >= 501
+          ? 'chemia'
+          : topic.numer >= 201
+          ? 'geografia'
+          : topic.numer >= 51
+          ? 'polski'
+          : topic.przedmiot || 'matematyka';
+
       result = await evaluateSession({
         pytanie: topic.pytanie,
         expectedAnswer: topic.odpowiedz,
         userAnswer,
-        przedmiot: topic.przedmiot,
+        przedmiot: evaluatedPrzedmiot,
       });
     } catch (llmError) {
       await updateSessionStatus(db, sessionId, 'evaluation_failed');

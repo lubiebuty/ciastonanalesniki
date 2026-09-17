@@ -91,11 +91,21 @@ export async function createSession(
       const fs = await import('fs');
       const path = await import('path');
       const chemiaFile = path.resolve(process.cwd(), 'data/chemia.json');
+      const fizykaFile = path.resolve(process.cwd(), 'data/fizyka.json');
+      let matched: any = null;
+
       if (fs.existsSync(chemiaFile)) {
         const topics = JSON.parse(fs.readFileSync(chemiaFile, 'utf-8'));
-        const matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
-        if (matched) {
-          await db.from('topics').upsert(matched, { onConflict: 'numer' });
+        matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
+      }
+      if (!matched && fs.existsSync(fizykaFile)) {
+        const topics = JSON.parse(fs.readFileSync(fizykaFile, 'utf-8'));
+        matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
+      }
+      if (matched) {
+        const { error: seedErr } = await db.from('topics').upsert(matched, { onConflict: 'numer' });
+        if (seedErr && (seedErr.code === '23514' || seedErr.message?.includes('check_przedmiot'))) {
+          await db.from('topics').upsert({ ...matched, przedmiot: 'chemia' }, { onConflict: 'numer' });
         }
       }
     } catch (e) {
