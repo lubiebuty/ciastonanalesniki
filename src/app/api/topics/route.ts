@@ -2,7 +2,12 @@
  * Topics API route — GET returns all available topics.
  */
 import { NextResponse } from 'next/server';
+import fs from 'fs';
+import path from 'path';
 import { getDatabase } from '@/lib/db';
+
+export const dynamic = 'force-dynamic';
+
 export async function GET(request: Request) {
   try {
     const { searchParams } = new URL(request.url);
@@ -10,8 +15,6 @@ export async function GET(request: Request) {
 
     if (przedmiot === 'fizyka') {
       try {
-        const fs = await import('fs');
-        const path = await import('path');
         const fizykaFile = path.resolve(process.cwd(), 'data/fizyka.json');
         if (fs.existsSync(fizykaFile)) {
           const topics = JSON.parse(fs.readFileSync(fizykaFile, 'utf-8'));
@@ -44,8 +47,6 @@ export async function GET(request: Request) {
     // Fallback if chemia is not yet seeded in database
     if (przedmiot === 'chemia' && topics.length === 0) {
       try {
-        const fs = await import('fs');
-        const path = await import('path');
         const chemiaFile = path.resolve(process.cwd(), 'data/chemia.json');
         if (fs.existsSync(chemiaFile)) {
           topics = JSON.parse(fs.readFileSync(chemiaFile, 'utf-8'));

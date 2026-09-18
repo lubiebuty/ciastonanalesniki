@@ -342,6 +342,316 @@ export const ZAWODY: Zawod[] = [
       }
     ]
   },
+  {
+    id: "informatyk",
+    nazwa: "Informatyk",
+    kategoria: "powazny",
+    ikonaEmoji: "💻",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Logiczne myślenie",
+      "Znajomość algorytmów",
+      "Języki programowania",
+      "Cierpliwość przy debugowaniu",
+      "Język angielski techniczny"
+    ],
+    pytania: [
+      {
+        tresc: "Jak nazywa się podstawowy system liczbowy używany w elektronice i informatyce (0 i 1)?",
+        opcje: ["Dziesiętny", "Szesnastkowy", "Dwójkowy (binarny)", "Ósemkowy"],
+        poprawnaOdpowiedz: 2
+      },
+      {
+        tresc: "Który z poniższych NIE jest językiem programowania?",
+        opcje: ["Python", "HTML", "C++", "Java"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Co oznacza skrót RAM?",
+        opcje: ["Random Access Memory", "Read Access Memory", "Run Action Module", "Realtime Application Memory"],
+        poprawnaOdpowiedz: 0
+      }
+    ]
+  },
+  {
+    id: "trener_akrobatyki",
+    nazwa: "Trener Akrobatyki",
+    kategoria: "powazny",
+    ikonaEmoji: "🤸",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Wybitna sprawność fizyczna",
+      "Wiedza o biomechanice",
+      "Cierpliwość do podopiecznych",
+      "Umiejętność asekuracji",
+      "Zasady pierwszej pomocy"
+    ],
+    pytania: [
+      {
+        tresc: "Podstawowy skok w akrobatyce, gdzie ciało wykonuje pełny obrót w powietrzu to:",
+        opcje: ["Szpagat", "Salto", "Mostek", "Piruet"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Co jest najważniejsze podczas asekuracji początkującego akrobaty?",
+        opcje: ["Krzyczenie dla zachęty", "Zabezpieczenie głowy i karku", "Nagrywanie filmu na TikToka", "Liczenie powtórzeń"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Zdolność do wykonywania ruchów w pełnym zakresie stawów to:",
+        opcje: ["Siła", "Szybkość", "Gibkość", "Wytrzymałość"],
+        poprawnaOdpowiedz: 2
+      }
+    ]
+  },
+  {
+    id: "czysciciel_okien",
+    nazwa: "Wysokościowy Czyściciel Okien",
+    kategoria: "powazny",
+    ikonaEmoji: "🏢",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Brak lęku wysokości",
+      "Techniki alpinistyczne",
+      "Sprawność fizyczna",
+      "Znajomość sprzętu asekuracyjnego",
+      "Ostrożność i dokładność"
+    ],
+    pytania: [
+      {
+        tresc: "Podstawowy element zabezpieczający pracownika wysokościowego przed upadkiem to:",
+        opcje: ["Kask", "Uprząż i lina asekuracyjna", "Rękawice", "Mocne buty"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Ile niezależnych punktów wpięcia (lin) musi mieć pracownik wykonujący prace na wysokości w dostępie linowym?",
+        opcje: ["Co najmniej jeden", "Co najmniej dwa", "Co najmniej cztery", "Nie musi mieć żadnego"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Jakie zjawisko pogodowe jest najbardziej niebezpieczne dla czyściciela okien na wieżowcu?",
+        opcje: ["Silny wiatr", "Delikatna mżawka", "Ostre słońce", "Przelotne zachmurzenie"],
+        poprawnaOdpowiedz: 0
+      }
+    ]
+  },
+  {
+    id: "kierowca_tramwaju",
+    nazwa: "Kierowca Tramwaju",
+    kategoria: "powazny",
+    ikonaEmoji: "🚋",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Pozwolenie na tramwaj",
+      "Znajomość przepisów ruchu drogowego",
+      "Odporność na stres",
+      "Szybki czas reakcji",
+      "Dobra koncentracja"
+    ],
+    pytania: [
+      {
+        tresc: "Tramwaj skręcający na skrzyżowaniu (bez sygnalizacji kierunkowej) względem samochodu jadącego prosto z przeciwka:",
+        opcje: ["Ma zawsze pierwszeństwo", "Ustępuje pierwszeństwa", "Zasada prawej ręki decyduje", "Kto pierwszy ten lepszy"],
+        poprawnaOdpowiedz: 0
+      },
+      {
+        tresc: "Co to jest pantograf?",
+        opcje: ["Rodzaj hamulca", "Urządzenie na dachu odbierające prąd z sieci trakcyjnej", "Przednia szyba tramwaju", "Przycisk otwierający drzwi"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Jaki jest główny problem przy hamowaniu tramwajem w porównaniu do auta?",
+        opcje: ["Brak pedału hamulca", "Droga hamowania stalowych kół na szynach jest znacznie dłuższa", "Tramwaj nie ma hamulców", "Hamowanie zużywa dużo prądu"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "maszynista",
+    nazwa: "Kierowca Pociągu",
+    kategoria: "powazny",
+    ikonaEmoji: "🚆",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Licencja maszynisty",
+      "Znajomość instrukcji kolejowych",
+      "Znakomity wzrok i słuch",
+      "Umiejętność pracy zmianowej",
+      "Ogromna odpowiedzialność"
+    ],
+    pytania: [
+      {
+        tresc: "Co na kolei oznacza pojęcie 'czuwak'?",
+        opcje: ["Asystent maszynisty", "Urządzenie sprawdzające czujność maszynisty", "Rodzaj semafora", "Pies pilnujący stacji"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Czy pociąg towarowy ma dłuższą drogę hamowania niż osobowy (przy tej samej prędkości)?",
+        opcje: ["Nie, krótszą", "Droga hamowania jest taka sama", "Tak, ze względu na znacznie większą masę", "Pociąg towarowy w ogóle nie hamuje"],
+        poprawnaOdpowiedz: 2
+      },
+      {
+        tresc: "Sygnał czerwony na semaforze oznacza:",
+        opcje: ["Zwolnij do 20 km/h", "Stój", "Droga wolna", "Awaria zasilania"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "kierowca_autobusu",
+    nazwa: "Kierowca autobusu",
+    kategoria: "powazny",
+    ikonaEmoji: "🚌",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Prawo jazdy kat. D i kwalifikacje",
+      "Cierpliwość do pasażerów",
+      "Płynna jazda",
+      "Znajomość topografii miasta",
+      "Odporność na stres w korkach"
+    ],
+    pytania: [
+      {
+        tresc: "Autobus wyjeżdżający z zatoki przystankowej w terenie zabudowanym:",
+        opcje: ["Musi poczekać aż wszystkie auta przejadą", "Ma bezwzględne pierwszeństwo", "Inni kierowcy mają obowiązek ułatwić mu włączenie się do ruchu", "Może wyjechać tylko na zielonym świetle"],
+        poprawnaOdpowiedz: 2
+      },
+      {
+        tresc: "Dlaczego kierowca autobusu musi otwierać szerzej zakręty?",
+        opcje: ["Żeby wolniej jechać", "Ze względu na duży rozstaw osi – tylne koła ścinają zakręt", "Bo autobus ma za małą kierownicę", "To tylko mit"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Co powinien zrobić kierowca widząc wbiegającego na przejście pieszego?",
+        opcje: ["Zatrzymać się i ustąpić pierwszeństwa", "Zatrąbić i jechać dalej", "Przyspieszyć", "Mignąć światłami"],
+        poprawnaOdpowiedz: 0
+      }
+    ]
+  },
+  {
+    id: "ratownik_medyczny",
+    nazwa: "Ratownik Medyczny",
+    kategoria: "powazny",
+    ikonaEmoji: "🚑",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Wiedza medyczna i ratownicza",
+      "Zdolność działania w stresie",
+      "Sprawność fizyczna",
+      "Szybkie podejmowanie decyzji",
+      "Odporność psychiczna"
+    ],
+    pytania: [
+      {
+        tresc: "Prawidłowe tempo uciśnięć klatki piersiowej podczas RKO u dorosłego wynosi około:",
+        opcje: ["60 na minutę", "100-120 na minutę", "160 na minutę", "Tyle ile fabryka dała"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Stosunek uciśnięć do wdechów ratowniczych u dorosłego to:",
+        opcje: ["15:2", "30:2", "5:1", "10:2"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Co to jest AED?",
+        opcje: ["Automatyczny Elektryczny Dystrybutor", "Automatyczny Zewnętrzny Defibrylator", "Aparat Endoskopowy Dochodzeniowy", "Ambulans Ewakuacji Drogowej"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "ortopeda",
+    nazwa: "Ortopeda",
+    kategoria: "powazny",
+    ikonaEmoji: "🦴",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Wiedza anatomiczna (układ ruchu)",
+      "Umiejętności chirurgiczne",
+      "Zdolności manualne",
+      "Interpretacja badań obrazowych (RTG, MRI)",
+      "Empatia do pacjenta"
+    ],
+    pytania: [
+      {
+        tresc: "Jak nazywa się największa i najdłuższa kość w organizmie człowieka?",
+        opcje: ["Kość ramienna", "Kość udowa", "Kość piszczelowa", "Miednica"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Gips ortopedyczny najczęściej stosuje się przy:",
+        opcje: ["Skaleczeniach skóry", "Złamaniach kości", "Przeziębieniach", "Wypadaniu włosów"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Co łączy kości w stawie, zapobiegając ich przemieszczeniom?",
+        opcje: ["Ścięgna", "Więzadła", "Mięśnie", "Chrząstki"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "lekarz_rodzinny",
+    nazwa: "Lekarz rodzinny",
+    kategoria: "powazny",
+    ikonaEmoji: "🏥",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Szeroka wiedza ogólnomedyczna",
+      "Umiejętność wywiadu lekarskiego",
+      "Holistyczne podejście do pacjenta",
+      "Wiedza o szczepieniach i profilaktyce",
+      "Cierpliwość i empatia"
+    ],
+    pytania: [
+      {
+        tresc: "Prawidłowe ciśnienie tętnicze krwi u dorosłego człowieka oscyluje w granicach:",
+        opcje: ["80/50 mmHg", "120/80 mmHg", "160/100 mmHg", "200/120 mmHg"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Co to jest antybiotyk?",
+        opcje: ["Lek niszczący wirusy", "Lek niszczący bakterie", "Lek przeciwbólowy", "Witamina"],
+        poprawnaOdpowiedz: 1
+      },
+      {
+        tresc: "Profilaktyka pierwotna w medycynie rodzinnej polega na:",
+        opcje: ["Leczeniu zaawansowanych nowotworów", "Operacjach chirurgicznych", "Zapobieganiu chorobom (np. szczepienia, dieta)", "Wypisywaniu zwolnień lekarskich"],
+        poprawnaOdpowiedz: 2
+      }
+    ]
+  },
+  {
+    id: "kierowca_karetki",
+    nazwa: "Kierowca Karetki",
+    kategoria: "powazny",
+    ikonaEmoji: "🚑",
+    mechanika: "quiz_wymagan",
+    wymagania: [
+      "Doskonałe umiejętności prowadzenia pojazdu",
+      "Uprawnienia na pojazdy uprzywilejowane",
+      "Opanowanie pod presją czasu",
+      "Topografia terenu działania",
+      "Podstawy pierwszej pomocy"
+    ],
+    pytania: [
+      {
+        tresc: "Kiedy karetka staje się pojazdem uprzywilejowanym w ruchu drogowym?",
+        opcje: ["Zawsze, kiedy jest na służbie", "Gdy ma włączone światła mijania", "Gdy wysyła jednocześnie sygnały świetlne i dźwiękowe", "Tylko w nocy"],
+        poprawnaOdpowiedz: 2
+      },
+      {
+        tresc: "Czy pojazd uprzywilejowany może nie stosować się do przepisów ruchu (np. na czerwonym świetle)?",
+        opcje: ["Tak, pod warunkiem zachowania szczególnej ostrożności", "Nie, nigdy", "Tak, ale tylko na autostradzie", "Tak, i inni odpowiadają za ewentualny wypadek"],
+        poprawnaOdpowiedz: 0
+      },
+      {
+        tresc: "Jeśli słyszysz sygnał karetki, powinieneś:",
+        opcje: ["Zatrzymać się natychmiast na środku pasa", "Przyspieszyć by uciec", "Ułatwić przejazd (zjechać do krawędzi tzw. korytarzem życia)", "Zignorować, bo jedziesz swoim pasem"],
+        poprawnaOdpowiedz: 2
+      }
+    ]
+  },
   
   // ZAWODY ŻARTOBLIWE - INNE MECHANIKI
   {
