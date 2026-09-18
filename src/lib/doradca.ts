@@ -34,6 +34,66 @@ export interface Zawod {
 export const ZAWODY: Zawod[] = [
   // ZAWODY POWAŻNE
   {
+    id: "przedsiebiorca_1",
+    nazwa: "Przedsiębiorca 1",
+    kategoria: "powazny",
+    ikonaEmoji: "💼",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Zarządzanie czasem", "Podstawy księgowości", "Odporność na stres"],
+    pytania: [
+      {
+        tresc: "Podstawowy dokument finansowy podsumowujący działalność to:",
+        opcje: ["Rachunek zysków i strat", "Paragon", "CV", "Menu"],
+        poprawnaOdpowiedz: 0
+      }
+    ]
+  },
+  {
+    id: "przedsiebiorca_2",
+    nazwa: "Przedsiębiorca 2",
+    kategoria: "powazny",
+    ikonaEmoji: "📈",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Budowanie zespołu", "Skalowanie biznesu", "Zarządzanie kapitałem"],
+    pytania: [
+      {
+        tresc: "Skrót B2B oznacza biznes skierowany do:",
+        opcje: ["Klienta detalicznego", "Innego biznesu (Business to Business)", "Dzieci", "Rządu"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "przedsiebiorca_3",
+    nazwa: "Przedsiębiorca 3",
+    kategoria: "powazny",
+    ikonaEmoji: "📊",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Inwestycje rynkowe", "Optymalizacja podatkowa", "Rozwój międzynarodowy"],
+    pytania: [
+      {
+        tresc: "Główny indeks giełdowy w Polsce to:",
+        opcje: ["NASDAQ", "WIG20", "DAX", "S&P 500"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "przedsiebiorca_4",
+    nazwa: "Przedsiębiorca 4",
+    kategoria: "powazny",
+    ikonaEmoji: "🚀",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Przywództwo", "Strategia globalna", "Fuzje i przejęcia"],
+    pytania: [
+      {
+        tresc: "Stan, w którym firma kontroluje lwią część rynku nazywamy:",
+        opcje: ["Oligopolem", "Monopolem", "Konkurencją doskonałą", "Spółdzielnią"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
     id: "architekt",
     nazwa: "Architekt",
     kategoria: "powazny",
@@ -652,6 +712,96 @@ export const ZAWODY: Zawod[] = [
       }
     ]
   },
+  {
+    id: "straznik_miejski",
+    nazwa: "Strażnik Miejski",
+    kategoria: "powazny",
+    ikonaEmoji: "🎫",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Znajomość prawa miejscowego", "Sprawność fizyczna", "Cierpliwość"],
+    pytania: [
+      {
+        tresc: "Strażnik miejski może wystawić mandat m.in. za:",
+        opcje: ["Złe parkowanie", "Zabójstwo", "Przekroczenie prędkości na autostradzie", "Złą ocenę z matematyki"],
+        poprawnaOdpowiedz: 0
+      }
+    ]
+  },
+  {
+    id: "policjant",
+    nazwa: "Pan Policjant",
+    kategoria: "powazny",
+    ikonaEmoji: "🚓",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Sprawność fizyczna i testy psychologiczne", "Znajomość kodeksów", "Obsługa broni"],
+    pytania: [
+      {
+        tresc: "Numer alarmowy na policję (choć dzisiaj działa głównie 112) to:",
+        opcje: ["999", "998", "997", "911"],
+        poprawnaOdpowiedz: 2
+      }
+    ]
+  },
+  {
+    id: "sedzia",
+    nazwa: "Sędzia",
+    kategoria: "powazny",
+    ikonaEmoji: "⚖️",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Nieskazitelny charakter", "Aplikacja sędziowska", "Bezwzględna znajomość prawa"],
+    pytania: [
+      {
+        tresc: "Sędzia na sali sądowej nosi togę z żabotem w kolorze:",
+        opcje: ["Czerwonym", "Fioletowym", "Zielonym", "Niebieskim"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "prokurator",
+    nazwa: "Prokurator",
+    kategoria: "powazny",
+    ikonaEmoji: "📜",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Aplikacja prokuratorska", "Odporność na stres", "Zdolności analityczne"],
+    pytania: [
+      {
+        tresc: "Głównym zadaniem prokuratora jest:",
+        opcje: ["Obrona oskarżonego", "Stanie na straży praworządności i oskarżanie w sądzie", "Wydawanie wyroków", "Pisanie ustaw"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "adwokat",
+    nazwa: "Adwokat",
+    kategoria: "powazny",
+    ikonaEmoji: "🏛️",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Aplikacja adwokacka", "Elokwencja", "Umiejętność interpretacji przepisów"],
+    pytania: [
+      {
+        tresc: "Adwokata obowiązuje bezwzględnie:",
+        opcje: ["Tajemnica spowiedzi", "Tajemnica adwokacka", "Tajemnica państwowa", "Milczenie na sali"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "zolnierz",
+    nazwa: "Żołnierz",
+    kategoria: "powazny",
+    ikonaEmoji: "🪖",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Doskonała kondycja", "Dyscyplina", "Znajomość taktyki i broni"],
+    pytania: [
+      {
+        tresc: "Jaki jest podstawowy karabin szturmowy w polskim wojsku nowej generacji?",
+        opcje: ["AK-47", "M16", "MSBS Grot", "P90"],
+        poprawnaOdpowiedz: 2
+      }
+    ]
+  },
   
   // ZAWODY ŻARTOBLIWE - INNE MECHANIKI
   {
@@ -750,5 +900,166 @@ export const ZAWODY: Zawod[] = [
         odpowiedz: "67"
       }
     ]
+  },
+  {
+    id: "elektryk_ziomal",
+    nazwa: "Elektryk",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "⚡",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Uprawnienia SEP", "Odporność na wstrząsy"],
+    pytania: [
+      {
+        tresc: "Co robisz, gdy kabel jest pod napięciem?",
+        opcje: ["Przecinasz go nożyczkami", "Łapiesz za izolację", "Dotykasz językiem", "Dzwonisz do mamy"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "hydraulik_ziomal",
+    nazwa: "Hydraulik",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "🚽",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Klucz francuski", "Brak węchu"],
+    pytania: [
+      {
+        tresc: "Gdy woda leje się z sufitu, w pierwszej kolejności:",
+        opcje: ["Zakręcasz główny zawór", "Podstawiasz wiadro", "Robisz zdjęcie na Insta", "Bierzesz szampon"],
+        poprawnaOdpowiedz: 0
+      }
+    ]
+  },
+  {
+    id: "kulturysta",
+    nazwa: "Kulturysta",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "💪",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Kurczak i ryż", "Brak karku", "Karnet na siłkę"],
+    pytania: [
+      {
+        tresc: "Najważniejszy posiłek dnia kulturysty to:",
+        opcje: ["Płatki z mlekiem", "Białko po treningu (okno anaboliczne!)", "Czekolada", "Woda z cytryną"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "bezrobotny",
+    nazwa: "Bezrobotny",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "🛋️",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Wygodna kanapa", "Netflix", "Umiejętność omijania Urzędu Pracy"],
+    pytania: [
+      {
+        tresc: "Jaki dzień tygodnia najbardziej stresuje bezrobotnego?",
+        opcje: ["Poniedziałek", "Piątek", "Niedziela wieczór", "Każdy jest taki sam"],
+        poprawnaOdpowiedz: 3
+      }
+    ]
+  },
+  {
+    id: "cold_caller",
+    nazwa: "Cold Caller",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "📞",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Twarda psychika", "Zatyczki do uszu", "Fotowoltaika w żyłach"],
+    pytania: [
+      {
+        tresc: "Jak zaczynasz rozmowę po usłyszeniu 'halo'?",
+        opcje: ["Dzień dobry, czy pan XYZ?", "Mam dla Pana darmowy pokaz garnków", "Czy jest Pan właścicielem dachu?", "Wszystkie powyższe"],
+        poprawnaOdpowiedz: 3
+      }
+    ]
+  },
+  {
+    id: "pilot_samochodu",
+    nazwa: "Pilot samochodu",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "🗺️",
+    mechanika: "timer_reakcja",
+    scenariuszTimer: {
+      tresc: "Kierowca zasuwa 150 km/h w lesie. Co mu dyktujesz?",
+      limitSekund: 3,
+      opcje: ["Prawy 3, nie tnij!", "Prosto w drzewo!", "Zwolnij, bo się boję", "Otwórz okno"],
+      animacjaPorazki: "Nie zdążyłeś! Dachowanie!"
+    }
+  },
+  {
+    id: "mechanik_ziomal",
+    nazwa: "Mechanik Samochodowy",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "🔧",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Szara taśma", "Trytytki", "Diagnoza 'panie, kto to panu tak sp...?'"],
+    pytania: [
+      {
+        tresc: "Gdy świeci się Check Engine, profesjonalny ziomal mechanik:",
+        opcje: ["Kasuje błąd i mówi że naprawione", "Okleja kontrolkę czarną taśmą", "Mówię 'ten typ tak ma'", "Wszystkie z wymienionych"],
+        poprawnaOdpowiedz: 3
+      }
+    ]
+  },
+  {
+    id: "mechanik_samolotowy",
+    nazwa: "Mechanik Samolotowy",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "✈️",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Duuużo trytytek", "Brak lęku wysokości", "Więcej taśmy klejącej"],
+    pytania: [
+      {
+        tresc: "Gdy skrzydło odpada, co robisz?",
+        opcje: ["Wołam kapitana", "Sklejam na taśmę Speed Tape", "Mówię, że to wina pilota", "Udaję, że nie widzę"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "informatyk_ziomal",
+    nazwa: "Informatyk",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "🧑‍💻",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Umiejętność googlowania", "Kawa we krwi", "Restartowanie wszystkiego"],
+    pytania: [
+      {
+        tresc: "Jaka jest uniwersalna rada na każdy problem z komputerem?",
+        opcje: ["Sformatuj dysk", "A próbował pan wyłączyć i włączyć?", "Zadzwoń do Microsoftu", "Kup Maca"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "komandos",
+    nazwa: "Komandos",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "🥷",
+    mechanika: "quiz_wymagan",
+    wymagania: ["Przewroty w tył", "Kamuflaż z błota", "Jedzenie robaków"],
+    pytania: [
+      {
+        tresc: "Co jest najważniejsze w byciu komandosem?",
+        opcje: ["Dobra strzelba", "Wyglądanie fajnie w okularach przeciwsłonecznych", "Ciche skradanie", "Zrobienie pompki na jednym palcu"],
+        poprawnaOdpowiedz: 1
+      }
+    ]
+  },
+  {
+    id: "skoczek_spadochronowy",
+    nazwa: "Skoczek Spadochronowy",
+    kategoria: "zartobliwy",
+    ikonaEmoji: "🪂",
+    mechanika: "timer_reakcja",
+    scenariuszTimer: {
+      tresc: "Lecisz z 4000 metrów, główny spadochron się nie otwiera!",
+      limitSekund: 2,
+      opcje: ["Macham rękami jak ptak", "Otwieram zapasowy!", "Dzwonię do mamy", "Zamykam oczy"],
+      animacjaPorazki: "Splat!"
+    }
   }
 ];
