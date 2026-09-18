@@ -12,6 +12,7 @@ export interface Lamiglowka {
 export interface Zawod {
   id: string;
   nazwa: string;
+  przedmioty?: string[];
   kategoria: "powazny" | "zartobliwy";
   ikonaEmoji: string;
   mechanika: "quiz_wymagan" | "timer_reakcja" | "lamiglowka" | "zadanie_obliczeniowe" | "animacja_bez_pytan";
@@ -35,6 +36,7 @@ export const ZAWODY: Zawod[] = [
   // ZAWODY POWAŻNE
   {
     id: "przedsiebiorca_1",
+    przedmioty: ["matematyka","etyka"],
     nazwa: "Przedsiębiorca 1",
     kategoria: "powazny",
     ikonaEmoji: "💼",
@@ -50,6 +52,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "przedsiebiorca_2",
+    przedmioty: ["matematyka","etyka"],
     nazwa: "Przedsiębiorca 2",
     kategoria: "powazny",
     ikonaEmoji: "📈",
@@ -65,6 +68,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "przedsiebiorca_3",
+    przedmioty: ["matematyka","etyka"],
     nazwa: "Przedsiębiorca 3",
     kategoria: "powazny",
     ikonaEmoji: "📊",
@@ -80,6 +84,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "przedsiebiorca_4",
+    przedmioty: ["matematyka","etyka"],
     nazwa: "Przedsiębiorca 4",
     kategoria: "powazny",
     ikonaEmoji: "🚀",
@@ -95,6 +100,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "architekt",
+    przedmioty: ["matematyka","fizyka"],
     nazwa: "Architekt",
     kategoria: "powazny",
     ikonaEmoji: "🏛️",
@@ -126,6 +132,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "kucharz",
+    przedmioty: ["chemia","biologia"],
     nazwa: "Kucharz",
     kategoria: "powazny",
     ikonaEmoji: "👨‍🍳",
@@ -157,6 +164,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "pilkarz",
+    przedmioty: ["wf"],
     nazwa: "Piłkarz",
     kategoria: "powazny",
     ikonaEmoji: "⚽",
@@ -188,6 +196,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "hydraulik",
+    przedmioty: ["fizyka","matematyka"],
     nazwa: "Hydraulik",
     kategoria: "powazny",
     ikonaEmoji: "🔧",
@@ -219,6 +228,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "spawacz",
+    przedmioty: ["fizyka","chemia"],
     nazwa: "Spawacz",
     kategoria: "powazny",
     ikonaEmoji: "🔥",
@@ -250,6 +260,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "mechanik",
+    przedmioty: ["fizyka"],
     nazwa: "Mechanik samochodowy",
     kategoria: "powazny",
     ikonaEmoji: "🚗",
@@ -281,6 +292,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "lekarz",
+    przedmioty: ["biologia","chemia"],
     nazwa: "Lekarz",
     kategoria: "powazny",
     ikonaEmoji: "🩺",
@@ -312,6 +324,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "prawnik",
+    przedmioty: ["historia","polski","etyka"],
     nazwa: "Prawnik",
     kategoria: "powazny",
     ikonaEmoji: "⚖️",
@@ -343,6 +356,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "fizyk",
+    przedmioty: ["fizyka","matematyka"],
     nazwa: "Fizyk",
     kategoria: "powazny",
     ikonaEmoji: "🔬",
@@ -374,6 +388,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "szalony_naukowiec",
+    przedmioty: ["chemia","fizyka"],
     nazwa: "Szalony Naukowiec",
     kategoria: "zartobliwy", // Choć trochę edukacyjny, ton jest żartobliwy
     ikonaEmoji: "🧪",
@@ -404,6 +419,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "informatyk",
+    przedmioty: ["matematyka","informatyka"],
     nazwa: "Informatyk",
     kategoria: "powazny",
     ikonaEmoji: "💻",
@@ -435,6 +451,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "trener_akrobatyki",
+    przedmioty: ["wf"],
     nazwa: "Trener Akrobatyki",
     kategoria: "powazny",
     ikonaEmoji: "🤸",
@@ -466,6 +483,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "czysciciel_okien",
+    przedmioty: ["wf","fizyka"],
     nazwa: "Wysokościowy Czyściciel Okien",
     kategoria: "powazny",
     ikonaEmoji: "🏢",
@@ -497,6 +515,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "kierowca_tramwaju",
+    przedmioty: ["fizyka"],
     nazwa: "Kierowca Tramwaju",
     kategoria: "powazny",
     ikonaEmoji: "🚋",
@@ -528,6 +547,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "maszynista",
+    przedmioty: ["fizyka"],
     nazwa: "Kierowca Pociągu",
     kategoria: "powazny",
     ikonaEmoji: "🚆",
@@ -559,6 +579,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "kierowca_autobusu",
+    przedmioty: ["fizyka"],
     nazwa: "Kierowca autobusu",
     kategoria: "powazny",
     ikonaEmoji: "🚌",
@@ -590,6 +611,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "ratownik_medyczny",
+    przedmioty: ["biologia","chemia"],
     nazwa: "Ratownik Medyczny",
     kategoria: "powazny",
     ikonaEmoji: "🚑",
@@ -621,6 +643,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "ortopeda",
+    przedmioty: ["biologia","chemia"],
     nazwa: "Ortopeda",
     kategoria: "powazny",
     ikonaEmoji: "🦴",
@@ -652,6 +675,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "lekarz_rodzinny",
+    przedmioty: ["biologia","chemia"],
     nazwa: "Lekarz rodzinny",
     kategoria: "powazny",
     ikonaEmoji: "🏥",
@@ -683,6 +707,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "kierowca_karetki",
+    przedmioty: ["fizyka"],
     nazwa: "Kierowca Karetki",
     kategoria: "powazny",
     ikonaEmoji: "🚑",
@@ -714,6 +739,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "straznik_miejski",
+    przedmioty: ["historia","etyka","polski"],
     nazwa: "Strażnik Miejski",
     kategoria: "powazny",
     ikonaEmoji: "🎫",
@@ -729,6 +755,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "policjant",
+    przedmioty: ["historia","etyka","polski"],
     nazwa: "Pan Policjant",
     kategoria: "powazny",
     ikonaEmoji: "🚓",
@@ -744,6 +771,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "sedzia",
+    przedmioty: ["historia","etyka","polski"],
     nazwa: "Sędzia",
     kategoria: "powazny",
     ikonaEmoji: "⚖️",
@@ -759,6 +787,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "prokurator",
+    przedmioty: ["historia","etyka","polski"],
     nazwa: "Prokurator",
     kategoria: "powazny",
     ikonaEmoji: "📜",
@@ -774,6 +803,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "adwokat",
+    przedmioty: ["historia","etyka","polski"],
     nazwa: "Adwokat",
     kategoria: "powazny",
     ikonaEmoji: "🏛️",
@@ -789,6 +819,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "zolnierz",
+    przedmioty: ["wf","historia"],
     nazwa: "Żołnierz",
     kategoria: "powazny",
     ikonaEmoji: "🪖",
@@ -806,6 +837,7 @@ export const ZAWODY: Zawod[] = [
   // ZAWODY ŻARTOBLIWE - INNE MECHANIKI
   {
     id: "gangster",
+    przedmioty: ["wf"],
     nazwa: "Gangster",
     kategoria: "zartobliwy",
     ikonaEmoji: "🚔",
@@ -824,6 +856,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "haker",
+    przedmioty: ["matematyka","informatyka"],
     nazwa: "Haker",
     kategoria: "zartobliwy",
     ikonaEmoji: "💻",
@@ -841,6 +874,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "szambonurek",
+    przedmioty: ["biologia","chemia"],
     nazwa: "Szambonurek",
     kategoria: "zartobliwy",
     ikonaEmoji: "🤿",
@@ -860,6 +894,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "kopanie_rowow",
+    przedmioty: ["wf"],
     nazwa: "Kopanie rowów",
     kategoria: "zartobliwy",
     ikonaEmoji: "⛏️",
@@ -867,6 +902,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "bmxiarz",
+    przedmioty: ["wf","fizyka"],
     nazwa: "BMX-iarz",
     kategoria: "zartobliwy",
     ikonaEmoji: "🚲",
@@ -880,6 +916,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "skater",
+    przedmioty: ["wf","fizyka"],
     nazwa: "Skater",
     kategoria: "zartobliwy",
     ikonaEmoji: "🛹",
@@ -893,6 +930,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "scooter_kid",
+    przedmioty: ["wf"],
     nazwa: "SKUTERKID (hulajnogarz)",
     kategoria: "zartobliwy",
     ikonaEmoji: "🛴",
@@ -906,6 +944,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "elektryk_ziomal",
+    przedmioty: ["fizyka"],
     nazwa: "Elektryk",
     kategoria: "zartobliwy",
     ikonaEmoji: "⚡",
@@ -921,6 +960,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "hydraulik_ziomal",
+    przedmioty: ["fizyka"],
     nazwa: "Hydraulik",
     kategoria: "zartobliwy",
     ikonaEmoji: "🚽",
@@ -936,6 +976,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "kulturysta",
+    przedmioty: ["wf","biologia"],
     nazwa: "Kulturysta",
     kategoria: "zartobliwy",
     ikonaEmoji: "💪",
@@ -951,6 +992,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "bezrobotny",
+    przedmioty: ["etyka"],
     nazwa: "Bezrobotny",
     kategoria: "zartobliwy",
     ikonaEmoji: "🛋️",
@@ -966,6 +1008,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "cold_caller",
+    przedmioty: ["polski"],
     nazwa: "Cold Caller",
     kategoria: "zartobliwy",
     ikonaEmoji: "📞",
@@ -981,6 +1024,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "pilot_samochodu",
+    przedmioty: ["geografia"],
     nazwa: "Pilot samochodu",
     kategoria: "zartobliwy",
     ikonaEmoji: "🗺️",
@@ -994,6 +1038,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "mechanik_ziomal",
+    przedmioty: ["fizyka"],
     nazwa: "Mechanik Samochodowy",
     kategoria: "zartobliwy",
     ikonaEmoji: "🔧",
@@ -1009,6 +1054,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "mechanik_samolotowy",
+    przedmioty: ["fizyka"],
     nazwa: "Mechanik Samolotowy",
     kategoria: "zartobliwy",
     ikonaEmoji: "✈️",
@@ -1024,6 +1070,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "informatyk_ziomal",
+    przedmioty: ["matematyka","informatyka"],
     nazwa: "Informatyk",
     kategoria: "zartobliwy",
     ikonaEmoji: "🧑‍💻",
@@ -1039,6 +1086,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "komandos",
+    przedmioty: ["wf"],
     nazwa: "Komandos",
     kategoria: "zartobliwy",
     ikonaEmoji: "🥷",
@@ -1054,6 +1102,7 @@ export const ZAWODY: Zawod[] = [
   },
   {
     id: "skoczek_spadochronowy",
+    przedmioty: ["wf"],
     nazwa: "Skoczek Spadochronowy",
     kategoria: "zartobliwy",
     ikonaEmoji: "🪂",

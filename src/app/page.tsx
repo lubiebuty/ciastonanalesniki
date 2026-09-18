@@ -23,7 +23,7 @@ interface TopicData {
   id_slug?: string;
 }
 
-type Subject = 'matematyka' | 'polski' | 'geografia' | 'chemia' | 'fizyka';
+type Subject = 'matematyka' | 'polski' | 'geografia' | 'chemia' | 'fizyka' | 'wf' | 'biologia' | 'historia' | 'etyka' | 'informatyka';
 
 export default function Home() {
   const [activeSubject, setActiveSubject] = useState<Subject>('matematyka');
@@ -64,9 +64,15 @@ export default function Home() {
 
   useEffect(() => {
     if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('selected_przedmiot');
-      if (saved === 'polski' || saved === 'matematyka' || saved === 'geografia' || saved === 'chemia' || saved === 'fizyka') {
-        setActiveSubject(saved as Subject);
+      const params = new URLSearchParams(window.location.search);
+      const subject = params.get('subject');
+      if (subject && ['matematyka', 'polski', 'geografia', 'chemia', 'fizyka', 'wf', 'biologia', 'historia', 'etyka', 'informatyka'].includes(subject)) {
+        setActiveSubject(subject as Subject);
+      } else {
+        const saved = localStorage.getItem('selected_przedmiot');
+        if (saved && ['matematyka', 'polski', 'geografia', 'chemia', 'fizyka', 'wf', 'biologia', 'historia', 'etyka', 'informatyka'].includes(saved)) {
+          setActiveSubject(saved as Subject);
+        }
       }
     }
     // Load sessions to track progress
@@ -129,6 +135,9 @@ export default function Home() {
 
   return (
     <main className="min-h-screen p-3 sm:p-6 md:p-10 font-sketch">
+      <div className="w-full max-w-4xl mx-auto mb-6 bg-yellow-300 border-[3px] border-slate-900 p-3 text-center transform -rotate-1 shadow-[4px_4px_0px_#0f172a]">
+        <h2 className="text-xl sm:text-2xl font-black text-slate-900 uppercase">⚠️ STRONA W BUDOWIE ⚠️</h2>
+      </div>
       <div className="max-w-4xl mx-auto space-y-6 sm:space-y-8">
 
         {/* ═════════════════════════════════════════════════════════════════
@@ -279,6 +288,56 @@ export default function Home() {
                 <div>
                   <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Fizyka</h3>
                   <p className="text-sm font-bold text-slate-600">9 działów i 4 warianty</p>
+                </div>
+              </div>
+            </button>
+            {/* WF Card */}
+            <button type="button" onClick={() => setActiveSubject('wf')} className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${activeSubject === 'wf' ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]' : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'}`}>
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a] text-xl">⚽</div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">WF</h3>
+                  <p className="text-sm font-bold text-slate-600">Brak pytań</p>
+                </div>
+              </div>
+            </button>
+            {/* Biologia Card */}
+            <button type="button" onClick={() => setActiveSubject('biologia')} className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${activeSubject === 'biologia' ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]' : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'}`}>
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a] text-xl">🧬</div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Biologia</h3>
+                  <p className="text-sm font-bold text-slate-600">Brak pytań</p>
+                </div>
+              </div>
+            </button>
+            {/* Historia Card */}
+            <button type="button" onClick={() => setActiveSubject('historia')} className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${activeSubject === 'historia' ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]' : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'}`}>
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a] text-xl">📜</div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Historia</h3>
+                  <p className="text-sm font-bold text-slate-600">Brak pytań</p>
+                </div>
+              </div>
+            </button>
+            {/* Etyka Card */}
+            <button type="button" onClick={() => setActiveSubject('etyka')} className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${activeSubject === 'etyka' ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]' : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'}`}>
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a] text-xl">🤝</div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Etyka</h3>
+                  <p className="text-sm font-bold text-slate-600">Brak pytań</p>
+                </div>
+              </div>
+            </button>
+            {/* Informatyka Card */}
+            <button type="button" onClick={() => setActiveSubject('informatyka')} className={`p-4 sm:p-5 rounded-xl border-[2.5px] border-slate-900 text-left transition-all cursor-pointer ${activeSubject === 'informatyka' ? 'bg-amber-100/70 shadow-[5px_5px_0px_#0f172a] scale-[1.01]' : 'bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a]'}`}>
+              <div className="flex items-center gap-3.5">
+                <div className="w-12 h-12 rounded-xl border-2 border-slate-900 bg-white flex items-center justify-center shadow-[2px_2px_0px_#0f172a] text-xl">💻</div>
+                <div>
+                  <h3 className="font-extrabold text-slate-900 text-xl tracking-wide">Informatyka</h3>
+                  <p className="text-sm font-bold text-slate-600">Brak pytań</p>
                 </div>
               </div>
             </button>
@@ -725,7 +784,7 @@ export default function Home() {
               />
             )}
           </div>
-        ) : (
+        ) : activeSubject === 'fizyka' ? (
           <div className="sketch-box p-5 sm:p-7 space-y-4">
             <div className="flex items-center justify-between border-b-2 border-dashed border-slate-300 pb-2">
               <div>
@@ -760,6 +819,15 @@ export default function Home() {
                 compact={true}
               />
             )}
+          </div>
+        ) : (
+          <div className="sketch-box p-5 sm:p-7 space-y-4">
+            <h2 className="text-xl sm:text-2xl font-extrabold tracking-wide text-slate-900">
+              Ten przedmiot ({activeSubject}) pojawi się wkrótce!
+            </h2>
+            <p className="text-sm font-bold text-slate-500">
+              Brak pytań w bazie danych. (Strona w budowie)
+            </p>
           </div>
         )}
       </div>

@@ -18,6 +18,7 @@ export default function ZawodPage() {
   const zawod = ZAWODY.find(z => z.id === zawodId);
   const [finished, setFinished] = useState(false);
   const [resultMsg, setResultMsg] = useState('');
+  const [isZaliczony, setIsZaliczony] = useState(false);
 
   if (!zawod) {
     return (
@@ -30,6 +31,7 @@ export default function ZawodPage() {
 
   const handleFinish = (wynik: { poprawnych: number; wszystkich: number; zaliczony: boolean }) => {
     setFinished(true);
+    setIsZaliczony(wynik.zaliczony);
     if (wynik.zaliczony) {
       setResultMsg(`Świetnie! Wynik: ${wynik.poprawnych}/${wynik.wszystkich}. Masz predyspozycje!`);
     } else {
@@ -100,7 +102,26 @@ export default function ZawodPage() {
             <p className="text-xl font-bold text-slate-700 p-6 bg-slate-50 border-2 border-slate-900 rounded-xl shadow-[4px_4px_0px_#0f172a]">
               {resultMsg}
             </p>
-            <div className="pt-4 flex flex-col sm:flex-row gap-4 justify-center">
+            
+            {isZaliczony && zawod.przedmioty && zawod.przedmioty.length > 0 && (
+              <div className="mt-6 space-y-3">
+                <h3 className="text-xl font-extrabold text-slate-900">Zalecane kursy dla tego zawodu:</h3>
+                <div className="flex flex-wrap gap-3 justify-center">
+                  {zawod.przedmioty.map((przedmiot) => (
+                    <Link
+                      key={przedmiot}
+                      href={`/?subject=${przedmiot}`}
+                      className="inline-flex items-center gap-2 px-4 py-2 rounded-xl border-[2px] border-slate-900 bg-amber-100 hover:bg-amber-200 font-extrabold text-slate-900 shadow-[3px_3px_0px_#0f172a] transition-transform hover:-translate-y-0.5 hover:shadow-[4px_4px_0px_#0f172a]"
+                    >
+                      <span>Przejdź do: {przedmiot.charAt(0).toUpperCase() + przedmiot.slice(1)}</span>
+                      <span>→</span>
+                    </Link>
+                  ))}
+                </div>
+              </div>
+            )}
+
+            <div className="pt-6 flex flex-col sm:flex-row gap-4 justify-center">
               <button 
                 onClick={() => setFinished(false)}
                 className="sketch-btn-black px-6 py-3 font-extrabold text-lg"
