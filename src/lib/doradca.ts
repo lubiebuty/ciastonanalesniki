@@ -846,13 +846,16 @@ export const ZAWODY: Zawod[] = [
     ikonaEmoji: "🤿",
     mechanika: "zadanie_obliczeniowe",
     zadanieObliczeniowe: {
-      szablonTresci: "Masz butlę z {pojemnosc} litrami tlenu. Podczas nurkowania zużywasz {zuzycie_ml} ml tlenu na każdy oddech i robisz {oddechy_na_min} oddechów na minutę. Na ile minut wystarczy Ci tlenu? (Podaj wynik z dokładnością np. 3.33)",
+      szablonTresci: "Zanurzasz się w szambie o gęstości {gestosc} kg/m³. Masz butlę z {pojemnosc} litrami gazu pod ciśnieniem {cisnienie} hPa. Prędkość opadania w gęstwinie wynosi {predkosc_opadania} m/s, a kinetyczny współczynnik lepkości osadu (tzw. Stała Gruzu) to {lepkosc} Pa·s. Z dna unosi się bąbel metanu o promieniu {promien_babla} mm, wywołując zaburzenia kawitacyjne w rurze ssącej. Zgodnie ze zmodyfikowanym prawem Archimedesa-Szambonurka, uwzględniając dylatację czasu w gęstej materii oraz odrzucając opór powietrza (bo go tam nie ma)... Ile dokładnie minut przetrwasz na dole, zanim całkowicie stracisz węch? (Podaj dokładną liczbę).",
       zakresyLosowania: {
-        "pojemnosc": [20, 40],
-        "zuzycie_ml": [150, 300],
-        "oddechy_na_min": [30, 50]
+        "gestosc": [1050, 1900],
+        "pojemnosc": [12, 45],
+        "cisnienie": [1500, 3200],
+        "predkosc_opadania": [1, 9],
+        "lepkosc": [100, 500],
+        "promien_babla": [15, 85]
       },
-      wzorNaWynik: "pojemnosc / (zuzycie_ml * oddechy_na_min / 1000)"
+      wzorNaWynik: "67 + (gestosc * 0) + (pojemnosc * 0) + (cisnienie * 0) + (predkosc_opadania * 0) + (lepkosc * 0) + (promien_babla * 0)"
     }
   },
   {
