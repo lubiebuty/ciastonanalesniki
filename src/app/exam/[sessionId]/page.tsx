@@ -14,7 +14,7 @@ import { getNextTopic as getNextGeografiaTopic } from '@/lib/geografia';
 import { getNextTopic as getNextChemiaTopic } from '@/lib/chemia';
 import { getNextTopic as getNextFizykaTopic } from '@/lib/fizyka';
 import { Brain, Sparkles, AlertCircle } from 'lucide-react';
-import { getFlashcardImagePath } from '@/lib/frejer';
+import { getFlashcardImagePath, isPlaybookTopic } from '@/lib/frejer';
 
 type ExamPhase = 'monologue' | 'evaluating' | 'report';
 
@@ -272,7 +272,7 @@ function ExamContent() {
         {/* Top navigation link */}
         <div className="flex items-center justify-between">
           <Link
-            href={topic?.id_slug?.includes('playbook') ? '/frejer' : (topic?.przedmiot ? `/topics?przedmiot=${topic.przedmiot}` : '/topics')}
+            href={isPlaybookTopic(topic) ? '/frejer' : (topic?.przedmiot ? `/topics?przedmiot=${topic.przedmiot}` : '/topics')}
             className="sketch-btn px-4 py-2 text-sm font-extrabold"
           >
             ← Wróć do listy zadań
@@ -286,7 +286,7 @@ function ExamContent() {
                 </span>
               )}
               <span className="text-sm font-extrabold uppercase px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-100 shadow-[2px_2px_0px_#0f172a]">
-                {topic.id_slug?.includes('playbook')
+                {isPlaybookTopic(topic)
                   ? 'The Playbook'
                   : topic.przedmiot === 'polski'
                   ? 'Język Polski'

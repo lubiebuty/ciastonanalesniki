@@ -37,6 +37,11 @@ export function getFlashcardImagePath(topic: { pytanie?: string; dzial_numer?: n
   return matchedFile ? `/fiszki_zagrywki/${matchedFile}` : null;
 }
 
+export function isPlaybookTopic(topic?: { id_slug?: string | null } | null) {
+  if (!topic) return false;
+  return topic.id_slug?.includes('playbook') || false;
+}
+
 export interface DzialMeta {
   numer: number;
   rzymski: string;
@@ -103,7 +108,6 @@ export function computeFrejerDzialyProgress(
   userSessions: UserSessionMinimal[]
 ): DzialProgress[] {
   const result: DzialProgress[] = [];
-  let previousDzialCompleted = true;
 
   for (const meta of FREJER_DZIALY_METADATA) {
     const dzialTopics = topics.filter((t) => t.dzial_numer === meta.numer);
@@ -149,8 +153,6 @@ export function computeFrejerDzialyProgress(
       isCompleted,
       variants: variantsProgress,
     });
-
-    previousDzialCompleted = isCompleted;
   }
 
   return result;
