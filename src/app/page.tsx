@@ -7,6 +7,7 @@ import Link from 'next/link';
 import GeografiaChaptersView from '@/components/GeografiaChaptersView';
 import ChemiaChaptersView from '@/components/ChemiaChaptersView';
 import FizykaChaptersView from '@/components/FizykaChaptersView';
+import FrejerChaptersView from '@/components/FrejerChaptersView';
 import NoTokensModal from '@/components/NoTokensModal';
 
 interface TopicData {
@@ -144,16 +145,22 @@ export default function Home() {
             0. DICE STYLE DORADCA ZAWODOWY BANNER
             ═════════════════════════════════════════════════════════════════ */}
         <div className="w-full">
-          <Link href="/doradca" className="block relative group">
-            <div className="relative flex flex-col items-center justify-center text-center px-4 py-16 sm:py-20 w-full max-w-4xl mx-auto">
-              
+          <div className="relative flex flex-col items-center justify-center text-center px-4 py-8 sm:py-12 w-full max-w-4xl mx-auto space-y-4">
+            <Link href="/frejer" className="relative z-20 w-full flex justify-center hover:scale-[1.02] transition-transform duration-300">
+              <img
+                src="/images/frejer_sticker.jpg"
+                alt="UWAGA NIE KLIKAJ TU TO PRZYCISK TYLKO DLA FRAJERÓW"
+                className="w-full max-w-[600px] object-contain drop-shadow-[0_8px_15px_rgba(0,0,0,0.4)]"
+              />
+            </Link>
+            <Link href="/doradca" className="block relative group w-full">
               <img 
                 src="/images/dice_header_transparent.png" 
                 alt="DICE Doradca Zawodowy DICE" 
                 className="relative z-10 w-full max-h-[400px] sm:max-h-[500px] object-contain opacity-95 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300 drop-shadow-[0_0_15px_rgba(0,0,0,0.5)]" 
               />
-            </div>
-          </Link>
+            </Link>
+          </div>
         </div>
 
         {/* ═════════════════════════════════════════════════════════════════

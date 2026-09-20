@@ -1,0 +1,995 @@
+[
+  {
+    "id": "4ba42826-b95c-4128-937d-ffccada7738c",
+    "numer": 1,
+    "pytanie": "Na czym polega taktyka „The SNASA” i jaki mechanizm ma sprawić, że rozmówczyni uwierzy w przedstawioną historię?",
+    "odpowiedz": "„The SNASA” polega na udawaniu pracownika tajnego rządowego programu kosmicznego o nazwie „Secret NASA”. Mechanizm opiera się na przedstawieniu fikcyjnej, sensacyjnej tożsamości jako wiarygodnej historii.",
+    "elementy_kluczowe": [
+      "udzawanie pracownika „Secret NASA”",
+      "fikcyjna tożsamość rządowego programu kosmicznego",
+      "historia ma zostać przedstawiona jako wiarygodna"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „udzawanie pracownika „Secret NASA”” i/lub „fikcyjna tożsamość rządowego programu kosmicznego”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje zagrywce inny mechanizm niż opisany w źródle albo usuwa z jej rdzenia element „udzawanie pracownika „Secret NASA””.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play1-varA",
+    "stats_json": {
+      "success_rate": "13%",
+      "attracts": "chicks with moon rocks for brains",
+      "requirements": "none, though a helmet won't hurt you",
+      "prep_time": "T minus zero!",
+      "bummers": "women dumb enough to believe in 'SNASA'; often don't know what NASA is"
+    }
+  },
+  {
+    "id": "114ea28f-820a-4cf4-82d1-0603675c4940",
+    "numer": 2,
+    "pytanie": "Jakie cechy osoby, do której kierowana jest ta zagrywka, według materiału zwiększają jej podatność na tę historię i jaki element dodatkowy został wymieniony jako pomocny w uwiarygodnieniu roli?",
+    "odpowiedz": "Materiał wskazuje na osoby łatwowierne jako grupę docelową. Jako dodatkowy element uwiarygodniający wymienia kask; w zestawieniu jest on przedstawiony jako opcjonalny („kask nie zaszkodzi”).",
+    "elementy_kluczowe": [
+      "łatwowierność jako wskazana grupa docelowa",
+      "kask jako dodatkowy element",
+      "rozumienie, że kask nie jest rdzeniem historii"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „łatwowierność jako wskazana grupa docelowa” i/lub „kask jako dodatkowy element”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje elementowi „łatwowierność jako wskazana grupa docelowa” funkcję sprzeczną ze źródłem albo zastępuje źródłowe szczegóły inną historią.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play1-varB",
+    "stats_json": {
+      "success_rate": "13%",
+      "attracts": "chicks with moon rocks for brains",
+      "requirements": "none, though a helmet won't hurt you",
+      "prep_time": "T minus zero!",
+      "bummers": "women dumb enough to believe in 'SNASA'; often don't know what NASA is"
+    }
+  },
+  {
+    "id": "d27691db-78b5-4d8f-8351-f11b4f68d5b8",
+    "numer": 3,
+    "pytanie": "Jaki warunek dotyczący odbiorczyni i wiarygodności roli jest najważniejszy dla zastosowania The SNASA?",
+    "odpowiedz": "Źródło kieruje tę zagrywkę do osób podatnych na taką historię. Kask jest tylko pomocniczym, opcjonalnym elementem roli, a nie jej istotą. Warunek dotyczy więc przede wszystkim podatności odbiorczyni i możliwości wiarygodnego odegrania roli.",
+    "elementy_kluczowe": [
+      "podatność odbiorczyni na przedstawioną historię",
+      "rozumienie, że kask jest elementem pomocniczym, a nie rdzeniem zagrywki"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń podaje „podatność odbiorczyni na przedstawioną historię”, ale pomija „rozumienie, że kask jest elementem pomocniczym, a nie rdzeniem zagrywki” albo nie wyjaśnia związku między tymi elementami.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która zaprzecza znaczeniu źródłowego warunku/ograniczenia („podatność odbiorczyni na przedstawioną historię”) albo twierdzi, że zagrywka działa w opisanym źródle niezależnie od tego warunku.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play1-varC",
+    "stats_json": {
+      "success_rate": "13%",
+      "attracts": "chicks with moon rocks for brains",
+      "requirements": "none, though a helmet won't hurt you",
+      "prep_time": "T minus zero!",
+      "bummers": "women dumb enough to believe in 'SNASA'; often don't know what NASA is"
+    }
+  },
+  {
+    "id": "024c1db5-42a2-48a3-b603-194a75e34309",
+    "numer": 4,
+    "pytanie": "Na czym polega taktyka „One Week to Live” i jaka emocja ma być jej głównym elementem?",
+    "odpowiedz": "Zaczynasz kaszleć w miejscu publicznym, a następnie wyznajesz, że zostało ci tylko tydzień życia. Rdzeniem jest wywołanie reakcji na historię o ciężkiej sytuacji zdrowotnej.",
+    "elementy_kluczowe": [
+      "kaszel w miejscu publicznym",
+      "wyznanie, że zostało tydzień życia",
+      "emocjonalny motyw ciężkiej sytuacji"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „kaszel w miejscu publicznym” i/lub „wyznanie, że zostało tydzień życia”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje zagrywce inny mechanizm niż opisany w źródle albo usuwa z jej rdzenia element „kaszel w miejscu publicznym”.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play2-varA",
+    "stats_json": {
+      "success_rate": "50%",
+      "attracts": "natural nurses",
+      "requirements": "a hearty cough",
+      "prep_time": "none!",
+      "bummers": "begging the universe to kick you in the nards"
+    }
+  },
+  {
+    "id": "3f371b3d-d9b8-4052-9b2b-8fffec22ff63",
+    "numer": 5,
+    "pytanie": "Jak przebiega schemat tej zagrywki od momentu pojawienia się kaszlu do „wyznania” o pozostałym czasie życia i jaki typ kobiet materiał wskazuje jako szczególnie podatny?",
+    "odpowiedz": "Materiał wskazuje „naturalne pielęgniarki” jako grupę docelową; uczeń powinien połączyć ten szczegół z przedstawioną historią.",
+    "elementy_kluczowe": [
+      "„naturalne pielęgniarki” jako wskazana grupa",
+      "kaszel i wyznanie jako sekwencja"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń podaje „„naturalne pielęgniarki” jako wskazana grupa”, ale pomija „kaszel i wyznanie jako sekwencja” albo nie wyjaśnia związku między tymi elementami.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje elementowi „„naturalne pielęgniarki” jako wskazana grupa” funkcję sprzeczną ze źródłem albo zastępuje źródłowe szczegóły inną historią.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play2-varB",
+    "stats_json": {
+      "success_rate": "50%",
+      "attracts": "natural nurses",
+      "requirements": "a hearty cough",
+      "prep_time": "none!",
+      "bummers": "begging the universe to kick you in the nards"
+    }
+  },
+  {
+    "id": "2e56746e-59b4-45aa-88eb-89fac05ae070",
+    "numer": 6,
+    "pytanie": "Jaki konkretny warunek wykonania musi być spełniony, aby The One Week to Live mogło przebiegać zgodnie ze źródłem?",
+    "odpowiedz": "Źródło wymaga miejsca publicznego oraz wiarygodnego odegrania mocnego kaszlu. To właśnie publiczny kontekst i widoczne rozpoczęcie sceny uruchamiają opisany schemat.",
+    "elementy_kluczowe": [
+      "miejsce publiczne",
+      "wiarygodny, wyraźny kaszel rozpoczynający scenę"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń podaje „miejsce publiczne”, ale pomija „wiarygodny, wyraźny kaszel rozpoczynający scenę” albo nie wyjaśnia związku między tymi elementami.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która zaprzecza znaczeniu źródłowego warunku/ograniczenia („miejsce publiczne”) albo twierdzi, że zagrywka działa w opisanym źródle niezależnie od tego warunku.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play2-varC",
+    "stats_json": {
+      "success_rate": "50%",
+      "attracts": "natural nurses",
+      "requirements": "a hearty cough",
+      "prep_time": "none!",
+      "bummers": "begging the universe to kick you in the nards"
+    }
+  },
+  {
+    "id": "83cdc0fe-8df6-4a8c-8dd9-e45035815ade",
+    "numer": 7,
+    "pytanie": "Na czym polega „The Blind Date” i jaka sytuacja społeczna jest w niej wykorzystywana?",
+    "odpowiedz": "Podchodzisz kolejno do kobiet i pytasz, czy któraś z nich jest Stacy, po czym udajesz osobę wystawioną przez własną randkę.",
+    "elementy_kluczowe": [
+      "pytanie „Czy ty jesteś Stacy?”",
+      "udawanie osoby wystawionej przez randkę",
+      "wykorzystanie sytuacji randkowej jako pretekstu"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „pytanie „Czy ty jesteś Stacy?”” i/lub „udawanie osoby wystawionej przez randkę”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje zagrywce inny mechanizm niż opisany w źródle albo usuwa z jej rdzenia element „pytanie „Czy ty jesteś Stacy?””.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play3-varA",
+    "stats_json": {
+      "success_rate": "22%",
+      "attracts": "desperate chicks, pity queens",
+      "requirements": "a single rose",
+      "prep_time": "none!",
+      "bummers": "roses are thorny ow!"
+    }
+  },
+  {
+    "id": "a75ceacf-8166-493e-8a60-eaf7f3415feb",
+    "numer": 8,
+    "pytanie": "Jaką funkcję pełni powtarzane pytanie „Czy ty jesteś Stacy?” w opisanym schemacie i jaki typ rozmówczyni materiał wskazuje jako szczególnie podatny?",
+    "odpowiedz": "Materiał wskazuje desperatki i „królowe litości” jako grupę docelową oraz wymienia różę jako rekwizyt.",
+    "elementy_kluczowe": [
+      "desperatki i „królowe litości”",
+      "róża"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń podaje „desperatki i „królowe litości””, ale pomija „róża” albo nie wyjaśnia związku między tymi elementami.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje elementowi „desperatki i „królowe litości”” funkcję sprzeczną ze źródłem albo zastępuje źródłowe szczegóły inną historią.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play3-varB",
+    "stats_json": {
+      "success_rate": "22%",
+      "attracts": "desperate chicks, pity queens",
+      "requirements": "a single rose",
+      "prep_time": "none!",
+      "bummers": "roses are thorny ow!"
+    }
+  },
+  {
+    "id": "1c816ccd-e474-420d-98d7-abd917e0d742",
+    "numer": 9,
+    "pytanie": "Jaki rekwizyt jest wymagany w The Blind Date i dlaczego ma znaczenie dla rozpoczęcia scenariusza?",
+    "odpowiedz": "Wymagana jest pojedyncza róża. Ma ona towarzyszyć podejściu do kolejnych kobiet i wspierać scenariusz rzekomej randki, którego punktem wyjścia jest pytanie o Stacy.",
+    "elementy_kluczowe": [
+      "pojedyncza róża",
+      "róża wspiera scenariusz rzekomej randki i pytania o Stacy"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń podaje „pojedyncza róża”, ale pomija „róża wspiera scenariusz rzekomej randki i pytania o Stacy” albo nie wyjaśnia związku między tymi elementami.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która zaprzecza znaczeniu źródłowego warunku/ograniczenia („pojedyncza róża”) albo twierdzi, że zagrywka działa w opisanym źródle niezależnie od tego warunku.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play3-varC",
+    "stats_json": {
+      "success_rate": "22%",
+      "attracts": "desperate chicks, pity queens",
+      "requirements": "a single rose",
+      "prep_time": "none!",
+      "bummers": "roses are thorny ow!"
+    }
+  },
+  {
+    "id": "429edb44-123d-49aa-acfd-0fed58f0fd0e",
+    "numer": 10,
+    "pytanie": "Jaki jest podstawowy schemat taktyki „Don’t Drink That!”?",
+    "odpowiedz": "„Ratujesz” dziewczynę przed rzekomo podrzuconą substancją w drinku, udając, że zauważyłeś niebezpieczeństwo.",
+    "elementy_kluczowe": [
+      "rzekomo niebezpieczna substancja w drinku",
+      "nagłe „ratowanie” dziewczyny",
+      "przedstawienie sytuacji jako zagrożenia"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „rzekomo niebezpieczna substancja w drinku” i/lub „nagłe „ratowanie” dziewczyny”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje zagrywce inny mechanizm niż opisany w źródle albo usuwa z jej rdzenia element „rzekomo niebezpieczna substancja w drinku”.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play4-varA",
+    "stats_json": {
+      "success_rate": "45%",
+      "attracts": "chicks who don't like being drugged",
+      "requirements": "good hand-eye coordination",
+      "prep_time": "none",
+      "bummers": "35% chance of getting your ass kicked"
+    }
+  },
+  {
+    "id": "e1ad547b-2207-4e7c-9a65-373a4e5e0620",
+    "numer": 11,
+    "pytanie": "Jaką rolę odgrywa moment nagłego 'ratowania' drugiej osoby i jak przebiega ten fragment scenariusza?",
+    "odpowiedz": "Kluczowy jest moment tuż przed wypiciem drinka: wykonujący podbiega i ostrzega, że ktoś mógł coś wsypać do napoju. Gdy pada pytanie, kto to zrobił, wskazuje wybraną osobę jako sprawcę. Mechanizm opiera się na wejściu w rolę osoby, która właśnie 'ratuje' rozmówczynię.",
+    "elementy_kluczowe": [
+      "ryzyko fizycznej reakcji drugiej osoby"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa jest poprawna, jeśli uczeń rozpoznaje: ryzyko fizycznej reakcji drugiej osoby, ale nie wyjaśnia pełnego znaczenia tego elementu dla zagrywki.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje elementowi „ryzyko fizycznej reakcji drugiej osoby” funkcję sprzeczną ze źródłem albo zastępuje źródłowe szczegóły inną historią.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play4-varB",
+    "stats_json": {
+      "success_rate": "45%",
+      "attracts": "chicks who don't like being drugged",
+      "requirements": "good hand-eye coordination",
+      "prep_time": "none",
+      "bummers": "35% chance of getting your ass kicked"
+    }
+  },
+  {
+    "id": "ca8ca34f-994b-4697-bff3-44b002a34fa9",
+    "numer": 12,
+    "pytanie": "Jakie wyraźne ryzyko stanowi najważniejsze ograniczenie The Don’t Drink That!?",
+    "odpowiedz": "Źródło wprost ostrzega przed fizyczną reakcją drugiej osoby: zagrywka może skończyć się tym, że mężczyzna zostanie zaatakowany. To jest źródłowo wskazane ryzyko zastosowania tej zagrywki.",
+    "elementy_kluczowe": [
+      "ryzyko fizycznej reakcji i oberwania",
+      "uznanie tego ryzyka za główne źródłowe ograniczenie"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń podaje „ryzyko fizycznej reakcji i oberwania”, ale pomija „uznanie tego ryzyka za główne źródłowe ograniczenie” albo nie wyjaśnia związku między tymi elementami.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która zaprzecza znaczeniu źródłowego warunku/ograniczenia („ryzyko fizycznej reakcji i oberwania”) albo twierdzi, że zagrywka działa w opisanym źródle niezależnie od tego warunku.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play4-varC",
+    "stats_json": {
+      "success_rate": "45%",
+      "attracts": "chicks who don't like being drugged",
+      "requirements": "good hand-eye coordination",
+      "prep_time": "none",
+      "bummers": "35% chance of getting your ass kicked"
+    }
+  },
+  {
+    "id": "2933e652-469e-4933-8a4d-aef2601d2c01",
+    "numer": 13,
+    "pytanie": "Na czym polega „The Rumspringa” i jaki element tożsamości kulturowej zostaje w niej wykorzystany?",
+    "odpowiedz": "Udajesz Amisza podczas rytuału przejścia zwanego Rumspringa, wykorzystując fikcyjną tożsamość kulturową jako centralny element scenki.",
+    "elementy_kluczowe": [
+      "udawanie Amisza",
+      "rytuał Rumspringa",
+      "tożsamość kulturowa jako rdzeń historii"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „udawanie Amisza” i/lub „rytuał Rumspringa”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje zagrywce inny mechanizm niż opisany w źródle albo usuwa z jej rdzenia element „udawanie Amisza”.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play5-varA",
+    "stats_json": {
+      "success_rate": "80%",
+      "attracts": "'experienced' ladies, secular chicks",
+      "requirements": "patchy facial hair, ill-fitting suit, Old Testament name",
+      "prep_time": "however long it takes to grow a beard",
+      "bummers": "have to wear ill-fitting, zipperless suit; have to hide cell phone; did I mention the suit?"
+    }
+  },
+  {
+    "id": "711f154b-0798-4605-8096-d9cea27587db",
+    "numer": 14,
+    "pytanie": "Jakie elementy wyglądu i przedstawionej historii mają wspierać wiarygodność tej roli oraz jakie inne rytuały przejścia materiał podaje jako analogiczne pomysły?",
+    "odpowiedz": "Materiał wymienia brodę, źle leżący garnitur i biblijne imię. Jako analogiczne pomysły podaje misję mormońską, walkabout, shinbyu, vision quest oraz opcję „coś wymyśl” dla scjentologów.",
+    "elementy_kluczowe": [
+      "broda",
+      "źle leżący garnitur",
+      "biblijne imię"
+    ],
+    "elementy_uzupelniajace": " co najmniej część listy analogicznych rytuałów",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „broda” i/lub „źle leżący garnitur”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje elementowi „broda” funkcję sprzeczną ze źródłem albo zastępuje źródłowe szczegóły inną historią.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play5-varB",
+    "stats_json": {
+      "success_rate": "80%",
+      "attracts": "'experienced' ladies, secular chicks",
+      "requirements": "patchy facial hair, ill-fitting suit, Old Testament name",
+      "prep_time": "however long it takes to grow a beard",
+      "bummers": "have to wear ill-fitting, zipperless suit; have to hide cell phone; did I mention the suit?"
+    }
+  },
+  {
+    "id": "a0511537-05c5-48a1-b3c1-940e0d612bcb",
+    "numer": 15,
+    "pytanie": "Jakie elementy wyglądu są warunkiem wiarygodnego odegrania The Rumspringa?",
+    "odpowiedz": "Źródło wymienia patchy facial hair, źle dopasowany garnitur i imię ze Starego Testamentu. Warunki te mają razem budować rozpoznawalny wizerunek Amisza; ich brak osłabia wiarygodność scenki.",
+    "elementy_kluczowe": [
+      "rzadka/niejednolita broda (patchy facial hair)",
+      "źle dopasowany garnitur",
+      "imię ze Starego Testamentu"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „rzadka/niejednolita broda (patchy facial hair)” i/lub „źle dopasowany garnitur”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która zaprzecza znaczeniu źródłowego warunku/ograniczenia („rzadka/niejednolita broda (patchy facial hair)”) albo twierdzi, że zagrywka działa w opisanym źródle niezależnie od tego warunku.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play5-varC",
+    "stats_json": {
+      "success_rate": "80%",
+      "attracts": "'experienced' ladies, secular chicks",
+      "requirements": "patchy facial hair, ill-fitting suit, Old Testament name",
+      "prep_time": "however long it takes to grow a beard",
+      "bummers": "have to wear ill-fitting, zipperless suit; have to hide cell phone; did I mention the suit?"
+    }
+  },
+  {
+    "id": "58284b5e-8dbe-422b-919d-47f8addd903e",
+    "numer": 16,
+    "pytanie": "Jaki jest koncept „The Terminator” i jaki efekt ma wywołać sposób wejścia w tę rolę?",
+    "odpowiedz": "Wchodzisz efektownie w oparach suchego lodu i przedstawiasz się jako wysłannik z przyszłości. Efekt ma wynikać z filmowej, futurystycznej scenki.",
+    "elementy_kluczowe": [
+      "wejście w oparach suchego lodu",
+      "rola wysłannika z przyszłości",
+      "efektowna, futurystyczna prezentacja"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „wejście w oparach suchego lodu” i/lub „rola wysłannika z przyszłości”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje zagrywce inny mechanizm niż opisany w źródle albo usuwa z jej rdzenia element „wejście w oparach suchego lodu”.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play6-varA",
+    "stats_json": {
+      "success_rate": "60%",
+      "attracts": "girls who like bad boys",
+      "requirements": "dry ice",
+      "prep_time": "less than a minute",
+      "bummers": "have to be relatively in shape; being nude in front of dudes; high arrest rate"
+    }
+  },
+  {
+    "id": "548204a4-43a6-4b3b-9e2f-d43291877591",
+    "numer": 17,
+    "pytanie": "Jakie elementy tej zagrywki materiał wskazuje jako kluczowe, do jakiego typu kobiet jest ona kierowana i jakie istotne ryzyko zostało przy niej zaznaczone?",
+    "odpowiedz": "Materiał wskazuje kobiety lubiące „bad boyów” oraz suchy lód jako rekwizyt; jednocześnie ostrzega o wysokim ryzyku zatrzymania.",
+    "elementy_kluczowe": [
+      "grupa docelowa",
+      "suchy lód",
+      "wysokie ryzyko zatrzymania"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „grupa docelowa” i/lub „suchy lód”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje elementowi „grupa docelowa” funkcję sprzeczną ze źródłem albo zastępuje źródłowe szczegóły inną historią.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play6-varB",
+    "stats_json": {
+      "success_rate": "60%",
+      "attracts": "girls who like bad boys",
+      "requirements": "dry ice",
+      "prep_time": "less than a minute",
+      "bummers": "have to be relatively in shape; being nude in front of dudes; high arrest rate"
+    }
+  },
+  {
+    "id": "62593e4c-e40b-47d2-b412-9fb8265c7b8d",
+    "numer": 18,
+    "pytanie": "Jakie ograniczenie lub ryzyko The Terminator jest najważniejsze z punktu widzenia zastosowania zagrywki?",
+    "odpowiedz": "Źródło wskazuje kilka bummerów, z których najważniejsze są wysoki poziom ryzyka zatrzymania oraz wymóg bycia względnie wysportowanym i wystawienia się na nagość przed mężczyznami. Są to realne warunki i ryzyka wpisane w opis scenariusza.",
+    "elementy_kluczowe": [
+      "wysokie ryzyko zatrzymania",
+      "wymóg względnej sprawności fizycznej",
+      "szczególny dyskomfort związany z nagością przed innymi mężczyznami"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „wysokie ryzyko zatrzymania” i/lub „wymóg względnej sprawności fizycznej”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która zaprzecza znaczeniu źródłowego warunku/ograniczenia („wysokie ryzyko zatrzymania”) albo twierdzi, że zagrywka działa w opisanym źródle niezależnie od tego warunku.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play6-varC",
+    "stats_json": {
+      "success_rate": "60%",
+      "attracts": "girls who like bad boys",
+      "requirements": "dry ice",
+      "prep_time": "less than a minute",
+      "bummers": "have to be relatively in shape; being nude in front of dudes; high arrest rate"
+    }
+  },
+  {
+    "id": "8b9a8272-a5ff-43f6-800c-fbbb9c582b05",
+    "numer": 19,
+    "pytanie": "Na czym w praktyce polega „The Hot Dude” i jak materiał opisuje jej grupę docelową?",
+    "odpowiedz": "Rdzeniem „The Hot Dude” jest przedstawienie mężczyzny jako bardzo atrakcyjnego; materiał sprowadza przygotowanie do posiadania atrakcyjnej twarzy i sylwetki pływaka.",
+    "elementy_kluczowe": [
+      "bardzo atrakcyjny wygląd",
+      "atrakcyjna twarz",
+      "sylwetka pływaka"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „bardzo atrakcyjny wygląd” i/lub „atrakcyjna twarz”), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje zagrywce inny mechanizm niż opisany w źródle albo usuwa z jej rdzenia element „bardzo atrakcyjny wygląd”.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play7-varA",
+    "stats_json": {
+      "success_rate": "100%",
+      "attracts": "all women",
+      "requirements": "handsome face, swimmer's body",
+      "prep_time": "none",
+      "bummers": "not sporting"
+    }
+  },
+  {
+    "id": "8a3e9c48-868e-4aff-9887-88a6b1b1f846",
+    "numer": 20,
+    "pytanie": "Jakie cechy fizyczne materiał przypisuje tej taktyce i co żartobliwa odpowiedź „bądź bardzo atrakcyjny” mówi o rzeczywistym poziomie przygotowania potrzebnym do jej zastosowania?",
+    "odpowiedz": "Materiał nie ogranicza jej do jednej grupy — wskazuje „wszystkie”. Żart „bądź bardzo atrakcyjny” podkreśla, że przygotowanie nie jest scenariuszem ani rekwizytem.",
+    "elementy_kluczowe": [
+      "wszystkie typy",
+      "„bądź bardzo atrakcyjny”",
+      "brak specyficznego rekwizytu"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń wskazuje część kluczowych informacji (np. „wszystkie typy” i/lub „„bądź bardzo atrakcyjny””), ale pomija pozostały kluczowy element albo nie wyjaśnia zależności między nimi.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która przypisuje elementowi „wszystkie typy” funkcję sprzeczną ze źródłem albo zastępuje źródłowe szczegóły inną historią.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play7-varB",
+    "stats_json": {
+      "success_rate": "100%",
+      "attracts": "all women",
+      "requirements": "handsome face, swimmer's body",
+      "prep_time": "none",
+      "bummers": "not sporting"
+    }
+  },
+  {
+    "id": "d9ee0bc6-cb14-4965-b49e-9dd44afbeb21",
+    "numer": 21,
+    "pytanie": "Jaki warunek powodzenia jest w źródle przedstawiony jako podstawowy dla The Hot Dude?",
+    "odpowiedz": "Podstawowym warunkiem jest sam wygląd: źródło sprowadza wymaganie do atrakcyjnej twarzy i sylwetki pływaka. Nie ma tu rekwizytu ani rozbudowanej scenki, która mogłaby zastąpić ten warunek.",
+    "elementy_kluczowe": [
+      "atrakcyjna twarz",
+      "sylwetka pływaka"
+    ],
+    "elementy_uzupelniajace": "brak osobnych wymagań - pozostałe informacje zawarte w odpowiedzi wzorcowej mają charakter objaśniający.",
+    "odpowiedz_czesciowa": "Odpowiedź częściowa występuje, gdy uczeń podaje „atrakcyjna twarz”, ale pomija „sylwetka pływaka” albo nie wyjaśnia związku między tymi elementami.",
+    "odpowiedz_bledna": "Błędna jest odpowiedź, która zaprzecza znaczeniu źródłowego warunku/ograniczenia („atrakcyjna twarz”) albo twierdzi, że zagrywka działa w opisanym źródle niezależnie od tego warunku.",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 4,
+    "dzial_nazwa": "Plays for the Beginner",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap4-play7-varC",
+    "stats_json": {
+      "success_rate": "100%",
+      "attracts": "all women",
+      "requirements": "handsome face, swimmer's body",
+      "prep_time": "none",
+      "bummers": "not sporting"
+    }
+  },
+  {
+    "id": "uuid-22",
+    "numer": 22,
+    "pytanie": "Kim jest Lorenzo Von Matterhorn?",
+    "odpowiedz": "Lorenzo to fikcyjna postać, bogaty odkrywca i miliarder o fałszywym życiorysie stworzonym w internecie.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 5,
+    "dzial_nazwa": "Plays for the Amateur",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap5-play1-varA",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-23",
+    "numer": 23,
+    "pytanie": "Jakie są kroki, aby zastosować zagrywkę The Lorenzo Von Matterhorn?",
+    "odpowiedz": "Należy stworzyć fałszywe strony internetowe z artykułami o sobie, następnie podejść do ofiary, podać się za Lorenzo i zasugerować jej sprawdzenie nazwiska w Google.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 5,
+    "dzial_nazwa": "Plays for the Amateur",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap5-play1-varB",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-24",
+    "numer": 24,
+    "pytanie": "Zbuduj pełną fałszywą tożsamość opierając się na The Lorenzo Von Matterhorn i podaj potencjalne luki.",
+    "odpowiedz": "Wymaga zaawansowanej wiedzy IT, fałszywych stron Forbes i fałszywych newsów. Luką jest to, że ktoś z branży może od razu zauważyć, że strony są fake'owe.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 5,
+    "dzial_nazwa": "Plays for the Amateur",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap5-play1-varC",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-25",
+    "numer": 25,
+    "pytanie": "Czym charakteryzuje się taktyka The Ted Mosby?",
+    "odpowiedz": "Polega na zbyt szybkim wyznaniu miłości na pierwszej randce, mówiąc 'Kocham Cię'.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 5,
+    "dzial_nazwa": "Plays for the Amateur",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap5-play2-varA",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-26",
+    "numer": 26,
+    "pytanie": "Dlaczego The Ted Mosby jest nazywana taktyką 'Amateur'?",
+    "odpowiedz": "Ponieważ zazwyczaj odstrasza kobiety zamiast je przyciągać, jest błędem popełnianym przez nadmiernie zaangażowanych nowicjuszy.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 5,
+    "dzial_nazwa": "Plays for the Amateur",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap5-play2-varB",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-27",
+    "numer": 27,
+    "pytanie": "W jakich rzadkich sytuacjach The Ted Mosby mogłoby zadziałać?",
+    "odpowiedz": "Kiedy druga osoba jest równie zdesperowana lub ma obsesję na punkcie szybkiego ustatkowania się, choć to wysoce nieprawdopodobne.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 5,
+    "dzial_nazwa": "Plays for the Amateur",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap5-play2-varC",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-28",
+    "numer": 28,
+    "pytanie": "W co musi być wyposażony gracz stosujący taktykę The Scuba Diver?",
+    "odpowiedz": "Musi posiadać pełny kombinezon płetwonurka ze sprzętem.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 6,
+    "dzial_nazwa": "Plays for the Weekend Warrior",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap6-play1-varA",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-29",
+    "numer": 29,
+    "pytanie": "Jaki jest główny cel taktyki The Scuba Diver w klubie?",
+    "odpowiedz": "Zwrócenie na siebie absolutnej, wręcz absurdalnej uwagi wszystkich w klubie poprzez całkowicie nieodpowiedni strój.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 6,
+    "dzial_nazwa": "Plays for the Weekend Warrior",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap6-play1-varB",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-30",
+    "numer": 30,
+    "pytanie": "Wyjaśnij psychologiczny mechanizm zaskoczenia za taktyką The Scuba Diver.",
+    "odpowiedz": "Pojawienie się w rynsztunku płetwonurka w barze wywołuje zjawisko 'pattern interrupt' - całkowicie niszczy oczekiwania społeczne, zmuszając ofiarę do zaciekawienia.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 6,
+    "dzial_nazwa": "Plays for the Weekend Warrior",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap6-play1-varC",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-31",
+    "numer": 31,
+    "pytanie": "Na czym polega The He's Not Coming?",
+    "odpowiedz": "Na staniu obok atrakcyjnej kobiety czekającej na kogoś i powiedzeniu z przekonaniem 'On nie przyjdzie'.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 6,
+    "dzial_nazwa": "Plays for the Weekend Warrior",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap6-play2-varA",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-32",
+    "numer": 32,
+    "pytanie": "Jaką przewagę daje The He's Not Coming na randkach w ciemno?",
+    "odpowiedz": "Uderza w niepewność kobiety czekającej na faceta z Tindera, przejmując inicjatywę w jej najsłabszym momencie.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 6,
+    "dzial_nazwa": "Plays for the Weekend Warrior",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap6-play2-varB",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-33",
+    "numer": 33,
+    "pytanie": "Zanalizuj potencjalne ryzyko w The He's Not Coming.",
+    "odpowiedz": "Ryzykiem jest to, że prawdziwy partner przyjdzie w trakcie podrywu, co doprowadzi do natychmiastowej konfrontacji i zdemaskowania blefu.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 6,
+    "dzial_nazwa": "Plays for the Weekend Warrior",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap6-play2-varC",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-34",
+    "numer": 34,
+    "pytanie": "Jaki jest główny rekwizyt w taktyce The Time Traveler?",
+    "odpowiedz": "Brak specyficznego rekwizytu fizycznego, liczy się desperacki, zdezorientowany sposób bycia i udawanie przybysza z przyszłości.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 7,
+    "dzial_nazwa": "Plays for the Advanced Don Juan",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap7-play1-varA",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-35",
+    "numer": 35,
+    "pytanie": "Jak poprawnie zainicjować rozmowę jako Podróżnik w Czasie?",
+    "odpowiedz": "Należy podbiec, spytać z paniką 'Który mamy rok?!', odetchnąć z ulgą i powiedzieć, że trzeba ją natychmiast uwieść, żeby ocalić przyszłość.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 7,
+    "dzial_nazwa": "Plays for the Advanced Don Juan",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap7-play1-varB",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-36",
+    "numer": 36,
+    "pytanie": "Dlaczego The Time Traveler wymaga zaawansowanych umiejętności aktorskich?",
+    "odpowiedz": "Ponieważ najmniejszy uśmiech czy brak pewności siebie w głosie niszczy całą iluzję absurdalnej, komediowej historii.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 7,
+    "dzial_nazwa": "Plays for the Advanced Don Juan",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap7-play1-varC",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-37",
+    "numer": 37,
+    "pytanie": "Z ilu kroków składa się taktyka The Robin?",
+    "odpowiedz": "Składa się z 16 bardzo skomplikowanych i długoterminowych kroków.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 7,
+    "dzial_nazwa": "Plays for the Advanced Don Juan",
+    "wariant": "A",
+    "numer_pytania": 1,
+    "notatka": "",
+    "id_slug": "playbook-chap7-play2-varA",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-38",
+    "numer": 38,
+    "pytanie": "Jaki jest ostateczny cel zagrywki The Robin?",
+    "odpowiedz": "Oświadczenie się i poślubienie ofiary (Robin).",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 7,
+    "dzial_nazwa": "Plays for the Advanced Don Juan",
+    "wariant": "B",
+    "numer_pytania": 2,
+    "notatka": "",
+    "id_slug": "playbook-chap7-play2-varB",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  },
+  {
+    "id": "uuid-39",
+    "numer": 39,
+    "pytanie": "Omów dekonstrukcję klasycznego PUA w The Robin.",
+    "odpowiedz": "The Robin całkowicie zaprzecza szybkiemu podrywowi. Wymaga miesięcy planowania, kłamania i zmuszania ofiary do wyznania uczuć w skrajnych emocjach, będąc bardziej manifestem miłości niż sztuczką.",
+    "elementy_kluczowe": [],
+    "elementy_uzupelniajace": "brak",
+    "odpowiedz_czesciowa": "częściowa",
+    "odpowiedz_bledna": "błędna",
+    "przedmiot": "The Playbook",
+    "dzial_numer": 7,
+    "dzial_nazwa": "Plays for the Advanced Don Juan",
+    "wariant": "C",
+    "numer_pytania": 3,
+    "notatka": "",
+    "id_slug": "playbook-chap7-play2-varC",
+    "stats_json": {
+      "success_rate": "N/A",
+      "attracts": "N/A",
+      "requirements": "N/A",
+      "prep_time": "N/A"
+    }
+  }
+]

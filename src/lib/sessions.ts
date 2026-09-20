@@ -88,24 +88,48 @@ export async function createSession(
 
   if (!existingTopic) {
     try {
-      const fs = await import('fs');
-      const path = await import('path');
-      const chemiaFile = path.resolve(process.cwd(), 'data/chemia.json');
-      const fizykaFile = path.resolve(process.cwd(), 'data/fizyka.json');
-      let matched: any = null;
+      // First try to auto-seed from playbook_topics
+      const { data: playbookTopic } = await db.from('playbook_topics').select('*').eq('id', topicId).single();
+      
+      if (playbookTopic) {
+        const { id, numer, pytanie, odpowiedz_wzorcowa, odpowiedz, przedmiot, dzial_numer, dzial_nazwa, wariant, numer_pytania, notatka, id_slug } = playbookTopic;
+        const mappedTopic = {
+          id,
+          numer: numer + 10000,
+          pytanie,
+          odpowiedz: odpowiedz || odpowiedz_wzorcowa,
+          przedmiot: 'chemia',
+          dzial_numer,
+          dzial_nazwa,
+          wariant,
+          numer_pytania,
+          notatka: notatka || '',
+          id_slug
+        };
+        const { error: seedErr } = await db.from('topics').upsert(mappedTopic, { onConflict: 'id' });
+        if (seedErr) {
+          console.warn('Failed to upsert playbook topic:', seedErr.message);
+        }
+      } else {
+        const fs = await import('fs');
+        const path = await import('path');
+        const chemiaFile = path.resolve(process.cwd(), 'data/chemia.json');
+        const fizykaFile = path.resolve(process.cwd(), 'data/fizyka.json');
+        let matched: any = null;
 
-      if (fs.existsSync(chemiaFile)) {
-        const topics = JSON.parse(fs.readFileSync(chemiaFile, 'utf-8'));
-        matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
-      }
-      if (!matched && fs.existsSync(fizykaFile)) {
-        const topics = JSON.parse(fs.readFileSync(fizykaFile, 'utf-8'));
-        matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
-      }
-      if (matched) {
-        const { error: seedErr } = await db.from('topics').upsert(matched, { onConflict: 'numer' });
-        if (seedErr && (seedErr.code === '23514' || seedErr.message?.includes('check_przedmiot'))) {
-          await db.from('topics').upsert({ ...matched, przedmiot: 'chemia' }, { onConflict: 'numer' });
+        if (fs.existsSync(chemiaFile)) {
+          const topics = JSON.parse(fs.readFileSync(chemiaFile, 'utf-8'));
+          matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
+        }
+        if (!matched && fs.existsSync(fizykaFile)) {
+          const topics = JSON.parse(fs.readFileSync(fizykaFile, 'utf-8'));
+          matched = topics.find((t: any) => t.id === topicId || String(t.numer) === String(topicId));
+        }
+        if (matched) {
+          const { error: seedErr } = await db.from('topics').upsert(matched, { onConflict: 'numer' });
+          if (seedErr && (seedErr.code === '23514' || seedErr.message?.includes('check_przedmiot'))) {
+            await db.from('topics').upsert({ ...matched, przedmiot: 'chemia' }, { onConflict: 'numer' });
+          }
         }
       }
     } catch (e) {

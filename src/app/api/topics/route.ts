@@ -25,6 +25,18 @@ export async function GET(request: Request) {
       }
     }
 
+    if (przedmiot === 'frejer') {
+      const db = getDatabase();
+      const { data, error } = await db.from('playbook_topics').select('*').order('numer', { ascending: true });
+      if (!error && data) {
+        const topics = data.map(t => ({
+          ...t,
+          odpowiedz: t.odpowiedz || t.odpowiedz_wzorcowa,
+        }));
+        return NextResponse.json({ topics });
+      }
+    }
+
     const db = getDatabase();
     let query = db.from('topics').select('*').order('numer', { ascending: true });
 

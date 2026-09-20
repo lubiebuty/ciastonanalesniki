@@ -58,7 +58,9 @@ export async function POST(request: NextRequest) {
     let result: Awaited<ReturnType<typeof evaluateSession>>;
     try {
       const evaluatedPrzedmiot =
-        topic.numer >= 701
+        topic.id_slug?.includes('playbook')
+          ? 'The Playbook'
+          : topic.numer >= 701
           ? 'fizyka'
           : topic.numer >= 501
           ? 'chemia'
