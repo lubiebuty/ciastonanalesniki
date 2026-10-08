@@ -1,0 +1,32 @@
+{
+  "index": 1,
+  "title": "The My Penis Grants Wishes",
+  "folder": "2_Plays_for_the_Amateur/The My Penis Grants Wishes",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The My Penis Grants Wishes/The My Penis Grants Wishes.pdf",
+  "topics": [
+    {
+      "id": "1e8f2303-1f49-4c3a-8825-c260902b7103",
+      "pytanie": "Na czym polega taktyka „My Penis Grants Wishes” i jaką fikcyjną rolę przyjmuje w niej mężczyzna?",
+      "odpowiedz_wzorcowa": "- arabski książę\\n- dżin\\n- wypadek z latającym dywanem",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play1-varA"
+    },
+    {
+      "id": "ae1f9921-595b-43b0-b86f-0ca291cec61e",
+      "pytanie": "Jakie elementy stroju mają pomóc w stworzeniu postaci arabskiego księcia, jaka historia ma uzasadniać jego pojawienie się i do jakiego typu kobiet według materiału skierowana jest ta zagrywka?",
+      "odpowiedz_wzorcowa": "- szaty\\n- tekturowa szabla\\n- turban\\n- romantyczki\\n- nauczycielki angielskiego",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play1-varB"
+    },
+    {
+      "id": "b7298d80-3ff3-4bdb-a718-829530128a21",
+      "pytanie": "Jakie ograniczenie dotyczące odbiorczyń źródło wskazuje przy The My Penis Grants Wishes?",
+      "odpowiedz_wzorcowa": "- możliwość urazenia części kobiet z Bliskiego Wschodu",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play1-varC"
+    }
+  ]
+}

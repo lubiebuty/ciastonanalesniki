@@ -1,0 +1,32 @@
+{
+  "index": 13,
+  "title": "The Au Pair",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Au Pair",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Au Pair/The Au Pair.pdf",
+  "topics": [
+    {
+      "id": "aa2989ff-e7d7-4d48-b4be-cdb1848d3c70",
+      "pytanie": "Na czym polega „The Au Pair” i w jaki sposób wykorzystuje zainteresowanie pracą oraz opieką nad dziećmi?",
+      "odpowiedz_wzorcowa": "- fikcyjne ogłoszenie au pair\\n- wymyślone dziecko\\n- rola związana z opieką",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play13-varA"
+    },
+    {
+      "id": "bc090572-bbb2-4ffb-b774-2acb0a3ed8d1",
+      "pytanie": "Co ma zawierać fikcyjne ogłoszenie, jaką rolę odgrywają zabawki dziecięce i do jakiego typu kobiet materiał kieruje tę zagrywkę?",
+      "odpowiedz_wzorcowa": "- młode obcokrajowczynie\\n- zabawki dziecięce",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play13-varB"
+    },
+    {
+      "id": "4fca472b-2571-4402-8c6b-c1faf55c8699",
+      "pytanie": "Jakie warunki przygotowania są najważniejsze w The Au Pair?",
+      "odpowiedz_wzorcowa": "- kolekcja zabawek dziecięcych\\n- ogłoszenie o poszukiwaniu au pair",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play13-varC"
+    }
+  ]
+}

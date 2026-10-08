@@ -1,0 +1,24 @@
+{
+  "index": 12,
+  "title": "The Robot",
+  "folder": "1_Plays_for_the_Beginner/The Robot",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Robot/The Robot.pdf",
+  "topics": [
+    {
+      "id": "2d596824-8954-4638-a85d-c446866fd010",
+      "pytanie": "Jaka jest centralna fikcja w „The Robot” i jaki rodzaj relacji ma pomóc nawiązać?",
+      "odpowiedz_wzorcowa": "- robot z wojskowej bazy\\n- ucieczka z bazy\\n- chęć zrozumienia ludzkiej bliskości",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play12-varA"
+    },
+    {
+      "id": "a62d9eef-b538-4f94-ac12-985cc7715131",
+      "pytanie": "Jaką funkcję pełni olej, jaki motyw fabularny został wymieniony jako uzasadnienie pojawienia się „robota” i do jakiej grupy odbiorczyń skierowana jest ta taktyka?",
+      "odpowiedz_wzorcowa": "- olej\\n- fanki sci-fi",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play12-varB"
+    }
+  ]
+}

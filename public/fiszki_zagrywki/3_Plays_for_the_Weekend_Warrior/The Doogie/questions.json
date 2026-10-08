@@ -1,0 +1,32 @@
+{
+  "index": 12,
+  "title": "The Doogie",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Doogie",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Doogie/The Doogie.pdf",
+  "topics": [
+    {
+      "id": "3a44bf5d-ad12-45a7-b53e-654cc2b7b499",
+      "pytanie": "Jaki mechanizm wykorzystuje „The Doogie” i jaki rodzaj dawnej sławy ma odgrywać główną rolę?",
+      "odpowiedz_wzorcowa": "- była gwiazda dziecięca\\n- sitcom\\n- dawna sława telewizyjna",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play12-varA"
+    },
+    {
+      "id": "426514d7-eda4-46ab-be96-c89461d097f0",
+      "pytanie": "Jaką historię zawodową przedstawia mężczyzna, jaka cecha jest według materiału szczególnie potrzebna do tej zagrywki i czemu służy tabela wiarygodnych postaci telewizyjnych?",
+      "odpowiedz_wzorcowa": "- łowczynie sławy\\n- wyobraźnia\\n- tabela wiarygodnych postaci",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play12-varB"
+    },
+    {
+      "id": "25f24ad3-7100-4d08-abb6-5a5f52190326",
+      "pytanie": "Jakie ograniczenie przygotowania źródło wskazuje przy The Doogie?",
+      "odpowiedz_wzorcowa": "- wyobraźnia do zbudowania wiarygodnej postaci\\n- trudność stworzenia spójnej fikcyjnej historii telewizyjnej",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play12-varC"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "index": 3,
+  "title": "The Anniversary Of My Wife's Death",
+  "folder": "2_Plays_for_the_Amateur/The Anniversary Of My Wifes Death",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Anniversary Of My Wifes Death/The Anniversary Of My Wifes Death.pdf",
+  "topics": [
+    {
+      "id": "16166b73-0cb1-468b-8037-4298047bccc9",
+      "pytanie": "Jaki jest podstawowy mechanizm „The Anniversary of My Wife’s Death”?",
+      "odpowiedz_wzorcowa": "- rocznica śmierci żony\\n- historia o zmarłej żonie\\n- wzbudzenie poczucia winy",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play3-varA"
+    },
+    {
+      "id": "5cb9c69d-fea6-49f9-a80a-9a8ad607bd74",
+      "pytanie": "Jaką historię przedstawia się rozmówczyni, jaką emocję ma ona wzbudzić i jakie dwa elementy materiał wymienia jako pomocne w uwiarygodnieniu tej historii?",
+      "odpowiedz_wzorcowa": "- róża\\n- „Dylemat Złotowłosej”\\n- wiarygodna przyczyna śmierci",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play3-varB"
+    }
+  ]
+}

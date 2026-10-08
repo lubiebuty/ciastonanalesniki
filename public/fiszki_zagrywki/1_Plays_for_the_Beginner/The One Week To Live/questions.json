@@ -1,0 +1,32 @@
+{
+  "index": 2,
+  "title": "The One Week To Live",
+  "folder": "1_Plays_for_the_Beginner/The One Week To Live",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The One Week To Live/The One Week To Live.pdf",
+  "topics": [
+    {
+      "id": "5e31390a-4829-4461-bd04-58542ae0e1d4",
+      "pytanie": "Na czym polega taktyka „One Week to Live” i jaka emocja ma być jej głównym elementem?",
+      "odpowiedz_wzorcowa": "- kaszel w miejscu publicznym\\n- wyznanie, że zostało tydzień życia\\n- emocjonalny motyw ciężkiej sytuacji",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play2-varA"
+    },
+    {
+      "id": "25df5549-3e7a-44b2-87e0-302e6b89ce58",
+      "pytanie": "Jak przebiega schemat tej zagrywki od momentu pojawienia się kaszlu do „wyznania” o pozostałym czasie życia i jaki typ kobiet materiał wskazuje jako szczególnie podatny?",
+      "odpowiedz_wzorcowa": "- „naturalne pielęgniarki” jako wskazana grupa\\n- kaszel i wyznanie jako sekwencja",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play2-varB"
+    },
+    {
+      "id": "213b1571-1b48-4ea2-9717-f8a9b644f906",
+      "pytanie": "Jaki konkretny warunek wykonania musi być spełniony, aby The One Week to Live mogło przebiegać zgodnie ze źródłem?",
+      "odpowiedz_wzorcowa": "- miejsce publiczne\\n- wiarygodny, wyraźny kaszel rozpoczynający scenę",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play2-varC"
+    }
+  ]
+}

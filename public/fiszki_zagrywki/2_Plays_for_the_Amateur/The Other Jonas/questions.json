@@ -1,0 +1,32 @@
+{
+  "index": 17,
+  "title": "The Other Jonas",
+  "folder": "2_Plays_for_the_Amateur/The Other Jonas",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Other Jonas/The Other Jonas.pdf",
+  "topics": [
+    {
+      "id": "dc4c36dd-9788-4441-9e1a-a6ea373c5495",
+      "pytanie": "Jaki jest podstawowy koncept „The Other Jonas” i na jakim rodzaju sławy się opiera?",
+      "odpowiedz_wzorcowa": "- przebranie za „innego” brata Jonas\\n- wykorzystanie sławy boysbandu",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play17-varA"
+    },
+    {
+      "id": "9b6dbecb-1d1d-4c43-bc7b-da79bc33f50f",
+      "pytanie": "Jak ma wyglądać przedstawienie się jako „kolejny brat Jonas”, jaką umiejętność według materiału warto przy tym posiadać i jakie ograniczenie dotyczące wieku potencjalnych rozmówczyń zostało wyraźnie zaznaczone?",
+      "odpowiedz_wzorcowa": "- łowczynie sławy\\n- wyczucie rytmu\\n- ryzyko przyciągnięcia niepełnoletnich\\n- zmienność nazwy wraz z modą na boysbandy",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play17-varB"
+    },
+    {
+      "id": "3fa5834c-7c0a-4295-be85-a1a920794d7b",
+      "pytanie": "Jakie ograniczenie grupy docelowej jest wprost zaznaczone przy The Other Jonas?",
+      "odpowiedz_wzorcowa": "- ryzyko przyciągnięcia osób niepełnoletnich",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play17-varC"
+    }
+  ]
+}

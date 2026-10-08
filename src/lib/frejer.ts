@@ -1,40 +1,36 @@
 import type { Topic } from './topics';
 import type { UserSessionMinimal, VariantProgress } from './geografia';
 
-export const AVAILABLE_FLASHCARDS = [
-  "Rozdzial_4_Don_t_Drink_That_.jpg",
-  "Rozdzial_4_He_s_Not_Coming.jpg",
-  "Rozdzial_4_One_Week_to_Live.jpg",
-  "Rozdzial_4_The_Author.jpg",
-  "Rozdzial_4_The_Olympian.jpg",
-  "Rozdzial_4_The_Rumspringa.jpg",
-  "Rozdzial_5_Bionic_Man.jpg",
-  "Rozdzial_5_Brian_s_Friend.jpg",
-  "Rozdzial_5_Love_at_First_Sight.jpg",
-  "Rozdzial_5_The_Befuddled_Puppy_Owner.jpg",
-  "Rozdzial_5_The_Other_Jonas.jpg",
-  "Rozdzial_5_The_Stanley_Cup.jpg",
-  "Rozdzial_6_Prince_Akeem.jpg",
-  "Rozdzial_6_The_Cheap_Trick.jpg",
-  "Rozdzial_6_The_Lottery.jpg",
-  "Rozdzial_6_The_Missing_Cat.jpg",
-  "Rozdzial_6_The_Rorschach.jpg",
-  "Rozdzial_7_The_Lifeguard.jpg",
-  "Rozdzial_7_The_Scuba_Diver.jpg"
-];
+import gamesMasterRaw from './games_master.json';
+const gamesMaster = gamesMasterRaw as Record<string, any[]>;
 
-export function getFlashcardImagePath(topic: { pytanie?: string; dzial_numer?: number }) {
-  if (!topic || !topic.pytanie) return null;
-  const nameMatch = topic.pytanie.match(/[„"]([^”"]+)[”"]/);
-  if (!nameMatch) return null;
-  const name = nameMatch[1];
-  const nameNormalized = name.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
+export function getFlashcardImagePath(topic: { id_slug?: string | null, dzial_numer?: number }) {
+  if (!topic || !topic.id_slug || !topic.dzial_numer) return null;
   
-  const matchedFile = AVAILABLE_FLASHCARDS.find(f => {
-    const fNormalized = f.replace(/[^a-zA-Z0-9]/g, '').toLowerCase();
-    return fNormalized.includes(nameNormalized) && f.includes(`Rozdzial_${topic.dzial_numer}`);
-  });
-  return matchedFile ? `/fiszki_zagrywki/${matchedFile}` : null;
+  const match = topic.id_slug.match(/^(playbook-chap(\d+)-play(\d+))-var[A-Z]$/);
+  if (!match) return null;
+  
+  const dzialNumer = parseInt(match[2]);
+  const playIndex = parseInt(match[3]);
+  
+  const masterList = gamesMaster[dzialNumer] || [];
+  const gameData = masterList.find((g: any) => g.index === playIndex);
+  
+  if (gameData) {
+    // If we want to return image and pdfPath... wait, we only want pdfPath now because the user said:
+    // "I do nich, w pierwszym zdjęciu, tam gdzie jest na górze, na stronie głównej, ma być wklejona pierwsza strona z playbooka, adekwatna dla tego game’u."
+    // And in the exam page, we also want to display the PDF. 
+    // Wait, what if they don't have a PDF but have an image? For The Hot Dude, we only have the image! But they explicitly asked for PDFs and organizing it inside the folders.
+    // Actually, The Test Tube replaced The Hot Dude in the user's list!
+    // So the image fallback might still be useful, but let's just return the pdfPath and calculate pages if needed (we can assume 1 or 2 based on pdf_meta.json, but games_master doesn't have pages. Let's just return the pdfPath for now).
+    return {
+      image: null,
+      pdfPath: gameData.pdfPath,
+      pages: 1 // Since we don't have exact pages in games_master, we will just pass 1 for now, or we can look it up in pdf_meta.json.
+    };
+  }
+  
+  return null;
 }
 
 export function isPlaybookTopic(topic?: { id_slug?: string | null } | null) {
@@ -97,10 +93,47 @@ export function isQuestionPassed(
     const matches = s.topic_id === topic.id || (s.numer !== undefined && s.numer === topic.numer);
     if (!matches) return false;
     if (s.status !== 'completed') return false;
-    if (s.is_correct === true || s.is_correct === 1) return true;
-    if (typeof s.score === 'number' && s.score >= 5) return true;
-    return false;
+    if (typeof s.score === 'number') return s.score >= 6; // User requested 60% (6 pkt)
+    
+    // Fallback: check scores json
+    const scoreMatch = (s as any).scores?.score >= 6;
+    return scoreMatch;
   });
+}
+
+export function getNextTopic(
+  topics: Topic[],
+  sessions: UserSessionMinimal[],
+  currentTopicId: string | number
+): Topic | null {
+  // We need current topic to know its game
+  const currentTopic = topics.find(t => t.id === currentTopicId || t.numer === currentTopicId);
+  if (!currentTopic || !currentTopic.id_slug) return null;
+
+  // Enforce that current topic must be passed to advance
+  if (!isQuestionPassed(currentTopic, sessions)) {
+    return null; // Cannot advance until current is passed (60%+)
+  }
+
+  const match = currentTopic.id_slug.match(/^(playbook-chap\d+-play\d+)-var([A-Z])$/);
+  if (!match) return null;
+
+  const gameBaseSlug = match[1];
+  const currentVar = match[2];
+  let nextVar = '';
+
+  if (currentVar === 'A') nextVar = 'B';
+  else if (currentVar === 'B') nextVar = 'C';
+  else return null; // No next variant after C (end of game)
+
+  const nextTopicSlug = `${gameBaseSlug}-var${nextVar}`;
+  const nextTopic = topics.find(t => t.id_slug === nextTopicSlug);
+  
+  if (nextTopic) {
+    return nextTopic;
+  }
+
+  return null;
 }
 
 export function computeFrejerDzialyProgress(

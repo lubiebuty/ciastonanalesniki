@@ -1,0 +1,24 @@
+{
+  "index": 18,
+  "title": "The Shotgun",
+  "folder": "1_Plays_for_the_Beginner/The Shotgun",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Shotgun/The Shotgun.pdf",
+  "topics": [
+    {
+      "id": "e53c507f-173b-409f-bc08-0029bbe66d72",
+      "pytanie": "Na czym polega The Shotgun i jaki podstawowy schemat działania wykorzystuje?",
+      "odpowiedz_wzorcowa": "- wielokrotne podejmowanie tej samej próby\\n- oczekiwanie na jedną zgodę jako rezultat wielu podejść",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play18-varA"
+    },
+    {
+      "id": "17dcdd1c-3f9f-4701-80c0-091afb40bb60",
+      "pytanie": "Jaką strategię społeczną zakłada ta zagrywka, ile prób sugeruje jej schemat i jaki profil rozmówczyni materiał wskazuje?",
+      "odpowiedz_wzorcowa": "- „gruba skóra”",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play18-varB"
+    }
+  ]
+}

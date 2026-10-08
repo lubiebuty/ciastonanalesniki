@@ -1,0 +1,32 @@
+{
+  "index": 10,
+  "title": "The Billionaire",
+  "folder": "4_Plays_for_the_Advanced/The Billionaire",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Billionaire/The Billionaire.pdf",
+  "topics": [
+    {
+      "id": "0e170a64-af65-40d9-aa98-109e48fd9025",
+      "pytanie": "Wyjaśnij, na czym polega The Billionaire i dlaczego jej podstawowym założeniem jest żart oparty na zdobyciu statusu miliardera.",
+      "odpowiedz_wzorcowa": "- status miliardera jest centralnym założeniem\\n- zagrywka ma formę żartu opartego na zostaniu miliarderem\\n- uczeń rozumie, że jest to całościowy scenariusz, a nie pojedynczy detal",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play10-varA"
+    },
+    {
+      "id": "8e99e9ad-c6e3-4a50-b23e-a9261d3b0384",
+      "pytanie": "Jaką rolę w konstrukcji zagrywki odgrywa kwota miliarda dolarów oraz dlaczego materiał kieruje ją do każdej kobiety, zamiast wskazywać węższą grupę docelową?",
+      "odpowiedz_wzorcowa": "- miliard dolarów jest elementem definiującym rolę\\n- grupa docelowa: każda kobieta\\n- uczeń łączy konkretny status z szeroką grupą docelową",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play10-varB"
+    },
+    {
+      "id": "ac8b396e-a480-4c1e-b504-1cf8c1970d0c",
+      "pytanie": "Dlaczego konieczność przygotowań trwających „kilka żyć” jest najważniejszym ograniczeniem The Billionaire i co mówi o praktycznym zastosowaniu tej zagrywki?",
+      "odpowiedz_wzorcowa": "- bardzo długi czas przygotowania\\n- określenie źródłowe: „kilka żyć”\\n- uczeń wyjaśnia, że długość przygotowania ogranicza praktyczne zastosowanie",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play10-varC"
+    }
+  ]
+}

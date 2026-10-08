@@ -1,0 +1,10 @@
+"The SNASA" -> 1_Plays_for_the_Beginner/The SNASA/The SNASA.pdf
+"One Week to Live" -> 1_Plays_for_the_Beginner/The One Week To Live/The One Week To Live.pdf
+"wyznania" -> null
+"The Blind Date" -> 1_Plays_for_the_Beginner/The Blind Date/The Blind Date.pdf
+"Czy ty jesteś Stacy?" -> null
+"Don’t Drink That!" -> 1_Plays_for_the_Beginner/The Dont Drink That/The Dont Drink That.pdf
+"The Rumspringa" -> 1_Plays_for_the_Beginner/The Rumspringa/The Rumspringa.pdf
+"The Terminator" -> 1_Plays_for_the_Beginner/The Terminator/The Terminator.pdf
+"The Hot Dude" -> null
+"bądź bardzo atrakcyjny" -> null

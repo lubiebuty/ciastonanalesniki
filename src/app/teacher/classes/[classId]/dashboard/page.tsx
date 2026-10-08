@@ -451,9 +451,13 @@ export default function ClassDashboardPage() {
                           {avg.variants.map((v: any) => (
                             <div key={v.variant} className="bg-black/50 border border-blue-900/40 p-3 flex flex-col relative group overflow-hidden">
                               <div className="absolute top-0 left-0 w-1 h-full bg-blue-900 group-hover:bg-blue-500 transition-colors"></div>
-                              <span className="text-xs text-blue-600 uppercase font-bold mb-1 pl-2 tracking-widest">
-                                Wariant {v.variant}
-                              </span>
+                              <div className="text-xs text-blue-400 uppercase font-bold mb-1 pl-2 tracking-widest">
+                                {v.variant === 'A' ? 'Pytania ogólne' :
+                                 v.variant === 'B' ? 'Pytania szczegółowe' :
+                                 v.variant === 'C' ? 'Pytania integrujące' :
+                                 v.variant === 'D' ? 'Znajdź i wytłumacz błąd' :
+                                 `Wariant ${v.variant}`}
+                              </div>
                               <div className="flex items-center justify-between pl-2">
                                 <span className="text-lg font-black text-blue-300">{v.averagePercentage.toFixed(0)}%</span>
                                 <span className="text-[10px] text-blue-800 font-bold uppercase">({v.count})</span>

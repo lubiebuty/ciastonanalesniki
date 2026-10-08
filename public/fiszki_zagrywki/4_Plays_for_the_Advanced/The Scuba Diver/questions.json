@@ -1,0 +1,32 @@
+{
+  "index": 20,
+  "title": "The Scuba Diver",
+  "folder": "4_Plays_for_the_Advanced/The Scuba Diver",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Scuba Diver/The Scuba Diver.pdf",
+  "topics": [
+    {
+      "id": "6a972591-b73a-45ee-98c4-b8eeb4198ad3",
+      "pytanie": "Wyjaśnij, na czym polega mechanizm The Scuba Diver i jak wykorzystanie natrętnej koleżanki-swatki oraz scenariusza ze sprzętem nurkowym ma prowadzić do kontaktu z wybraną osobą.",
+      "odpowiedz_wzorcowa": "- sprzęt nurkowy jako centralny element scenariusza\\n- udział natrętnej koleżanki-swatki\\n- wieloetapowy charakter zagrywki\\n- połączenie tych elementów w jeden scenariusz",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play20-varA"
+    },
+    {
+      "id": "716f469a-89bf-490a-8aef-4e9fa0b138be",
+      "pytanie": "Jaką funkcję pełnią tlenowa butla, maska, płetwy, mokry kombinezon, zwykły garnitur założony pod spód oraz koleżanka-swatka i dlaczego zagrywka wymaga połączenia tych elementów w wieloetapowy scenariusz?",
+      "odpowiedz_wzorcowa": "- wskazanie sprzętu nurkowego jako jednego zestawu elementów roli\\n- garnitur pod spodem jest częścią scenariusza\\n- udział koleżanki-swatki jest częścią mechanizmu\\n- rozumienie, że wszystkie elementy tworzą jeden wieloetapowy setup",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play20-varB"
+    },
+    {
+      "id": "3aa792d1-b8e7-4667-9372-2670dc7f3481",
+      "pytanie": "Jakie najważniejsze ograniczenia The Scuba Diver wskazuje materiał - kilka lat przygotowań, konieczność posiadania całego sprzętu i udziału osoby trzeciej - oraz jakie wyraźne ostrzeżenie autor umieszcza przy tej zagrywce?",
+      "odpowiedz_wzorcowa": "- kilka lat przygotowań\\n- konieczność posiadania odpowiedniego sprzętu\\n- udział osoby trzeciej\\n- wyraźne ostrzeżenie o wyrwaniu stron przed wykonaniem",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play20-varC"
+    }
+  ]
+}

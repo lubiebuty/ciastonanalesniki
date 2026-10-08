@@ -1,0 +1,32 @@
+{
+  "index": 6,
+  "title": "The Biker",
+  "folder": "2_Plays_for_the_Amateur/The Biker",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Biker/The Biker.pdf",
+  "topics": [
+    {
+      "id": "86f764e5-0847-41d6-8232-74ee41a874ca",
+      "pytanie": "Na czym polega „The Biker” i jaki stereotyp osobowości wykorzystuje?",
+      "odpowiedz_wzorcowa": "- motocyklista\\n- wizerunek „bad boya”\\n- stereotyp motocyklisty",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play6-varA"
+    },
+    {
+      "id": "f5bac45b-a618-4d1d-b19a-5906f43fb89d",
+      "pytanie": "Jakie dwa elementy wyglądu zostały wymienione jako podstawowe dla tej roli, do jakiego typu kobiet jest ona skierowana i czemu służy generator nazw gangów motocyklowych?",
+      "odpowiedz_wzorcowa": "- skórzana kurtka\\n- kask\\n- fanki bad boyów\\n- generator nazw gangów",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play6-varB"
+    },
+    {
+      "id": "8362a6d4-798c-424e-8e36-40088c67d3ff",
+      "pytanie": "Jakie ryzyko pojawia się przy rozwijaniu w The Biker wątku gangu motocyklowego?",
+      "odpowiedz_wzorcowa": "- wariant z gangiem jest określony jako wysokiego ryzyka\\n- potrzebna jest fikcyjna nazwa gangu, jeśli ten motyw jest rozwijany",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play6-varC"
+    }
+  ]
+}

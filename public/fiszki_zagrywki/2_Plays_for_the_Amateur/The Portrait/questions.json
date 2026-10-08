@@ -1,0 +1,32 @@
+{
+  "index": 13,
+  "title": "The Portrait",
+  "folder": "2_Plays_for_the_Amateur/The Portrait",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Portrait/The Portrait.pdf",
+  "topics": [
+    {
+      "id": "b35e4e5d-457a-4243-8738-dc9ead995b55",
+      "pytanie": "Jaki jest podstawowy mechanizm „The Portrait” i jaki rodzaj prestiżu ma stworzyć?",
+      "odpowiedz_wzorcowa": "- portret siebie jako arystokraty\\n- umieszczenie portretu w muzeum\\n- fikcyjny prestiż",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play13-varA"
+    },
+    {
+      "id": "73a40df1-2a26-4c5a-a0a0-e4fac4d189a5",
+      "pytanie": "Co przedstawia zamówiony portret, w jaki sposób ma się znaleźć w muzeum i do jakiego rodzaju kobiet materiał kieruje tę zagrywkę?",
+      "odpowiedz_wzorcowa": "- miłośniczki sztuki\\n- turystki\\n- pieniądze",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play13-varB"
+    },
+    {
+      "id": "98e3833d-1cb7-467e-ac09-afe96b3b903b",
+      "pytanie": "Jaki zasób jest niezbędny do zrealizowania The Portrait zgodnie ze źródłem?",
+      "odpowiedz_wzorcowa": "- pieniądze na wykonanie/umieszczenie portretu\\n- czas i możliwość działania w muzeum",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play13-varC"
+    }
+  ]
+}

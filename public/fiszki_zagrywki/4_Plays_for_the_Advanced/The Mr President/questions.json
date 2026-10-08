@@ -1,0 +1,32 @@
+{
+  "index": 15,
+  "title": "The Mr. President",
+  "folder": "4_Plays_for_the_Advanced/The Mr President",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Mr President/The Mr President.pdf",
+  "topics": [
+    {
+      "id": "e80f59eb-c9a1-4161-9d65-8c371de98a81",
+      "pytanie": "Wyjaśnij, na czym polega The Mr. President i jak budowanie kariery politycznej od lokalnego urzędu do kampanii prezydenckiej tworzy mechanizm całej zagrywki.",
+      "odpowiedz_wzorcowa": "- kampania prezydencka jest centralnym motywem\\n- historia obejmuje budowanie kariery politycznej\\n- kolejne etapy kariery tworzą jeden scenariusz",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play15-varA"
+    },
+    {
+      "id": "911c8517-9b1f-4319-bfa7-417fcacbffdc",
+      "pytanie": "Jaką funkcję pełnią w scenariuszu 270 głosów elektorskich, minimalny wiek 35 lat, mocny uścisk dłoni i białe zęby oraz dlaczego te szczegóły są przedstawione jako warunki powodzenia?",
+      "odpowiedz_wzorcowa": "- 270 głosów elektorskich jako kluczowy element scenariusza\\n- minimum 35 lat jako wskazany warunek\\n- rozpoznanie, że uścisk dłoni i białe zęby są dodatkowymi szczegółami prezentacji, a nie rdzeniem mechanizmu",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play15-varB"
+    },
+    {
+      "id": "a160ce91-9a19-4da8-a21f-7fcda14c68a9",
+      "pytanie": "Dlaczego wymaganie minimum 35 lat oraz konieczność przejścia przez bardzo konkretny kontekst wyborczy stanowią zasadnicze ograniczenia The Mr. President i uniemożliwiają zastosowanie zagrywki bez spełnienia tych warunków?",
+      "odpowiedz_wzorcowa": "- minimum 35 lat\\n- konkretny kontekst kampanii prezydenckiej\\n- uczeń wyjaśnia, że brak tych warunków uniemożliwia zastosowanie scenariusza w opisanej postaci",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play15-varC"
+    }
+  ]
+}

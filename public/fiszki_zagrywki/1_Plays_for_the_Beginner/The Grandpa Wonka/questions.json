@@ -1,0 +1,32 @@
+{
+  "index": 16,
+  "title": "The Grandpa Wonka",
+  "folder": "1_Plays_for_the_Beginner/The Grandpa Wonka",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Grandpa Wonka/The Grandpa Wonka.pdf",
+  "topics": [
+    {
+      "id": "db343600-260d-4606-9ae0-70b7cec380a1",
+      "pytanie": "Na czym polega „Grandpa Wonka” i jaki rodzaj skojarzenia ma zostać wywołany?",
+      "odpowiedz_wzorcowa": "- wnuk Willy’ego Wonki\\n- fikcyjna relacja rodzinna\\n- odwołanie do świata Willy’ego Wonki",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play16-varA"
+    },
+    {
+      "id": "102159b9-42a0-444a-b704-6aa38d858107",
+      "pytanie": "Jaką funkcję pełnią cukierki i relacja rodzinna z Willym Wonką w The Grandpa Wonka?",
+      "odpowiedz_wzorcowa": "- cukierki\\n- „jak szanse na złoty bilet” jako opis prawdopodobieństwa\\n- łasuchy",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play16-varB"
+    },
+    {
+      "id": "ea16b9cb-91e2-4e9b-9723-d28edb745055",
+      "pytanie": "Jaki warunek przygotowania jest najważniejszy dla The Grandpa Wonka?",
+      "odpowiedz_wzorcowa": "- cukierki jako główny rekwizyt\\n- cukierki mają wspierać skojarzenie z Willym Wonką",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play16-varC"
+    }
+  ]
+}

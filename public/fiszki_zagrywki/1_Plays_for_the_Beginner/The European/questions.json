@@ -1,0 +1,32 @@
+{
+  "index": 9,
+  "title": "The European",
+  "folder": "1_Plays_for_the_Beginner/The European",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The European/The European.pdf",
+  "topics": [
+    {
+      "id": "4c0123aa-7e3c-4835-b68c-419bc3ea7dbc",
+      "pytanie": "Jaki jest podstawowy pomysł stojący za „The European”?",
+      "odpowiedz_wzorcowa": "- fikcyjny europejski kraj\\n- udawanie Europejczyka\\n- nieistniejący, ale „znany” kraj",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play9-varA"
+    },
+    {
+      "id": "477b2906-8733-417b-9f48-8dddc6c93949",
+      "pytanie": "Jaką rolę odgrywa dziwny akcent, jaki rodzaj rozmówczyni materiał wskazuje jako potencjalnie bardziej podatny i na czym polega żart związany z „krajem, o którym wszyscy słyszeli, choć nie istnieje”?",
+      "odpowiedz_wzorcowa": "- dziwny akcent\\n- mądrale\\n- „99° Celsius”",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play9-varB"
+    },
+    {
+      "id": "1fd746c3-53b3-4852-ba0c-fe086caf7f24",
+      "pytanie": "Jaki warunek językowy jest charakterystyczny dla The European i po co jest potrzebny?",
+      "odpowiedz_wzorcowa": "- dziwny akcent\\n- jego funkcja: uwiarygodnienie fikcyjnej europejskiej tożsamości",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play9-varC"
+    }
+  ]
+}

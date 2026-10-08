@@ -1,0 +1,32 @@
+{
+  "index": 15,
+  "title": "The Jim Nacho",
+  "folder": "2_Plays_for_the_Amateur/The Jim Nacho",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Jim Nacho/The Jim Nacho.pdf",
+  "topics": [
+    {
+      "id": "f6ecdde4-65ad-4ed4-92af-e25f77bc625b",
+      "pytanie": "Jaki jest mechanizm „The Jim Nacho” i na czym polega gra słów wykorzystana w tej zagrywce?",
+      "odpowiedz_wzorcowa": "- przyjmowanie „podziękowań”\\n- „Jim” + to, co jej się podoba\\n- gra słów",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play15-varA"
+    },
+    {
+      "id": "4bf133fd-f3bc-4fb7-96eb-ae2cdfd9f3d4",
+      "pytanie": "Jak powinien reagować mężczyzna na rzeczy, które podobają się rozmówczyni, jak buduje z tego swoje przedstawienie i jaka cecha jest według materiału szczególnie potrzebna do zastosowania tej taktyki?",
+      "odpowiedz_wzorcowa": "- „łowczynie fortun”\\n- dobry słuch",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play15-varB"
+    },
+    {
+      "id": "f4791bd6-6c60-47c1-b063-9761e03254ee",
+      "pytanie": "Jaka umiejętność jest według źródła najważniejszym warunkiem The Jim Nacho?",
+      "odpowiedz_wzorcowa": "- dobry słuch\\n- umiejętność wychwytywania tego, co podoba się rozmówczyni",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play15-varC"
+    }
+  ]
+}

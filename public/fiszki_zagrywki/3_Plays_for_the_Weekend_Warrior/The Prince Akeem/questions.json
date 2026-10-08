@@ -1,0 +1,32 @@
+{
+  "index": 3,
+  "title": "The Prince Akeem",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Prince Akeem",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Prince Akeem/The Prince Akeem.pdf",
+  "topics": [
+    {
+      "id": "1c6bf1d9-c7dd-439c-963f-fd07d1342c83",
+      "pytanie": "Na czym polega „Prince Akeem” i jaki rodzaj statusu ma stworzyć przedstawiana historia?",
+      "odpowiedz_wzorcowa": "- fikcyjny książę\\n- fikcyjne królestwo\\n- poszukiwanie przyszłej królowej",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play3-varA"
+    },
+    {
+      "id": "24ba6ac3-5f3f-4253-8a33-ae3ad517ac5a",
+      "pytanie": "Jaką rolę odgrywa fikcyjne królestwo, czego książę szuka według przedstawionej historii i jakie znaczenie ma w tej zagrywce dobry wingman?",
+      "odpowiedz_wzorcowa": "- „słabe z geografii”\\n- dobry wingman\\n- Arsenio Hall jako żartobliwe nawiązanie",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play3-varB"
+    },
+    {
+      "id": "1d7b575e-492c-45e7-b4b2-32f4e620c7c3",
+      "pytanie": "Jakie ograniczenie wykonawcze może pojawić się w The Prince Akeem?",
+      "odpowiedz_wzorcowa": "- dobry wingman\\n- konieczność podtrzymywania fikcyjnej historii i jej praw sukcesji",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play3-varC"
+    }
+  ]
+}

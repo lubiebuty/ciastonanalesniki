@@ -1,0 +1,32 @@
+{
+  "index": 10,
+  "title": "The Olympian",
+  "folder": "1_Plays_for_the_Beginner/The Olympian",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Olympian/The Olympian.pdf",
+  "topics": [
+    {
+      "id": "6568f2a2-87ca-4e55-912c-87ed2a91b70f",
+      "pytanie": "Na czym polega „The Olympian” i w jakim szczególnym momencie ma największy sens według materiału?",
+      "odpowiedz_wzorcowa": "- udawanie olimpijczyka\\n- odwołanie do igrzysk\\n- budowanie wiarygodnego wizerunku sportowca",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play10-varA"
+    },
+    {
+      "id": "2fab716f-d3cf-460c-8fed-e45963ec1627",
+      "pytanie": "Jakie elementy rekwizytowe zostały wymienione jako sposób na stworzenie wizerunku olimpijczyka i jaki szczególny moment zastosowania materiał wskazuje?",
+      "odpowiedz_wzorcowa": "- kurtka z literami USA z taśmy\\n- ciastko owsiane w folii jako „srebrny medal”\\n- patriotki",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play10-varB"
+    },
+    {
+      "id": "722db755-173d-4127-a7b6-2894c82f31d8",
+      "pytanie": "Jakie ograniczenie czasowe określa możliwość zastosowania The Olympian?",
+      "odpowiedz_wzorcowa": "- sezonowość\\n- około trzytygodniowe okno co dwa lata związane z igrzyskami",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play10-varC"
+    }
+  ]
+}

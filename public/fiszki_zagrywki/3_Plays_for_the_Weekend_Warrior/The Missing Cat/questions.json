@@ -1,0 +1,24 @@
+{
+  "index": 16,
+  "title": "The Missing Cat",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Missing Cat",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Missing Cat/The Missing Cat.pdf",
+  "topics": [
+    {
+      "id": "707c7c58-37d5-4393-83a7-68a8a39d4a2c",
+      "pytanie": "Na czym polega „The Missing Cat” i jaki wspólny temat ma stworzyć naturalny pretekst do kontaktu?",
+      "odpowiedz_wzorcowa": "- ulotka o zaginionym kocie\\n- „znalezienie” kota\\n- kontakt przez temat zwierzęcia",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play16-varA"
+    },
+    {
+      "id": "69891cf6-8da1-49e0-bbed-668b1df6d09c",
+      "pytanie": "Jaką rolę pełni klatka transportowa, w jaki sposób kot zostaje „znaleziony” i jaki typ kobiet materiał wskazuje jako odbiorczynie?",
+      "odpowiedz_wzorcowa": "- miłośniczki zwierząt\\n- mała klatka transportowa",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play16-varB"
+    }
+  ]
+}

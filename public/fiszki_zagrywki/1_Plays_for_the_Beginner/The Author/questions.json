@@ -1,0 +1,32 @@
+{
+  "index": 11,
+  "title": "The Author",
+  "folder": "1_Plays_for_the_Beginner/The Author",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Author/The Author.pdf",
+  "topics": [
+    {
+      "id": "015e9446-6c61-4837-a4d8-d022b7b07168",
+      "pytanie": "Na czym polega „The Author” i jaki wspólny punkt zainteresowania wykorzystuje?",
+      "odpowiedz_wzorcowa": "- przedstawienie się jako autor\\n- książka czytana przez rozmówczynię\\n- wspólny punkt zainteresowania",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play11-varA"
+    },
+    {
+      "id": "e68576e0-125c-407d-a4c4-d19f030c4ea0",
+      "pytanie": "Jaką funkcję ma znajomość książki, którą czyta rozmówczyni, i jaki typ kobiety materiał określa jako bardziej podatny?",
+      "odpowiedz_wzorcowa": "- książka jest czytana przez rozmówczynię\\n- „książkowe” jako grupa docelowa",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play11-varB"
+    },
+    {
+      "id": "714159b8-8afe-46b1-98e6-2650c17a2635",
+      "pytanie": "Jaki szczególny warunek może spowodować konieczność przerwania The Author według źródła?",
+      "odpowiedz_wzorcowa": "- autor używa inicjałów zamiast pełnego imienia\\n- taki szczegół może skomplikować wiarygodne odegranie roli autora",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play11-varC"
+    }
+  ]
+}

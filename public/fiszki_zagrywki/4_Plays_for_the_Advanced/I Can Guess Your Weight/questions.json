@@ -1,0 +1,32 @@
+{
+  "index": 17,
+  "title": "I Can Guess Your Weight",
+  "folder": "4_Plays_for_the_Advanced/I Can Guess Your Weight",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/I Can Guess Your Weight/I Can Guess Your Weight.pdf",
+  "topics": [
+    {
+      "id": "3d817d14-9537-4cb4-81c9-2340d2ac2091",
+      "pytanie": "Wyjaśnij, na czym polega The I Can Guess Your Weight i jak wykorzystanie prostego działania matematycznego ma stworzyć wrażenie, że można odgadnąć wagę drugiej osoby.",
+      "odpowiedz_wzorcowa": "- zapowiedź odgadnięcia wagi\\n- wyjście od przypuszczalnej rzeczywistej wagi\\n- zastosowanie odejmowania do uzyskania końcowej liczby\\n- podanie wyniku jako odgadniętej wagi",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play17-varA"
+    },
+    {
+      "id": "a4225936-73e6-4f0f-9918-96dc849a2e0e",
+      "pytanie": "Jaką rolę odgrywają podstawy matematyki w przebiegu zagrywki i dlaczego opisane w materiale obliczenie obejmujące odejmowanie kolejnych wartości jest kluczowym elementem scenariusza?",
+      "odpowiedz_wzorcowa": "- podstawy matematyki są wymagane\\n- najpierw odejmuje się 25 funtów\\n- następnie odejmuje się kolejne 5 funtów\\n- końcowy wynik jest prezentowany jako odgadnięta waga",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play17-varB"
+    },
+    {
+      "id": "44fce219-cffb-46fe-8caa-3e8c44b0b895",
+      "pytanie": "Dlaczego błędne obliczenia są głównym ograniczeniem The I Can Guess Your Weight i w jaki sposób pomyłka może doprowadzić do niepowodzenia zagrywki?",
+      "odpowiedz_wzorcowa": "- błąd w obliczeniu jest wprost wskazanym ograniczeniem\\n- końcowa liczba zależy od poprawnego rachunku\\n- pomyłka może dać błędny wynik i zepsuć zaplanowany efekt",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play17-varC"
+    }
+  ]
+}

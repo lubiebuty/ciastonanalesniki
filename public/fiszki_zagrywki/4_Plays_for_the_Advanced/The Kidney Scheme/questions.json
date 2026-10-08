@@ -1,0 +1,32 @@
+{
+  "index": 16,
+  "title": "The Kidney Scheme",
+  "folder": "4_Plays_for_the_Advanced/The Kidney Scheme",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Kidney Scheme/The Kidney Scheme.pdf",
+  "topics": [
+    {
+      "id": "abcf24e0-5980-45fa-8783-0be3f0d09821",
+      "pytanie": "Wyjaśnij, na czym polega mechanizm The Kidney Scheme i dlaczego historia o oddaniu nerki przyjacielowi ma pełnić centralną funkcję w scenariuszu.",
+      "odpowiedz_wzorcowa": "- historia o oddaniu nerki przyjacielowi\\n- oddanie nerki jest centralnym wydarzeniem opowieści\\n- historia jest kierowana do osoby określonej jako „wielkoduszna”",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play16-varA"
+    },
+    {
+      "id": "65f4e3b5-8b59-4cca-bd5a-5f8361bbd64f",
+      "pytanie": "Jaką rolę pełnią opaska szpitalna i kolega oraz w jaki sposób te elementy pomagają zbudować wiarygodność opowieści skierowanej do osoby określonej jako „wielkoduszna”?",
+      "odpowiedz_wzorcowa": "- opaska szpitalna jest elementem scenariusza\\n- kolega jest wymaganym uczestnikiem/elementem\\n- oba elementy wspierają przedstawienie historii o oddaniu nerki\\n- odbiorcą ma być osoba „wielkoduszna”",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play16-varB"
+    },
+    {
+      "id": "4d112d25-240f-414d-997f-c1a0afd1e501",
+      "pytanie": "Dlaczego The Kidney Scheme wymaga odpowiedniego kontekstu szpitalnego oraz udziału kolegi i co może się stać z mechanizmem, gdy któregoś z tych elementów zabraknie?",
+      "odpowiedz_wzorcowa": "- kontekst szpitalny\\n- udział kolegi\\n- związek tych warunków z historią o oddaniu nerki",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play16-varC"
+    }
+  ]
+}

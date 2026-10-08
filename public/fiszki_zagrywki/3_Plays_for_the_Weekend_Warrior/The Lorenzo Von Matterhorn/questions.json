@@ -1,0 +1,32 @@
+{
+  "index": 5,
+  "title": "The Lorenzo Von Matterhorn",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Lorenzo Von Matterhorn",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Lorenzo Von Matterhorn/The Lorenzo Von Matterhorn.pdf",
+  "topics": [
+    {
+      "id": "7d387d5d-c04d-4aaf-9daf-9529c986ae74",
+      "pytanie": "Na czym polega „The Lorenzo von Matterhorn” i w jaki sposób buduje pozór sławy?",
+      "odpowiedz_wzorcowa": "- fikcyjna postać Lorenzo von Matterhorn\\n- tworzenie stron o postaci\\n- pozór sławy wsparty stronami WWW",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play5-varA"
+    },
+    {
+      "id": "6b6ae266-e966-49cd-b06c-d37201303f19",
+      "pytanie": "Jaką fikcyjną postać należy stworzyć, w jaki sposób strony internetowe mają wspierać jej wiarygodność i jaki warunek techniczny materiał wskazuje jako istotny?",
+      "odpowiedz_wzorcowa": "- osoby ze smartfonem\\n- podstawy tworzenia stron WWW",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play5-varB"
+    },
+    {
+      "id": "1d75ec56-ee60-41f0-a772-5d07676d11c6",
+      "pytanie": "Jakie wymaganie techniczne jest warunkiem wiarygodności The Lorenzo von Matterhorn?",
+      "odpowiedz_wzorcowa": "- podstawowa znajomość tworzenia stron WWW",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play5-varC"
+    }
+  ]
+}

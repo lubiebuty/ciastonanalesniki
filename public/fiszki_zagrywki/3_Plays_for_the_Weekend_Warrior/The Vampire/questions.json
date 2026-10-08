@@ -1,0 +1,32 @@
+{
+  "index": 18,
+  "title": "The Vampire",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Vampire",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Vampire/The Vampire.pdf",
+  "topics": [
+    {
+      "id": "0bcb3b6b-d7bb-4f32-917d-a79d2c018017",
+      "pytanie": "Na czym polega „The Vampire” i jakimi prostymi elementami buduje się tytułową postać?",
+      "odpowiedz_wzorcowa": "- udawanie wampira\\n- fikcyjna tożsamość wampira",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play18-varA"
+    },
+    {
+      "id": "a7813834-6084-473a-a6ae-28bd3cb884bf",
+      "pytanie": "Do czego mają służyć miętowe Tic Taki i taśma, jaką historię przedstawia mężczyzna i co sam Barney przyznaje na temat jakości przygotowania tej zagrywki?",
+      "odpowiedz_wzorcowa": "- miętowe Tic Taki\\n- taśma jako kły\\n- przyznanie, że zagrywka jest słabo dopracowana",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play18-varB"
+    },
+    {
+      "id": "610ede80-e319-4538-b90c-c89b317aebd0",
+      "pytanie": "Jakie ograniczenie jakości przygotowania jest wyraźnie przyznane w źródle przy The Vampire?",
+      "odpowiedz_wzorcowa": "- źródłowe przyznanie, że zagrywka jest słabo dopracowana\\n- miętowe Tic Taki i taśma jako prosty element przygotowania",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play18-varC"
+    }
+  ]
+}

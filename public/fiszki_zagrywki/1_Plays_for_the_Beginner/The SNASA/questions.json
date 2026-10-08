@@ -1,0 +1,32 @@
+{
+  "index": 1,
+  "title": "The SNASA",
+  "folder": "1_Plays_for_the_Beginner/The SNASA",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The SNASA/The SNASA.pdf",
+  "topics": [
+    {
+      "id": "6cc70895-992f-4f28-bd4e-1390483318db",
+      "pytanie": "Na czym polega taktyka „The SNASA” i jaki mechanizm ma sprawić, że rozmówczyni uwierzy w przedstawioną historię?",
+      "odpowiedz_wzorcowa": "- udzawanie pracownika „Secret NASA”\\n- fikcyjna tożsamość rządowego programu kosmicznego\\n- historia ma zostać przedstawiona jako wiarygodna",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play1-varA"
+    },
+    {
+      "id": "ba2375db-054a-4816-863e-6c1e34324dd0",
+      "pytanie": "Jakie cechy osoby, do której kierowana jest ta zagrywka, według materiału zwiększają jej podatność na tę historię i jaki element dodatkowy został wymieniony jako pomocny w uwiarygodnieniu roli?",
+      "odpowiedz_wzorcowa": "- łatwowierność jako wskazana grupa docelowa\\n- kask jako dodatkowy element\\n- rozumienie, że kask nie jest rdzeniem historii",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play1-varB"
+    },
+    {
+      "id": "29669dba-4ce7-46ea-a28d-6e0fb45658e7",
+      "pytanie": "Jaki warunek dotyczący odbiorczyni i wiarygodności roli jest najważniejszy dla zastosowania The SNASA?",
+      "odpowiedz_wzorcowa": "- podatność odbiorczyni na przedstawioną historię\\n- rozumienie, że kask jest elementem pomocniczym, a nie rdzeniem zagrywki",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play1-varC"
+    }
+  ]
+}

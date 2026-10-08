@@ -103,8 +103,8 @@ export function isQuestionPassed(
     const matches = s.topic_id === topic.id || (s.numer !== undefined && s.numer === topic.numer);
     if (!matches) return false;
     if (s.status !== 'completed') return false;
+    if (typeof s.score === 'number') return s.score >= 5;
     if (s.is_correct === true || s.is_correct === 1) return true;
-    if (typeof s.score === 'number' && s.score >= 5) return true;
     return false;
   });
 }

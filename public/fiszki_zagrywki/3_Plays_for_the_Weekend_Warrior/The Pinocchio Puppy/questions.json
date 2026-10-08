@@ -1,0 +1,24 @@
+{
+  "index": 1,
+  "title": "The Pinocchio Puppy",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Pinocchio Puppy",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Pinocchio Puppy/The Pinocchio Puppy.pdf",
+  "topics": [
+    {
+      "id": "896c6502-5526-42a1-ad68-dddbec9b1fd4",
+      "pytanie": "Na czym polega „The Pinocchio Puppy” i jaki rodzaj nietypowego zachowania stanowi jej główny element?",
+      "odpowiedz_wzorcowa": "- zachowanie jak pies\\n- człowiek w ludzkim ciele odgrywający psa",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play1-varA"
+    },
+    {
+      "id": "b6faeb41-6b72-4fd9-b3c7-c3255e7e0e4b",
+      "pytanie": "Jak ma zachowywać się osoba stosująca tę zagrywkę, jaki rekwizyt materiał wskazuje i do jakiego typu kobiet ją kieruje?",
+      "odpowiedz_wzorcowa": "- naiwne\\n- miłośniczki zwierząt\\n- obroża",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play1-varB"
+    }
+  ]
+}

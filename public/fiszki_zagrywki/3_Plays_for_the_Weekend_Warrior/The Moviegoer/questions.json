@@ -1,0 +1,32 @@
+{
+  "index": 4,
+  "title": "The Moviegoer",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Moviegoer",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Moviegoer/The Moviegoer.pdf",
+  "topics": [
+    {
+      "id": "21a5ae44-6352-42b2-81b0-babe0dbdf145",
+      "pytanie": "Jaki jest podstawowy mechanizm „The Moviegoer” i jakie miejsce stanowi w tej zagrywce pole działania?",
+      "odpowiedz_wzorcowa": "- seans filmowy\\n- kiepska komedia romantyczna\\n- kino jako miejsce działania",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play4-varA"
+    },
+    {
+      "id": "1a9b72e3-c730-4a82-885c-72b066e63bbd",
+      "pytanie": "Jakiego rodzaju film według materiału należy wybrać, do jakiego typu kobiet kierowana jest ta zagrywka i jakie ograniczenie czasowe zostało przy niej podane?",
+      "odpowiedz_wzorcowa": "- „smutne”\\n- mocny żołądek\\n- ok. 110 minut",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play4-varB"
+    },
+    {
+      "id": "691b111b-16ab-4f77-8eb9-77bc33decb1d",
+      "pytanie": "Jaki warunek repertuarowy i sytuacyjny ogranicza The Moviegoer?",
+      "odpowiedz_wzorcowa": "- odpowiednia komedia romantyczna dostępna aktualnie w kinach\\n- ponowne uczestnictwo w seansie i związany z tym czas/komfort",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play4-varC"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "index": 14,
+  "title": "E Pluribus Unum",
+  "folder": "4_Plays_for_the_Advanced/E Pluribus Unum",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/E Pluribus Unum/E Pluribus Unum.pdf",
+  "topics": [
+    {
+      "id": "f609bbc8-13d2-4fe5-a88e-47673085ccea",
+      "pytanie": "Wyjaśnij, na czym polega The E Pluribus Unum i w jaki sposób powrót banknotu z twoim numerem ma być przedstawiany jako znak przeznaczenia.",
+      "odpowiedz_wzorcowa": "- banknot ma zawierać własny numer\\n- banknot ma po czasie wrócić do bohatera\\n- powrót jest interpretowany jako znak przeznaczenia",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play14-varA"
+    },
+    {
+      "id": "8c890a5f-a16b-4a58-b60a-d9e712c3926e",
+      "pytanie": "Jaką rolę pełni banknot z twoim numerem oraz dlaczego materiał łączy tę zagrywkę z osobami wierzącymi w przeznaczenie i z koniecznością wieloletniej cierpliwości?",
+      "odpowiedz_wzorcowa": "- banknot z własnym numerem\\n- grupa docelowa: osoby wierzące w przeznaczenie\\n- wieloletnia cierpliwość jest wymagana\\n- powrót banknotu ma tworzyć narrację o przeznaczeniu",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play14-varB"
+    },
+    {
+      "id": "72c72847-28a1-40b7-94b1-e7785b07e0e0",
+      "pytanie": "Dlaczego potrzeba wielu lat cierpliwości oraz wiara w przeznaczenie stanowią kluczowe ograniczenia The E Pluribus Unum i co może sprawić, że bez tych warunków scenariusz straci sens?",
+      "odpowiedz_wzorcowa": "- wieloletnia cierpliwość\\n- odbiorczyni wierząca w przeznaczenie\\n- czas i odpowiedni kontekst są potrzebne, aby banknot mógł zadziałać jako „znak”",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play14-varC"
+    }
+  ]
+}

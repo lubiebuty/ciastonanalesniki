@@ -1,0 +1,24 @@
+{
+  "index": 16,
+  "title": "The Confused Inheritor",
+  "folder": "2_Plays_for_the_Amateur/The Confused Inheritor",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Confused Inheritor/The Confused Inheritor.pdf",
+  "topics": [
+    {
+      "id": "2d326a05-caaf-444d-925a-bbf05dc59ed4",
+      "pytanie": "Na czym polega „The Confused Inheritor” i jaki motyw społeczny wykorzystuje?",
+      "odpowiedz_wzorcowa": "- zdezorientowany spadkobierca\\n- absurdalna fortuna\\n- motyw niespodziewanego dziedziczenia",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play16-varA"
+    },
+    {
+      "id": "c141a34a-083f-469f-b7fa-b8aa52284866",
+      "pytanie": "Jaką rolę odgrywa podrobiony testament, jakiego rodzaju fortunę przedstawia się w historii i do jakiej grupy kobiet materiał kieruje tę zagrywkę?",
+      "odpowiedz_wzorcowa": "- podrobiony testament\\n- polujące na pieniądze",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play16-varB"
+    }
+  ]
+}

@@ -59,6 +59,18 @@ export async function GET(
       }
     }
 
+    // Fallback for Frejer (playbook_topics)
+    if ((!topic || !topic.id_slug) && sessionData.topic_id) {
+      const { data: playbookTopic } = await db
+        .from('playbook_topics')
+        .select('*')
+        .eq('id', sessionData.topic_id)
+        .single();
+      if (playbookTopic) {
+        topic = playbookTopic;
+      }
+    }
+
     // Determine subject: explicit column or by question number
     let przedmiot = topic?.przedmiot;
     if (!przedmiot) {

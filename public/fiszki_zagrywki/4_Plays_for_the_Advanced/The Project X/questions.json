@@ -1,0 +1,32 @@
+{
+  "index": 1,
+  "title": "The Project X",
+  "folder": "4_Plays_for_the_Advanced/The Project X",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Project X/The Project X.pdf",
+  "topics": [
+    {
+      "id": "a15be2f8-3783-4d2f-abce-c19ac03af39b",
+      "pytanie": "Wyjaśnij, na czym polega podstawowy mechanizm The Project X i w jaki sposób wykorzystanie szympansa ma prowadzić do zbudowania sytuacji kontaktu z wybraną osobą.",
+      "odpowiedz_wzorcowa": "- szympans jest centralnym elementem i pretekstem do kontaktu\\n- historia o wyrwaniu szympansa z ośrodka testów na zwierzętach jest częścią scenariusza\\n- uczeń wyjaśnia związek między zwierzęciem, historią i nawiązaniem rozmowy",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play1-varA"
+    },
+    {
+      "id": "ea860100-abc1-4332-beee-5ca0406fe4e0",
+      "pytanie": "Jaką funkcję pełnią szympans, smycz oraz historia o wyrwaniu zwierzęcia z ośrodka testów na zwierzętach i dlaczego te elementy są częścią scenariusza, a nie przypadkowymi rekwizytami?",
+      "odpowiedz_wzorcowa": "- szympans jest głównym elementem scenariusza\\n- smycz należy do wskazanych w źródle rekwizytów/wymagań\\n- historia o wyrwaniu zwierzęcia z ośrodka wyjaśnia jego obecność w scenariuszu",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play1-varB"
+    },
+    {
+      "id": "bcf0f530-0816-4177-8df4-29d29828bc8d",
+      "pytanie": "Dlaczego powodzenie The Project X jest uzależnione od tego, jak „słodka” jest małpa, oraz od jej dostępności i dlaczego te warunki są istotne dla zastosowania zagrywki?",
+      "odpowiedz_wzorcowa": "- wskazanie zależności powodzenia od „słodyczy” małpy\\n- wskazanie dostępności małpy jako warunku przygotowania/zastosowania\\n- wyjaśnienie, że brak odpowiedniego zwierzęcia uniemożliwia wykonanie scenariusza",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play1-varC"
+    }
+  ]
+}

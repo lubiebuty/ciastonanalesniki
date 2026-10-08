@@ -1,0 +1,32 @@
+{
+  "index": 15,
+  "title": "The Fireman",
+  "folder": "1_Plays_for_the_Beginner/The Fireman",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Fireman/The Fireman.pdf",
+  "topics": [
+    {
+      "id": "d80276c4-7755-4121-bf89-21efb73edc0b",
+      "pytanie": "Jaki jest podstawowy schemat „The Fireman”?",
+      "odpowiedz_wzorcowa": "- udawanie strażaka\\n- przedstawienie się jako strażak",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play15-varA"
+    },
+    {
+      "id": "60e8f614-c6d7-4fbb-a5bc-705473f0bd98",
+      "pytanie": "Jakie ryzyka prawne lub społeczne materiał wskazuje przy tej zagrywce i jakie są to ryzyka?",
+      "odpowiedz_wzorcowa": "- nielegalność jako wskazane ryzyko\\n- możliwa złość prawdziwego strażaka",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play15-varB"
+    },
+    {
+      "id": "21e0e4b1-5c3f-49e6-ba87-924ce67e91f0",
+      "pytanie": "Jakie ryzyko praktyczne i prawne źródło wiąże z The Fireman?",
+      "odpowiedz_wzorcowa": "- ryzyko nielegalności\\n- ryzyko oczekiwania rzeczywistej wiedzy/reakcji strażaka\\n- możliwa konfrontacja z prawdziwym strażakiem",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play15-varC"
+    }
+  ]
+}

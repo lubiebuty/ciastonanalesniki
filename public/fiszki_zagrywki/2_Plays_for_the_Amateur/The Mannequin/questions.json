@@ -1,0 +1,32 @@
+{
+  "index": 4,
+  "title": "The Mannequin",
+  "folder": "2_Plays_for_the_Amateur/The Mannequin",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Mannequin/The Mannequin.pdf",
+  "topics": [
+    {
+      "id": "045d5ed7-2afd-40e6-bde4-f225b09211e6",
+      "pytanie": "Na czym polega „The Mannequin” i jaki element zaskoczenia jest kluczowy dla tej zagrywki?",
+      "odpowiedz_wzorcowa": "- nieruchome stanie w witrynie\\n- udawanie manekina\\n- moment „ożycia”",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play4-varA"
+    },
+    {
+      "id": "cd22f355-66bf-4a90-9339-e67c8ed2271a",
+      "pytanie": "Jakie trzy elementy przygotowania są potrzebne do wykonania tej taktyki zgodnie z materiałem?",
+      "odpowiedz_wzorcowa": "- garnitur\\n- cierpliwość\\n- mocne kolana\\n- kupujące",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play4-varB"
+    },
+    {
+      "id": "8aa4dd31-e32f-44d8-bc75-0a2f431a5a58",
+      "pytanie": "Jakie wymaganie wykonawcze ogranicza The Mannequin?",
+      "odpowiedz_wzorcowa": "- cierpliwość\\n- mocne kolana / możliwość długiego stania nieruchomo",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play4-varC"
+    }
+  ]
+}

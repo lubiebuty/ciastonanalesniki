@@ -1,0 +1,32 @@
+{
+  "index": 3,
+  "title": "The Blind Date",
+  "folder": "1_Plays_for_the_Beginner/The Blind Date",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Blind Date/The Blind Date.pdf",
+  "topics": [
+    {
+      "id": "15cf9df2-dd5b-4610-8baa-1dfe0119b16c",
+      "pytanie": "Na czym polega „The Blind Date” i jaka sytuacja społeczna jest w niej wykorzystywana?",
+      "odpowiedz_wzorcowa": "- pytanie „Czy ty jesteś Stacy?”\\n- udawanie osoby wystawionej przez randkę\\n- wykorzystanie sytuacji randkowej jako pretekstu",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play3-varA"
+    },
+    {
+      "id": "ec6c631b-80a9-459b-9af7-0f63b1d43ff0",
+      "pytanie": "Jaką funkcję pełni powtarzane pytanie „Czy ty jesteś Stacy?” w opisanym schemacie i jaki typ rozmówczyni materiał wskazuje jako szczególnie podatny?",
+      "odpowiedz_wzorcowa": "- desperatki i „królowe litości”\\n- róża",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play3-varB"
+    },
+    {
+      "id": "c44f2127-63f8-4d5b-a73a-bc177d3809f7",
+      "pytanie": "Jaki rekwizyt jest wymagany w The Blind Date i dlaczego ma znaczenie dla rozpoczęcia scenariusza?",
+      "odpowiedz_wzorcowa": "- pojedyncza róża\\n- róża wspiera scenariusz rzekomej randki i pytania o Stacy",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play3-varC"
+    }
+  ]
+}

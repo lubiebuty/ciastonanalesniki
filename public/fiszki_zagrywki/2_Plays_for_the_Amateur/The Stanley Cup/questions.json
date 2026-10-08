@@ -1,0 +1,32 @@
+{
+  "index": 11,
+  "title": "The Stanley Cup",
+  "folder": "2_Plays_for_the_Amateur/The Stanley Cup",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Stanley Cup/The Stanley Cup.pdf",
+  "topics": [
+    {
+      "id": "7d540bb7-4cce-4809-acc4-78cbc4122ecf",
+      "pytanie": "Jaki jest koncept „The Stanley Cup” i w jaki sposób tworzy się pozór osiągnięcia sportowego?",
+      "odpowiedz_wzorcowa": "- domowej roboty Puchar Stanleya\\n- udawanie hokeisty\\n- pozór sportowego osiągnięcia",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play11-varA"
+    },
+    {
+      "id": "3171ce93-f6fe-4bdf-b6b6-5728a6ef21d2",
+      "pytanie": "Z jakich materiałów wykonuje się domowej roboty puchar, ile czasu według materiału zajmuje przygotowanie go i do jakiej konkretnej grupy kobiet kierowana jest ta zagrywka?",
+      "odpowiedz_wzorcowa": "- folia\\n- marker\\n- ok. 45 minut\\n- sportowe (nie kibicki)",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play11-varB"
+    },
+    {
+      "id": "a3c336ac-ccdf-4777-a098-c6875a1ebffe",
+      "pytanie": "Jaki praktyczny problem z przygotowaniem The Stanley Cup może ograniczać jej zastosowanie?",
+      "odpowiedz_wzorcowa": "- konieczność wykonania własnego pucharu\\n- pracochłonność przygotowania jako źródłowe utrudnienie",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play11-varC"
+    }
+  ]
+}

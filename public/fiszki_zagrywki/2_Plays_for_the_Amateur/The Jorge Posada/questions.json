@@ -1,0 +1,32 @@
+{
+  "index": 2,
+  "title": "The Jorge Posada",
+  "folder": "2_Plays_for_the_Amateur/The Jorge Posada",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Jorge Posada/The Jorge Posada.pdf",
+  "topics": [
+    {
+      "id": "bfd47f4e-8ace-43ad-8dda-440df8fc4d39",
+      "pytanie": "Na czym polega „The Jorge Posada” i jaki rodzaj statusu ma stworzyć ta zagrywka?",
+      "odpowiedz_wzorcowa": "- catcher\\n- pobliska drużyna\\n- sportowy status",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play2-varA"
+    },
+    {
+      "id": "50ce807b-fd66-418c-9df0-c5e2e4fa72ee",
+      "pytanie": "Jaką rolę sportową należy odegrać, do jakiej grupy kobiet materiał kieruje tę taktykę i jaki odpowiednik tej postaci sugeruje w przypadku Kanady?",
+      "odpowiedz_wzorcowa": "- fanki sławy i sportu\\n- catcher\\n- w Kanadzie: bramkarz hokejowy",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play2-varB"
+    },
+    {
+      "id": "62a57113-164d-442a-ab1b-6266da8c2a11",
+      "pytanie": "Jaki warunek sportowy jest potrzebny, aby The Jorge Posada zachowało swoją wiarygodność?",
+      "odpowiedz_wzorcowa": "- wygląd sugerujący pewną sprawność sportową\\n- dopasowanie roli do lokalnego sportu/drużyny",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play2-varC"
+    }
+  ]
+}

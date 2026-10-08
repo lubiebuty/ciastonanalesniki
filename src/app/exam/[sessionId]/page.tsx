@@ -14,7 +14,7 @@ import { getNextTopic as getNextGeografiaTopic } from '@/lib/geografia';
 import { getNextTopic as getNextChemiaTopic } from '@/lib/chemia';
 import { getNextTopic as getNextFizykaTopic } from '@/lib/fizyka';
 import { Brain, Sparkles, AlertCircle } from 'lucide-react';
-import { getFlashcardImagePath, isPlaybookTopic } from '@/lib/frejer';
+import { getFlashcardImagePath, isPlaybookTopic, getNextTopic as getNextFrejerTopic } from '@/lib/frejer';
 
 type ExamPhase = 'monologue' | 'evaluating' | 'report';
 
@@ -57,6 +57,7 @@ function ExamContent() {
   const [showKeyboard, setShowKeyboard] = useState<boolean>(false);
   const [repeating, setRepeating] = useState<boolean>(false);
   const [showNoTokensModal, setShowNoTokensModal] = useState<boolean>(false);
+  const [allTopics, setAllTopics] = useState<any[]>([]);
 
   // Load session & topic details on mount
   useEffect(() => {
@@ -94,6 +95,11 @@ function ExamContent() {
           if (typeof window !== 'undefined' && subject) {
             localStorage.setItem('selected_przedmiot', subject);
           }
+          // Fetch all topics to determine index for previous/next arrows
+          fetch(`/api/topics?przedmiot=${subject}`)
+            .then((r) => r.json())
+            .then((d) => setAllTopics(d.topics || []))
+            .catch(() => {});
         }
       })
       .catch((err) => {
@@ -207,10 +213,12 @@ function ExamContent() {
     setLoadingNext(true);
 
     try {
-      const subject = topic.przedmiot || 'geografia';
+      const isFrejer = isPlaybookTopic(topic);
+      const subject = isFrejer ? 'frejer' : (topic.przedmiot || 'geografia');
+      
       const [topicsRes, sessionsRes] = await Promise.all([
-        fetch(`/api/topics?przedmiot=${subject}`),
-        fetch('/api/sessions'),
+        fetch(`/api/topics?przedmiot=${subject}`, { cache: 'no-store' }),
+        fetch('/api/sessions', { cache: 'no-store' }),
       ]);
 
       const topicsData = await topicsRes.json();
@@ -224,6 +232,8 @@ function ExamContent() {
         nextTopic = getNextFizykaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
       } else if (subject === 'chemia') {
         nextTopic = getNextChemiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
+      } else if (subject === 'frejer') {
+        nextTopic = getNextFrejerTopic(allTopics, allSessions, topic.numer ?? topic.topicId);
       } else {
         nextTopic = getNextGeografiaTopic(allTopics, allSessions, topic.numer ?? topic.topicId, subject);
       }
@@ -249,13 +259,65 @@ function ExamContent() {
         }
       }
 
-      router.push(`/topics?przedmiot=${subject}`);
+      router.push(isFrejer ? `/frejer` : `/topics?przedmiot=${subject}`);
     } catch {
-      router.push(`/topics?przedmiot=${topic.przedmiot || 'matematyka'}`);
+      router.push(isPlaybookTopic(topic) ? `/frejer` : `/topics?przedmiot=${topic.przedmiot || 'matematyka'}`);
     } finally {
       setLoadingNext(false);
     }
   };
+
+  const handlePrevExamTopic = async () => {
+    if (loadingNext || !topic || allTopics.length === 0) return;
+
+    if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
+      setShowNoTokensModal(true);
+      return;
+    }
+
+    setLoadingNext(true);
+
+    try {
+      const isFrejer = isPlaybookTopic(topic);
+      const subject = isFrejer ? 'frejer' : (topic.przedmiot || 'geografia');
+      
+      const sorted = [...allTopics].sort((a, b) => a.numer - b.numer);
+      const currentIndex = sorted.findIndex(
+        (t) => t.id === topic.topicId || t.numer === topic.numer
+      );
+
+      if (currentIndex > 0) {
+        const prevTopic = sorted[currentIndex - 1];
+        const createRes = await fetch('/api/sessions', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ topicId: prevTopic.id }),
+        });
+        const createData = await createRes.json();
+        if (createRes.status === 402 || createData.error?.toLowerCase().includes('token')) {
+          setShowNoTokensModal(true);
+          return;
+        }
+        if (createRes.ok && createData.session) {
+          await update();
+          router.push(`/exam/${createData.session.id}`);
+          return;
+        }
+      }
+    } catch {
+      // ignore
+    } finally {
+      setLoadingNext(false);
+    }
+  };
+
+  // Determine button states
+  const sortedTopics = [...allTopics].sort((a, b) => a.numer - b.numer);
+  const currentIndex = sortedTopics.findIndex(
+    (t) => t.id === topic?.topicId || t.numer === topic?.numer
+  );
+  const hasPrev = currentIndex > 0;
+  const canGoNext = phase === 'report' || prevScore !== null;
 
   return (
     <main className="min-h-screen p-3 sm:p-6 md:p-10 font-sketch">
@@ -282,7 +344,11 @@ function ExamContent() {
             <div className="flex items-center gap-2">
               {topic.wariant && (
                 <span className="text-xs font-extrabold uppercase px-2.5 py-1 rounded-md border-2 border-slate-900 bg-amber-200 shadow-[1.5px_1.5px_0px_#0f172a]">
-                  Wariant {topic.wariant}
+                  {topic.wariant === 'A' ? 'Pytania ogólne' :
+                   topic.wariant === 'B' ? 'Pytania szczegółowe' :
+                   topic.wariant === 'C' ? 'Pytania integrujące' :
+                   topic.wariant === 'D' ? 'Znajdź i wytłumacz błąd' :
+                   `Wariant ${topic.wariant}`}
                 </span>
               )}
               <span className="text-sm font-extrabold uppercase px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-100 shadow-[2px_2px_0px_#0f172a]">
@@ -324,7 +390,13 @@ function ExamContent() {
               <ChalkboardFrame
                 title={
                   topic.dzial_nazwa
-                    ? `${topic.dzial_nazwa} • Wariant ${topic.wariant || ''}`
+                    ? `${topic.dzial_nazwa} • ${
+                        topic.wariant === 'A' ? 'Pytania ogólne' :
+                        topic.wariant === 'B' ? 'Pytania szczegółowe' :
+                        topic.wariant === 'C' ? 'Pytania integrujące' :
+                        topic.wariant === 'D' ? 'Znajdź i wytłumacz błąd' :
+                        topic.wariant ? `Wariant ${topic.wariant}` : ''
+                      }`.replace(/ • $/, '')
                     : `ZADANIE #${topic.numer}`
                 }
               >
@@ -484,7 +556,48 @@ function ExamContent() {
 
             {scores && <ScoreBreakdown scores={scores} feedback={feedback} />}
 
-            <div className="flex flex-col sm:flex-row gap-3 pt-2">
+            {isPlaybookTopic(topic) && getFlashcardImagePath(topic as any) && (
+              <div className="mt-8 space-y-4">
+                <h2 className="text-2xl sm:text-3xl font-extrabold tracking-wide uppercase text-slate-900 text-center">
+                  Oryginalna Fiszka z Playbooka
+                </h2>
+                {(() => {
+                  const flashcard = getFlashcardImagePath(topic as any);
+                  if (!flashcard) return null;
+                  
+                  return (
+                    <div className="flex flex-col gap-8">
+                      {/* Render Image if exists */}
+                      {flashcard.image && (
+                        <div className="flex justify-center">
+                          <img 
+                            src={flashcard.image} 
+                            alt="Fiszka - zdjęcie" 
+                            className="rounded-xl border-4 border-slate-900 shadow-[4px_4px_0px_#0f172a] max-w-full h-auto"
+                          />
+                        </div>
+                      )}
+                      
+                      {/* Render PDF if exists */}
+                      {flashcard.pdfPath && (
+                        flashcard.pages === 2 ? (
+                          <div className="flex flex-col md:flex-row gap-4 w-full h-[600px] sm:h-[800px]">
+                            <iframe src={`${flashcard.pdfPath}#page=1&view=FitH&toolbar=0&navpanes=0`} className="w-full md:w-1/2 h-full rounded-xl border-4 border-slate-900 shadow-[4px_4px_0px_#0f172a]" />
+                            <iframe src={`${flashcard.pdfPath}#page=2&view=FitH&toolbar=0&navpanes=0`} className="w-full md:w-1/2 h-full rounded-xl border-4 border-slate-900 shadow-[4px_4px_0px_#0f172a]" />
+                          </div>
+                        ) : (
+                          <div className="w-full h-[600px] sm:h-[800px]">
+                            <iframe src={`${flashcard.pdfPath}#page=1&view=FitH&toolbar=0&navpanes=0`} className="w-full h-full rounded-xl border-4 border-slate-900 shadow-[4px_4px_0px_#0f172a]" />
+                          </div>
+                        )
+                      )}
+                    </div>
+                  );
+                })()}
+              </div>
+            )}
+
+            <div className="flex flex-col sm:flex-row gap-3 pt-8">
               <button
                 type="button"
                 onClick={repeatExam}
@@ -522,6 +635,31 @@ function ExamContent() {
             </div>
           </div>
         )}
+      </div>
+
+      {/* Navigation Arrows (Fixed on edges) */}
+      <div className="fixed inset-y-0 left-0 sm:left-4 md:left-8 flex items-center pointer-events-none z-40">
+        <button
+          type="button"
+          onClick={handlePrevExamTopic}
+          disabled={!hasPrev || loadingNext}
+          className="pointer-events-auto sketch-btn px-2 sm:px-3 py-6 sm:py-8 bg-white border-[3px] border-slate-900 rounded-r-xl shadow-[4px_4px_0px_#0f172a] hover:bg-amber-100 transition-all flex items-center justify-center opacity-70 hover:opacity-100 disabled:opacity-30 disabled:cursor-not-allowed"
+          title="Poprzednie zadanie"
+        >
+          <span className="text-2xl sm:text-4xl font-black text-slate-900">←</span>
+        </button>
+      </div>
+
+      <div className="fixed inset-y-0 right-0 sm:right-4 md:right-8 flex items-center pointer-events-none z-40">
+        <button
+          type="button"
+          onClick={handleNextExamTopic}
+          disabled={!canGoNext || loadingNext}
+          className="pointer-events-auto sketch-btn-black px-2 sm:px-3 py-6 sm:py-8 border-[3px] rounded-l-xl shadow-[-4px_4px_0px_#0f172a] hover:bg-slate-800 transition-all flex items-center justify-center opacity-70 hover:opacity-100 disabled:opacity-30 disabled:cursor-not-allowed"
+          title="Następne zadanie"
+        >
+          <span className="text-2xl sm:text-4xl font-black text-white">→</span>
+        </button>
       </div>
 
       {/* No Tokens Modal Window */}

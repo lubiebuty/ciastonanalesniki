@@ -1,0 +1,32 @@
+{
+  "index": 17,
+  "title": "The Time Traveler",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Time Traveler",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Time Traveler/The Time Traveler.pdf",
+  "topics": [
+    {
+      "id": "ca742693-040a-4b9c-8e34-422fb3f0442e",
+      "pytanie": "Jaki jest podstawowy koncept „The Time Traveler” i jaki paradoks fabularny zostaje w nim wykorzystany?",
+      "odpowiedz_wzorcowa": "- stary ty z przyszłości\\n- wiadomość dla niej\\n- motyw podróży w czasie",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play17-varA"
+    },
+    {
+      "id": "a9acc66c-3065-4694-86ba-39945ea1c137",
+      "pytanie": "Kto ma przekazać wiadomość rozmówczyni, jakie elementy pomagają stworzyć tę scenę i do jakiej grupy kobiet materiał kieruje tę zagrywkę?",
+      "odpowiedz_wzorcowa": "- fanki sci-fi\\n- makijaż starca\\n- dwóch kolegów",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play17-varB"
+    },
+    {
+      "id": "af02a54a-86c3-449b-ace1-1a81bb6a5583",
+      "pytanie": "Jakie warunki sceniczne są niezbędne dla The Time Traveler?",
+      "odpowiedz_wzorcowa": "- makijaż starca\\n- dwóch kolegów",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play17-varC"
+    }
+  ]
+}

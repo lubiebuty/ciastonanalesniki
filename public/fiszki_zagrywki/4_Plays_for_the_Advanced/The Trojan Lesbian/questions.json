@@ -1,0 +1,32 @@
+{
+  "index": 11,
+  "title": "The Trojan Lesbian",
+  "folder": "4_Plays_for_the_Advanced/The Trojan Lesbian",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Trojan Lesbian/The Trojan Lesbian.pdf",
+  "topics": [
+    {
+      "id": "41c9fb7e-057c-4a42-a0f9-264c12d3f964",
+      "pytanie": "Wyjaśnij, na czym polega mechanizm The Trojan Lesbian i jak podszywanie się mężczyzny pod lesbijkę ma stworzyć sytuację kontaktu z określoną grupą odbiorczyń.",
+      "odpowiedz_wzorcowa": "- mężczyzna podszywa się pod lesbijkę\\n- grupa docelowa: lesbijki i kobiety „eksperymentujące”\\n- rola przyjęta przez bohatera ma być podstawą nawiązania kontaktu",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play11-varA"
+    },
+    {
+      "id": "21083033-b3a7-441d-9f47-81496089f6d5",
+      "pytanie": "Dlaczego materiał wskazuje lesbijki i kobiety „eksperymentujące” jako grupę docelową oraz jaką rolę w całym założeniu odgrywa element szczęścia?",
+      "odpowiedz_wzorcowa": "- prawidłowa grupa docelowa\\n- szczęście jest wskazane jako wymaganie\\n- uczeń wyjaśnia zależność powodzenia od odpowiedniego zbiegu okoliczności",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play11-varB"
+    },
+    {
+      "id": "a0ecd45c-899f-49c6-b320-4895c747ecf5",
+      "pytanie": "Dlaczego zależność od szczęścia jest kluczowym ograniczeniem The Trojan Lesbian i jakie warunki muszą zostać spełnione, aby jej założenie mogło zostać zrealizowane?",
+      "odpowiedz_wzorcowa": "- szczęście jako wyraźny warunek\\n- właściwa grupa docelowa\\n- odpowiednia sytuacja umożliwiająca zastosowanie przyjętej roli",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play11-varC"
+    }
+  ]
+}

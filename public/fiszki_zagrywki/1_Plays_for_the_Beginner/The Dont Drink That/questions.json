@@ -1,0 +1,24 @@
+{
+  "index": 4,
+  "title": "The Don't Drink That",
+  "folder": "1_Plays_for_the_Beginner/The Dont Drink That",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Dont Drink That/The Dont Drink That.pdf",
+  "topics": [
+    {
+      "id": "63847826-902d-4890-8044-4962c982ecd0",
+      "pytanie": "Jaki jest podstawowy schemat taktyki „Don’t Drink That!”?",
+      "odpowiedz_wzorcowa": "- rzekomo niebezpieczna substancja w drinku\\n- nagłe „ratowanie” dziewczyny\\n- przedstawienie sytuacji jako zagrożenia",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play4-varA"
+    },
+    {
+      "id": "e81fc9fe-d021-4007-ab6e-760307ca2140",
+      "pytanie": "Jakie wyraźne ryzyko stanowi najważniejsze ograniczenie The Don’t Drink That!?",
+      "odpowiedz_wzorcowa": "- ryzyko fizycznej reakcji i oberwania\\n- uznanie tego ryzyka za główne źródłowe ograniczenie",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play4-varC"
+    }
+  ]
+}

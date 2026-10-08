@@ -1,0 +1,32 @@
+{
+  "index": 9,
+  "title": "The Rorschach",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Rorschach",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Rorschach/The Rorschach.pdf",
+  "topics": [
+    {
+      "id": "cb065960-58a1-4bee-b067-a60a57f4309c",
+      "pytanie": "Na czym polega „The Rorschach” i jaką rolę odgrywa w niej autorytet eksperta?",
+      "odpowiedz_wzorcowa": "- profesor psychologii\\n- test plam atramentowych\\n- autorytet eksperta",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play9-varA"
+    },
+    {
+      "id": "2592e568-2d59-4f88-8421-ab2d30bcb560",
+      "pytanie": "Jaką postać ma odegrać mężczyzna, jakie materiały są potrzebne do zagrywki i jaki typ osób materiał wskazuje jako odbiorców?",
+      "odpowiedz_wzorcowa": "- superłatwowierne\\n- atrament\\n- papier\\n- notes",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play9-varB"
+    },
+    {
+      "id": "7a2bf3e1-3338-46b7-83e6-da868386d09c",
+      "pytanie": "Jakie materiały są niezbędne do przygotowania The Rorschach?",
+      "odpowiedz_wzorcowa": "- atrament\\n- biały papier\\n- notes/legal pad",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play9-varC"
+    }
+  ]
+}

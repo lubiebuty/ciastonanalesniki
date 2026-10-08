@@ -1,0 +1,24 @@
+{
+  "index": 8,
+  "title": "The Ghost",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Ghost",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Ghost/The Ghost.pdf",
+  "topics": [
+    {
+      "id": "831333ee-ce06-418d-9b14-a20750f54a7a",
+      "pytanie": "Jaki jest mechanizm „The Ghost” i jaką rolę odgrywają w niej osoby trzecie?",
+      "odpowiedz_wzorcowa": "- kilku przyjaciół\\n- pozorowane opłakiwanie\\n- pojawienie się jako „duch”",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play8-varA"
+    },
+    {
+      "id": "ae475a42-179e-4eb6-ab10-004b5251b6e0",
+      "pytanie": "Jaką historię mają przedstawiać przyjaciele, w jaki sposób „duch” pojawia się przy rozmówczyni i jaki przedmiot ma stanowić dowód na jego rzekome istnienie?",
+      "odpowiedz_wzorcowa": "- osoby „duchowe”\\n- kilku przyjaciół\\n- latający kufel",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play8-varB"
+    }
+  ]
+}

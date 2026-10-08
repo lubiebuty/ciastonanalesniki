@@ -1,0 +1,32 @@
+{
+  "index": 13,
+  "title": "The I'm Joining The Marines",
+  "folder": "1_Plays_for_the_Beginner/The Im Joining The Marines",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Im Joining The Marines/The Im Joining The Marines.pdf",
+  "topics": [
+    {
+      "id": "ff7fa1b2-11cd-4d84-8464-94081cce713f",
+      "pytanie": "Na czym polega „Joining the Marines” i jaki rodzaj informacji o sobie ma być przedstawiony rozmówczyni?",
+      "odpowiedz_wzorcowa": "- deklaracja, że jutro idziesz do marines\\n- motyw służby wojskowej\\n- przedstawienie siebie jako przyszłego marines",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play13-varA"
+    },
+    {
+      "id": "0fa4f502-d037-47c9-a887-c7ef85a3f33c",
+      "pytanie": "Jaką rolę odgrywa „spojrzenie tysiąca jardów”, jaki typ kobiet materiał wskazuje jako odbiorczynie i jaki problem praktyczny wskazuje Barney?",
+      "odpowiedz_wzorcowa": "- „spojrzenie tysiąca jardów”\\n- patriotki\\n- uwaga, że trzeba potem naprawdę wstąpić",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play13-varB"
+    },
+    {
+      "id": "3d6fd72b-7507-4f53-a733-94a9aef34c40",
+      "pytanie": "Jakie praktyczne ryzyko jest w źródle wyraźnie związane z The Joining the Marines?",
+      "odpowiedz_wzorcowa": "- łatwość wykrycia, szczególnie w czasie pokoju\\n- źródłowa konsekwencja fabularna: rzeczywiste wstąpienie do Marines",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play13-varC"
+    }
+  ]
+}

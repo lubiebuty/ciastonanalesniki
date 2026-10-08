@@ -1,0 +1,32 @@
+{
+  "index": 9,
+  "title": "The Bouncer",
+  "folder": "4_Plays_for_the_Advanced/The Bouncer",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Bouncer/The Bouncer.pdf",
+  "topics": [
+    {
+      "id": "98abfb6a-db0f-4885-9986-8b12c79c97dd",
+      "pytanie": "Wyjaśnij, na czym polega mechanizm The Bouncer i jak fałszywa kolejka ma stworzyć wrażenie, że chodzi o wydarzenie prywatne i ekskluzywne.",
+      "odpowiedz_wzorcowa": "- fałszywa kolejka\\n- wrażenie prywatnego i ekskluzywnego wydarzenia\\n- scenariusz pozoruje dostęp do „prywatnego koncertu”",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play9-varA"
+    },
+    {
+      "id": "5d4cb1d7-623a-4411-b5ab-e75132f5867f",
+      "pytanie": "Jaką funkcję pełnią boombox, aksamitne liny i lista oraz w jaki sposób każdy z tych elementów wzmacnia pozór prawdziwej kolejki do „prywatnego koncertu”?",
+      "odpowiedz_wzorcowa": "- boombox jako element scenografii wydarzenia\\n- aksamitne liny jako element organizacji/wyznaczania wejścia\\n- lista jako element pozornego kontrolowania osób\\n- połączenie ich funkcji w stworzeniu wrażenia ekskluzywnego wejścia",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play9-varB"
+    },
+    {
+      "id": "39ead6ce-b2cf-4c1f-8694-e8dbe9a7687b",
+      "pytanie": "Dlaczego deszcz jest kluczowym ograniczeniem The Bouncer i w jaki sposób pogoda wpływa na możliwość zastosowania opisanej zagrywki?",
+      "odpowiedz_wzorcowa": "- deszcz jest wyraźnie wskazanym ograniczeniem\\n- zagrywka zależy od odpowiednich warunków zewnętrznych\\n- uczeń wyjaśnia wpływ pogody na możliwość utrzymania scenariusza",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play9-varC"
+    }
+  ]
+}

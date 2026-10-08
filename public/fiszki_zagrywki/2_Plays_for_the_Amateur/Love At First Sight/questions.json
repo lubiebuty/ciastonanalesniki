@@ -1,0 +1,32 @@
+{
+  "index": 5,
+  "title": "Love At First Sight",
+  "folder": "2_Plays_for_the_Amateur/Love At First Sight",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/Love At First Sight/Love At First Sight.pdf",
+  "topics": [
+    {
+      "id": "ad243db8-2f44-4c99-b251-c20b00a90118",
+      "pytanie": "Jak wygląda podstawowy schemat „Love at First Sight” i jaki romantyczny motyw wykorzystuje?",
+      "odpowiedz_wzorcowa": "- slow motion\\n- piosenka w tle\\n- pytanie o miłość od pierwszego wejrzenia",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play5-varA"
+    },
+    {
+      "id": "2f6fb499-4a3f-4de6-a7f7-f79e553a5af9",
+      "pytanie": "Jaką rolę pełni kolega oraz boombox, jaki sposób przedstawienia sceny jest kluczowy i do jakiego typu kobiet materiał przypisuje tę zagrywkę?",
+      "odpowiedz_wzorcowa": "- kolega\\n- boombox\\n- „niewinne typy”",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play5-varB"
+    },
+    {
+      "id": "01d320fe-c092-414d-8748-a8d58f6bf92b",
+      "pytanie": "Jakie ograniczenie częstotliwości stosowania ma The Love at First Sight?",
+      "odpowiedz_wzorcowa": "- maksymalnie jedna próba w jednej lokalizacji na noc",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play5-varC"
+    }
+  ]
+}

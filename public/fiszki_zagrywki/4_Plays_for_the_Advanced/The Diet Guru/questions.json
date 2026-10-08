@@ -1,0 +1,32 @@
+{
+  "index": 3,
+  "title": "The Diet Guru",
+  "folder": "4_Plays_for_the_Advanced/The Diet Guru",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Diet Guru/The Diet Guru.pdf",
+  "topics": [
+    {
+      "id": "a612df7d-3737-43a6-ad44-75ceb1d13e7f",
+      "pytanie": "Wyjaśnij, na czym polega mechanizm The Diet Guru i jak rola udawanego guru diety ma prowadzić do zainteresowania odbiorczyni zagrywką.",
+      "odpowiedz_wzorcowa": "- udawanie guru diety\\n- związek zagrywki z tematyką odchudzania/szczupłej sylwetki\\n- skierowanie do osób z kompleksami dotyczącymi wagi",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play3-varA"
+    },
+    {
+      "id": "034a2f07-31ce-4d2c-9522-d97b16f6ddd8",
+      "pytanie": "Dlaczego w scenariuszu znaczenie ma szczupła sylwetka oraz lista „cudownych” nazw diet i jaką funkcję pełnią te elementy w budowaniu roli guru?",
+      "odpowiedz_wzorcowa": "- szczupła sylwetka jest częścią obrazu osoby odgrywającej guru\\n- lista „cudownych” nazw diet jest elementem scenariusza\\n- uczeń wyjaśnia, że elementy wzmacniają przyjętą rolę i temat rozmowy",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play3-varB"
+    },
+    {
+      "id": "abc59dca-2c9e-4502-83ef-5b58d1b62fa8",
+      "pytanie": "Dlaczego The Diet Guru jest zależne od tego, czy odbiorczyni należy do grupy dziewczyn z kompleksami dotyczącymi wagi, i w jaki sposób brak tego kontekstu może osłabić lub unieważnić założenie zagrywki?",
+      "odpowiedz_wzorcowa": "- grupa docelowa to dziewczyny z kompleksami dotyczącymi wagi\\n- temat wagi/sylwetki jest częścią podstawy zagrywki\\n- brak takiego kontekstu osłabia sens zastosowania scenariusza",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play3-varC"
+    }
+  ]
+}

@@ -1,0 +1,24 @@
+{
+  "index": 10,
+  "title": "The Bionic Man",
+  "folder": "2_Plays_for_the_Amateur/The Bionic Man",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Bionic Man/The Bionic Man.pdf",
+  "topics": [
+    {
+      "id": "e853f184-5024-43dd-978a-bee1d0084273",
+      "pytanie": "Na czym polega „Bionic Man” i jaką fikcyjną historię wykorzystuje do wyjaśnienia swojej siły?",
+      "odpowiedz_wzorcowa": "- mocny uścisk dłoni\\n- wojsko wymieniło części ciała na tytan\\n- fikcja bionicznych części",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play10-varA"
+    },
+    {
+      "id": "7de9b938-6dce-4296-8e6a-b1e9924a4205",
+      "pytanie": "Jakie ograniczenie lub ryzyko wykonania The Bionic Man źródło wskazuje?",
+      "odpowiedz_wzorcowa": "- ryzyko konfrontacji z prawdziwymi weteranami\\n- możliwa nieprzyjemna lub agresywna reakcja",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play10-varC"
+    }
+  ]
+}

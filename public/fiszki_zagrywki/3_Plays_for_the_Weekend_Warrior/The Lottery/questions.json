@@ -1,0 +1,32 @@
+{
+  "index": 14,
+  "title": "The Lottery",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Lottery",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Lottery/The Lottery.pdf",
+  "topics": [
+    {
+      "id": "48ea160e-974e-4993-bc87-826a1d7bbd9a",
+      "pytanie": "Jaki jest podstawowy mechanizm „The Lottery” i jaki rodzaj nagłego szczęścia zostaje w niej odegrany?",
+      "odpowiedz_wzorcowa": "- fałszywa wygrana\\n- nagranie losowania\\n- bar",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play14-varA"
+    },
+    {
+      "id": "2899214b-61af-44b6-9876-85d0154bc36f",
+      "pytanie": "Jaką funkcję pełni los oraz nagranie wideo, gdzie według materiału można odegrać tę scenę i czemu służy lista „szlachetnych” fundacji?",
+      "odpowiedz_wzorcowa": "- polujące na pieniądze\\n- los\\n- kaseta wideo\\n- lista fundacji",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play14-varB"
+    },
+    {
+      "id": "63cc939d-04f8-4321-984a-d8d355900b35",
+      "pytanie": "Jaki warunek techniczny i rekwizytowy jest niezbędny dla The Lottery?",
+      "odpowiedz_wzorcowa": "- los loteryjny\\n- nagranie wideo losowania",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play14-varC"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "index": 12,
+  "title": "The Befuddled Puppy Owner",
+  "folder": "2_Plays_for_the_Amateur/The Befuddled Puppy Owner",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Befuddled Puppy Owner/The Befuddled Puppy Owner.pdf",
+  "topics": [
+    {
+      "id": "dbde7261-58a1-415c-afc2-81dd20f5253d",
+      "pytanie": "Na czym polega „The Befuddled Puppy Owner” i jaką sytuację społeczną wykorzystuje?",
+      "odpowiedz_wzorcowa": "- szczeniak „uciekający” w jej stronę\\n- prośba o pomoc\\n- kontakt przez wspólną sytuację ze zwierzęciem",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play12-varA"
+    },
+    {
+      "id": "411d55e7-694e-4b57-b2d6-0ac13d7a1af8",
+      "pytanie": "Jaki jest schemat związany ze szczeniakiem, o jaką pomoc prosi się rozmówczynię i jakie imię ma suczka w przedstawionej historii?",
+      "odpowiedz_wzorcowa": "- miłośniczki zwierząt\\n- szczeniak\\n- Oprah",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play12-varB"
+    },
+    {
+      "id": "066790f1-0074-46f9-89f7-b65fc531f420",
+      "pytanie": "Jakie praktyczne ograniczenie wiąże się z użyciem prawdziwego szczeniaka w The Befuddled Puppy Owner?",
+      "odpowiedz_wzorcowa": "- trudne i frustrujące szkolenie domowe szczeniaka",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play12-varC"
+    }
+  ]
+}

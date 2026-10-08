@@ -1,0 +1,32 @@
+{
+  "index": 18,
+  "title": "The Heimlich Maneuver",
+  "folder": "4_Plays_for_the_Advanced/The Heimlich Maneuver",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Heimlich Maneuver/The Heimlich Maneuver.pdf",
+  "topics": [
+    {
+      "id": "c229be57-88f2-49ab-b8af-adb9bf71f071",
+      "pytanie": "Wyjaśnij, na czym polega mechanizm The Heimlich Maneuver i jak udawane zakrztuszenie ma stworzyć sytuację, w której druga osoba podejmuje działanie ratunkowe.",
+      "odpowiedz_wzorcowa": "- udawane zakrztuszenie\\n- druga osoba ma podjąć działanie ratunkowe\\n- sytuacja ratunkowa stanowi podstawę kontaktu",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play18-varA"
+    },
+    {
+      "id": "d47e839b-f7c4-43fe-91b7-cecb05897e94",
+      "pytanie": "Jaką funkcję pełni precel oraz dlaczego materiał kieruje tę zagrywkę do osób określonych jako ratowniczki? Wyjaśnij, jak rekwizyt łączy się z odegraniem scenariusza.",
+      "odpowiedz_wzorcowa": "- precel jest wymaganym rekwizytem\\n- grupa docelowa: ratowniczki\\n- rekwizyt służy odegraniu scenariusza zakrztuszenia",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play18-varB"
+    },
+    {
+      "id": "39a37f7d-e806-4000-8541-fee409dbee41",
+      "pytanie": "Dlaczego zastosowanie The Heimlich Maneuver wymaga zarówno odpowiedniego rekwizytu, jak i osoby gotowej reagować jako ratowniczka, a brak któregoś z tych warunków może przerwać cały mechanizm?",
+      "odpowiedz_wzorcowa": "- precel jako konieczny element\\n- ratowniczka jako właściwa osoba w scenariuszu\\n- związek obu warunków z odegraniem zakrztuszenia i akcją ratunkową",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play18-varC"
+    }
+  ]
+}

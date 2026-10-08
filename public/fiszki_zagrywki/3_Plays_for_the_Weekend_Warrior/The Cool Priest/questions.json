@@ -1,0 +1,32 @@
+{
+  "index": 6,
+  "title": "The Cool Priest",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Cool Priest",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Cool Priest/The Cool Priest.pdf",
+  "topics": [
+    {
+      "id": "cdac50f8-22b5-43f2-8eee-14281fe8e8e7",
+      "pytanie": "Jaki stereotyp wykorzystuje „The Cool Priest” i na czym polega jego podstawowy kontrast?",
+      "odpowiedz_wzorcowa": "- rola księdza\\n- picie\\n- klnięcie\\n- kontrast ze stereotypowym duchownym",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play6-varA"
+    },
+    {
+      "id": "04b8814d-ece1-49f9-9f7c-062b0d964424",
+      "pytanie": "Jakie elementy stroju mają stworzyć wizerunek księdza, jakie zachowanie odróżnia go od stereotypowego duchownego i do jakiej grupy kobiet materiał kieruje tę zagrywkę?",
+      "odpowiedz_wzorcowa": "- koszula duchownego\\n- koloratka\\n- przygnębione „kościółkowe”",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play6-varB"
+    },
+    {
+      "id": "3d406b89-9482-4dac-8c85-c6b95e7c2dce",
+      "pytanie": "Jakie elementy garderoby są warunkiem zbudowania roli w The Cool Priest?",
+      "odpowiedz_wzorcowa": "- koszula duchownego\\n- koloratka",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play6-varC"
+    }
+  ]
+}

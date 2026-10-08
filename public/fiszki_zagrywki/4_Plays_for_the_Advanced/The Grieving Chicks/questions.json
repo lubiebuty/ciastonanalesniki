@@ -1,0 +1,32 @@
+{
+  "index": 13,
+  "title": "The Grieving Chicks",
+  "folder": "4_Plays_for_the_Advanced/The Grieving Chicks",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Grieving Chicks/The Grieving Chicks.pdf",
+  "topics": [
+    {
+      "id": "80fa86be-5004-4e38-a16f-50f345f567fb",
+      "pytanie": "Wyjaśnij, na czym polega The Grieving Chicks i jak wykorzystanie poczekalni szpitalnej, pojawienie się złych wiadomości oraz zaoferowanie wsparcia mają tworzyć mechanizm zagrywki.",
+      "odpowiedz_wzorcowa": "- poczekalnia szpitalna jako miejsce scenariusza\\n- sytuacja złych wiadomości/straty jako uruchomienie scenariusza\\n- zaoferowanie wsparcia jako dalszy element kontaktu",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play13-varA"
+    },
+    {
+      "id": "9967dc4e-571e-4357-8f5e-0622ec56c57a",
+      "pytanie": "Jaką funkcję pełnią poczekalnia szpitalna, wybór osoby spośród zgromadzonych bliskich oraz późniejsze zaoferowanie ramienia do wypłakania i wsparcia finansowego? Wyjaśnij zależność między tymi elementami a scenariuszem.",
+      "odpowiedz_wzorcowa": "- poczekalnia szpitalna\\n- wybranie konkretnej osoby wśród zgromadzonych\\n- zaoferowanie emocjonalnego wsparcia\\n- zaoferowanie wsparcia finansowego jako części opisanego scenariusza",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play13-varB"
+    },
+    {
+      "id": "87717e31-c6a7-4c05-b017-b9f490d7b5c1",
+      "pytanie": "Dlaczego „zerowa uczciwość” jest kluczowym warunkiem The Grieving Chicks i co ten warunek mówi o charakterze opisanego scenariusza?",
+      "odpowiedz_wzorcowa": "- „zerowa uczciwość” jest wprost wskazana jako warunek/cecha zagrywki\\n- uczeń rozumie, że chodzi o szczególnie nieuczciwy sposób działania opisany przez autora\\n- ograniczenie ma charakter etyczno-scenariuszowy, a nie statystyczny",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play13-varC"
+    }
+  ]
+}

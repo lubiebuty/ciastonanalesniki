@@ -49,26 +49,8 @@ function TopicsList() {
   const [selectedTopicToConfirm, setSelectedTopicToConfirm] = useState<string | null>(null);
   const [showNoTokensModal, setShowNoTokensModal] = useState<boolean>(false);
   const [currentPage, setCurrentPage] = useState(1);
-  const [debilClicks, setDebilClicks] = useState(0);
   const { data: session, status, update } = useSession();
-
-  useEffect(() => {
-    if (typeof window !== 'undefined') {
-      const saved = localStorage.getItem('hamas_debilario_clicks');
-      if (saved) setDebilClicks(parseInt(saved, 10) || 0);
-    }
-  }, []);
-
-  const handleHamasDebilarioClick = () => {
-    setDebilClicks((prev) => {
-      const next = prev + 1;
-      if (typeof window !== 'undefined') {
-        localStorage.setItem('hamas_debilario_clicks', String(next));
-      }
-      return next;
-    });
-  };
-
+  
   const handleTopicClick = (topicId: string) => {
     if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
       setShowNoTokensModal(true);
@@ -155,15 +137,7 @@ function TopicsList() {
     }
   };
 
-  const drawRandom = () => {
-    if (status !== 'loading' && session && (session?.tokens ?? 0) <= 0) {
-      setShowNoTokensModal(true);
-      return;
-    }
-    if (topics.length === 0) return;
-    const random = topics[Math.floor(Math.random() * topics.length)];
-    setSelectedTopicToConfirm(random.id);
-  };
+
 
   const itemsPerPage = 10;
   const totalPages = Math.ceil(topics.length / itemsPerPage);
@@ -268,41 +242,7 @@ function TopicsList() {
           </button>
         </div>
 
-        {/* ═════════════════════════════════════════════════════════════════
-            CTA BUTTON (Hand-drawn CTA)
-            ═════════════════════════════════════════════════════════════════ */}
-        <div className="space-y-3">
-          {activeSubject !== 'geografia' && activeSubject !== 'chemia' && activeSubject !== 'fizyka' && (
-            <button
-              onClick={drawRandom}
-              disabled={creating || topics.length === 0}
-              className="w-full sketch-btn-black p-4 font-extrabold text-base sm:text-lg tracking-wide flex items-center justify-center gap-2.5 disabled:opacity-50 cursor-pointer"
-            >
-              <span>Wylosuj zadanie ({subjectLabel})</span>
-              <span aria-hidden="true">→</span>
-            </button>
-          )}
 
-          <div className="flex items-center gap-4">
-            <button
-              type="button"
-              onClick={handleHamasDebilarioClick}
-              className="flex-1 sketch-btn-black !bg-red-700 !border-red-900 p-4 font-extrabold text-base sm:text-xl tracking-wide flex items-center justify-center gap-2.5 cursor-pointer shadow-[5px_5px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 select-none hover:!bg-red-800"
-            >
-              <span>test how much debil do you have</span>
-            </button>
-            {debilClicks > 0 && (
-              <div
-                className="sketch-box px-6 py-3 bg-amber-200 border-[3px] border-slate-900 shadow-[4px_4px_0px_#0f172a] text-center min-w-[80px] animate-in fade-in zoom-in-95 duration-150"
-                title="Ilość kliknięć"
-              >
-                <span className="text-3xl font-black text-slate-900 font-sketch leading-none">
-                  {debilClicks}
-                </span>
-              </div>
-            )}
-          </div>
-        </div>
 
         {/* ═════════════════════════════════════════════════════════════════
             TOPICS TILES / CHAPTERS VIEW

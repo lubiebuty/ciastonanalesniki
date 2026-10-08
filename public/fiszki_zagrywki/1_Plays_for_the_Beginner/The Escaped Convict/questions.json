@@ -1,0 +1,32 @@
+{
+  "index": 8,
+  "title": "The Escaped Convict",
+  "folder": "1_Plays_for_the_Beginner/The Escaped Convict",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Escaped Convict/The Escaped Convict.pdf",
+  "topics": [
+    {
+      "id": "2b4a3ba0-7c45-48f6-83bf-6de2e5ea2b0d",
+      "pytanie": "Na czym polega „The Escaped Convict” i jaką historię przedstawia osoba stosująca tę zagrywkę?",
+      "odpowiedz_wzorcowa": "- zbiegiem jest osoba udawana przez mężczyznę\\n- niesłuszne skazanie\\n- ucieczka z więzienia",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play8-varA"
+    },
+    {
+      "id": "7ba99f02-9b3a-4013-92e1-647baa5a49cb",
+      "pytanie": "Jaką funkcję pełnią kajdany w przedstawionej historii i jaki konkretnie element narracji ma wzbudzić zainteresowanie lub emocjonalne zaangażowanie rozmówczyni?",
+      "odpowiedz_wzorcowa": "- kajdany\\n- niesłuszne skazanie jako narracja",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play8-varB"
+    },
+    {
+      "id": "8e88fd38-d738-4a2c-85dc-f1a2ef6d56ac",
+      "pytanie": "Jaki element przygotowania jest niezbędny, aby zachować założenia The Escaped Convict?",
+      "odpowiedz_wzorcowa": "- kajdany jako rekwizyt\\n- powiązanie kajdan z rolą zbiega",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play8-varC"
+    }
+  ]
+}

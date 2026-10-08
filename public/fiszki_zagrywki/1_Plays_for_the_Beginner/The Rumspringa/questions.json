@@ -1,0 +1,32 @@
+{
+  "index": 5,
+  "title": "The Rumspringa",
+  "folder": "1_Plays_for_the_Beginner/The Rumspringa",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Rumspringa/The Rumspringa.pdf",
+  "topics": [
+    {
+      "id": "5e6f984e-88f2-4a7b-96ea-35d0371456e3",
+      "pytanie": "Na czym polega „The Rumspringa” i jaki element tożsamości kulturowej zostaje w niej wykorzystany?",
+      "odpowiedz_wzorcowa": "- udawanie Amisza\\n- rytuał Rumspringa\\n- tożsamość kulturowa jako rdzeń historii",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play5-varA"
+    },
+    {
+      "id": "08f55211-1141-43e6-892b-3a3cf4af9410",
+      "pytanie": "Jakie elementy wyglądu i przedstawionej historii mają wspierać wiarygodność tej roli oraz jakie inne rytuały przejścia materiał podaje jako analogiczne pomysły?",
+      "odpowiedz_wzorcowa": "- broda\\n- źle leżący garnitur\\n- biblijne imię",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play5-varB"
+    },
+    {
+      "id": "844f1f08-62ab-47ae-a643-54c4f1d725f6",
+      "pytanie": "Jakie elementy wyglądu są warunkiem wiarygodnego odegrania The Rumspringa?",
+      "odpowiedz_wzorcowa": "- rzadka/niejednolita broda (patchy facial hair)\\n- źle dopasowany garnitur\\n- imię ze Starego Testamentu",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play5-varC"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "index": 17,
+  "title": "The Naked Man",
+  "folder": "1_Plays_for_the_Beginner/The Naked Man",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Naked Man/The Naked Man.pdf",
+  "topics": [
+    {
+      "id": "86e1cc11-70f8-4f8e-88c6-cad398fe0da1",
+      "pytanie": "Jaki jest ogólny koncept „The Naked Man” według materiału?",
+      "odpowiedz_wzorcowa": "- pretekst wejścia do mieszkania\\n- jej powrót do mieszkania\\n- „nagła” sytuacja nagości",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play17-varA"
+    },
+    {
+      "id": "53669130-d254-4d95-be92-e4325ff61e90",
+      "pytanie": "Jakie założenia dotyczące miejsca i przebiegu są istotne w The Naked Man?",
+      "odpowiedz_wzorcowa": "- określony kontekst\\n- wszystkie typy kobiet",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play17-varB"
+    },
+    {
+      "id": "cab686bb-c08d-42bb-8f60-e217cdd26d96",
+      "pytanie": "Jaki warunek sytuacyjny musi zostać spełniony, aby The Naked Man mogło przebiegać zgodnie ze źródłem?",
+      "odpowiedz_wzorcowa": "- znalezienie się w mieszkaniu rozmówczyni pod opisanym pretekstem\\n- moment po jej wyjściu z pokoju",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play17-varC"
+    }
+  ]
+}

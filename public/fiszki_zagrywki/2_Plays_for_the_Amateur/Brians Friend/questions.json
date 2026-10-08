@@ -1,0 +1,24 @@
+{
+  "index": 9,
+  "title": "Brian's Friend",
+  "folder": "2_Plays_for_the_Amateur/Brians Friend",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/Brians Friend/Brians Friend.pdf",
+  "topics": [
+    {
+      "id": "61b62a5b-29dc-4651-aada-b350b6a6d170",
+      "pytanie": "Jaki jest schemat „Brian’s Friend” i na jakim założeniu dotyczącym wcześniejszego spotkania opiera się ta taktyka?",
+      "odpowiedz_wzorcowa": "- sugerowanie wcześniejszego spotkania\\n- „zapomniałem imienia”\\n- „Jestem kolegą Briana”",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play9-varA"
+    },
+    {
+      "id": "661ab0b2-d41f-4aa3-9c49-232869e50d94",
+      "pytanie": "Jakie założenie musi zadziałać, aby pierwszy krok The Brian’s Friend był wiarygodny?",
+      "odpowiedz_wzorcowa": "- wiarygodna sugestia wcześniejszego spotkania\\n- Brian jako punkt odniesienia dla podtrzymania historii",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play9-varC"
+    }
+  ]
+}

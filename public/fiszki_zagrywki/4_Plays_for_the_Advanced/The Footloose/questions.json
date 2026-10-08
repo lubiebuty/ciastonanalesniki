@@ -1,0 +1,32 @@
+{
+  "index": 12,
+  "title": "The Footloose",
+  "folder": "4_Plays_for_the_Advanced/The Footloose",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Footloose/The Footloose.pdf",
+  "topics": [
+    {
+      "id": "b2741ea9-095d-4ac4-81fb-4287d4305a76",
+      "pytanie": "Wyjaśnij, na czym polega The Footloose i jak scenariusz miasteczka, w którym zakazano tańca, tworzy podstawę zagrywki.",
+      "odpowiedz_wzorcowa": "- miasteczko jako tło scenariusza\\n- zakaz tańca jest centralnym elementem historii\\n- taniec i jego zakaz tworzą podstawowy konflikt",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play12-varA"
+    },
+    {
+      "id": "94e6ac8d-31ff-4476-93bc-922993e4fcf8",
+      "pytanie": "Jaką funkcję pełnią taniec i młyn w historii oraz dlaczego właśnie mieszkańcy zacofanych miasteczek stanowią grupę docelową według materiału?",
+      "odpowiedz_wzorcowa": "- taniec jest centralnym motywem\\n- młyn jest elementem scenariusza\\n- grupa docelowa: mieszkańcy zacofanych miasteczek",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play12-varB"
+    },
+    {
+      "id": "c1b94285-bb06-4fe7-b258-a6d6411b32bf",
+      "pytanie": "Dlaczego The Footloose wymaga bardzo szczególnego kontekstu miejsca - miasteczka, w którym rzeczywiście obowiązuje zakaz tańca - i co się dzieje, gdy taki warunek nie występuje?",
+      "odpowiedz_wzorcowa": "- szczególny kontekst miejsca\\n- zakaz tańca jako warunek wyjściowy\\n- bez tego kontekstu nie ma podstawowego scenariusza",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play12-varC"
+    }
+  ]
+}

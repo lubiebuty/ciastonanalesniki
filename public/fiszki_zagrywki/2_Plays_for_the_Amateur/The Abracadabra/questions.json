@@ -1,0 +1,32 @@
+{
+  "index": 8,
+  "title": "The Abracadabra",
+  "folder": "2_Plays_for_the_Amateur/The Abracadabra",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Abracadabra/The Abracadabra.pdf",
+  "topics": [
+    {
+      "id": "a6816d55-5a83-4818-8a9e-efa705d49e62",
+      "pytanie": "Na czym polega „Abracadabra” i jaki prosty trik stanowi jej centralny element?",
+      "odpowiedz_wzorcowa": "- sztuczka magiczna\\n- kajdanki\\n- element uwolnienia",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play8-varA"
+    },
+    {
+      "id": "1d45f3b4-c856-44ab-bcc6-7ba4aa728ba7",
+      "pytanie": "Jakie przedmioty są potrzebne do wykonania sztuczki, jaki efekt ma ona wywołać i jakie poważne ograniczenie lub ryzyko materiał wskazuje przy tej zagrywce?",
+      "odpowiedz_wzorcowa": "- kajdanki\\n- kluczyk\\n- ryzyko bezprawnego pozbawienia wolności",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play8-varB"
+    },
+    {
+      "id": "466e129a-c315-4489-8e67-3bf57e71c33b",
+      "pytanie": "Jakie ograniczenie prawne jest bezpośrednio wskazane przy The Abracadabra?",
+      "odpowiedz_wzorcowa": "- ryzyko bezprawnego pozbawienia wolności",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play8-varC"
+    }
+  ]
+}

@@ -98,17 +98,28 @@ export default function FrejerPage() {
             CHAPTERS VIEW
             ═════════════════════════════════════════════════════════════════ */}
         <div className="sketch-box p-6 sm:p-8 bg-white space-y-6">
-          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b-2 border-dashed border-slate-300 pb-4">
-            <div className="space-y-2">
-              <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
-                The Playbook
+          <div className="flex flex-col sm:flex-row sm:items-end justify-between gap-4 border-b-[3px] border-dashed border-slate-900 pb-4">
+            <div className="space-y-4">
+              <Link
+                href="/"
+                className="inline-flex items-center justify-center p-2 rounded-xl border-[2.5px] border-slate-900 bg-white hover:bg-slate-50 shadow-[3px_3px_0px_#0f172a] active:translate-x-0.5 active:translate-y-0.5 transition-all w-fit"
+                aria-label="Wróć na stronę główną"
+              >
+                <svg className="w-6 h-6 stroke-slate-900 fill-none" viewBox="0 0 24 24" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <path d="m15 18-6-6 6-6"/>
+                </svg>
+              </Link>
+              <div className="space-y-2">
+                <div className="inline-block px-3 py-1 rounded-md border-2 border-slate-900 bg-amber-200 font-extrabold text-xs uppercase tracking-wider text-slate-900 shadow-[2px_2px_0px_#0f172a]">
+                  The Playbook
+                </div>
+                <h2 className="text-2xl sm:text-4xl font-extrabold tracking-wide leading-tight text-slate-900">
+                  Trening Cwaniaczka
+                </h2>
+                <p className="text-sm font-bold text-slate-500">
+                  System zagrywek podzielony na 4 działy (od podstawowych do zaawansowanych).
+                </p>
               </div>
-              <h2 className="text-2xl sm:text-4xl font-extrabold tracking-wide leading-tight text-slate-900">
-                Trening Cwaniaczka
-              </h2>
-              <p className="text-sm font-bold text-slate-500">
-                System zagrywek podzielony na 4 działy (od podstawowych do zaawansowanych).
-              </p>
             </div>
           </div>
 

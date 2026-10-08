@@ -1,0 +1,32 @@
+{
+  "index": 15,
+  "title": "The Call Barney Stinson",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Call Barney Stinson",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Call Barney Stinson/The Call Barney Stinson.pdf",
+  "topics": [
+    {
+      "id": "e9b4e21a-621f-4f66-8cff-a7bd7f60977b",
+      "pytanie": "Na czym polega „The Call Barney Stinson” i w jaki sposób wykorzystuje duże wydarzenie publiczne?",
+      "odpowiedz_wzorcowa": "- duże wydarzenie sportowe\\n- transparent z numerem telefonu\\n- kadr transmisji",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play15-varA"
+    },
+    {
+      "id": "f18e718d-7a6c-4e5e-8832-8fd48e33da95",
+      "pytanie": "Co ma znaleźć się na transparencie, w którym miejscu powinien się on pojawić i jaki typ uczestniczek materiał wskazuje jako odbiorczynie?",
+      "odpowiedz_wzorcowa": "- miłośniczki gwiazd\\n- duże wydarzenie sportowe\\n- dobre miejsce w kadrze",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play15-varB"
+    },
+    {
+      "id": "4d2db2c8-4a26-4f6d-be39-f3e7acedd1f2",
+      "pytanie": "Jaki warunek miejsca jest najważniejszy dla The Call Barney Stinson?",
+      "odpowiedz_wzorcowa": "- duże wydarzenie sportowe\\n- miejsce dobrze widoczne w kadrze/transmisji",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play15-varC"
+    }
+  ]
+}

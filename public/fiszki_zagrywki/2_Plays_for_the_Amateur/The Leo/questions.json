@@ -1,0 +1,32 @@
+{
+  "index": 7,
+  "title": "The Leo",
+  "folder": "2_Plays_for_the_Amateur/The Leo",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Leo/The Leo.pdf",
+  "topics": [
+    {
+      "id": "45eabdfd-4eeb-4c1f-a899-d19339da3009",
+      "pytanie": "Jaki jest mechanizm „The Leo” i na jakim rodzaju rozpoznawalności opiera się ta zagrywka?",
+      "odpowiedz_wzorcowa": "- podszywanie się pod Leonardo DiCaprio\\n- wykorzystanie sławy\\n- koledzy potwierdzający historię",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play7-varA"
+    },
+    {
+      "id": "4f5442d6-3f5e-4cca-b621-1370d8115e79",
+      "pytanie": "Jakie elementy mają wspierać podszywanie się pod Leonardo DiCaprio i dlaczego aktualność jego obecności w popkulturze ma znaczenie?",
+      "odpowiedz_wzorcowa": "- groupies\\n- okulary lotnicze\\n- kozia bródka\\n- koledzy",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play7-varB"
+    },
+    {
+      "id": "f5a93565-bd86-4869-aa6c-8a4ba6f7779d",
+      "pytanie": "Jaki warunek sytuacyjny sprawia, że The Leo ma w źródle lepszy kontekst?",
+      "odpowiedz_wzorcowa": "- większa aktualność rozpoznawalności Leonardo DiCaprio\\n- szczególnie sprzyjający kontekst: jego film jest w kinach",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play7-varC"
+    }
+  ]
+}

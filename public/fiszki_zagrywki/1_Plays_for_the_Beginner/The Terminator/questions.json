@@ -1,0 +1,32 @@
+{
+  "index": 6,
+  "title": "The Terminator",
+  "folder": "1_Plays_for_the_Beginner/The Terminator",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Terminator/The Terminator.pdf",
+  "topics": [
+    {
+      "id": "c84fdc84-3bcb-4824-bae3-0b235d1a2a08",
+      "pytanie": "Jaki jest koncept „The Terminator” i jaki efekt ma wywołać sposób wejścia w tę rolę?",
+      "odpowiedz_wzorcowa": "- wejście w oparach suchego lodu\\n- rola wysłannika z przyszłości\\n- efektowna, futurystyczna prezentacja",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play6-varA"
+    },
+    {
+      "id": "313e9d0f-922b-439a-b479-437e872cebe6",
+      "pytanie": "Jakie elementy tej zagrywki materiał wskazuje jako kluczowe, do jakiego typu kobiet jest ona kierowana i jakie istotne ryzyko zostało przy niej zaznaczone?",
+      "odpowiedz_wzorcowa": "- grupa docelowa\\n- suchy lód\\n- wysokie ryzyko zatrzymania",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play6-varB"
+    },
+    {
+      "id": "d5e70dca-d6f0-4319-9737-5adb502346f1",
+      "pytanie": "Jakie ograniczenie lub ryzyko The Terminator jest najważniejsze z punktu widzenia zastosowania zagrywki?",
+      "odpowiedz_wzorcowa": "- wysokie ryzyko zatrzymania\\n- wymóg względnej sprawności fizycznej\\n- szczególny dyskomfort związany z nagością przed innymi mężczyznami",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play6-varC"
+    }
+  ]
+}

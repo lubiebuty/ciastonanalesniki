@@ -1,0 +1,32 @@
+{
+  "index": 14,
+  "title": "The Ted Mosby",
+  "folder": "2_Plays_for_the_Amateur/The Ted Mosby",
+  "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Ted Mosby/The Ted Mosby.pdf",
+  "topics": [
+    {
+      "id": "982f7cd2-5b64-4831-aaea-2da274a7ce9d",
+      "pytanie": "Na czym polega „The Ted Mosby” i jaki rodzaj romantycznej tragedii jest w niej odgrywany?",
+      "odpowiedz_wzorcowa": "- porzucenie przed ślubem\\n- sytuacja tuż przed ołtarzem\\n- romantyczna tragedia",
+      "dzial_numer": 5,
+      "wariant": "A",
+      "id_slug": "playbook-chap5-play14-varA"
+    },
+    {
+      "id": "13152867-eb4c-46a1-a4d9-0283fa0d8d68",
+      "pytanie": "Jakie trzy elementy wyglądu lub rekwizytów mają wspierać tę rolę, jaką sytuację przedstawia mężczyzna i które grupy kobiet według materiału mogą być szczególnie zainteresowane tą narracją?",
+      "odpowiedz_wzorcowa": "- smoking\\n- krople do oczu\\n- obrączka\\n- wieczne druhny\\n- rozwódki",
+      "dzial_numer": 5,
+      "wariant": "B",
+      "id_slug": "playbook-chap5-play14-varB"
+    },
+    {
+      "id": "0d49e707-0d57-43a9-8324-076402c283b8",
+      "pytanie": "Jaki warunek przygotowania jest istotny dla The Ted Mosby i dlaczego?",
+      "odpowiedz_wzorcowa": "- smoking\\n- krople do oczu\\n- obrączka\\n- publiczny kontekst sceny",
+      "dzial_numer": 5,
+      "wariant": "C",
+      "id_slug": "playbook-chap5-play14-varC"
+    }
+  ]
+}

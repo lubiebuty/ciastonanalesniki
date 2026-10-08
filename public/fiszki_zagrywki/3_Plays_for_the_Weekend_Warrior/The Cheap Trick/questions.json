@@ -1,0 +1,32 @@
+{
+  "index": 10,
+  "title": "The Cheap Trick",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Cheap Trick",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Cheap Trick/The Cheap Trick.pdf",
+  "topics": [
+    {
+      "id": "739b4562-1457-460e-b99d-28e0d55f63ef",
+      "pytanie": "Jaki jest koncept „The Cheap Trick” i jaką fikcyjną tożsamość wykorzystuje?",
+      "odpowiedz_wzorcowa": "- basista Cheap Trick\\n- tożsamość konkretnego zespołu",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play10-varA"
+    },
+    {
+      "id": "41852f73-2051-4a77-bf96-9c60aa9b3a51",
+      "pytanie": "Jakie elementy wyglądu mają pomóc stworzyć wizerunek basisty, czym różni się ta zagrywka od zwykłego podawania się za muzyka i do jakiego typu kobiet jest skierowana?",
+      "odpowiedz_wzorcowa": "- groupies\\n- dżinsowa kurtka\\n- naszywka\\n- przedłużki",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play10-varB"
+    },
+    {
+      "id": "83eeec64-be00-492e-80e4-3eb8429bcf0f",
+      "pytanie": "Jakie przygotowanie kostiumowe jest wymagane w The Cheap Trick?",
+      "odpowiedz_wzorcowa": "- dżinsowa kurtka\\n- naszywka Cheap Trick\\n- przedłużki włosów",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play10-varC"
+    }
+  ]
+}

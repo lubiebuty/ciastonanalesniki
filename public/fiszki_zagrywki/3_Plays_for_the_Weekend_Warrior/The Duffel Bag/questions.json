@@ -1,0 +1,32 @@
+{
+  "index": 2,
+  "title": "The Duffel Bag",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Duffel Bag",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Duffel Bag/The Duffel Bag.pdf",
+  "topics": [
+    {
+      "id": "7e4c3564-a117-4054-bee8-401e6dcdbaff",
+      "pytanie": "Na czym polega „The Duffel Bag” i jaką sytuację wykorzystuje jako punkt wyjścia do rozmowy?",
+      "odpowiedz_wzorcowa": "- luk bagażowy międzynarodowego lotu\\n- zmarznięty biznesmen\\n- zaskakujące „wyjechanie” z bagażu",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play2-varA"
+    },
+    {
+      "id": "30d14f66-af35-49f1-bfdf-f0f542d8bfe2",
+      "pytanie": "Jaka jest rola dużej torby i lotniska, skąd ma „pojawić się” bohater zagrywki i jaką postać ma w tej historii odgrywać?",
+      "odpowiedz_wzorcowa": "- obcokrajowczynie\\n- duża torba\\n- lotnisko",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play2-varB"
+    },
+    {
+      "id": "cd2abc70-65e1-4679-b04f-cf5b95457795",
+      "pytanie": "Jaki warunek miejsca i rekwizytu jest niezbędny dla The Duffel Bag?",
+      "odpowiedz_wzorcowa": "- lotnisko / międzynarodowa karuzela bagażowa\\n- duża torba podróżna",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play2-varC"
+    }
+  ]
+}

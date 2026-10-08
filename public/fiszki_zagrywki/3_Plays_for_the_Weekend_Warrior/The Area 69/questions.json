@@ -1,0 +1,32 @@
+{
+  "index": 7,
+  "title": "The Area 69",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Area 69",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Area 69/The Area 69.pdf",
+  "topics": [
+    {
+      "id": "40cc62e3-6dc8-4fcc-8973-88cebe95d21a",
+      "pytanie": "Na czym polega „The Area 69” i jaki nietypowy sposób naśladowania drugiej osoby stanowi jej podstawę?",
+      "odpowiedz_wzorcowa": "- naśladowanie każdego ruchu\\n- udawanie kosmity\\n- połączenie mimikry z fikcyjną tożsamością",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play7-varA"
+    },
+    {
+      "id": "7071fc15-3f85-4c61-a30f-a7d80e511a46",
+      "pytanie": "Co dokładnie ma robić mężczyzna, jaką fikcyjną tożsamość przedstawia i jakie trzy grupy kobiet zostały wymienione jako grupa docelowa?",
+      "odpowiedz_wzorcowa": "- fanki sci-fi\\n- wierzące\\n- wiejskie",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play7-varB"
+    },
+    {
+      "id": "18d7d6bd-4c46-4c26-8aad-4a94a543a94a",
+      "pytanie": "Jakie źródłowe ograniczenie może przerwać The Area 69 już na początku scenki?",
+      "odpowiedz_wzorcowa": "- rozmówczyni może się wystraszyć i odejść\\n- początkowe naśladowanie może zostać odebrane jako zbyt niepokojące",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play7-varC"
+    }
+  ]
+}

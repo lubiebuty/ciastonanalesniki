@@ -1,0 +1,32 @@
+{
+  "index": 7,
+  "title": "The Boy In The Bubble",
+  "folder": "4_Plays_for_the_Advanced/The Boy In The Bubble",
+  "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Boy In The Bubble/The Boy In The Bubble.pdf",
+  "topics": [
+    {
+      "id": "c52f8449-00c4-42e4-8d68-fd1db84d6e99",
+      "pytanie": "Wyjaśnij, na czym polega The Boy in the Bubble i jak samo wejście do baru w wielkiej bańce tworzy podstawę całego scenariusza.",
+      "odpowiedz_wzorcowa": "- wejście do baru\\n- wielka bańka jako centralny element\\n- bańka tworzy sytuację, od której rozpoczyna się kontakt",
+      "dzial_numer": 7,
+      "wariant": "A",
+      "id_slug": "playbook-chap7-play7-varA"
+    },
+    {
+      "id": "456e7f3c-fd80-4435-afcb-435770a142cb",
+      "pytanie": "Dlaczego wielka bańka jest centralnym elementem zagrywki i w jaki sposób jej niezwykłość łączy się z grupą docelową określoną w materiale jako osoby naiwne?",
+      "odpowiedz_wzorcowa": "- wielka bańka jest niezbędnym centrum scenariusza\\n- grupa docelowa: osoby naiwne\\n- uczeń łączy niezwykłość sytuacji z funkcją rozpoczęcia kontaktu",
+      "dzial_numer": 7,
+      "wariant": "B",
+      "id_slug": "playbook-chap7-play7-varB"
+    },
+    {
+      "id": "529b7c60-729d-4839-bc9c-ab3a61cfe637",
+      "pytanie": "Jaki konkretny warunek zastosowania wynika z opisu The Boy in the Bubble - i dlaczego brak możliwości wejścia do odpowiedniego baru z wielką bańką sprawia, że scenariusz nie może zostać zrealizowany?",
+      "odpowiedz_wzorcowa": "- odpowiednie miejsce: bar\\n- wielka bańka jako konieczny element wykonania\\n- brak jednego z tych warunków usuwa podstawę scenariusza",
+      "dzial_numer": 7,
+      "wariant": "C",
+      "id_slug": "playbook-chap7-play7-varC"
+    }
+  ]
+}

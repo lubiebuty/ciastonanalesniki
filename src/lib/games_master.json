@@ -1,0 +1,2169 @@
+{
+  "4": [
+    {
+      "index": 1,
+      "title": "The SNASA",
+      "folder": "1_Plays_for_the_Beginner/The SNASA",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The SNASA/The SNASA.pdf",
+      "topics": [
+        {
+          "id": "6cc70895-992f-4f28-bd4e-1390483318db",
+          "pytanie": "Na czym polega taktyka „The SNASA” i jaki mechanizm ma sprawić, że rozmówczyni uwierzy w przedstawioną historię?",
+          "odpowiedz_wzorcowa": "- udzawanie pracownika „Secret NASA”\\n- fikcyjna tożsamość rządowego programu kosmicznego\\n- historia ma zostać przedstawiona jako wiarygodna",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play1-varA"
+        },
+        {
+          "id": "ba2375db-054a-4816-863e-6c1e34324dd0",
+          "pytanie": "Jakie cechy osoby, do której kierowana jest ta zagrywka, według materiału zwiększają jej podatność na tę historię i jaki element dodatkowy został wymieniony jako pomocny w uwiarygodnieniu roli?",
+          "odpowiedz_wzorcowa": "- łatwowierność jako wskazana grupa docelowa\\n- kask jako dodatkowy element\\n- rozumienie, że kask nie jest rdzeniem historii",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play1-varB"
+        },
+        {
+          "id": "29669dba-4ce7-46ea-a28d-6e0fb45658e7",
+          "pytanie": "Jaki warunek dotyczący odbiorczyni i wiarygodności roli jest najważniejszy dla zastosowania The SNASA?",
+          "odpowiedz_wzorcowa": "- podatność odbiorczyni na przedstawioną historię\\n- rozumienie, że kask jest elementem pomocniczym, a nie rdzeniem zagrywki",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play1-varC"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "title": "The One Week To Live",
+      "folder": "1_Plays_for_the_Beginner/The One Week To Live",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The One Week To Live/The One Week To Live.pdf",
+      "topics": [
+        {
+          "id": "5e31390a-4829-4461-bd04-58542ae0e1d4",
+          "pytanie": "Na czym polega taktyka „One Week to Live” i jaka emocja ma być jej głównym elementem?",
+          "odpowiedz_wzorcowa": "- kaszel w miejscu publicznym\\n- wyznanie, że zostało tydzień życia\\n- emocjonalny motyw ciężkiej sytuacji",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play2-varA"
+        },
+        {
+          "id": "25df5549-3e7a-44b2-87e0-302e6b89ce58",
+          "pytanie": "Jak przebiega schemat tej zagrywki od momentu pojawienia się kaszlu do „wyznania” o pozostałym czasie życia i jaki typ kobiet materiał wskazuje jako szczególnie podatny?",
+          "odpowiedz_wzorcowa": "- „naturalne pielęgniarki” jako wskazana grupa\\n- kaszel i wyznanie jako sekwencja",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play2-varB"
+        },
+        {
+          "id": "213b1571-1b48-4ea2-9717-f8a9b644f906",
+          "pytanie": "Jaki konkretny warunek wykonania musi być spełniony, aby The One Week to Live mogło przebiegać zgodnie ze źródłem?",
+          "odpowiedz_wzorcowa": "- miejsce publiczne\\n- wiarygodny, wyraźny kaszel rozpoczynający scenę",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play2-varC"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "title": "The Blind Date",
+      "folder": "1_Plays_for_the_Beginner/The Blind Date",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Blind Date/The Blind Date.pdf",
+      "topics": [
+        {
+          "id": "15cf9df2-dd5b-4610-8baa-1dfe0119b16c",
+          "pytanie": "Na czym polega „The Blind Date” i jaka sytuacja społeczna jest w niej wykorzystywana?",
+          "odpowiedz_wzorcowa": "- pytanie „Czy ty jesteś Stacy?”\\n- udawanie osoby wystawionej przez randkę\\n- wykorzystanie sytuacji randkowej jako pretekstu",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play3-varA"
+        },
+        {
+          "id": "ec6c631b-80a9-459b-9af7-0f63b1d43ff0",
+          "pytanie": "Jaką funkcję pełni powtarzane pytanie „Czy ty jesteś Stacy?” w opisanym schemacie i jaki typ rozmówczyni materiał wskazuje jako szczególnie podatny?",
+          "odpowiedz_wzorcowa": "- desperatki i „królowe litości”\\n- róża",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play3-varB"
+        },
+        {
+          "id": "c44f2127-63f8-4d5b-a73a-bc177d3809f7",
+          "pytanie": "Jaki rekwizyt jest wymagany w The Blind Date i dlaczego ma znaczenie dla rozpoczęcia scenariusza?",
+          "odpowiedz_wzorcowa": "- pojedyncza róża\\n- róża wspiera scenariusz rzekomej randki i pytania o Stacy",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play3-varC"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "title": "The Don't Drink That",
+      "folder": "1_Plays_for_the_Beginner/The Dont Drink That",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Dont Drink That/The Dont Drink That.pdf",
+      "topics": [
+        {
+          "id": "63847826-902d-4890-8044-4962c982ecd0",
+          "pytanie": "Jaki jest podstawowy schemat taktyki „Don’t Drink That!”?",
+          "odpowiedz_wzorcowa": "- rzekomo niebezpieczna substancja w drinku\\n- nagłe „ratowanie” dziewczyny\\n- przedstawienie sytuacji jako zagrożenia",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play4-varA"
+        },
+        {
+          "id": "e81fc9fe-d021-4007-ab6e-760307ca2140",
+          "pytanie": "Jakie wyraźne ryzyko stanowi najważniejsze ograniczenie The Don’t Drink That!?",
+          "odpowiedz_wzorcowa": "- ryzyko fizycznej reakcji i oberwania\\n- uznanie tego ryzyka za główne źródłowe ograniczenie",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play4-varC"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "title": "The Rumspringa",
+      "folder": "1_Plays_for_the_Beginner/The Rumspringa",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Rumspringa/The Rumspringa.pdf",
+      "topics": [
+        {
+          "id": "5e6f984e-88f2-4a7b-96ea-35d0371456e3",
+          "pytanie": "Na czym polega „The Rumspringa” i jaki element tożsamości kulturowej zostaje w niej wykorzystany?",
+          "odpowiedz_wzorcowa": "- udawanie Amisza\\n- rytuał Rumspringa\\n- tożsamość kulturowa jako rdzeń historii",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play5-varA"
+        },
+        {
+          "id": "08f55211-1141-43e6-892b-3a3cf4af9410",
+          "pytanie": "Jakie elementy wyglądu i przedstawionej historii mają wspierać wiarygodność tej roli oraz jakie inne rytuały przejścia materiał podaje jako analogiczne pomysły?",
+          "odpowiedz_wzorcowa": "- broda\\n- źle leżący garnitur\\n- biblijne imię",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play5-varB"
+        },
+        {
+          "id": "844f1f08-62ab-47ae-a643-54c4f1d725f6",
+          "pytanie": "Jakie elementy wyglądu są warunkiem wiarygodnego odegrania The Rumspringa?",
+          "odpowiedz_wzorcowa": "- rzadka/niejednolita broda (patchy facial hair)\\n- źle dopasowany garnitur\\n- imię ze Starego Testamentu",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play5-varC"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "title": "The Terminator",
+      "folder": "1_Plays_for_the_Beginner/The Terminator",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Terminator/The Terminator.pdf",
+      "topics": [
+        {
+          "id": "c84fdc84-3bcb-4824-bae3-0b235d1a2a08",
+          "pytanie": "Jaki jest koncept „The Terminator” i jaki efekt ma wywołać sposób wejścia w tę rolę?",
+          "odpowiedz_wzorcowa": "- wejście w oparach suchego lodu\\n- rola wysłannika z przyszłości\\n- efektowna, futurystyczna prezentacja",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play6-varA"
+        },
+        {
+          "id": "313e9d0f-922b-439a-b479-437e872cebe6",
+          "pytanie": "Jakie elementy tej zagrywki materiał wskazuje jako kluczowe, do jakiego typu kobiet jest ona kierowana i jakie istotne ryzyko zostało przy niej zaznaczone?",
+          "odpowiedz_wzorcowa": "- grupa docelowa\\n- suchy lód\\n- wysokie ryzyko zatrzymania",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play6-varB"
+        },
+        {
+          "id": "d5e70dca-d6f0-4319-9737-5adb502346f1",
+          "pytanie": "Jakie ograniczenie lub ryzyko The Terminator jest najważniejsze z punktu widzenia zastosowania zagrywki?",
+          "odpowiedz_wzorcowa": "- wysokie ryzyko zatrzymania\\n- wymóg względnej sprawności fizycznej\\n- szczególny dyskomfort związany z nagością przed innymi mężczyznami",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play6-varC"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "title": "The Test Tube",
+      "folder": "1_Plays_for_the_Beginner/The Test Tube",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Test Tube/The Test Tube.pdf",
+      "topics": []
+    },
+    {
+      "index": 8,
+      "title": "The Escaped Convict",
+      "folder": "1_Plays_for_the_Beginner/The Escaped Convict",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Escaped Convict/The Escaped Convict.pdf",
+      "topics": [
+        {
+          "id": "2b4a3ba0-7c45-48f6-83bf-6de2e5ea2b0d",
+          "pytanie": "Na czym polega „The Escaped Convict” i jaką historię przedstawia osoba stosująca tę zagrywkę?",
+          "odpowiedz_wzorcowa": "- zbiegiem jest osoba udawana przez mężczyznę\\n- niesłuszne skazanie\\n- ucieczka z więzienia",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play8-varA"
+        },
+        {
+          "id": "7ba99f02-9b3a-4013-92e1-647baa5a49cb",
+          "pytanie": "Jaką funkcję pełnią kajdany w przedstawionej historii i jaki konkretnie element narracji ma wzbudzić zainteresowanie lub emocjonalne zaangażowanie rozmówczyni?",
+          "odpowiedz_wzorcowa": "- kajdany\\n- niesłuszne skazanie jako narracja",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play8-varB"
+        },
+        {
+          "id": "8e88fd38-d738-4a2c-85dc-f1a2ef6d56ac",
+          "pytanie": "Jaki element przygotowania jest niezbędny, aby zachować założenia The Escaped Convict?",
+          "odpowiedz_wzorcowa": "- kajdany jako rekwizyt\\n- powiązanie kajdan z rolą zbiega",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play8-varC"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "title": "The European",
+      "folder": "1_Plays_for_the_Beginner/The European",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The European/The European.pdf",
+      "topics": [
+        {
+          "id": "4c0123aa-7e3c-4835-b68c-419bc3ea7dbc",
+          "pytanie": "Jaki jest podstawowy pomysł stojący za „The European”?",
+          "odpowiedz_wzorcowa": "- fikcyjny europejski kraj\\n- udawanie Europejczyka\\n- nieistniejący, ale „znany” kraj",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play9-varA"
+        },
+        {
+          "id": "477b2906-8733-417b-9f48-8dddc6c93949",
+          "pytanie": "Jaką rolę odgrywa dziwny akcent, jaki rodzaj rozmówczyni materiał wskazuje jako potencjalnie bardziej podatny i na czym polega żart związany z „krajem, o którym wszyscy słyszeli, choć nie istnieje”?",
+          "odpowiedz_wzorcowa": "- dziwny akcent\\n- mądrale\\n- „99° Celsius”",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play9-varB"
+        },
+        {
+          "id": "1fd746c3-53b3-4852-ba0c-fe086caf7f24",
+          "pytanie": "Jaki warunek językowy jest charakterystyczny dla The European i po co jest potrzebny?",
+          "odpowiedz_wzorcowa": "- dziwny akcent\\n- jego funkcja: uwiarygodnienie fikcyjnej europejskiej tożsamości",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play9-varC"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "title": "The Olympian",
+      "folder": "1_Plays_for_the_Beginner/The Olympian",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Olympian/The Olympian.pdf",
+      "topics": [
+        {
+          "id": "6568f2a2-87ca-4e55-912c-87ed2a91b70f",
+          "pytanie": "Na czym polega „The Olympian” i w jakim szczególnym momencie ma największy sens według materiału?",
+          "odpowiedz_wzorcowa": "- udawanie olimpijczyka\\n- odwołanie do igrzysk\\n- budowanie wiarygodnego wizerunku sportowca",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play10-varA"
+        },
+        {
+          "id": "2fab716f-d3cf-460c-8fed-e45963ec1627",
+          "pytanie": "Jakie elementy rekwizytowe zostały wymienione jako sposób na stworzenie wizerunku olimpijczyka i jaki szczególny moment zastosowania materiał wskazuje?",
+          "odpowiedz_wzorcowa": "- kurtka z literami USA z taśmy\\n- ciastko owsiane w folii jako „srebrny medal”\\n- patriotki",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play10-varB"
+        },
+        {
+          "id": "722db755-173d-4127-a7b6-2894c82f31d8",
+          "pytanie": "Jakie ograniczenie czasowe określa możliwość zastosowania The Olympian?",
+          "odpowiedz_wzorcowa": "- sezonowość\\n- około trzytygodniowe okno co dwa lata związane z igrzyskami",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play10-varC"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "title": "The Author",
+      "folder": "1_Plays_for_the_Beginner/The Author",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Author/The Author.pdf",
+      "topics": [
+        {
+          "id": "015e9446-6c61-4837-a4d8-d022b7b07168",
+          "pytanie": "Na czym polega „The Author” i jaki wspólny punkt zainteresowania wykorzystuje?",
+          "odpowiedz_wzorcowa": "- przedstawienie się jako autor\\n- książka czytana przez rozmówczynię\\n- wspólny punkt zainteresowania",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play11-varA"
+        },
+        {
+          "id": "e68576e0-125c-407d-a4c4-d19f030c4ea0",
+          "pytanie": "Jaką funkcję ma znajomość książki, którą czyta rozmówczyni, i jaki typ kobiety materiał określa jako bardziej podatny?",
+          "odpowiedz_wzorcowa": "- książka jest czytana przez rozmówczynię\\n- „książkowe” jako grupa docelowa",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play11-varB"
+        },
+        {
+          "id": "714159b8-8afe-46b1-98e6-2650c17a2635",
+          "pytanie": "Jaki szczególny warunek może spowodować konieczność przerwania The Author według źródła?",
+          "odpowiedz_wzorcowa": "- autor używa inicjałów zamiast pełnego imienia\\n- taki szczegół może skomplikować wiarygodne odegranie roli autora",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play11-varC"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "title": "The Robot",
+      "folder": "1_Plays_for_the_Beginner/The Robot",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Robot/The Robot.pdf",
+      "topics": [
+        {
+          "id": "2d596824-8954-4638-a85d-c446866fd010",
+          "pytanie": "Jaka jest centralna fikcja w „The Robot” i jaki rodzaj relacji ma pomóc nawiązać?",
+          "odpowiedz_wzorcowa": "- robot z wojskowej bazy\\n- ucieczka z bazy\\n- chęć zrozumienia ludzkiej bliskości",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play12-varA"
+        },
+        {
+          "id": "a62d9eef-b538-4f94-ac12-985cc7715131",
+          "pytanie": "Jaką funkcję pełni olej, jaki motyw fabularny został wymieniony jako uzasadnienie pojawienia się „robota” i do jakiej grupy odbiorczyń skierowana jest ta taktyka?",
+          "odpowiedz_wzorcowa": "- olej\\n- fanki sci-fi",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play12-varB"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "title": "The I'm Joining The Marines",
+      "folder": "1_Plays_for_the_Beginner/The Im Joining The Marines",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Im Joining The Marines/The Im Joining The Marines.pdf",
+      "topics": [
+        {
+          "id": "ff7fa1b2-11cd-4d84-8464-94081cce713f",
+          "pytanie": "Na czym polega „Joining the Marines” i jaki rodzaj informacji o sobie ma być przedstawiony rozmówczyni?",
+          "odpowiedz_wzorcowa": "- deklaracja, że jutro idziesz do marines\\n- motyw służby wojskowej\\n- przedstawienie siebie jako przyszłego marines",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play13-varA"
+        },
+        {
+          "id": "0fa4f502-d037-47c9-a887-c7ef85a3f33c",
+          "pytanie": "Jaką rolę odgrywa „spojrzenie tysiąca jardów”, jaki typ kobiet materiał wskazuje jako odbiorczynie i jaki problem praktyczny wskazuje Barney?",
+          "odpowiedz_wzorcowa": "- „spojrzenie tysiąca jardów”\\n- patriotki\\n- uwaga, że trzeba potem naprawdę wstąpić",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play13-varB"
+        },
+        {
+          "id": "3d6fd72b-7507-4f53-a733-94a9aef34c40",
+          "pytanie": "Jakie praktyczne ryzyko jest w źródle wyraźnie związane z The Joining the Marines?",
+          "odpowiedz_wzorcowa": "- łatwość wykrycia, szczególnie w czasie pokoju\\n- źródłowa konsekwencja fabularna: rzeczywiste wstąpienie do Marines",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play13-varC"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "title": "The Little Orphan Barney",
+      "folder": "1_Plays_for_the_Beginner/The Little Orphan Barney",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Little Orphan Barney/The Little Orphan Barney.pdf",
+      "topics": [
+        {
+          "id": "b305bca8-30bf-4ed0-869e-0a9035ae30ed",
+          "pytanie": "Na czym polega „Little Orphan Barney” i jakie święta stanowią kontekst tej zagrywki?",
+          "odpowiedz_wzorcowa": "- udawanie sieroty\\n- Dzień Matki lub Dzień Ojca\\n- wykorzystanie określonego święta jako kontekstu",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play14-varA"
+        },
+        {
+          "id": "af9caab3-12e9-45c7-bb9f-42e161c430ad",
+          "pytanie": "Jak przebiega kluczowa zmiana narracji w The Little Orphan Barney po pytaniu o kontakt z rodzicami?",
+          "odpowiedz_wzorcowa": "- cierpliwość\\n- tylko dwa razy w roku\\n- Dzień Matki/Dzień Ojca",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play14-varB"
+        },
+        {
+          "id": "90a26eb8-9128-410a-8f2c-49fa81d1b7e7",
+          "pytanie": "Jakie ograniczenie czasowe jest kluczowe dla The Little Orphan Barney?",
+          "odpowiedz_wzorcowa": "- Dzień Matki lub Dzień Ojca\\n- tylko dwa razy w roku",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play14-varC"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "title": "The Fireman",
+      "folder": "1_Plays_for_the_Beginner/The Fireman",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Fireman/The Fireman.pdf",
+      "topics": [
+        {
+          "id": "d80276c4-7755-4121-bf89-21efb73edc0b",
+          "pytanie": "Jaki jest podstawowy schemat „The Fireman”?",
+          "odpowiedz_wzorcowa": "- udawanie strażaka\\n- przedstawienie się jako strażak",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play15-varA"
+        },
+        {
+          "id": "60e8f614-c6d7-4fbb-a5bc-705473f0bd98",
+          "pytanie": "Jakie ryzyka prawne lub społeczne materiał wskazuje przy tej zagrywce i jakie są to ryzyka?",
+          "odpowiedz_wzorcowa": "- nielegalność jako wskazane ryzyko\\n- możliwa złość prawdziwego strażaka",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play15-varB"
+        },
+        {
+          "id": "21e0e4b1-5c3f-49e6-ba87-924ce67e91f0",
+          "pytanie": "Jakie ryzyko praktyczne i prawne źródło wiąże z The Fireman?",
+          "odpowiedz_wzorcowa": "- ryzyko nielegalności\\n- ryzyko oczekiwania rzeczywistej wiedzy/reakcji strażaka\\n- możliwa konfrontacja z prawdziwym strażakiem",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play15-varC"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "title": "The Grandpa Wonka",
+      "folder": "1_Plays_for_the_Beginner/The Grandpa Wonka",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Grandpa Wonka/The Grandpa Wonka.pdf",
+      "topics": [
+        {
+          "id": "db343600-260d-4606-9ae0-70b7cec380a1",
+          "pytanie": "Na czym polega „Grandpa Wonka” i jaki rodzaj skojarzenia ma zostać wywołany?",
+          "odpowiedz_wzorcowa": "- wnuk Willy’ego Wonki\\n- fikcyjna relacja rodzinna\\n- odwołanie do świata Willy’ego Wonki",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play16-varA"
+        },
+        {
+          "id": "102159b9-42a0-444a-b704-6aa38d858107",
+          "pytanie": "Jaką funkcję pełnią cukierki i relacja rodzinna z Willym Wonką w The Grandpa Wonka?",
+          "odpowiedz_wzorcowa": "- cukierki\\n- „jak szanse na złoty bilet” jako opis prawdopodobieństwa\\n- łasuchy",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play16-varB"
+        },
+        {
+          "id": "ea16b9cb-91e2-4e9b-9723-d28edb745055",
+          "pytanie": "Jaki warunek przygotowania jest najważniejszy dla The Grandpa Wonka?",
+          "odpowiedz_wzorcowa": "- cukierki jako główny rekwizyt\\n- cukierki mają wspierać skojarzenie z Willym Wonką",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play16-varC"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "title": "The Naked Man",
+      "folder": "1_Plays_for_the_Beginner/The Naked Man",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Naked Man/The Naked Man.pdf",
+      "topics": [
+        {
+          "id": "86e1cc11-70f8-4f8e-88c6-cad398fe0da1",
+          "pytanie": "Jaki jest ogólny koncept „The Naked Man” według materiału?",
+          "odpowiedz_wzorcowa": "- pretekst wejścia do mieszkania\\n- jej powrót do mieszkania\\n- „nagła” sytuacja nagości",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play17-varA"
+        },
+        {
+          "id": "53669130-d254-4d95-be92-e4325ff61e90",
+          "pytanie": "Jakie założenia dotyczące miejsca i przebiegu są istotne w The Naked Man?",
+          "odpowiedz_wzorcowa": "- określony kontekst\\n- wszystkie typy kobiet",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play17-varB"
+        },
+        {
+          "id": "cab686bb-c08d-42bb-8f60-e217cdd26d96",
+          "pytanie": "Jaki warunek sytuacyjny musi zostać spełniony, aby The Naked Man mogło przebiegać zgodnie ze źródłem?",
+          "odpowiedz_wzorcowa": "- znalezienie się w mieszkaniu rozmówczyni pod opisanym pretekstem\\n- moment po jej wyjściu z pokoju",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play17-varC"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "title": "The Shotgun",
+      "folder": "1_Plays_for_the_Beginner/The Shotgun",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Shotgun/The Shotgun.pdf",
+      "topics": [
+        {
+          "id": "e53c507f-173b-409f-bc08-0029bbe66d72",
+          "pytanie": "Na czym polega The Shotgun i jaki podstawowy schemat działania wykorzystuje?",
+          "odpowiedz_wzorcowa": "- wielokrotne podejmowanie tej samej próby\\n- oczekiwanie na jedną zgodę jako rezultat wielu podejść",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play18-varA"
+        },
+        {
+          "id": "17dcdd1c-3f9f-4701-80c0-091afb40bb60",
+          "pytanie": "Jaką strategię społeczną zakłada ta zagrywka, ile prób sugeruje jej schemat i jaki profil rozmówczyni materiał wskazuje?",
+          "odpowiedz_wzorcowa": "- „gruba skóra”",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play18-varB"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "title": "The He's Not Coming",
+      "folder": "1_Plays_for_the_Beginner/The Hes Not Coming",
+      "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Hes Not Coming/The Hes Not Coming.pdf",
+      "topics": [
+        {
+          "id": "fcc1cf29-b9d9-424a-8808-271b390c8bf1",
+          "pytanie": "Na czym polega „He’s Not Coming” i jakie emocje rozmówczyni mają być punktem wyjścia dla tej historii?",
+          "odpowiedz_wzorcowa": "- komunikat „On nie przyjdzie”\\n- taras widokowy\\n- romantyczny kontekst oczekiwania",
+          "dzial_numer": 4,
+          "wariant": "A",
+          "id_slug": "playbook-chap4-play19-varA"
+        },
+        {
+          "id": "ca78c779-da78-43a0-a306-2c493fa64082",
+          "pytanie": "Jakie grupy docelowe wskazuje materiał i jaką funkcję pełni Empire State Building w przedstawionym schemacie?",
+          "odpowiedz_wzorcowa": "- romantyczki\\n- świeżo porzucone\\n- Empire State Building",
+          "dzial_numer": 4,
+          "wariant": "B",
+          "id_slug": "playbook-chap4-play19-varB"
+        },
+        {
+          "id": "747b5342-769b-463a-9dee-4de9391ee404",
+          "pytanie": "Jaki warunek miejsca jest niezbędny dla The He’s Not Coming i dlaczego miejsce ma znaczenie?",
+          "odpowiedz_wzorcowa": "- taras widokowy Empire State Building\\n- miejsce ma pełnić określony romantyczny kontekst scenariusza",
+          "dzial_numer": 4,
+          "wariant": "C",
+          "id_slug": "playbook-chap4-play19-varC"
+        }
+      ]
+    }
+  ],
+  "5": [
+    {
+      "index": 1,
+      "title": "The My Penis Grants Wishes",
+      "folder": "2_Plays_for_the_Amateur/The My Penis Grants Wishes",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The My Penis Grants Wishes/The My Penis Grants Wishes.pdf",
+      "topics": [
+        {
+          "id": "1e8f2303-1f49-4c3a-8825-c260902b7103",
+          "pytanie": "Na czym polega taktyka „My Penis Grants Wishes” i jaką fikcyjną rolę przyjmuje w niej mężczyzna?",
+          "odpowiedz_wzorcowa": "- arabski książę\\n- dżin\\n- wypadek z latającym dywanem",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play1-varA"
+        },
+        {
+          "id": "ae1f9921-595b-43b0-b86f-0ca291cec61e",
+          "pytanie": "Jakie elementy stroju mają pomóc w stworzeniu postaci arabskiego księcia, jaka historia ma uzasadniać jego pojawienie się i do jakiego typu kobiet według materiału skierowana jest ta zagrywka?",
+          "odpowiedz_wzorcowa": "- szaty\\n- tekturowa szabla\\n- turban\\n- romantyczki\\n- nauczycielki angielskiego",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play1-varB"
+        },
+        {
+          "id": "b7298d80-3ff3-4bdb-a718-829530128a21",
+          "pytanie": "Jakie ograniczenie dotyczące odbiorczyń źródło wskazuje przy The My Penis Grants Wishes?",
+          "odpowiedz_wzorcowa": "- możliwość urazenia części kobiet z Bliskiego Wschodu",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play1-varC"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "title": "The Jorge Posada",
+      "folder": "2_Plays_for_the_Amateur/The Jorge Posada",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Jorge Posada/The Jorge Posada.pdf",
+      "topics": [
+        {
+          "id": "bfd47f4e-8ace-43ad-8dda-440df8fc4d39",
+          "pytanie": "Na czym polega „The Jorge Posada” i jaki rodzaj statusu ma stworzyć ta zagrywka?",
+          "odpowiedz_wzorcowa": "- catcher\\n- pobliska drużyna\\n- sportowy status",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play2-varA"
+        },
+        {
+          "id": "50ce807b-fd66-418c-9df0-c5e2e4fa72ee",
+          "pytanie": "Jaką rolę sportową należy odegrać, do jakiej grupy kobiet materiał kieruje tę taktykę i jaki odpowiednik tej postaci sugeruje w przypadku Kanady?",
+          "odpowiedz_wzorcowa": "- fanki sławy i sportu\\n- catcher\\n- w Kanadzie: bramkarz hokejowy",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play2-varB"
+        },
+        {
+          "id": "62a57113-164d-442a-ab1b-6266da8c2a11",
+          "pytanie": "Jaki warunek sportowy jest potrzebny, aby The Jorge Posada zachowało swoją wiarygodność?",
+          "odpowiedz_wzorcowa": "- wygląd sugerujący pewną sprawność sportową\\n- dopasowanie roli do lokalnego sportu/drużyny",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play2-varC"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "title": "The Anniversary Of My Wife's Death",
+      "folder": "2_Plays_for_the_Amateur/The Anniversary Of My Wifes Death",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Anniversary Of My Wifes Death/The Anniversary Of My Wifes Death.pdf",
+      "topics": [
+        {
+          "id": "16166b73-0cb1-468b-8037-4298047bccc9",
+          "pytanie": "Jaki jest podstawowy mechanizm „The Anniversary of My Wife’s Death”?",
+          "odpowiedz_wzorcowa": "- rocznica śmierci żony\\n- historia o zmarłej żonie\\n- wzbudzenie poczucia winy",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play3-varA"
+        },
+        {
+          "id": "5cb9c69d-fea6-49f9-a80a-9a8ad607bd74",
+          "pytanie": "Jaką historię przedstawia się rozmówczyni, jaką emocję ma ona wzbudzić i jakie dwa elementy materiał wymienia jako pomocne w uwiarygodnieniu tej historii?",
+          "odpowiedz_wzorcowa": "- róża\\n- „Dylemat Złotowłosej”\\n- wiarygodna przyczyna śmierci",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play3-varB"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "title": "The Mannequin",
+      "folder": "2_Plays_for_the_Amateur/The Mannequin",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Mannequin/The Mannequin.pdf",
+      "topics": [
+        {
+          "id": "045d5ed7-2afd-40e6-bde4-f225b09211e6",
+          "pytanie": "Na czym polega „The Mannequin” i jaki element zaskoczenia jest kluczowy dla tej zagrywki?",
+          "odpowiedz_wzorcowa": "- nieruchome stanie w witrynie\\n- udawanie manekina\\n- moment „ożycia”",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play4-varA"
+        },
+        {
+          "id": "cd22f355-66bf-4a90-9339-e67c8ed2271a",
+          "pytanie": "Jakie trzy elementy przygotowania są potrzebne do wykonania tej taktyki zgodnie z materiałem?",
+          "odpowiedz_wzorcowa": "- garnitur\\n- cierpliwość\\n- mocne kolana\\n- kupujące",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play4-varB"
+        },
+        {
+          "id": "8aa4dd31-e32f-44d8-bc75-0a2f431a5a58",
+          "pytanie": "Jakie wymaganie wykonawcze ogranicza The Mannequin?",
+          "odpowiedz_wzorcowa": "- cierpliwość\\n- mocne kolana / możliwość długiego stania nieruchomo",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play4-varC"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "title": "Love At First Sight",
+      "folder": "2_Plays_for_the_Amateur/Love At First Sight",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/Love At First Sight/Love At First Sight.pdf",
+      "topics": [
+        {
+          "id": "ad243db8-2f44-4c99-b251-c20b00a90118",
+          "pytanie": "Jak wygląda podstawowy schemat „Love at First Sight” i jaki romantyczny motyw wykorzystuje?",
+          "odpowiedz_wzorcowa": "- slow motion\\n- piosenka w tle\\n- pytanie o miłość od pierwszego wejrzenia",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play5-varA"
+        },
+        {
+          "id": "2f6fb499-4a3f-4de6-a7f7-f79e553a5af9",
+          "pytanie": "Jaką rolę pełni kolega oraz boombox, jaki sposób przedstawienia sceny jest kluczowy i do jakiego typu kobiet materiał przypisuje tę zagrywkę?",
+          "odpowiedz_wzorcowa": "- kolega\\n- boombox\\n- „niewinne typy”",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play5-varB"
+        },
+        {
+          "id": "01d320fe-c092-414d-8748-a8d58f6bf92b",
+          "pytanie": "Jakie ograniczenie częstotliwości stosowania ma The Love at First Sight?",
+          "odpowiedz_wzorcowa": "- maksymalnie jedna próba w jednej lokalizacji na noc",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play5-varC"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "title": "The Biker",
+      "folder": "2_Plays_for_the_Amateur/The Biker",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Biker/The Biker.pdf",
+      "topics": [
+        {
+          "id": "86f764e5-0847-41d6-8232-74ee41a874ca",
+          "pytanie": "Na czym polega „The Biker” i jaki stereotyp osobowości wykorzystuje?",
+          "odpowiedz_wzorcowa": "- motocyklista\\n- wizerunek „bad boya”\\n- stereotyp motocyklisty",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play6-varA"
+        },
+        {
+          "id": "f5bac45b-a618-4d1d-b19a-5906f43fb89d",
+          "pytanie": "Jakie dwa elementy wyglądu zostały wymienione jako podstawowe dla tej roli, do jakiego typu kobiet jest ona skierowana i czemu służy generator nazw gangów motocyklowych?",
+          "odpowiedz_wzorcowa": "- skórzana kurtka\\n- kask\\n- fanki bad boyów\\n- generator nazw gangów",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play6-varB"
+        },
+        {
+          "id": "8362a6d4-798c-424e-8e36-40088c67d3ff",
+          "pytanie": "Jakie ryzyko pojawia się przy rozwijaniu w The Biker wątku gangu motocyklowego?",
+          "odpowiedz_wzorcowa": "- wariant z gangiem jest określony jako wysokiego ryzyka\\n- potrzebna jest fikcyjna nazwa gangu, jeśli ten motyw jest rozwijany",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play6-varC"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "title": "The Leo",
+      "folder": "2_Plays_for_the_Amateur/The Leo",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Leo/The Leo.pdf",
+      "topics": [
+        {
+          "id": "45eabdfd-4eeb-4c1f-a899-d19339da3009",
+          "pytanie": "Jaki jest mechanizm „The Leo” i na jakim rodzaju rozpoznawalności opiera się ta zagrywka?",
+          "odpowiedz_wzorcowa": "- podszywanie się pod Leonardo DiCaprio\\n- wykorzystanie sławy\\n- koledzy potwierdzający historię",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play7-varA"
+        },
+        {
+          "id": "4f5442d6-3f5e-4cca-b621-1370d8115e79",
+          "pytanie": "Jakie elementy mają wspierać podszywanie się pod Leonardo DiCaprio i dlaczego aktualność jego obecności w popkulturze ma znaczenie?",
+          "odpowiedz_wzorcowa": "- groupies\\n- okulary lotnicze\\n- kozia bródka\\n- koledzy",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play7-varB"
+        },
+        {
+          "id": "f5a93565-bd86-4869-aa6c-8a4ba6f7779d",
+          "pytanie": "Jaki warunek sytuacyjny sprawia, że The Leo ma w źródle lepszy kontekst?",
+          "odpowiedz_wzorcowa": "- większa aktualność rozpoznawalności Leonardo DiCaprio\\n- szczególnie sprzyjający kontekst: jego film jest w kinach",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play7-varC"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "title": "The Abracadabra",
+      "folder": "2_Plays_for_the_Amateur/The Abracadabra",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Abracadabra/The Abracadabra.pdf",
+      "topics": [
+        {
+          "id": "a6816d55-5a83-4818-8a9e-efa705d49e62",
+          "pytanie": "Na czym polega „Abracadabra” i jaki prosty trik stanowi jej centralny element?",
+          "odpowiedz_wzorcowa": "- sztuczka magiczna\\n- kajdanki\\n- element uwolnienia",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play8-varA"
+        },
+        {
+          "id": "1d45f3b4-c856-44ab-bcc6-7ba4aa728ba7",
+          "pytanie": "Jakie przedmioty są potrzebne do wykonania sztuczki, jaki efekt ma ona wywołać i jakie poważne ograniczenie lub ryzyko materiał wskazuje przy tej zagrywce?",
+          "odpowiedz_wzorcowa": "- kajdanki\\n- kluczyk\\n- ryzyko bezprawnego pozbawienia wolności",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play8-varB"
+        },
+        {
+          "id": "466e129a-c315-4489-8e67-3bf57e71c33b",
+          "pytanie": "Jakie ograniczenie prawne jest bezpośrednio wskazane przy The Abracadabra?",
+          "odpowiedz_wzorcowa": "- ryzyko bezprawnego pozbawienia wolności",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play8-varC"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "title": "Brian's Friend",
+      "folder": "2_Plays_for_the_Amateur/Brians Friend",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/Brians Friend/Brians Friend.pdf",
+      "topics": [
+        {
+          "id": "61b62a5b-29dc-4651-aada-b350b6a6d170",
+          "pytanie": "Jaki jest schemat „Brian’s Friend” i na jakim założeniu dotyczącym wcześniejszego spotkania opiera się ta taktyka?",
+          "odpowiedz_wzorcowa": "- sugerowanie wcześniejszego spotkania\\n- „zapomniałem imienia”\\n- „Jestem kolegą Briana”",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play9-varA"
+        },
+        {
+          "id": "661ab0b2-d41f-4aa3-9c49-232869e50d94",
+          "pytanie": "Jakie założenie musi zadziałać, aby pierwszy krok The Brian’s Friend był wiarygodny?",
+          "odpowiedz_wzorcowa": "- wiarygodna sugestia wcześniejszego spotkania\\n- Brian jako punkt odniesienia dla podtrzymania historii",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play9-varC"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "title": "The Bionic Man",
+      "folder": "2_Plays_for_the_Amateur/The Bionic Man",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Bionic Man/The Bionic Man.pdf",
+      "topics": [
+        {
+          "id": "e853f184-5024-43dd-978a-bee1d0084273",
+          "pytanie": "Na czym polega „Bionic Man” i jaką fikcyjną historię wykorzystuje do wyjaśnienia swojej siły?",
+          "odpowiedz_wzorcowa": "- mocny uścisk dłoni\\n- wojsko wymieniło części ciała na tytan\\n- fikcja bionicznych części",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play10-varA"
+        },
+        {
+          "id": "7de9b938-6dce-4296-8e6a-b1e9924a4205",
+          "pytanie": "Jakie ograniczenie lub ryzyko wykonania The Bionic Man źródło wskazuje?",
+          "odpowiedz_wzorcowa": "- ryzyko konfrontacji z prawdziwymi weteranami\\n- możliwa nieprzyjemna lub agresywna reakcja",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play10-varC"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "title": "The Stanley Cup",
+      "folder": "2_Plays_for_the_Amateur/The Stanley Cup",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Stanley Cup/The Stanley Cup.pdf",
+      "topics": [
+        {
+          "id": "7d540bb7-4cce-4809-acc4-78cbc4122ecf",
+          "pytanie": "Jaki jest koncept „The Stanley Cup” i w jaki sposób tworzy się pozór osiągnięcia sportowego?",
+          "odpowiedz_wzorcowa": "- domowej roboty Puchar Stanleya\\n- udawanie hokeisty\\n- pozór sportowego osiągnięcia",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play11-varA"
+        },
+        {
+          "id": "3171ce93-f6fe-4bdf-b6b6-5728a6ef21d2",
+          "pytanie": "Z jakich materiałów wykonuje się domowej roboty puchar, ile czasu według materiału zajmuje przygotowanie go i do jakiej konkretnej grupy kobiet kierowana jest ta zagrywka?",
+          "odpowiedz_wzorcowa": "- folia\\n- marker\\n- ok. 45 minut\\n- sportowe (nie kibicki)",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play11-varB"
+        },
+        {
+          "id": "a3c336ac-ccdf-4777-a098-c6875a1ebffe",
+          "pytanie": "Jaki praktyczny problem z przygotowaniem The Stanley Cup może ograniczać jej zastosowanie?",
+          "odpowiedz_wzorcowa": "- konieczność wykonania własnego pucharu\\n- pracochłonność przygotowania jako źródłowe utrudnienie",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play11-varC"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "title": "The Befuddled Puppy Owner",
+      "folder": "2_Plays_for_the_Amateur/The Befuddled Puppy Owner",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Befuddled Puppy Owner/The Befuddled Puppy Owner.pdf",
+      "topics": [
+        {
+          "id": "dbde7261-58a1-415c-afc2-81dd20f5253d",
+          "pytanie": "Na czym polega „The Befuddled Puppy Owner” i jaką sytuację społeczną wykorzystuje?",
+          "odpowiedz_wzorcowa": "- szczeniak „uciekający” w jej stronę\\n- prośba o pomoc\\n- kontakt przez wspólną sytuację ze zwierzęciem",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play12-varA"
+        },
+        {
+          "id": "411d55e7-694e-4b57-b2d6-0ac13d7a1af8",
+          "pytanie": "Jaki jest schemat związany ze szczeniakiem, o jaką pomoc prosi się rozmówczynię i jakie imię ma suczka w przedstawionej historii?",
+          "odpowiedz_wzorcowa": "- miłośniczki zwierząt\\n- szczeniak\\n- Oprah",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play12-varB"
+        },
+        {
+          "id": "066790f1-0074-46f9-89f7-b65fc531f420",
+          "pytanie": "Jakie praktyczne ograniczenie wiąże się z użyciem prawdziwego szczeniaka w The Befuddled Puppy Owner?",
+          "odpowiedz_wzorcowa": "- trudne i frustrujące szkolenie domowe szczeniaka",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play12-varC"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "title": "The Portrait",
+      "folder": "2_Plays_for_the_Amateur/The Portrait",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Portrait/The Portrait.pdf",
+      "topics": [
+        {
+          "id": "b35e4e5d-457a-4243-8738-dc9ead995b55",
+          "pytanie": "Jaki jest podstawowy mechanizm „The Portrait” i jaki rodzaj prestiżu ma stworzyć?",
+          "odpowiedz_wzorcowa": "- portret siebie jako arystokraty\\n- umieszczenie portretu w muzeum\\n- fikcyjny prestiż",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play13-varA"
+        },
+        {
+          "id": "73a40df1-2a26-4c5a-a0a0-e4fac4d189a5",
+          "pytanie": "Co przedstawia zamówiony portret, w jaki sposób ma się znaleźć w muzeum i do jakiego rodzaju kobiet materiał kieruje tę zagrywkę?",
+          "odpowiedz_wzorcowa": "- miłośniczki sztuki\\n- turystki\\n- pieniądze",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play13-varB"
+        },
+        {
+          "id": "98e3833d-1cb7-467e-ac09-afe96b3b903b",
+          "pytanie": "Jaki zasób jest niezbędny do zrealizowania The Portrait zgodnie ze źródłem?",
+          "odpowiedz_wzorcowa": "- pieniądze na wykonanie/umieszczenie portretu\\n- czas i możliwość działania w muzeum",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play13-varC"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "title": "The Ted Mosby",
+      "folder": "2_Plays_for_the_Amateur/The Ted Mosby",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Ted Mosby/The Ted Mosby.pdf",
+      "topics": [
+        {
+          "id": "982f7cd2-5b64-4831-aaea-2da274a7ce9d",
+          "pytanie": "Na czym polega „The Ted Mosby” i jaki rodzaj romantycznej tragedii jest w niej odgrywany?",
+          "odpowiedz_wzorcowa": "- porzucenie przed ślubem\\n- sytuacja tuż przed ołtarzem\\n- romantyczna tragedia",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play14-varA"
+        },
+        {
+          "id": "13152867-eb4c-46a1-a4d9-0283fa0d8d68",
+          "pytanie": "Jakie trzy elementy wyglądu lub rekwizytów mają wspierać tę rolę, jaką sytuację przedstawia mężczyzna i które grupy kobiet według materiału mogą być szczególnie zainteresowane tą narracją?",
+          "odpowiedz_wzorcowa": "- smoking\\n- krople do oczu\\n- obrączka\\n- wieczne druhny\\n- rozwódki",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play14-varB"
+        },
+        {
+          "id": "0d49e707-0d57-43a9-8324-076402c283b8",
+          "pytanie": "Jaki warunek przygotowania jest istotny dla The Ted Mosby i dlaczego?",
+          "odpowiedz_wzorcowa": "- smoking\\n- krople do oczu\\n- obrączka\\n- publiczny kontekst sceny",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play14-varC"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "title": "The Jim Nacho",
+      "folder": "2_Plays_for_the_Amateur/The Jim Nacho",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Jim Nacho/The Jim Nacho.pdf",
+      "topics": [
+        {
+          "id": "f6ecdde4-65ad-4ed4-92af-e25f77bc625b",
+          "pytanie": "Jaki jest mechanizm „The Jim Nacho” i na czym polega gra słów wykorzystana w tej zagrywce?",
+          "odpowiedz_wzorcowa": "- przyjmowanie „podziękowań”\\n- „Jim” + to, co jej się podoba\\n- gra słów",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play15-varA"
+        },
+        {
+          "id": "4bf133fd-f3bc-4fb7-96eb-ae2cdfd9f3d4",
+          "pytanie": "Jak powinien reagować mężczyzna na rzeczy, które podobają się rozmówczyni, jak buduje z tego swoje przedstawienie i jaka cecha jest według materiału szczególnie potrzebna do zastosowania tej taktyki?",
+          "odpowiedz_wzorcowa": "- „łowczynie fortun”\\n- dobry słuch",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play15-varB"
+        },
+        {
+          "id": "f4791bd6-6c60-47c1-b063-9761e03254ee",
+          "pytanie": "Jaka umiejętność jest według źródła najważniejszym warunkiem The Jim Nacho?",
+          "odpowiedz_wzorcowa": "- dobry słuch\\n- umiejętność wychwytywania tego, co podoba się rozmówczyni",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play15-varC"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "title": "The Confused Inheritor",
+      "folder": "2_Plays_for_the_Amateur/The Confused Inheritor",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Confused Inheritor/The Confused Inheritor.pdf",
+      "topics": [
+        {
+          "id": "2d326a05-caaf-444d-925a-bbf05dc59ed4",
+          "pytanie": "Na czym polega „The Confused Inheritor” i jaki motyw społeczny wykorzystuje?",
+          "odpowiedz_wzorcowa": "- zdezorientowany spadkobierca\\n- absurdalna fortuna\\n- motyw niespodziewanego dziedziczenia",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play16-varA"
+        },
+        {
+          "id": "c141a34a-083f-469f-b7fa-b8aa52284866",
+          "pytanie": "Jaką rolę odgrywa podrobiony testament, jakiego rodzaju fortunę przedstawia się w historii i do jakiej grupy kobiet materiał kieruje tę zagrywkę?",
+          "odpowiedz_wzorcowa": "- podrobiony testament\\n- polujące na pieniądze",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play16-varB"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "title": "The Other Jonas",
+      "folder": "2_Plays_for_the_Amateur/The Other Jonas",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Other Jonas/The Other Jonas.pdf",
+      "topics": [
+        {
+          "id": "dc4c36dd-9788-4441-9e1a-a6ea373c5495",
+          "pytanie": "Jaki jest podstawowy koncept „The Other Jonas” i na jakim rodzaju sławy się opiera?",
+          "odpowiedz_wzorcowa": "- przebranie za „innego” brata Jonas\\n- wykorzystanie sławy boysbandu",
+          "dzial_numer": 5,
+          "wariant": "A",
+          "id_slug": "playbook-chap5-play17-varA"
+        },
+        {
+          "id": "9b6dbecb-1d1d-4c43-bc7b-da79bc33f50f",
+          "pytanie": "Jak ma wyglądać przedstawienie się jako „kolejny brat Jonas”, jaką umiejętność według materiału warto przy tym posiadać i jakie ograniczenie dotyczące wieku potencjalnych rozmówczyń zostało wyraźnie zaznaczone?",
+          "odpowiedz_wzorcowa": "- łowczynie sławy\\n- wyczucie rytmu\\n- ryzyko przyciągnięcia niepełnoletnich\\n- zmienność nazwy wraz z modą na boysbandy",
+          "dzial_numer": 5,
+          "wariant": "B",
+          "id_slug": "playbook-chap5-play17-varB"
+        },
+        {
+          "id": "3fa5834c-7c0a-4295-be85-a1a920794d7b",
+          "pytanie": "Jakie ograniczenie grupy docelowej jest wprost zaznaczone przy The Other Jonas?",
+          "odpowiedz_wzorcowa": "- ryzyko przyciągnięcia osób niepełnoletnich",
+          "dzial_numer": 5,
+          "wariant": "C",
+          "id_slug": "playbook-chap5-play17-varC"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "title": "The Chick",
+      "folder": "2_Plays_for_the_Amateur/The Chick",
+      "pdfPath": "/fiszki_zagrywki/2_Plays_for_the_Amateur/The Chick/The Chick.pdf",
+      "topics": []
+    }
+  ],
+  "6": [
+    {
+      "index": 1,
+      "title": "The Pinocchio Puppy",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Pinocchio Puppy",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Pinocchio Puppy/The Pinocchio Puppy.pdf",
+      "topics": [
+        {
+          "id": "896c6502-5526-42a1-ad68-dddbec9b1fd4",
+          "pytanie": "Na czym polega „The Pinocchio Puppy” i jaki rodzaj nietypowego zachowania stanowi jej główny element?",
+          "odpowiedz_wzorcowa": "- zachowanie jak pies\\n- człowiek w ludzkim ciele odgrywający psa",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play1-varA"
+        },
+        {
+          "id": "b6faeb41-6b72-4fd9-b3c7-c3255e7e0e4b",
+          "pytanie": "Jak ma zachowywać się osoba stosująca tę zagrywkę, jaki rekwizyt materiał wskazuje i do jakiego typu kobiet ją kieruje?",
+          "odpowiedz_wzorcowa": "- naiwne\\n- miłośniczki zwierząt\\n- obroża",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play1-varB"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "title": "The Duffel Bag",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Duffel Bag",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Duffel Bag/The Duffel Bag.pdf",
+      "topics": [
+        {
+          "id": "7e4c3564-a117-4054-bee8-401e6dcdbaff",
+          "pytanie": "Na czym polega „The Duffel Bag” i jaką sytuację wykorzystuje jako punkt wyjścia do rozmowy?",
+          "odpowiedz_wzorcowa": "- luk bagażowy międzynarodowego lotu\\n- zmarznięty biznesmen\\n- zaskakujące „wyjechanie” z bagażu",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play2-varA"
+        },
+        {
+          "id": "30d14f66-af35-49f1-bfdf-f0f542d8bfe2",
+          "pytanie": "Jaka jest rola dużej torby i lotniska, skąd ma „pojawić się” bohater zagrywki i jaką postać ma w tej historii odgrywać?",
+          "odpowiedz_wzorcowa": "- obcokrajowczynie\\n- duża torba\\n- lotnisko",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play2-varB"
+        },
+        {
+          "id": "cd2abc70-65e1-4679-b04f-cf5b95457795",
+          "pytanie": "Jaki warunek miejsca i rekwizytu jest niezbędny dla The Duffel Bag?",
+          "odpowiedz_wzorcowa": "- lotnisko / międzynarodowa karuzela bagażowa\\n- duża torba podróżna",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play2-varC"
+        }
+      ]
+    },
+    {
+      "index": 3,
+      "title": "The Prince Akeem",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Prince Akeem",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Prince Akeem/The Prince Akeem.pdf",
+      "topics": [
+        {
+          "id": "1c6bf1d9-c7dd-439c-963f-fd07d1342c83",
+          "pytanie": "Na czym polega „Prince Akeem” i jaki rodzaj statusu ma stworzyć przedstawiana historia?",
+          "odpowiedz_wzorcowa": "- fikcyjny książę\\n- fikcyjne królestwo\\n- poszukiwanie przyszłej królowej",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play3-varA"
+        },
+        {
+          "id": "24ba6ac3-5f3f-4253-8a33-ae3ad517ac5a",
+          "pytanie": "Jaką rolę odgrywa fikcyjne królestwo, czego książę szuka według przedstawionej historii i jakie znaczenie ma w tej zagrywce dobry wingman?",
+          "odpowiedz_wzorcowa": "- „słabe z geografii”\\n- dobry wingman\\n- Arsenio Hall jako żartobliwe nawiązanie",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play3-varB"
+        },
+        {
+          "id": "1d7b575e-492c-45e7-b4b2-32f4e620c7c3",
+          "pytanie": "Jakie ograniczenie wykonawcze może pojawić się w The Prince Akeem?",
+          "odpowiedz_wzorcowa": "- dobry wingman\\n- konieczność podtrzymywania fikcyjnej historii i jej praw sukcesji",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play3-varC"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "title": "The Moviegoer",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Moviegoer",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Moviegoer/The Moviegoer.pdf",
+      "topics": [
+        {
+          "id": "21a5ae44-6352-42b2-81b0-babe0dbdf145",
+          "pytanie": "Jaki jest podstawowy mechanizm „The Moviegoer” i jakie miejsce stanowi w tej zagrywce pole działania?",
+          "odpowiedz_wzorcowa": "- seans filmowy\\n- kiepska komedia romantyczna\\n- kino jako miejsce działania",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play4-varA"
+        },
+        {
+          "id": "1a9b72e3-c730-4a82-885c-72b066e63bbd",
+          "pytanie": "Jakiego rodzaju film według materiału należy wybrać, do jakiego typu kobiet kierowana jest ta zagrywka i jakie ograniczenie czasowe zostało przy niej podane?",
+          "odpowiedz_wzorcowa": "- „smutne”\\n- mocny żołądek\\n- ok. 110 minut",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play4-varB"
+        },
+        {
+          "id": "691b111b-16ab-4f77-8eb9-77bc33decb1d",
+          "pytanie": "Jaki warunek repertuarowy i sytuacyjny ogranicza The Moviegoer?",
+          "odpowiedz_wzorcowa": "- odpowiednia komedia romantyczna dostępna aktualnie w kinach\\n- ponowne uczestnictwo w seansie i związany z tym czas/komfort",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play4-varC"
+        }
+      ]
+    },
+    {
+      "index": 5,
+      "title": "The Lorenzo Von Matterhorn",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Lorenzo Von Matterhorn",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Lorenzo Von Matterhorn/The Lorenzo Von Matterhorn.pdf",
+      "topics": [
+        {
+          "id": "7d387d5d-c04d-4aaf-9daf-9529c986ae74",
+          "pytanie": "Na czym polega „The Lorenzo von Matterhorn” i w jaki sposób buduje pozór sławy?",
+          "odpowiedz_wzorcowa": "- fikcyjna postać Lorenzo von Matterhorn\\n- tworzenie stron o postaci\\n- pozór sławy wsparty stronami WWW",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play5-varA"
+        },
+        {
+          "id": "6b6ae266-e966-49cd-b06c-d37201303f19",
+          "pytanie": "Jaką fikcyjną postać należy stworzyć, w jaki sposób strony internetowe mają wspierać jej wiarygodność i jaki warunek techniczny materiał wskazuje jako istotny?",
+          "odpowiedz_wzorcowa": "- osoby ze smartfonem\\n- podstawy tworzenia stron WWW",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play5-varB"
+        },
+        {
+          "id": "1d75ec56-ee60-41f0-a772-5d07676d11c6",
+          "pytanie": "Jakie wymaganie techniczne jest warunkiem wiarygodności The Lorenzo von Matterhorn?",
+          "odpowiedz_wzorcowa": "- podstawowa znajomość tworzenia stron WWW",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play5-varC"
+        }
+      ]
+    },
+    {
+      "index": 6,
+      "title": "The Cool Priest",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Cool Priest",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Cool Priest/The Cool Priest.pdf",
+      "topics": [
+        {
+          "id": "cdac50f8-22b5-43f2-8eee-14281fe8e8e7",
+          "pytanie": "Jaki stereotyp wykorzystuje „The Cool Priest” i na czym polega jego podstawowy kontrast?",
+          "odpowiedz_wzorcowa": "- rola księdza\\n- picie\\n- klnięcie\\n- kontrast ze stereotypowym duchownym",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play6-varA"
+        },
+        {
+          "id": "04b8814d-ece1-49f9-9f7c-062b0d964424",
+          "pytanie": "Jakie elementy stroju mają stworzyć wizerunek księdza, jakie zachowanie odróżnia go od stereotypowego duchownego i do jakiej grupy kobiet materiał kieruje tę zagrywkę?",
+          "odpowiedz_wzorcowa": "- koszula duchownego\\n- koloratka\\n- przygnębione „kościółkowe”",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play6-varB"
+        },
+        {
+          "id": "3d406b89-9482-4dac-8c85-c6b95e7c2dce",
+          "pytanie": "Jakie elementy garderoby są warunkiem zbudowania roli w The Cool Priest?",
+          "odpowiedz_wzorcowa": "- koszula duchownego\\n- koloratka",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play6-varC"
+        }
+      ]
+    },
+    {
+      "index": 7,
+      "title": "The Area 69",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Area 69",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Area 69/The Area 69.pdf",
+      "topics": [
+        {
+          "id": "40cc62e3-6dc8-4fcc-8973-88cebe95d21a",
+          "pytanie": "Na czym polega „The Area 69” i jaki nietypowy sposób naśladowania drugiej osoby stanowi jej podstawę?",
+          "odpowiedz_wzorcowa": "- naśladowanie każdego ruchu\\n- udawanie kosmity\\n- połączenie mimikry z fikcyjną tożsamością",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play7-varA"
+        },
+        {
+          "id": "7071fc15-3f85-4c61-a30f-a7d80e511a46",
+          "pytanie": "Co dokładnie ma robić mężczyzna, jaką fikcyjną tożsamość przedstawia i jakie trzy grupy kobiet zostały wymienione jako grupa docelowa?",
+          "odpowiedz_wzorcowa": "- fanki sci-fi\\n- wierzące\\n- wiejskie",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play7-varB"
+        },
+        {
+          "id": "18d7d6bd-4c46-4c26-8aad-4a94a543a94a",
+          "pytanie": "Jakie źródłowe ograniczenie może przerwać The Area 69 już na początku scenki?",
+          "odpowiedz_wzorcowa": "- rozmówczyni może się wystraszyć i odejść\\n- początkowe naśladowanie może zostać odebrane jako zbyt niepokojące",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play7-varC"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "title": "The Ghost",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Ghost",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Ghost/The Ghost.pdf",
+      "topics": [
+        {
+          "id": "831333ee-ce06-418d-9b14-a20750f54a7a",
+          "pytanie": "Jaki jest mechanizm „The Ghost” i jaką rolę odgrywają w niej osoby trzecie?",
+          "odpowiedz_wzorcowa": "- kilku przyjaciół\\n- pozorowane opłakiwanie\\n- pojawienie się jako „duch”",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play8-varA"
+        },
+        {
+          "id": "ae475a42-179e-4eb6-ab10-004b5251b6e0",
+          "pytanie": "Jaką historię mają przedstawiać przyjaciele, w jaki sposób „duch” pojawia się przy rozmówczyni i jaki przedmiot ma stanowić dowód na jego rzekome istnienie?",
+          "odpowiedz_wzorcowa": "- osoby „duchowe”\\n- kilku przyjaciół\\n- latający kufel",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play8-varB"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "title": "The Rorschach",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Rorschach",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Rorschach/The Rorschach.pdf",
+      "topics": [
+        {
+          "id": "cb065960-58a1-4bee-b067-a60a57f4309c",
+          "pytanie": "Na czym polega „The Rorschach” i jaką rolę odgrywa w niej autorytet eksperta?",
+          "odpowiedz_wzorcowa": "- profesor psychologii\\n- test plam atramentowych\\n- autorytet eksperta",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play9-varA"
+        },
+        {
+          "id": "2592e568-2d59-4f88-8421-ab2d30bcb560",
+          "pytanie": "Jaką postać ma odegrać mężczyzna, jakie materiały są potrzebne do zagrywki i jaki typ osób materiał wskazuje jako odbiorców?",
+          "odpowiedz_wzorcowa": "- superłatwowierne\\n- atrament\\n- papier\\n- notes",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play9-varB"
+        },
+        {
+          "id": "7a2bf3e1-3338-46b7-83e6-da868386d09c",
+          "pytanie": "Jakie materiały są niezbędne do przygotowania The Rorschach?",
+          "odpowiedz_wzorcowa": "- atrament\\n- biały papier\\n- notes/legal pad",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play9-varC"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "title": "The Cheap Trick",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Cheap Trick",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Cheap Trick/The Cheap Trick.pdf",
+      "topics": [
+        {
+          "id": "739b4562-1457-460e-b99d-28e0d55f63ef",
+          "pytanie": "Jaki jest koncept „The Cheap Trick” i jaką fikcyjną tożsamość wykorzystuje?",
+          "odpowiedz_wzorcowa": "- basista Cheap Trick\\n- tożsamość konkretnego zespołu",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play10-varA"
+        },
+        {
+          "id": "41852f73-2051-4a77-bf96-9c60aa9b3a51",
+          "pytanie": "Jakie elementy wyglądu mają pomóc stworzyć wizerunek basisty, czym różni się ta zagrywka od zwykłego podawania się za muzyka i do jakiego typu kobiet jest skierowana?",
+          "odpowiedz_wzorcowa": "- groupies\\n- dżinsowa kurtka\\n- naszywka\\n- przedłużki",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play10-varB"
+        },
+        {
+          "id": "83eeec64-be00-492e-80e4-3eb8429bcf0f",
+          "pytanie": "Jakie przygotowanie kostiumowe jest wymagane w The Cheap Trick?",
+          "odpowiedz_wzorcowa": "- dżinsowa kurtka\\n- naszywka Cheap Trick\\n- przedłużki włosów",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play10-varC"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "title": "The Soviet Defector",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Soviet Defector",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Soviet Defector/The Soviet Defector.pdf",
+      "topics": []
+    },
+    {
+      "index": 12,
+      "title": "The Doogie",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Doogie",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Doogie/The Doogie.pdf",
+      "topics": [
+        {
+          "id": "3a44bf5d-ad12-45a7-b53e-654cc2b7b499",
+          "pytanie": "Jaki mechanizm wykorzystuje „The Doogie” i jaki rodzaj dawnej sławy ma odgrywać główną rolę?",
+          "odpowiedz_wzorcowa": "- była gwiazda dziecięca\\n- sitcom\\n- dawna sława telewizyjna",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play12-varA"
+        },
+        {
+          "id": "426514d7-eda4-46ab-be96-c89461d097f0",
+          "pytanie": "Jaką historię zawodową przedstawia mężczyzna, jaka cecha jest według materiału szczególnie potrzebna do tej zagrywki i czemu służy tabela wiarygodnych postaci telewizyjnych?",
+          "odpowiedz_wzorcowa": "- łowczynie sławy\\n- wyobraźnia\\n- tabela wiarygodnych postaci",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play12-varB"
+        },
+        {
+          "id": "25f24ad3-7100-4d08-abb6-5a5f52190326",
+          "pytanie": "Jakie ograniczenie przygotowania źródło wskazuje przy The Doogie?",
+          "odpowiedz_wzorcowa": "- wyobraźnia do zbudowania wiarygodnej postaci\\n- trudność stworzenia spójnej fikcyjnej historii telewizyjnej",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play12-varC"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "title": "The Au Pair",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Au Pair",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Au Pair/The Au Pair.pdf",
+      "topics": [
+        {
+          "id": "aa2989ff-e7d7-4d48-b4be-cdb1848d3c70",
+          "pytanie": "Na czym polega „The Au Pair” i w jaki sposób wykorzystuje zainteresowanie pracą oraz opieką nad dziećmi?",
+          "odpowiedz_wzorcowa": "- fikcyjne ogłoszenie au pair\\n- wymyślone dziecko\\n- rola związana z opieką",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play13-varA"
+        },
+        {
+          "id": "bc090572-bbb2-4ffb-b774-2acb0a3ed8d1",
+          "pytanie": "Co ma zawierać fikcyjne ogłoszenie, jaką rolę odgrywają zabawki dziecięce i do jakiego typu kobiet materiał kieruje tę zagrywkę?",
+          "odpowiedz_wzorcowa": "- młode obcokrajowczynie\\n- zabawki dziecięce",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play13-varB"
+        },
+        {
+          "id": "4fca472b-2571-4402-8c6b-c1faf55c8699",
+          "pytanie": "Jakie warunki przygotowania są najważniejsze w The Au Pair?",
+          "odpowiedz_wzorcowa": "- kolekcja zabawek dziecięcych\\n- ogłoszenie o poszukiwaniu au pair",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play13-varC"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "title": "The Lottery",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Lottery",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Lottery/The Lottery.pdf",
+      "topics": [
+        {
+          "id": "48ea160e-974e-4993-bc87-826a1d7bbd9a",
+          "pytanie": "Jaki jest podstawowy mechanizm „The Lottery” i jaki rodzaj nagłego szczęścia zostaje w niej odegrany?",
+          "odpowiedz_wzorcowa": "- fałszywa wygrana\\n- nagranie losowania\\n- bar",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play14-varA"
+        },
+        {
+          "id": "2899214b-61af-44b6-9876-85d0154bc36f",
+          "pytanie": "Jaką funkcję pełni los oraz nagranie wideo, gdzie według materiału można odegrać tę scenę i czemu służy lista „szlachetnych” fundacji?",
+          "odpowiedz_wzorcowa": "- polujące na pieniądze\\n- los\\n- kaseta wideo\\n- lista fundacji",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play14-varB"
+        },
+        {
+          "id": "63cc939d-04f8-4321-984a-d8d355900b35",
+          "pytanie": "Jaki warunek techniczny i rekwizytowy jest niezbędny dla The Lottery?",
+          "odpowiedz_wzorcowa": "- los loteryjny\\n- nagranie wideo losowania",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play14-varC"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "title": "The Call Barney Stinson",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Call Barney Stinson",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Call Barney Stinson/The Call Barney Stinson.pdf",
+      "topics": [
+        {
+          "id": "e9b4e21a-621f-4f66-8cff-a7bd7f60977b",
+          "pytanie": "Na czym polega „The Call Barney Stinson” i w jaki sposób wykorzystuje duże wydarzenie publiczne?",
+          "odpowiedz_wzorcowa": "- duże wydarzenie sportowe\\n- transparent z numerem telefonu\\n- kadr transmisji",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play15-varA"
+        },
+        {
+          "id": "f18e718d-7a6c-4e5e-8832-8fd48e33da95",
+          "pytanie": "Co ma znaleźć się na transparencie, w którym miejscu powinien się on pojawić i jaki typ uczestniczek materiał wskazuje jako odbiorczynie?",
+          "odpowiedz_wzorcowa": "- miłośniczki gwiazd\\n- duże wydarzenie sportowe\\n- dobre miejsce w kadrze",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play15-varB"
+        },
+        {
+          "id": "4d2db2c8-4a26-4f6d-be39-f3e7acedd1f2",
+          "pytanie": "Jaki warunek miejsca jest najważniejszy dla The Call Barney Stinson?",
+          "odpowiedz_wzorcowa": "- duże wydarzenie sportowe\\n- miejsce dobrze widoczne w kadrze/transmisji",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play15-varC"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "title": "The Missing Cat",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Missing Cat",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Missing Cat/The Missing Cat.pdf",
+      "topics": [
+        {
+          "id": "707c7c58-37d5-4393-83a7-68a8a39d4a2c",
+          "pytanie": "Na czym polega „The Missing Cat” i jaki wspólny temat ma stworzyć naturalny pretekst do kontaktu?",
+          "odpowiedz_wzorcowa": "- ulotka o zaginionym kocie\\n- „znalezienie” kota\\n- kontakt przez temat zwierzęcia",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play16-varA"
+        },
+        {
+          "id": "69891cf6-8da1-49e0-bbed-668b1df6d09c",
+          "pytanie": "Jaką rolę pełni klatka transportowa, w jaki sposób kot zostaje „znaleziony” i jaki typ kobiet materiał wskazuje jako odbiorczynie?",
+          "odpowiedz_wzorcowa": "- miłośniczki zwierząt\\n- mała klatka transportowa",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play16-varB"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "title": "The Time Traveler",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Time Traveler",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Time Traveler/The Time Traveler.pdf",
+      "topics": [
+        {
+          "id": "ca742693-040a-4b9c-8e34-422fb3f0442e",
+          "pytanie": "Jaki jest podstawowy koncept „The Time Traveler” i jaki paradoks fabularny zostaje w nim wykorzystany?",
+          "odpowiedz_wzorcowa": "- stary ty z przyszłości\\n- wiadomość dla niej\\n- motyw podróży w czasie",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play17-varA"
+        },
+        {
+          "id": "a9acc66c-3065-4694-86ba-39945ea1c137",
+          "pytanie": "Kto ma przekazać wiadomość rozmówczyni, jakie elementy pomagają stworzyć tę scenę i do jakiej grupy kobiet materiał kieruje tę zagrywkę?",
+          "odpowiedz_wzorcowa": "- fanki sci-fi\\n- makijaż starca\\n- dwóch kolegów",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play17-varB"
+        },
+        {
+          "id": "af02a54a-86c3-449b-ace1-1a81bb6a5583",
+          "pytanie": "Jakie warunki sceniczne są niezbędne dla The Time Traveler?",
+          "odpowiedz_wzorcowa": "- makijaż starca\\n- dwóch kolegów",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play17-varC"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "title": "The Vampire",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Vampire",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Vampire/The Vampire.pdf",
+      "topics": [
+        {
+          "id": "0bcb3b6b-d7bb-4f32-917d-a79d2c018017",
+          "pytanie": "Na czym polega „The Vampire” i jakimi prostymi elementami buduje się tytułową postać?",
+          "odpowiedz_wzorcowa": "- udawanie wampira\\n- fikcyjna tożsamość wampira",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play18-varA"
+        },
+        {
+          "id": "a7813834-6084-473a-a6ae-28bd3cb884bf",
+          "pytanie": "Do czego mają służyć miętowe Tic Taki i taśma, jaką historię przedstawia mężczyzna i co sam Barney przyznaje na temat jakości przygotowania tej zagrywki?",
+          "odpowiedz_wzorcowa": "- miętowe Tic Taki\\n- taśma jako kły\\n- przyznanie, że zagrywka jest słabo dopracowana",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play18-varB"
+        },
+        {
+          "id": "610ede80-e319-4538-b90c-c89b317aebd0",
+          "pytanie": "Jakie ograniczenie jakości przygotowania jest wyraźnie przyznane w źródle przy The Vampire?",
+          "odpowiedz_wzorcowa": "- źródłowe przyznanie, że zagrywka jest słabo dopracowana\\n- miętowe Tic Taki i taśma jako prosty element przygotowania",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play18-varC"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "title": "The Barney Identity",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The Barney Identity",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Barney Identity/The Barney Identity.pdf",
+      "topics": [
+        {
+          "id": "015e0bf3-97c6-4d0c-9d6e-1210a0a4b814",
+          "pytanie": "Jaki jest mechanizm „The Barney Identity” i do jakiego motywu filmowego nawiązuje?",
+          "odpowiedz_wzorcowa": "- parodia „Tożsamości Bourne’a”\\n- fikcja szpiegowska\\n- pióro jako tajny mikrofilm",
+          "dzial_numer": 6,
+          "wariant": "A",
+          "id_slug": "playbook-chap6-play19-varA"
+        },
+        {
+          "id": "2173d77e-d15c-43fd-a87b-1486e06398f3",
+          "pytanie": "Jaką funkcję pełni efektowne pióro w The Barney Identity i jak źródło wiąże tę zagrywkę z wyglądem?",
+          "odpowiedz_wzorcowa": "- paranoicy\\n- efektowne pióro",
+          "dzial_numer": 6,
+          "wariant": "B",
+          "id_slug": "playbook-chap6-play19-varB"
+        },
+        {
+          "id": "7a06dfa4-4420-4a5c-9cab-4eaa9e8a151a",
+          "pytanie": "Jaki warunek wyglądu jest w źródle przedstawiony jako istotny dla The Barney Identity?",
+          "odpowiedz_wzorcowa": "- wiarygodny, odpowiednio filmowy wygląd\\n- w źródle szczególnie wyróżniony wygląd przypominający Matta Damona",
+          "dzial_numer": 6,
+          "wariant": "C",
+          "id_slug": "playbook-chap6-play19-varC"
+        }
+      ]
+    },
+    {
+      "index": 20,
+      "title": "The And The Sea",
+      "folder": "3_Plays_for_the_Weekend_Warrior/The And The Sea",
+      "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The And The Sea/The And The Sea.pdf",
+      "topics": []
+    }
+  ],
+  "7": [
+    {
+      "index": 1,
+      "title": "The Project X",
+      "folder": "4_Plays_for_the_Advanced/The Project X",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Project X/The Project X.pdf",
+      "topics": [
+        {
+          "id": "a15be2f8-3783-4d2f-abce-c19ac03af39b",
+          "pytanie": "Wyjaśnij, na czym polega podstawowy mechanizm The Project X i w jaki sposób wykorzystanie szympansa ma prowadzić do zbudowania sytuacji kontaktu z wybraną osobą.",
+          "odpowiedz_wzorcowa": "- szympans jest centralnym elementem i pretekstem do kontaktu\\n- historia o wyrwaniu szympansa z ośrodka testów na zwierzętach jest częścią scenariusza\\n- uczeń wyjaśnia związek między zwierzęciem, historią i nawiązaniem rozmowy",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play1-varA"
+        },
+        {
+          "id": "ea860100-abc1-4332-beee-5ca0406fe4e0",
+          "pytanie": "Jaką funkcję pełnią szympans, smycz oraz historia o wyrwaniu zwierzęcia z ośrodka testów na zwierzętach i dlaczego te elementy są częścią scenariusza, a nie przypadkowymi rekwizytami?",
+          "odpowiedz_wzorcowa": "- szympans jest głównym elementem scenariusza\\n- smycz należy do wskazanych w źródle rekwizytów/wymagań\\n- historia o wyrwaniu zwierzęcia z ośrodka wyjaśnia jego obecność w scenariuszu",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play1-varB"
+        },
+        {
+          "id": "bcf0f530-0816-4177-8df4-29d29828bc8d",
+          "pytanie": "Dlaczego powodzenie The Project X jest uzależnione od tego, jak „słodka” jest małpa, oraz od jej dostępności i dlaczego te warunki są istotne dla zastosowania zagrywki?",
+          "odpowiedz_wzorcowa": "- wskazanie zależności powodzenia od „słodyczy” małpy\\n- wskazanie dostępności małpy jako warunku przygotowania/zastosowania\\n- wyjaśnienie, że brak odpowiedniego zwierzęcia uniemożliwia wykonanie scenariusza",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play1-varC"
+        }
+      ]
+    },
+    {
+      "index": 2,
+      "title": "The Lifeguard",
+      "folder": "4_Plays_for_the_Advanced/The Lifeguard",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Lifeguard/The Lifeguard.pdf",
+      "topics": []
+    },
+    {
+      "index": 3,
+      "title": "The Diet Guru",
+      "folder": "4_Plays_for_the_Advanced/The Diet Guru",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Diet Guru/The Diet Guru.pdf",
+      "topics": [
+        {
+          "id": "a612df7d-3737-43a6-ad44-75ceb1d13e7f",
+          "pytanie": "Wyjaśnij, na czym polega mechanizm The Diet Guru i jak rola udawanego guru diety ma prowadzić do zainteresowania odbiorczyni zagrywką.",
+          "odpowiedz_wzorcowa": "- udawanie guru diety\\n- związek zagrywki z tematyką odchudzania/szczupłej sylwetki\\n- skierowanie do osób z kompleksami dotyczącymi wagi",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play3-varA"
+        },
+        {
+          "id": "034a2f07-31ce-4d2c-9522-d97b16f6ddd8",
+          "pytanie": "Dlaczego w scenariuszu znaczenie ma szczupła sylwetka oraz lista „cudownych” nazw diet i jaką funkcję pełnią te elementy w budowaniu roli guru?",
+          "odpowiedz_wzorcowa": "- szczupła sylwetka jest częścią obrazu osoby odgrywającej guru\\n- lista „cudownych” nazw diet jest elementem scenariusza\\n- uczeń wyjaśnia, że elementy wzmacniają przyjętą rolę i temat rozmowy",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play3-varB"
+        },
+        {
+          "id": "abc59dca-2c9e-4502-83ef-5b58d1b62fa8",
+          "pytanie": "Dlaczego The Diet Guru jest zależne od tego, czy odbiorczyni należy do grupy dziewczyn z kompleksami dotyczącymi wagi, i w jaki sposób brak tego kontekstu może osłabić lub unieważnić założenie zagrywki?",
+          "odpowiedz_wzorcowa": "- grupa docelowa to dziewczyny z kompleksami dotyczącymi wagi\\n- temat wagi/sylwetki jest częścią podstawy zagrywki\\n- brak takiego kontekstu osłabia sens zastosowania scenariusza",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play3-varC"
+        }
+      ]
+    },
+    {
+      "index": 4,
+      "title": "The Deja Vu",
+      "folder": "4_Plays_for_the_Advanced/The Deja Vu",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Deja Vu/The Deja Vu.pdf",
+      "topics": []
+    },
+    {
+      "index": 5,
+      "title": "The Falling In Love",
+      "folder": "4_Plays_for_the_Advanced/The Falling In Love",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Falling In Love/The Falling In Love.pdf",
+      "topics": []
+    },
+    {
+      "index": 6,
+      "title": "The Man On This Plane",
+      "folder": "4_Plays_for_the_Advanced/The Man On This Plane",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Man On This Plane/The Man On This Plane.pdf",
+      "topics": []
+    },
+    {
+      "index": 7,
+      "title": "The Boy In The Bubble",
+      "folder": "4_Plays_for_the_Advanced/The Boy In The Bubble",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Boy In The Bubble/The Boy In The Bubble.pdf",
+      "topics": [
+        {
+          "id": "c52f8449-00c4-42e4-8d68-fd1db84d6e99",
+          "pytanie": "Wyjaśnij, na czym polega The Boy in the Bubble i jak samo wejście do baru w wielkiej bańce tworzy podstawę całego scenariusza.",
+          "odpowiedz_wzorcowa": "- wejście do baru\\n- wielka bańka jako centralny element\\n- bańka tworzy sytuację, od której rozpoczyna się kontakt",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play7-varA"
+        },
+        {
+          "id": "456e7f3c-fd80-4435-afcb-435770a142cb",
+          "pytanie": "Dlaczego wielka bańka jest centralnym elementem zagrywki i w jaki sposób jej niezwykłość łączy się z grupą docelową określoną w materiale jako osoby naiwne?",
+          "odpowiedz_wzorcowa": "- wielka bańka jest niezbędnym centrum scenariusza\\n- grupa docelowa: osoby naiwne\\n- uczeń łączy niezwykłość sytuacji z funkcją rozpoczęcia kontaktu",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play7-varB"
+        },
+        {
+          "id": "529b7c60-729d-4839-bc9c-ab3a61cfe637",
+          "pytanie": "Jaki konkretny warunek zastosowania wynika z opisu The Boy in the Bubble - i dlaczego brak możliwości wejścia do odpowiedniego baru z wielką bańką sprawia, że scenariusz nie może zostać zrealizowany?",
+          "odpowiedz_wzorcowa": "- odpowiednie miejsce: bar\\n- wielka bańka jako konieczny element wykonania\\n- brak jednego z tych warunków usuwa podstawę scenariusza",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play7-varC"
+        }
+      ]
+    },
+    {
+      "index": 8,
+      "title": "The Mrs. Stinsfire",
+      "folder": "4_Plays_for_the_Advanced/The Mrs Stinsfire",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Mrs Stinsfire/The Mrs Stinsfire.pdf",
+      "topics": [
+        {
+          "id": "e80f59eb-c9a1-4161-9d65-8c371de98a81",
+          "pytanie": "Wyjaśnij, na czym polega The Mr. President i jak budowanie kariery politycznej od lokalnego urzędu do kampanii prezydenckiej tworzy mechanizm całej zagrywki.",
+          "odpowiedz_wzorcowa": "- kampania prezydencka jest centralnym motywem\\n- historia obejmuje budowanie kariery politycznej\\n- kolejne etapy kariery tworzą jeden scenariusz",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play15-varA"
+        },
+        {
+          "id": "911c8517-9b1f-4319-bfa7-417fcacbffdc",
+          "pytanie": "Jaką funkcję pełnią w scenariuszu 270 głosów elektorskich, minimalny wiek 35 lat, mocny uścisk dłoni i białe zęby oraz dlaczego te szczegóły są przedstawione jako warunki powodzenia?",
+          "odpowiedz_wzorcowa": "- 270 głosów elektorskich jako kluczowy element scenariusza\\n- minimum 35 lat jako wskazany warunek\\n- rozpoznanie, że uścisk dłoni i białe zęby są dodatkowymi szczegółami prezentacji, a nie rdzeniem mechanizmu",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play15-varB"
+        },
+        {
+          "id": "a160ce91-9a19-4da8-a21f-7fcda14c68a9",
+          "pytanie": "Dlaczego wymaganie minimum 35 lat oraz konieczność przejścia przez bardzo konkretny kontekst wyborczy stanowią zasadnicze ograniczenia The Mr. President i uniemożliwiają zastosowanie zagrywki bez spełnienia tych warunków?",
+          "odpowiedz_wzorcowa": "- minimum 35 lat\\n- konkretny kontekst kampanii prezydenckiej\\n- uczeń wyjaśnia, że brak tych warunków uniemożliwia zastosowanie scenariusza w opisanej postaci",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play15-varC"
+        }
+      ]
+    },
+    {
+      "index": 9,
+      "title": "The Bouncer",
+      "folder": "4_Plays_for_the_Advanced/The Bouncer",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Bouncer/The Bouncer.pdf",
+      "topics": [
+        {
+          "id": "98abfb6a-db0f-4885-9986-8b12c79c97dd",
+          "pytanie": "Wyjaśnij, na czym polega mechanizm The Bouncer i jak fałszywa kolejka ma stworzyć wrażenie, że chodzi o wydarzenie prywatne i ekskluzywne.",
+          "odpowiedz_wzorcowa": "- fałszywa kolejka\\n- wrażenie prywatnego i ekskluzywnego wydarzenia\\n- scenariusz pozoruje dostęp do „prywatnego koncertu”",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play9-varA"
+        },
+        {
+          "id": "5d4cb1d7-623a-4411-b5ab-e75132f5867f",
+          "pytanie": "Jaką funkcję pełnią boombox, aksamitne liny i lista oraz w jaki sposób każdy z tych elementów wzmacnia pozór prawdziwej kolejki do „prywatnego koncertu”?",
+          "odpowiedz_wzorcowa": "- boombox jako element scenografii wydarzenia\\n- aksamitne liny jako element organizacji/wyznaczania wejścia\\n- lista jako element pozornego kontrolowania osób\\n- połączenie ich funkcji w stworzeniu wrażenia ekskluzywnego wejścia",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play9-varB"
+        },
+        {
+          "id": "39ead6ce-b2cf-4c1f-8694-e8dbe9a7687b",
+          "pytanie": "Dlaczego deszcz jest kluczowym ograniczeniem The Bouncer i w jaki sposób pogoda wpływa na możliwość zastosowania opisanej zagrywki?",
+          "odpowiedz_wzorcowa": "- deszcz jest wyraźnie wskazanym ograniczeniem\\n- zagrywka zależy od odpowiednich warunków zewnętrznych\\n- uczeń wyjaśnia wpływ pogody na możliwość utrzymania scenariusza",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play9-varC"
+        }
+      ]
+    },
+    {
+      "index": 10,
+      "title": "The Billionaire",
+      "folder": "4_Plays_for_the_Advanced/The Billionaire",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Billionaire/The Billionaire.pdf",
+      "topics": [
+        {
+          "id": "0e170a64-af65-40d9-aa98-109e48fd9025",
+          "pytanie": "Wyjaśnij, na czym polega The Billionaire i dlaczego jej podstawowym założeniem jest żart oparty na zdobyciu statusu miliardera.",
+          "odpowiedz_wzorcowa": "- status miliardera jest centralnym założeniem\\n- zagrywka ma formę żartu opartego na zostaniu miliarderem\\n- uczeń rozumie, że jest to całościowy scenariusz, a nie pojedynczy detal",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play10-varA"
+        },
+        {
+          "id": "8e99e9ad-c6e3-4a50-b23e-a9261d3b0384",
+          "pytanie": "Jaką rolę w konstrukcji zagrywki odgrywa kwota miliarda dolarów oraz dlaczego materiał kieruje ją do każdej kobiety, zamiast wskazywać węższą grupę docelową?",
+          "odpowiedz_wzorcowa": "- miliard dolarów jest elementem definiującym rolę\\n- grupa docelowa: każda kobieta\\n- uczeń łączy konkretny status z szeroką grupą docelową",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play10-varB"
+        },
+        {
+          "id": "ac8b396e-a480-4c1e-b504-1cf8c1970d0c",
+          "pytanie": "Dlaczego konieczność przygotowań trwających „kilka żyć” jest najważniejszym ograniczeniem The Billionaire i co mówi o praktycznym zastosowaniu tej zagrywki?",
+          "odpowiedz_wzorcowa": "- bardzo długi czas przygotowania\\n- określenie źródłowe: „kilka żyć”\\n- uczeń wyjaśnia, że długość przygotowania ogranicza praktyczne zastosowanie",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play10-varC"
+        }
+      ]
+    },
+    {
+      "index": 11,
+      "title": "The Trojan Lesbian",
+      "folder": "4_Plays_for_the_Advanced/The Trojan Lesbian",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Trojan Lesbian/The Trojan Lesbian.pdf",
+      "topics": [
+        {
+          "id": "41c9fb7e-057c-4a42-a0f9-264c12d3f964",
+          "pytanie": "Wyjaśnij, na czym polega mechanizm The Trojan Lesbian i jak podszywanie się mężczyzny pod lesbijkę ma stworzyć sytuację kontaktu z określoną grupą odbiorczyń.",
+          "odpowiedz_wzorcowa": "- mężczyzna podszywa się pod lesbijkę\\n- grupa docelowa: lesbijki i kobiety „eksperymentujące”\\n- rola przyjęta przez bohatera ma być podstawą nawiązania kontaktu",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play11-varA"
+        },
+        {
+          "id": "21083033-b3a7-441d-9f47-81496089f6d5",
+          "pytanie": "Dlaczego materiał wskazuje lesbijki i kobiety „eksperymentujące” jako grupę docelową oraz jaką rolę w całym założeniu odgrywa element szczęścia?",
+          "odpowiedz_wzorcowa": "- prawidłowa grupa docelowa\\n- szczęście jest wskazane jako wymaganie\\n- uczeń wyjaśnia zależność powodzenia od odpowiedniego zbiegu okoliczności",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play11-varB"
+        },
+        {
+          "id": "a0ecd45c-899f-49c6-b320-4895c747ecf5",
+          "pytanie": "Dlaczego zależność od szczęścia jest kluczowym ograniczeniem The Trojan Lesbian i jakie warunki muszą zostać spełnione, aby jej założenie mogło zostać zrealizowane?",
+          "odpowiedz_wzorcowa": "- szczęście jako wyraźny warunek\\n- właściwa grupa docelowa\\n- odpowiednia sytuacja umożliwiająca zastosowanie przyjętej roli",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play11-varC"
+        }
+      ]
+    },
+    {
+      "index": 12,
+      "title": "The Footloose",
+      "folder": "4_Plays_for_the_Advanced/The Footloose",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Footloose/The Footloose.pdf",
+      "topics": [
+        {
+          "id": "b2741ea9-095d-4ac4-81fb-4287d4305a76",
+          "pytanie": "Wyjaśnij, na czym polega The Footloose i jak scenariusz miasteczka, w którym zakazano tańca, tworzy podstawę zagrywki.",
+          "odpowiedz_wzorcowa": "- miasteczko jako tło scenariusza\\n- zakaz tańca jest centralnym elementem historii\\n- taniec i jego zakaz tworzą podstawowy konflikt",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play12-varA"
+        },
+        {
+          "id": "94e6ac8d-31ff-4476-93bc-922993e4fcf8",
+          "pytanie": "Jaką funkcję pełnią taniec i młyn w historii oraz dlaczego właśnie mieszkańcy zacofanych miasteczek stanowią grupę docelową według materiału?",
+          "odpowiedz_wzorcowa": "- taniec jest centralnym motywem\\n- młyn jest elementem scenariusza\\n- grupa docelowa: mieszkańcy zacofanych miasteczek",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play12-varB"
+        },
+        {
+          "id": "c1b94285-bb06-4fe7-b258-a6d6411b32bf",
+          "pytanie": "Dlaczego The Footloose wymaga bardzo szczególnego kontekstu miejsca - miasteczka, w którym rzeczywiście obowiązuje zakaz tańca - i co się dzieje, gdy taki warunek nie występuje?",
+          "odpowiedz_wzorcowa": "- szczególny kontekst miejsca\\n- zakaz tańca jako warunek wyjściowy\\n- bez tego kontekstu nie ma podstawowego scenariusza",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play12-varC"
+        }
+      ]
+    },
+    {
+      "index": 13,
+      "title": "The Grieving Chicks",
+      "folder": "4_Plays_for_the_Advanced/The Grieving Chicks",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Grieving Chicks/The Grieving Chicks.pdf",
+      "topics": [
+        {
+          "id": "80fa86be-5004-4e38-a16f-50f345f567fb",
+          "pytanie": "Wyjaśnij, na czym polega The Grieving Chicks i jak wykorzystanie poczekalni szpitalnej, pojawienie się złych wiadomości oraz zaoferowanie wsparcia mają tworzyć mechanizm zagrywki.",
+          "odpowiedz_wzorcowa": "- poczekalnia szpitalna jako miejsce scenariusza\\n- sytuacja złych wiadomości/straty jako uruchomienie scenariusza\\n- zaoferowanie wsparcia jako dalszy element kontaktu",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play13-varA"
+        },
+        {
+          "id": "9967dc4e-571e-4357-8f5e-0622ec56c57a",
+          "pytanie": "Jaką funkcję pełnią poczekalnia szpitalna, wybór osoby spośród zgromadzonych bliskich oraz późniejsze zaoferowanie ramienia do wypłakania i wsparcia finansowego? Wyjaśnij zależność między tymi elementami a scenariuszem.",
+          "odpowiedz_wzorcowa": "- poczekalnia szpitalna\\n- wybranie konkretnej osoby wśród zgromadzonych\\n- zaoferowanie emocjonalnego wsparcia\\n- zaoferowanie wsparcia finansowego jako części opisanego scenariusza",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play13-varB"
+        },
+        {
+          "id": "87717e31-c6a7-4c05-b017-b9f490d7b5c1",
+          "pytanie": "Dlaczego „zerowa uczciwość” jest kluczowym warunkiem The Grieving Chicks i co ten warunek mówi o charakterze opisanego scenariusza?",
+          "odpowiedz_wzorcowa": "- „zerowa uczciwość” jest wprost wskazana jako warunek/cecha zagrywki\\n- uczeń rozumie, że chodzi o szczególnie nieuczciwy sposób działania opisany przez autora\\n- ograniczenie ma charakter etyczno-scenariuszowy, a nie statystyczny",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play13-varC"
+        }
+      ]
+    },
+    {
+      "index": 14,
+      "title": "E Pluribus Unum",
+      "folder": "4_Plays_for_the_Advanced/E Pluribus Unum",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/E Pluribus Unum/E Pluribus Unum.pdf",
+      "topics": [
+        {
+          "id": "f609bbc8-13d2-4fe5-a88e-47673085ccea",
+          "pytanie": "Wyjaśnij, na czym polega The E Pluribus Unum i w jaki sposób powrót banknotu z twoim numerem ma być przedstawiany jako znak przeznaczenia.",
+          "odpowiedz_wzorcowa": "- banknot ma zawierać własny numer\\n- banknot ma po czasie wrócić do bohatera\\n- powrót jest interpretowany jako znak przeznaczenia",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play14-varA"
+        },
+        {
+          "id": "8c890a5f-a16b-4a58-b60a-d9e712c3926e",
+          "pytanie": "Jaką rolę pełni banknot z twoim numerem oraz dlaczego materiał łączy tę zagrywkę z osobami wierzącymi w przeznaczenie i z koniecznością wieloletniej cierpliwości?",
+          "odpowiedz_wzorcowa": "- banknot z własnym numerem\\n- grupa docelowa: osoby wierzące w przeznaczenie\\n- wieloletnia cierpliwość jest wymagana\\n- powrót banknotu ma tworzyć narrację o przeznaczeniu",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play14-varB"
+        },
+        {
+          "id": "72c72847-28a1-40b7-94b1-e7785b07e0e0",
+          "pytanie": "Dlaczego potrzeba wielu lat cierpliwości oraz wiara w przeznaczenie stanowią kluczowe ograniczenia The E Pluribus Unum i co może sprawić, że bez tych warunków scenariusz straci sens?",
+          "odpowiedz_wzorcowa": "- wieloletnia cierpliwość\\n- odbiorczyni wierząca w przeznaczenie\\n- czas i odpowiedni kontekst są potrzebne, aby banknot mógł zadziałać jako „znak”",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play14-varC"
+        }
+      ]
+    },
+    {
+      "index": 15,
+      "title": "The Mr. President",
+      "folder": "4_Plays_for_the_Advanced/The Mr President",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Mr President/The Mr President.pdf",
+      "topics": [
+        {
+          "id": "e80f59eb-c9a1-4161-9d65-8c371de98a81",
+          "pytanie": "Wyjaśnij, na czym polega The Mr. President i jak budowanie kariery politycznej od lokalnego urzędu do kampanii prezydenckiej tworzy mechanizm całej zagrywki.",
+          "odpowiedz_wzorcowa": "- kampania prezydencka jest centralnym motywem\\n- historia obejmuje budowanie kariery politycznej\\n- kolejne etapy kariery tworzą jeden scenariusz",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play15-varA"
+        },
+        {
+          "id": "911c8517-9b1f-4319-bfa7-417fcacbffdc",
+          "pytanie": "Jaką funkcję pełnią w scenariuszu 270 głosów elektorskich, minimalny wiek 35 lat, mocny uścisk dłoni i białe zęby oraz dlaczego te szczegóły są przedstawione jako warunki powodzenia?",
+          "odpowiedz_wzorcowa": "- 270 głosów elektorskich jako kluczowy element scenariusza\\n- minimum 35 lat jako wskazany warunek\\n- rozpoznanie, że uścisk dłoni i białe zęby są dodatkowymi szczegółami prezentacji, a nie rdzeniem mechanizmu",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play15-varB"
+        },
+        {
+          "id": "a160ce91-9a19-4da8-a21f-7fcda14c68a9",
+          "pytanie": "Dlaczego wymaganie minimum 35 lat oraz konieczność przejścia przez bardzo konkretny kontekst wyborczy stanowią zasadnicze ograniczenia The Mr. President i uniemożliwiają zastosowanie zagrywki bez spełnienia tych warunków?",
+          "odpowiedz_wzorcowa": "- minimum 35 lat\\n- konkretny kontekst kampanii prezydenckiej\\n- uczeń wyjaśnia, że brak tych warunków uniemożliwia zastosowanie scenariusza w opisanej postaci",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play15-varC"
+        }
+      ]
+    },
+    {
+      "index": 16,
+      "title": "The Kidney Scheme",
+      "folder": "4_Plays_for_the_Advanced/The Kidney Scheme",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Kidney Scheme/The Kidney Scheme.pdf",
+      "topics": [
+        {
+          "id": "abcf24e0-5980-45fa-8783-0be3f0d09821",
+          "pytanie": "Wyjaśnij, na czym polega mechanizm The Kidney Scheme i dlaczego historia o oddaniu nerki przyjacielowi ma pełnić centralną funkcję w scenariuszu.",
+          "odpowiedz_wzorcowa": "- historia o oddaniu nerki przyjacielowi\\n- oddanie nerki jest centralnym wydarzeniem opowieści\\n- historia jest kierowana do osoby określonej jako „wielkoduszna”",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play16-varA"
+        },
+        {
+          "id": "65f4e3b5-8b59-4cca-bd5a-5f8361bbd64f",
+          "pytanie": "Jaką rolę pełnią opaska szpitalna i kolega oraz w jaki sposób te elementy pomagają zbudować wiarygodność opowieści skierowanej do osoby określonej jako „wielkoduszna”?",
+          "odpowiedz_wzorcowa": "- opaska szpitalna jest elementem scenariusza\\n- kolega jest wymaganym uczestnikiem/elementem\\n- oba elementy wspierają przedstawienie historii o oddaniu nerki\\n- odbiorcą ma być osoba „wielkoduszna”",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play16-varB"
+        },
+        {
+          "id": "4d112d25-240f-414d-997f-c1a0afd1e501",
+          "pytanie": "Dlaczego The Kidney Scheme wymaga odpowiedniego kontekstu szpitalnego oraz udziału kolegi i co może się stać z mechanizmem, gdy któregoś z tych elementów zabraknie?",
+          "odpowiedz_wzorcowa": "- kontekst szpitalny\\n- udział kolegi\\n- związek tych warunków z historią o oddaniu nerki",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play16-varC"
+        }
+      ]
+    },
+    {
+      "index": 17,
+      "title": "I Can Guess Your Weight",
+      "folder": "4_Plays_for_the_Advanced/I Can Guess Your Weight",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/I Can Guess Your Weight/I Can Guess Your Weight.pdf",
+      "topics": [
+        {
+          "id": "3d817d14-9537-4cb4-81c9-2340d2ac2091",
+          "pytanie": "Wyjaśnij, na czym polega The I Can Guess Your Weight i jak wykorzystanie prostego działania matematycznego ma stworzyć wrażenie, że można odgadnąć wagę drugiej osoby.",
+          "odpowiedz_wzorcowa": "- zapowiedź odgadnięcia wagi\\n- wyjście od przypuszczalnej rzeczywistej wagi\\n- zastosowanie odejmowania do uzyskania końcowej liczby\\n- podanie wyniku jako odgadniętej wagi",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play17-varA"
+        },
+        {
+          "id": "a4225936-73e6-4f0f-9918-96dc849a2e0e",
+          "pytanie": "Jaką rolę odgrywają podstawy matematyki w przebiegu zagrywki i dlaczego opisane w materiale obliczenie obejmujące odejmowanie kolejnych wartości jest kluczowym elementem scenariusza?",
+          "odpowiedz_wzorcowa": "- podstawy matematyki są wymagane\\n- najpierw odejmuje się 25 funtów\\n- następnie odejmuje się kolejne 5 funtów\\n- końcowy wynik jest prezentowany jako odgadnięta waga",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play17-varB"
+        },
+        {
+          "id": "44fce219-cffb-46fe-8caa-3e8c44b0b895",
+          "pytanie": "Dlaczego błędne obliczenia są głównym ograniczeniem The I Can Guess Your Weight i w jaki sposób pomyłka może doprowadzić do niepowodzenia zagrywki?",
+          "odpowiedz_wzorcowa": "- błąd w obliczeniu jest wprost wskazanym ograniczeniem\\n- końcowa liczba zależy od poprawnego rachunku\\n- pomyłka może dać błędny wynik i zepsuć zaplanowany efekt",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play17-varC"
+        }
+      ]
+    },
+    {
+      "index": 18,
+      "title": "The Heimlich Maneuver",
+      "folder": "4_Plays_for_the_Advanced/The Heimlich Maneuver",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Heimlich Maneuver/The Heimlich Maneuver.pdf",
+      "topics": [
+        {
+          "id": "c229be57-88f2-49ab-b8af-adb9bf71f071",
+          "pytanie": "Wyjaśnij, na czym polega mechanizm The Heimlich Maneuver i jak udawane zakrztuszenie ma stworzyć sytuację, w której druga osoba podejmuje działanie ratunkowe.",
+          "odpowiedz_wzorcowa": "- udawane zakrztuszenie\\n- druga osoba ma podjąć działanie ratunkowe\\n- sytuacja ratunkowa stanowi podstawę kontaktu",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play18-varA"
+        },
+        {
+          "id": "d47e839b-f7c4-43fe-91b7-cecb05897e94",
+          "pytanie": "Jaką funkcję pełni precel oraz dlaczego materiał kieruje tę zagrywkę do osób określonych jako ratowniczki? Wyjaśnij, jak rekwizyt łączy się z odegraniem scenariusza.",
+          "odpowiedz_wzorcowa": "- precel jest wymaganym rekwizytem\\n- grupa docelowa: ratowniczki\\n- rekwizyt służy odegraniu scenariusza zakrztuszenia",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play18-varB"
+        },
+        {
+          "id": "39a37f7d-e806-4000-8541-fee409dbee41",
+          "pytanie": "Dlaczego zastosowanie The Heimlich Maneuver wymaga zarówno odpowiedniego rekwizytu, jak i osoby gotowej reagować jako ratowniczka, a brak któregoś z tych warunków może przerwać cały mechanizm?",
+          "odpowiedz_wzorcowa": "- precel jako konieczny element\\n- ratowniczka jako właściwa osoba w scenariuszu\\n- związek obu warunków z odegraniem zakrztuszenia i akcją ratunkową",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play18-varC"
+        }
+      ]
+    },
+    {
+      "index": 19,
+      "title": "Ghost Of Christmas Future",
+      "folder": "4_Plays_for_the_Advanced/Ghost Of Christmas Future",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/Ghost Of Christmas Future/Ghost Of Christmas Future.pdf",
+      "topics": []
+    },
+    {
+      "index": 20,
+      "title": "The Scuba Diver",
+      "folder": "4_Plays_for_the_Advanced/The Scuba Diver",
+      "pdfPath": "/fiszki_zagrywki/4_Plays_for_the_Advanced/The Scuba Diver/The Scuba Diver.pdf",
+      "topics": [
+        {
+          "id": "6a972591-b73a-45ee-98c4-b8eeb4198ad3",
+          "pytanie": "Wyjaśnij, na czym polega mechanizm The Scuba Diver i jak wykorzystanie natrętnej koleżanki-swatki oraz scenariusza ze sprzętem nurkowym ma prowadzić do kontaktu z wybraną osobą.",
+          "odpowiedz_wzorcowa": "- sprzęt nurkowy jako centralny element scenariusza\\n- udział natrętnej koleżanki-swatki\\n- wieloetapowy charakter zagrywki\\n- połączenie tych elementów w jeden scenariusz",
+          "dzial_numer": 7,
+          "wariant": "A",
+          "id_slug": "playbook-chap7-play20-varA"
+        },
+        {
+          "id": "716f469a-89bf-490a-8aef-4e9fa0b138be",
+          "pytanie": "Jaką funkcję pełnią tlenowa butla, maska, płetwy, mokry kombinezon, zwykły garnitur założony pod spód oraz koleżanka-swatka i dlaczego zagrywka wymaga połączenia tych elementów w wieloetapowy scenariusz?",
+          "odpowiedz_wzorcowa": "- wskazanie sprzętu nurkowego jako jednego zestawu elementów roli\\n- garnitur pod spodem jest częścią scenariusza\\n- udział koleżanki-swatki jest częścią mechanizmu\\n- rozumienie, że wszystkie elementy tworzą jeden wieloetapowy setup",
+          "dzial_numer": 7,
+          "wariant": "B",
+          "id_slug": "playbook-chap7-play20-varB"
+        },
+        {
+          "id": "3aa792d1-b8e7-4667-9372-2670dc7f3481",
+          "pytanie": "Jakie najważniejsze ograniczenia The Scuba Diver wskazuje materiał - kilka lat przygotowań, konieczność posiadania całego sprzętu i udziału osoby trzeciej - oraz jakie wyraźne ostrzeżenie autor umieszcza przy tej zagrywce?",
+          "odpowiedz_wzorcowa": "- kilka lat przygotowań\\n- konieczność posiadania odpowiedniego sprzętu\\n- udział osoby trzeciej\\n- wyraźne ostrzeżenie o wyrwaniu stron przed wykonaniem",
+          "dzial_numer": 7,
+          "wariant": "C",
+          "id_slug": "playbook-chap7-play20-varC"
+        }
+      ]
+    }
+  ]
+}

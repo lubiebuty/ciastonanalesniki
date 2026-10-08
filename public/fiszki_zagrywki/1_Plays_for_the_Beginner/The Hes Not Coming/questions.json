@@ -1,0 +1,32 @@
+{
+  "index": 19,
+  "title": "The He's Not Coming",
+  "folder": "1_Plays_for_the_Beginner/The Hes Not Coming",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Hes Not Coming/The Hes Not Coming.pdf",
+  "topics": [
+    {
+      "id": "fcc1cf29-b9d9-424a-8808-271b390c8bf1",
+      "pytanie": "Na czym polega „He’s Not Coming” i jakie emocje rozmówczyni mają być punktem wyjścia dla tej historii?",
+      "odpowiedz_wzorcowa": "- komunikat „On nie przyjdzie”\\n- taras widokowy\\n- romantyczny kontekst oczekiwania",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play19-varA"
+    },
+    {
+      "id": "ca78c779-da78-43a0-a306-2c493fa64082",
+      "pytanie": "Jakie grupy docelowe wskazuje materiał i jaką funkcję pełni Empire State Building w przedstawionym schemacie?",
+      "odpowiedz_wzorcowa": "- romantyczki\\n- świeżo porzucone\\n- Empire State Building",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play19-varB"
+    },
+    {
+      "id": "747b5342-769b-463a-9dee-4de9391ee404",
+      "pytanie": "Jaki warunek miejsca jest niezbędny dla The He’s Not Coming i dlaczego miejsce ma znaczenie?",
+      "odpowiedz_wzorcowa": "- taras widokowy Empire State Building\\n- miejsce ma pełnić określony romantyczny kontekst scenariusza",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play19-varC"
+    }
+  ]
+}

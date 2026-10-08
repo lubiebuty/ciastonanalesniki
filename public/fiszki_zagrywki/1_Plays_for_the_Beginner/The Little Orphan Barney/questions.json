@@ -1,0 +1,32 @@
+{
+  "index": 14,
+  "title": "The Little Orphan Barney",
+  "folder": "1_Plays_for_the_Beginner/The Little Orphan Barney",
+  "pdfPath": "/fiszki_zagrywki/1_Plays_for_the_Beginner/The Little Orphan Barney/The Little Orphan Barney.pdf",
+  "topics": [
+    {
+      "id": "b305bca8-30bf-4ed0-869e-0a9035ae30ed",
+      "pytanie": "Na czym polega „Little Orphan Barney” i jakie święta stanowią kontekst tej zagrywki?",
+      "odpowiedz_wzorcowa": "- udawanie sieroty\\n- Dzień Matki lub Dzień Ojca\\n- wykorzystanie określonego święta jako kontekstu",
+      "dzial_numer": 4,
+      "wariant": "A",
+      "id_slug": "playbook-chap4-play14-varA"
+    },
+    {
+      "id": "af9caab3-12e9-45c7-bb9f-42e161c430ad",
+      "pytanie": "Jak przebiega kluczowa zmiana narracji w The Little Orphan Barney po pytaniu o kontakt z rodzicami?",
+      "odpowiedz_wzorcowa": "- cierpliwość\\n- tylko dwa razy w roku\\n- Dzień Matki/Dzień Ojca",
+      "dzial_numer": 4,
+      "wariant": "B",
+      "id_slug": "playbook-chap4-play14-varB"
+    },
+    {
+      "id": "90a26eb8-9128-410a-8f2c-49fa81d1b7e7",
+      "pytanie": "Jakie ograniczenie czasowe jest kluczowe dla The Little Orphan Barney?",
+      "odpowiedz_wzorcowa": "- Dzień Matki lub Dzień Ojca\\n- tylko dwa razy w roku",
+      "dzial_numer": 4,
+      "wariant": "C",
+      "id_slug": "playbook-chap4-play14-varC"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+{
+  "index": 19,
+  "title": "The Barney Identity",
+  "folder": "3_Plays_for_the_Weekend_Warrior/The Barney Identity",
+  "pdfPath": "/fiszki_zagrywki/3_Plays_for_the_Weekend_Warrior/The Barney Identity/The Barney Identity.pdf",
+  "topics": [
+    {
+      "id": "015e0bf3-97c6-4d0c-9d6e-1210a0a4b814",
+      "pytanie": "Jaki jest mechanizm „The Barney Identity” i do jakiego motywu filmowego nawiązuje?",
+      "odpowiedz_wzorcowa": "- parodia „Tożsamości Bourne’a”\\n- fikcja szpiegowska\\n- pióro jako tajny mikrofilm",
+      "dzial_numer": 6,
+      "wariant": "A",
+      "id_slug": "playbook-chap6-play19-varA"
+    },
+    {
+      "id": "2173d77e-d15c-43fd-a87b-1486e06398f3",
+      "pytanie": "Jaką funkcję pełni efektowne pióro w The Barney Identity i jak źródło wiąże tę zagrywkę z wyglądem?",
+      "odpowiedz_wzorcowa": "- paranoicy\\n- efektowne pióro",
+      "dzial_numer": 6,
+      "wariant": "B",
+      "id_slug": "playbook-chap6-play19-varB"
+    },
+    {
+      "id": "7a06dfa4-4420-4a5c-9cab-4eaa9e8a151a",
+      "pytanie": "Jaki warunek wyglądu jest w źródle przedstawiony jako istotny dla The Barney Identity?",
+      "odpowiedz_wzorcowa": "- wiarygodny, odpowiednio filmowy wygląd\\n- w źródle szczególnie wyróżniony wygląd przypominający Matta Damona",
+      "dzial_numer": 6,
+      "wariant": "C",
+      "id_slug": "playbook-chap6-play19-varC"
+    }
+  ]
+}
